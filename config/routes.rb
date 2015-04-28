@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
 
+  namespace :backend do
+  get 'sponsors/new'
+  end
+
   get 'sessions/new'
   get 'static_pages/home'
 
@@ -19,6 +23,7 @@ Rails.application.routes.draw do
     # get 'speakers/index'
     resources :speakers
     resources :users
+    resources :sponsors
     
   end
 
