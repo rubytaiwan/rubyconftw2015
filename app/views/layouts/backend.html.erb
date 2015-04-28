@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>控制台</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render 'navbar_backend' %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3"><%= render 'sidebar_backend' %></div>
+		
+		<div class="col-md-9"><%#= render 'breadcrumbs_backend' %><%= yield %></div>	  
+	</div>
+</div>
+
+</body>
+</html>
