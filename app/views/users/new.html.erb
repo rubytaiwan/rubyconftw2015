@@ -1,0 +1,12 @@
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+
+
+<%= simple_form_for @user do |f| %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+    
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>

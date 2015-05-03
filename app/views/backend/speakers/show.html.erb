@@ -1,0 +1,23 @@
+<%# breadcrumb :speaker, @speaker %>
+<p>  
+  <strong>Name:</strong>
+  <%= @speaker.name %>
+</p>
+
+<p>
+  <strong>Biography:</strong>
+  <%= @speaker.biography %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @speaker.subject %>
+</p>
+
+<p>
+  <strong>image:</strong>
+  <%= @speaker.avatar %>
+</p>
+
+<%= link_to "編輯商品" ,edit_backend_speaker_path %><br>
+<%= link_to "回商品列表" ,backend_speakers_path %>
