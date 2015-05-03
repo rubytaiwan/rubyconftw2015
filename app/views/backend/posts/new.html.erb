@@ -1,0 +1,11 @@
+<h1>Backend::Posts#new</h1>
+<p>Find me in app/views/backend/posts/new.html.erb</p>
+<h1>新增消息</h1>
+<%= simple_form_for [:backend, @post] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <%= f.label :publish_date %><br>
+  <%= f.date_select :publish_date %><br>
+    
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>

@@ -1,29 +1,23 @@
-<h1>Backend::Speakers#index</h1>
-<p>Find me in app/views/backend/speakers/index.html.erb</p>
-
-
+<h1>Speakers</h1>
 <%= link_to '新增', new_backend_speaker_path, class:'btn btn-success' %>
 
 <hr>
 
 <div class="row">
 <% current_collection.each do |speaker| %>
-  <!-- <div class="col-sm-4"> -->
-
+  <div class="col-sm-4">
+  	
     <div class="thumbnail">
-      <%#= image_tag speaker.image.small %>
-      <div class="caption">
-        <h3><%#= link_to speaker.name, backend_speaker_path(speaker) %></h3>
-        <h3>演講者：<%=link_to speaker.name, backend_speaker_path(speaker) %></h3>
-        <h4>Bio：<%= speaker.biography %></h4>
-        <h4>演講題目：<%= speaker.subject%></h4>
+      <%= image_tag speaker.avatar.middle %>
+      <div class="caption"> 	
+        <h4><%=link_to speaker.name, backend_speaker_path(speaker) %></h3>
+        <h4><%= speaker.subject%></h4>
         <p>
         <%= link_to '編輯', edit_backend_speaker_path(speaker),class:'btn btn-success btn-xs' %>
         <%= link_to '刪除', backend_speaker_path(speaker),class:'btn btn-danger btn-xs', :method => :delete , data:{confirm:'確定嗎？'}%>
         </p>
       </div>
     </div>
-
-  <!-- </div> -->
+  </div>
   <% end %>
 </div>

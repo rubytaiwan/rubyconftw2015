@@ -1,8 +1,10 @@
 <%= simple_form_for [:backend, @sponsor] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :image %>
+  <%= f.input :name , label: '贊助商名稱' %>
   
+  <%= f.input :description , label: '描述'%>
+
+  <%= f.input_field :image, as: :file%>
     
   <%= f.submit class: "btn btn-primary"%>
 <% end %>
+

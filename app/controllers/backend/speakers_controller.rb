@@ -56,5 +56,11 @@ class Backend::SpeakersController < Backend::BaseController
       params.require(:speaker).permit(:name, :avatat, :biography , :subject , :asbtract)
   	end
 
+# <<<<<<< Updated upstream
+# =======
+#   	def speaker_params
+#     params.require(:speaker).permit(:name, :avatar, :biography , :subject , :asbtract)
+#   	end
+# >>>>>>> Stashed changes
 end
 

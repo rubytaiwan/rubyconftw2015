@@ -1,11 +1,9 @@
-<h1>新增講者</h1>
-<hr>
-<%= simple_form_for [:backend, current_object] do |f| %>
+<%= simple_form_for [:backend, @speaker] do |f| %>
   <%= f.input :name %>
-  <%= f.input :avatar %>
+  <%= f.input :avatar, as: :file%>
   <%= f.input :biography %>
   <%= f.input :subject %>
   <%= f.input :abstract %>
-
+    
   <%= f.submit class: "btn btn-primary"%>
 <% end %>

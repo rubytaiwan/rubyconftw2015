@@ -1,23 +1,45 @@
 <%# breadcrumb :speaker, @speaker %>
-<p>  
-  <strong>Name:</strong>
-  <%= @speaker.name %>
-</p>
+<h1>演講者資訊</h1>
 
-<p>
-  <strong>Biography:</strong>
-  <%= @speaker.biography %>
-</p>
+<hr>
 
-<p>
-  <strong>Subject:</strong>
-  <%= @speaker.subject %>
-</p>
 
-<p>
-  <strong>image:</strong>
-  <%= @speaker.avatar %>
-</p>
+<div class="media">
+  <div class="media-left">
+    <%= image_tag @speaker.avatar.middle %>
+  </div>
+  <div class="media-body">
+<table class="table">
+      <thead>
+        <tr class="active">
+          <th colspan="2">基本資料</th>
+        </tr>
+      </thead>
+      <tbody>     
+        <tr>
+          <td>Name</td>
+          <td><%= @speaker.name %></td>
+        </tr>
+        <tr>
+          <td>Subject</td>
+          <td><%= @speaker.subject %></td>
+        </tr>
+        <tr>
+          <td>Biography</td>
+          <td><%=  @speaker.biography %></td>
+        </tr>
+        <tr>
+          <td>Abstract</td>
+          <td><%=  @speaker.abstract %></td>
+        </tr>
+      
+      </tbody>
+</table>
+  </div>
+</div>
 
-<%= link_to "編輯商品" ,edit_backend_speaker_path %><br>
-<%= link_to "回商品列表" ,backend_speakers_path %>
+
+
+
+<%= link_to "編輯" ,edit_backend_speaker_path ,class:'btn btn-success btn-default' %>
+<%= link_to "返回列表" ,backend_speakers_path ,class:'btn btn-primary' %>
