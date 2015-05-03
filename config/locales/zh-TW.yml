@@ -1,0 +1,11 @@
+zh-TW:
+  page_title:
+    default: 'RubyConf Taiwan 2015'
+    users:
+      new: '註冊用戶'
+    sessions:
+      new: 登入
+  flash:
+    successfully_created: 成功建立
+    successfully_updated: 成功更新
+    successfully_destroyed: 已刪除

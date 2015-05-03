@@ -1,0 +1,9 @@
+<h1>修改講者</h1>
+<%= simple_form_for [:backend, current_object] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :avatar %>
+  <%= f.input :biography %>
+  <%= f.input :subject %>
+  <%= f.input :abstract %>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>

@@ -1,0 +1,15 @@
+<h1>Hello Ruby Conf 2015</h1>
+<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="row">
+<% @speakers.each do |speaker| %>
+   <div class="thumbnail">
+      <div class="caption"> 	
+        <h3>演講者：<%=link_to speaker.name, backend_speaker_path(speaker) %></h3>
+        <h4>Bio：<%= speaker.biography %></h4>
+        <h4>演講題目：<%= speaker.subject%></h4>
+        
+      </div>
+    </div>
+<% end %>
+</div>
+
