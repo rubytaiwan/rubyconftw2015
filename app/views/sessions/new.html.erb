@@ -7,9 +7,8 @@
 <div></div>
 <% end %>
 
-<% provide(:title, "Log in") %>
 <h1>Log in</h1>
-	
+
 	<%= simple_form_for(:session, url: login_path) do |f| %>
     <%#= form_for(:session, url: login_path) do |f| %>
 
@@ -20,4 +19,4 @@
     <% end %>
 
     <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
-  
+
