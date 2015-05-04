@@ -5,6 +5,7 @@ zh-TW:
       new: '註冊用戶'
     sessions:
       new: 登入
+   
   flash:
     successfully_created: 成功建立
     successfully_updated: 成功更新

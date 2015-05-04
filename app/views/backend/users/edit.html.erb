@@ -1,12 +1,8 @@
-<% provide(:title, 'Sign up') %>
-<h1>新增作者</h1>
-
-
-<%= simple_form_for current_object do |f| %>
+<h1>修改作者</h1>
+<%= simple_form_for [:backend, current_object] do |f| %>
   <%= f.input :name %>
   <%= f.input :email %>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
-    
   <%= f.submit class: "btn btn-primary"%>
 <% end %>
