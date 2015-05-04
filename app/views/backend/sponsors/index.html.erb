@@ -9,7 +9,7 @@
         </tr>
       </thead>
       <tbody>
-      <% @sponsors.each do |sponsor| %>
+      <% current_collection.each do |sponsor| %>
         <tr>
           <td><%= sponsor.name %></td>
           <td><%= sponsor.description %></td>

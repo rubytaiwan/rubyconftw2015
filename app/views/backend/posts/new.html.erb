@@ -1,7 +1,7 @@
 <h1>Backend::Posts#new</h1>
 <p>Find me in app/views/backend/posts/new.html.erb</p>
 <h1>新增消息</h1>
-<%= simple_form_for [:backend, @post] do |f| %>
+<%= simple_form_for [:backend, current_object] do |f| %>
   <%= f.input :title %>
   <%= f.input :content %>
   <%= f.label :publish_date %><br>

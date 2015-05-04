@@ -1,4 +1,4 @@
-<%= simple_form_for [:backend, @sponsor] do |f| %>
+<%= simple_form_for [:backend, current_object] do |f| %>
   <%= f.input :name , label: '贊助商名稱' %>
   
   <%= f.input :description , label: '描述'%>

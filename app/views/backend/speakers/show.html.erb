@@ -6,7 +6,7 @@
 
 <div class="media">
   <div class="media-left">
-    <%= image_tag @speaker.avatar.middle %>
+    <%= image_tag current_object.avatar.middle %>
   </div>
   <div class="media-body">
 <table class="table">
@@ -18,19 +18,19 @@
       <tbody>     
         <tr>
           <td>Name</td>
-          <td><%= @speaker.name %></td>
+          <td><%= current_object.name %></td>
         </tr>
         <tr>
           <td>Subject</td>
-          <td><%= @speaker.subject %></td>
+          <td><%= current_object.subject %></td>
         </tr>
         <tr>
           <td>Biography</td>
-          <td><%=  @speaker.biography %></td>
+          <td><%=  current_object.biography %></td>
         </tr>
         <tr>
           <td>Abstract</td>
-          <td><%=  @speaker.abstract %></td>
+          <td><%=  current_object.abstract %></td>
         </tr>
       
       </tbody>
