@@ -1,4 +1,6 @@
-<h1>index</h1>
+<h1>贊助商列表</h1>
+<%= link_to '新增', new_backend_sponsor_path, class:'btn btn-success' %>
+<hr>
 <table class="table table-hover">
       <thead>
         <tr>
@@ -14,9 +16,9 @@
           <td><%= sponsor.name %></td>
           <td><%= sponsor.description %></td>
           <td><%= image_tag sponsor.image.small %></td>
-          <td><%= link_to 'Show', backend_sponsor_path(sponsor) ,class:'btn btn-success btn-xs'%></td>
-          <td><%= link_to 'Edit', edit_backend_sponsor_path(sponsor) ,class:'btn btn-success btn-xs'%></td>
-          <td><%= link_to 'Destroy', backend_sponsor_path(sponsor), method: :delete, data: { confirm: 'Are you sure?' ,class:'btn btn-danger btn-xs'} %></td>
+          <td><%= link_to '顯示', backend_sponsor_path(sponsor) ,class:'btn btn-success btn-xs'%></td>
+          <td><%= link_to '編輯', edit_backend_sponsor_path(sponsor) ,class:'btn btn-success btn-xs'%></td>
+          <td><%= link_to '刪除', backend_sponsor_path(sponsor), method: :delete, data: { confirm: 'Are you sure?'} ,class:'btn btn-danger btn-xs' %></td>
         </tr>
        <% end %> 
       </tbody>

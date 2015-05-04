@@ -1,11 +1,19 @@
-<h1>Backend::Posts#new</h1>
-<p>Find me in app/views/backend/posts/new.html.erb</p>
 <h1>新增消息</h1>
+<hr>
+<% if flash[:success]!=nil %>
+<div class="alert  alert-success alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   <%= flash[:success] %>
+</div>
+<% else%>
+<div></div>
+<% end %>
+
 <%= simple_form_for [:backend, current_object] do |f| %>
   <%= f.input :title %>
   <%= f.input :content %>
   <%= f.label :publish_date %><br>
   <%= f.date_select :publish_date %><br>
-    
+  <br>   
   <%= f.submit class: "btn btn-primary"%>
 <% end %>
