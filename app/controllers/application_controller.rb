@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
     @page_title =
     begin
       I18n.t "page_title.#{controller_name}.#{action_name}", raise: true
+      #I18n.t "page_title.#{controller_name}.demodulize.#{action_name}", raise: true
     rescue I18n::MissingTranslationData
       t('page_title.default')
     end

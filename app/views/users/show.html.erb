@@ -1,0 +1,27 @@
+<h1>作者資訊</h1>
+<hr>
+
+<div class="media">
+  <div class="media-left">
+    <%= gravatar_for  @user %>
+  </div>
+  <div class="media-body">
+  <table class="table">
+        <thead>
+          <tr class="active">
+            <th colspan="2">基本資料</th>
+          </tr>
+        </thead>
+        <tbody>     
+          <tr>
+            <td>Name</td>
+            <td><%= @user.name %></td>
+          </tr>
+          <tr>
+            <td>E-mail</td>
+            <td><%= @user.email %></td>
+          </tr>      
+        </tbody>
+  </table>
+  </div>
+</div>

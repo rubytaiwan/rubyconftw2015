@@ -27,8 +27,19 @@ class Backend::UsersController < Backend::BaseController
   	
   # end
 
+  # def update
+  #   if @user.update(user_params)
+  #    flash[:success] = "更新成功"
+  #    redirect_to backend_users_path
+  #  else
+  #    flash[:success] = "problem!"
+  #    render :edit
+  #  end
+  # end
+
   # def destroy
   # 	@user.destroy
+
   # 	redirect_to backend_users_path
   # end
 
@@ -37,13 +48,18 @@ class Backend::UsersController < Backend::BaseController
     def collection_scope
       User
     end
-  # 	def find_user
-  # 		@user = User.find(params[:id])
-  # 	end
-
-  	def object_params
+    def object_params
     params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
-  	end
+    end
+
+  	# def find_user
+  	# 	@user = User.find(params[:id])
+  	# end
+
+  	# def user_params
+   #  params.require(:user).permit(:name, :email, :password,
+   #                                 :password_confirmation)
+  	# end
 
 end

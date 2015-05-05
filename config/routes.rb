@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
    namespace :backend do
     get 'dashboard', to:'dashboard#index'
-    get 'users', to:'users#index'
+    #get 'users', to:'users#index'
     #get 'posts', to:'posts#index'
 
     # get 'speakers/index'

@@ -1,5 +1,4 @@
-<h1>新增作者</h1>
-<hr>
+<h1>修改使用者</h1>
 <% if flash[:success]!=nil %>
 <div class="alert  alert-success alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -9,11 +8,10 @@
 <div></div>
 <% end %>
 
-<%= simple_form_for [:backend, current_object] do |f| %>
+<%= simple_form_for @user do |f| %>
   <%= f.input :name %>
   <%= f.input :email %>
-  <%= f.input :password %>
-  <%= f.input :password_confirmation %>
-    
+  <%#= f.input :password %>
+  <%#= f.input :password_confirmation %>
   <%= f.submit class: "btn btn-primary"%>
 <% end %>
