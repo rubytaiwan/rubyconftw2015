@@ -1,0 +1,18 @@
+<h1>文章列表</h1>
+<%= link_to '新增', new_backend_post_path, class:'btn btn-success' %>
+<hr>
+
+<div class="row">
+<% current_collection.each do |post| %>  
+      <div class="caption"> 	
+        <h4>標題：<%=link_to post.title, backend_post_path(post) %></h4>
+        <h4>發表日期：<%= post.publish_date %></h4>
+        <p><%= post.content%></p>
+        <p>
+        <%= link_to '編輯', edit_backend_post_path(post),class:'btn btn-success btn-xs' %> 
+        <%= link_to '刪除', backend_post_path(post),class:'btn btn-danger btn-xs', :method => :delete , data:{confirm:'確定嗎？'}%>
+        </p>
+      </div>
+
+  <% end %>
+</div>

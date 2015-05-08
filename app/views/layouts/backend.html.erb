@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>控制台</title>
+  <title><%=page_title%></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -14,7 +14,7 @@
 	<div class="row">
 		<div class="col-md-3"><%= render 'sidebar_backend' %></div>
 		
-		<div class="col-md-9"><%#= render 'breadcrumbs_backend' %><%= yield %></div>	  
+		<div class="col-md-9"><%= yield %><%= debug(params) if Rails.env.development? %></div>	  
 	</div>
 </div>
 

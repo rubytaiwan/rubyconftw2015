@@ -1,0 +1,9 @@
+<div class="row">
+ 
+  <h1><%=current_object.title%></h1> 
+  <h4><em><%= current_object.publish_date %></em></h4>
+  <%= link_to '編輯', edit_backend_post_path(current_object),class:'btn btn-success btn-default' %> 
+  <hr>
+  <p><%= current_object.content%></p>
+</div>
+

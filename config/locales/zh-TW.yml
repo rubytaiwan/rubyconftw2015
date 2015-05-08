@@ -5,6 +5,12 @@ zh-TW:
       new: '註冊用戶'
     sessions:
       new: 登入
+    backend/dashboard:
+      index: '控制台'
+    backend/users:
+      new: '新增使用者'
+      edit: '修改作者資料'
+    
   flash:
     successfully_created: 成功建立
     successfully_updated: 成功更新

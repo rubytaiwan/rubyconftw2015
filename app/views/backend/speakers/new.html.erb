@@ -1,10 +1,12 @@
 <h1>新增講者</h1>
-<%= simple_form_for [:backend, current_object] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :avatar %>
-  <%= f.input :biography %>
-  <%= f.input :subject %>
-  <%= f.input :abstract %>
-
-  <%= f.submit class: "btn btn-primary"%>
+<hr>
+<% if flash[:success]!=nil %>
+<div class="alert  alert-success alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   <%= flash[:success] %>
+</div>
+<% else%>
+<div></div>
 <% end %>
+<%= render 'form'%>
+

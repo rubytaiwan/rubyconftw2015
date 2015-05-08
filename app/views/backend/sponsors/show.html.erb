@@ -1,1 +1,29 @@
-<h1>Show</h1>
+<h1>贊助商資訊</h1>
+<%= link_to "編輯" ,edit_backend_sponsor_path ,class:'btn btn-success btn-default' %>
+<hr>
+<div class="media">
+  <div class="media-left">
+    <%= image_tag current_object.image.middle %>
+  </div>
+  <div class="media-body">
+  <table class="table">
+        <thead>
+          <tr class="active">
+            <th colspan="2">基本資料</th>
+          </tr>
+        </thead>
+        <tbody>     
+          <tr>
+            <td>贊助商名稱</td>
+            <td><%= current_object.name %></td>
+          </tr>
+          <tr>
+            <td>描述</td>
+            <td><%= current_object.description  %></td>
+          </tr>      
+        </tbody>
+  </table>
+  </div>
+</div>
+
+<%= link_to "返回列表" ,backend_sponsors_path ,class:'btn btn-primary' %>
