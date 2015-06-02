@@ -1,20 +1,112 @@
-<h1>Hello Ruby Conf 2015</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
-<div class="row">
-<% @speakers.each do |speaker| %>
-<div class="col-sm-4">
-  	
-    <div class="thumbnail">
-      <%= image_tag speaker.avatar.middle %>
-      <div class="caption"> 	
-        <h3>演講者：<%=speaker.name%></h3>
-        <h4>Bio：<%= speaker.biography %></h4>
-        <h4>演講題目：<%= speaker.subject%></h4>
-        
-      </div>
-    </div>
-    
+<nav id="front-nav">
+  <ul>
+  <li class="home_ic"><a href="#home"><%= image_tag('menu_home.png')%></a></li>
+  <li class="speaker_ic"><a href="#speaker"><%= image_tag('menu_speaker.png')%></a></li>
+</ul>
+  
+</nav> 
+<header id="home">
+  <div class="logo"><%=image_tag("logo.png")%></div>
+  
+  <%=image_tag("cloud2_airplan.png", class: "cloud2")%>
+  <%=image_tag("cloud1.png", class: "cloud1")%>
+  <%=image_tag("cloud3.png", class: "cloud3")%>
+  
+
+  <div class="social">
+    <%=image_tag("fb_ic.png")%>
+    <%=image_tag("twitter_ic.png")%>
+    <%=image_tag("email_ic.png")%>
   </div>
-<% end %>
+  <div class="info">
+    <div class="info-inner time">
+      <%=image_tag("time_ic.png")%>
+      <p>November 9</p>
+    </div>
+    <div class="info-inner location">
+      <%=image_tag("location_ic.png")%>
+      <p>Taiwan , Taipei</p>
+    </div>
+  </div>
+  <div class="btn">
+  <%=image_tag("video_btn.png", class: "video_btn disabled")%>
+  <%=link_to image_tag("registeration_btn.png", class: "registeration_btn"),  "http://www.example.com"%>
+  </div>
+  <%=image_tag("Shovel.png", class: "shovel")%>
+  <%=image_tag("mountain.png", class: "mountain")%>
+</header>
+<div class="green_block"></div>
+
+<div id="speaker">
+  <div class="row">
+    <%# @speakers.each do |speaker| %>
+    <!-- <div class="col-4">
+      <div class="avatar">    
+        <div class="imagecontainer">
+        <%#= image_tag speaker.avatar.middle%>
+        </div>
+      </div> 
+        <div class="description"> 	
+        <h3>演講者：<%#=speaker.name%></h3>
+        <h4>Bio：<%#= speaker.biography %></h4>
+        </div>     
+    </div> -->
+    <div class="col-sm-4">
+      <div class="avatar">    
+        <div class="imagecontainer">
+        <%= image_tag("matz.png")%>
+        </div>
+      </div> 
+        <div class="description">   
+        <h3>松本行弘 Matz</h3>
+        <p>@yukihiro_matz</p>
+        <p>Father of Ruby Language</p>
+        </div>     
+    </div>
+    <div class="col-sm-4">
+      <div class="avatar">    
+        <div class="imagecontainer">
+        <%= image_tag("linda.png")%>
+        </div>
+      </div> 
+        <div class="description">   
+        <h3>Linda Liukas</h3>
+        <p>@lindaliukas</p>
+        <p>Founder of Rails Girls Community</p>
+        </div>     
+    </div>
+    <div class="col-sm-4">
+      <div class="avatar">    
+        <div class="imagecontainer">
+       <%= image_tag("terence-lee.png")%>
+        </div>
+      </div> 
+        <div class="description">   
+        <h3>Terence Lee</h3>
+        <p>@hone02</p>
+        <p>Terence works at Heroku maintaining the Ruby stack and a slew of OSS projects such as Ruby and Bundler, as well as helping with ...</p>
+        </div>     
+    </div>
+    <div class="col-sm-4">
+      <div class="avatar">    
+        <div class="imagecontainer">
+       <%= image_tag("terence-lee.png")%>
+        </div>
+      </div> 
+        <div class="description">   
+        <h3>Terence Lee</h3>
+        <p>@hone02</p>
+        <p>Terence works at Heroku maintaining the Ruby stack and a slew of OSS projects such as Ruby and Bundler, as well as helping with ...</p>
+        </div>     
+    </div>
+
+    <%# end %>
+  </div>
 </div>
 
+<footer>
+  <%=image_tag("footer.png", class: "footer-bg")%>
+  <%=image_tag("dwarf1.png", class: "dwarf1")%>
+  <%=image_tag("dwarf2.png", class: "dwarf2")%>
+  <%=image_tag("dwarf3.png", class: "dwarf3")%>
+</footer>
