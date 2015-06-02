@@ -48,7 +48,8 @@ header{
 	}
 	.disabled{
 		cursor: default; 
-		opacity: 0.5;
+		// opacity: 0.5;
+		display: none;
 	}
 	.social{	
   	position: absolute;
@@ -60,16 +61,17 @@ header{
   		}
 	}
 	.info{
-		 text-align: center;
+		text-align: center;
 		display: block;
 		color: #fff;
+		margin-top: 2%;
 		margin-bottom: 2%;
 		font-family: "Songti TC";
-		img{float:left;padding: 0 9%;}
-		p{float:left;letter-spacing: 2px;}
+		img{float:left;}
+		p{float:left;letter-spacing: 2px;  margin-left: 10px;}
 		.info-inner{
-			display: inline-block;
-			width: 200px;
+			display: inline-block;	
+			margin: 0 3%;	
 		}
 
 	}
@@ -82,19 +84,29 @@ header{
 }
 nav#front-nav{
 	position: fixed;
-	top: 30%;
+	// top: 30%;
+	top: 300px;
  	left: 68px;
  	z-index: 2;
- 	ul { 
-	  list-style-image:url('line.png'); 
+	.list-group-icon {
+	  position: relative;
+	  display: block;
+	  padding: 10px 15px;
+	  margin-bottom: -1px;
 	}
-	li a{
-	 	opacity: 0;
+	a.list-group-icon {
+		color: #fff;
+		img{
+			opacity: 0;
+		}
 	}
-	li a:hover{
-		opacity: 1;
+	a.list-group-icon:hover, a.list-group-icon:focus {
+	  text-decoration: none;
+	  
+	  img{
+			opacity: 1;
+		}
 	}
-
 }
 .green_block{
 	background-color: #00CCB2;
