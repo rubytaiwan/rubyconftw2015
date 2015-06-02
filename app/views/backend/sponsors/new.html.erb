@@ -1,3 +1,12 @@
-<h1>Backend::Sponsors#new</h1>
-<p>Find me in app/views/backend/sponsors/new.html.erb</p>
+<h1>新增贊助商</h1>
+<hr>
+<% if flash[:success]!=nil %>
+<div class="alert  alert-success alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   <%= flash[:success] %>
+</div>
+<% else%>
+<div></div>
+<% end %>
+
 <%= render 'form' %>
