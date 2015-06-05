@@ -51,11 +51,7 @@ header{
 	right: 13%;
 	top:635px;
 	}
-	.disabled{
-		cursor: default; 
-		// opacity: 0.5;
-		display: none;
-	}
+	
 	.social{	
   	position: absolute;
   	right: 36px;
@@ -86,6 +82,9 @@ header{
 		text-transform: capitalize;
 		font-size: 14pt;
 		height: 67px;
+		a{
+			text-decoration: none;
+		}
 		.white_btn{
 			background-color: #fff;	
 			border: 2px solid #fff;	
@@ -103,13 +102,11 @@ header{
 			padding: 20px 64px;
 			margin: 0 15px;
 		}
-		a:hover{
-			text-decoration: none;
-			zoom: 0.9;
-			-ms-zoom: 0.9;
-			-webkit-zoom: 0.9;
-			-moz-transform:  scale(0.9,0.9);
-		}
+		
+	}
+	.disabled{
+		cursor: default; 
+		opacity: 0.5;	
 	}
 
 }
