@@ -1,6 +1,7 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$green-color: #66CC99;
 
 body{
 	margin:0;
@@ -109,12 +110,12 @@ nav#front-nav{
 	}
 }
 .green_block{
-	background-color: #00CCB2;
+	background-color: $green-color;
 	padding-top: 100px;
 }
 
 #speaker{
-	background-color: #00CCB2;
+	background-color: $green-color;
 	text-align: center;
 	
 	.row{

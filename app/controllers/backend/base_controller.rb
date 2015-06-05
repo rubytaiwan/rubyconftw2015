@@ -18,6 +18,8 @@ class Backend::BaseController < ApplicationController
       end
       f.json
     end
+  else
+    flash[:success] = t('flash.warning')
   end
 
   def destroy
