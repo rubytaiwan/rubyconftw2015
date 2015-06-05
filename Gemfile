@@ -14,7 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # bootstrap
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
-
+gem 'font-awesome-sass'
 # form
 gem 'simple_form'
 gem 'cocoon'

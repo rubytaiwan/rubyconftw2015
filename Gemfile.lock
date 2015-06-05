@@ -102,6 +102,8 @@ GEM
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.6)
+    font-awesome-sass (4.3.2.1)
+      sass (~> 3.2)
     formatador (0.2.5)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
@@ -293,6 +295,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   faker
+  font-awesome-sass
   gretel
   guard
   guard-minitest
