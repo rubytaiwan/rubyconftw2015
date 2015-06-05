@@ -40,12 +40,14 @@ gem 'settingslogic'
 gem 'gretel'
 
 group :development, :test do
-  gem 'sqlite3'
+#  gem 'sqlite3'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'hirb-unicode'
   gem 'better_errors'
+  gem 'capistrano',  '~> 3.1'
+  gem 'capistrano-rails', '~> 1.1'
 end
 
 group :test do
@@ -60,7 +62,5 @@ group :test do
   gem 'faker'
 end
 
-group :production do
-   #gem 'pg'
-end
+gem 'pg'
 
