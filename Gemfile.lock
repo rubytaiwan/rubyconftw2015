@@ -152,6 +152,7 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    libv8 (3.16.14.7)
     listen (2.9.0)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
@@ -323,6 +324,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
+  libv8
   mini_magick
   minitest-reporters
   omniauth-facebook
