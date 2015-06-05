@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $green-color: #66CC99;
+$blue-color: #173E71;
 
 body{
 	margin:0;
@@ -9,6 +10,9 @@ body{
 }
 img{
 	max-width: 100%;
+}
+canvas {
+    
 }
 header{
 	background-color: #173E71;
@@ -45,7 +49,7 @@ header{
 	position: absolute;
 	z-index: 0;	
 	right: 13%;
-	top:584px;
+	top:635px;
 	}
 	.disabled{
 		cursor: default; 
@@ -79,7 +83,33 @@ header{
 	.btn{
 		text-align: center;
 		display: block;
-		letter-spacing: 45px;
+		text-transform: capitalize;
+		font-size: 14pt;
+		height: 67px;
+		.white_btn{
+			background-color: #fff;	
+			border: 2px solid #fff;	
+			border-radius: 3px;			
+			color: $blue-color;
+			padding: 20px 85px;
+			margin: 0 15px;
+
+		}
+		.blue_btn{
+			background-color: $blue-color;
+			border: 2px solid #fff;	
+			border-radius: 3px;		
+			color: #fff;
+			padding: 20px 64px;
+			margin: 0 15px;
+		}
+		a:hover{
+			text-decoration: none;
+			zoom: 0.9;
+			-ms-zoom: 0.9;
+			-webkit-zoom: 0.9;
+			-moz-transform:  scale(0.9,0.9);
+		}
 	}
 
 }
@@ -135,6 +165,10 @@ nav#front-nav{
 	}
 	p{
 		color: #fff;
+	}
+	.imagecontainer{
+		// overflow: hidden;
+		// -webkit-mask-image: url(hexagon.png);
 	}
 }
 

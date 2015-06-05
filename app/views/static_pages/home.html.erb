@@ -5,6 +5,7 @@
 </div>
 </nav> 
 <header id="home">
+
   <div class="logo"><%=image_tag("logo.png")%></div>
   
   <%=image_tag("cloud2_airplan.png", class: "cloud2")%>
@@ -29,8 +30,8 @@
   </div>
   <div class="btn">
   <%=image_tag("video_btn.png", class: "video_btn disabled")%>
-
-  <%=link_to image_tag("registeration_btn.png", class: "registeration_btn  disabled"),  "http://www.example.com"%>
+  <%=link_to "registeration","http://www.example.com",class: "white_btn"%>
+  <%=link_to "Call For Proposals","http://www.example.com",class: "blue_btn"%>
   </div>
   <%=image_tag("Shovel.png", class: "shovel")%>
   <%=image_tag("mountain.png", class: "mountain")%>
