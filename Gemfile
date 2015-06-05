@@ -38,6 +38,7 @@ gem 'settingslogic'
 
 #breadcrums
 gem 'gretel'
+gem 'therubyracer', platforms: :ruby
 gem 'libv8'
 group :development, :test do
 #  gem 'sqlite3'
