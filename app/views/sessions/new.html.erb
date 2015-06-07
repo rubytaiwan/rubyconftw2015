@@ -1,3 +1,4 @@
+
 <% if flash[:danger]!=nil %>
 <div class="alert  alert-danger alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -9,14 +10,12 @@
 
 <h1>Log in</h1>
 
-	<%= simple_form_for(:session, url: login_path) do |f| %>
-    <%#= form_for(:session, url: login_path) do |f| %>
+<%= simple_form_for(:session, url: login_path) do |f| %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>
 
-      <%= f.input :email %>
-  	  <%= f.input :password %>
-
-      <%= f.submit class: "btn btn-primary"%>
-    <% end %>
-
-    <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+<p>New user? <%= link_to "Sign up now!", new_user_path %>
+</p>
 

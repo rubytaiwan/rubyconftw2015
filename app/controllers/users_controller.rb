@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
-
+  before_action :find_user, only:[:show, :destroy, :edit, :update]
   def index
     @users = User.all
   end
   def show
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
   end
 
   def new
@@ -22,8 +22,27 @@ class UsersController < ApplicationController
     end
   end
 
-  private
+   def edit
+    
+  end
 
+  def update
+    if @user.update(user_params)
+     flash[:success] = "更新成功"
+     redirect_to users_path
+   else     
+     render :edit
+   end
+  end
+   def destroy
+    @user.destroy
+     redirect_to users_path
+  end
+
+  private
+    def find_user
+      @user = User.find(params[:id])
+    end
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)

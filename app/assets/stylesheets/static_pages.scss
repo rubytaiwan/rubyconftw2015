@@ -1,3 +1,166 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+	margin:0;
+	overflow-x:hidden;
+}
+img{
+	max-width: 100%;
+}
+header{
+	background-color: #173E71;
+	padding: 128px 0 130px 0;
+	.logo{
+	text-align: center;
+	}
+	
+	img.cloud2{
+     position: absolute;
+     top: 38px;
+     left: 17%;
+	
+	}
+	img.cloud1{
+	 position: absolute;
+     top: 541px;
+     right: 8.7%;
+	}	
+	img.cloud3{	 
+     position: absolute;
+     top: 555px;
+     right: -3%;	
+	}
+	img.mountain{
+	position: absolute;
+	max-width: 104%;
+	width: 104%;
+	right: -17px;
+	z-index: 1;	
+
+	}
+	img.shovel{
+	position: absolute;
+	z-index: 0;	
+	right: 13%;
+	top:584px;
+	}
+	.disabled{
+		cursor: default; 
+		// opacity: 0.5;
+		display: none;
+	}
+	.social{	
+  	position: absolute;
+  	right: 36px;
+  	top:314px;
+  	width: 50px;
+  		img{
+  			margin-bottom: 26px;
+  		}
+	}
+	.info{
+		text-align: center;
+		display: block;
+		color: #fff;
+		margin-top: 2%;
+		margin-bottom: 2%;
+		font-family: "Songti TC";
+		img{float:left;}
+		p{float:left;letter-spacing: 2px;  margin-left: 10px;}
+		.info-inner{
+			display: inline-block;	
+			margin: 0 3%;	
+		}
+
+	}
+	.btn{
+		text-align: center;
+		display: block;
+		letter-spacing: 45px;
+	}
+
+}
+nav#front-nav{
+	position: fixed;
+	// top: 30%;
+	top: 300px;
+ 	left: 68px;
+ 	z-index: 2;
+	.list-group-icon {
+	  position: relative;
+	  display: block;
+	  padding: 10px 15px;
+	  margin-bottom: -1px;
+	}
+	a.list-group-icon {
+		color: #fff;
+		img{
+			opacity: 0;
+		}
+	}
+	a.list-group-icon:hover, a.list-group-icon:focus {
+	  text-decoration: none;
+	  
+	  img{
+			opacity: 1;
+		}
+	}
+}
+.green_block{
+	background-color: #00CCB2;
+	padding-top: 100px;
+}
+
+#speaker{
+	background-color: #00CCB2;
+	text-align: center;
+	
+	.row{
+	margin-left: 30%;
+	}
+	.col-sm-4{
+	padding-left: 60px;
+  	padding-right: 60px;
+  	padding-bottom: 100px;
+  	// width:31.333%;
+  	// display: table-cell;
+	}
+	h3{
+		font-family: "Heiti TC";
+		color: #318777;
+		font-size: 20px;
+	}
+	p{
+		color: #fff;
+	}
+}
+
+footer{
+	//background-color: #00CCB2;
+	position: relative;
+	z-index: -1;
+	img.footer-bg{
+		width: 100%;
+	}
+	.dwarf1{
+	position: absolute;
+	left: 850px;
+	bottom: 145px;
+	}
+	.dwarf2{
+	position: absolute;
+	left: 1065px;
+  	bottom: 65px;
+  	-moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+	-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+	}
+	.dwarf3{
+	position: absolute;
+	left: 100px;
+  	bottom: 65px;
+	-moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+	-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+	}
+}

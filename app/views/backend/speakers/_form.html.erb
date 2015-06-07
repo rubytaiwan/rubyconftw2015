@@ -1,0 +1,10 @@
+<%= simple_form_for [:backend, current_object] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :avatar, as: :file%>
+  <%= f.input :biography %>
+  <%= f.input :subject %>
+  <%= f.input :abstract %>
+    
+  <%= f.submit class: "btn btn-success"%>
+  <%= link_to "返回列表" ,backend_speakers_path ,class:'btn btn-primary' %>
+<% end %>

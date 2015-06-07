@@ -1,10 +1,9 @@
-
-<% @users.each do |user| %>
+<% current_collection.each do |user| %>
 <div class="col-sm-6">
   <div class="thumbnail"> 
       <%= gravatar_for user %>
       <div class="caption"> 	
-        <h3>作者：<%=link_to user.name, user_path(user) %></h3>
+        <h3>作者：<%=link_to user.name, backend_user_path(user) %></h3>
         <h4>Email：<%= user.email %></h4>
         <p>
         <%= link_to '編輯', edit_backend_user_path(user),class:'btn btn-success btn-xs' %> 
