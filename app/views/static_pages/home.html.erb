@@ -63,10 +63,10 @@
       <%=image_tag("sponsorship_level_1.png")%>
     </div>
     <% @sponsors.each do |sponsor| %>
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <div class="avatar">    
         <div class="imagecontainer">
-        <%= image_tag sponsor.image, class:"sponsor_img" %>
+        <%= image_tag sponsor.image, class:"sponsor_ruby" %>
         </div>
       </div>   
     </div> 
@@ -86,3 +86,13 @@
   <%=image_tag("dwarf2.png", class: "dwarf2")%>
   <%=image_tag("dwarf3.png", class: "dwarf3")%>
 </footer>
+
+<script src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
+<script>
+  $( "li a" ).mouseenter(function() {
+  $( this ).animate({opacity:'1'},"slow");
+});
+$( "li a" ).mouseleave(function() {
+  $( this ).animate({opacity:'0'},"slow");
+});
+</script>

@@ -117,17 +117,9 @@ header{
 }
 nav#front-nav{
 	position: fixed;
-	// top: 30%;
 	top: 250px;
  	left: 68px;
  	z-index: 2;
-
-	.list-group-icon {
-	  position: relative;
-	  display: block;
-	  padding: 10px 15px;
-	  margin-bottom: -1px;
-	}
 	li { 
 	  list-style-image:url('menu_line.png'); 
 	  margin: 15px 0px;
@@ -138,9 +130,6 @@ nav#front-nav{
 	li a{
 	 	opacity: 0;
 	}
-	li a:hover{
-		opacity: 1;
-	}
 }
 .green_block{
 	background-color: $green-color;
@@ -150,18 +139,15 @@ nav#front-nav{
 	background-color: $blue-color;
 }
 img.mountain{
-// position: absolute;
 max-width: 104%;
 width: 100%;
-// right: -17px;
 z-index: 1;	
-// top:600px;
-
 }
 #speaker,#sponsor{
 	background-color: $green-color;
 	text-align: center;
 	padding-top: 30px;
+	padding-bottom: 30px;
 
 	.row{
 	margin-left: 30%;
@@ -171,27 +157,25 @@ z-index: 1;
 	padding-left: 60px;
   	padding-right: 60px;
   	padding-bottom: 100px;
-  	// width:31.333%;
-  	// display: table-cell;
 	}
 	h3{
 		font-family: "Tamil MN";
 		font-weight: bold;
-		//"Heiti TC";
 		color: #318777;
 		font-size: 20px;
 	}
 	p{
 		color: #fff;
 	}
-	.imagecontainer{
-		// overflow: hidden;
-		// -webkit-mask-image: url(hexagon.png);
+	.level{
+		padding: 30px;
+	}
+	img.sponsor_ruby{
+		width: 60%;
 	}
 }
 
 footer{
-	//background-color: #00CCB2;
 	position: relative;
 	z-index: -1;
 	img.footer-bg{
@@ -217,3 +201,4 @@ footer{
 	-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 	}
 }
+
