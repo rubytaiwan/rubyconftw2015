@@ -1,16 +1,17 @@
 <nav id="front-nav"> 
-<div class="group">
-  <a class="list-group-icon" href="#home"><i class="fa fa-home  fa-3x fa-fw"></i><%= image_tag('menu_home.png')%></a>
-  <a class="list-group-icon" href="#speaker"><i class="fa fa-users  fa-3x fa-fw"></i><%= image_tag('menu_speaker.png')%></a>
-</div>
+<ul>
+  <li class="home_ic"><a href="#home"><%= image_tag('menu_home.png')%></a></li>
+  <li class="speaker_ic"><a href="#speaker"><%= image_tag('menu_speaker.png')%></a></li>
+  <li class="sponser_ic"><a href="#speaker"><%= image_tag('menu_sponser.png')%></a></li>
+</ul>
 </nav> 
 <header id="home">
-
   <div class="logo"><%=image_tag("logo.png")%></div>
-  
+  <%=image_tag("gif/ruby_rotate.gif", class: "ruby")%>
   <%=image_tag("cloud2_airplan.png", class: "cloud2")%>
   <%=image_tag("cloud1.png", class: "cloud1")%>
   <%=image_tag("cloud3.png", class: "cloud3")%>
+
   
 
   <div class="social">
@@ -32,13 +33,13 @@
   <%=link_to "registeration","#",class: "white_btn disabled"%>
   <%=link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "blue_btn", target: "_blank"%>
   </div>
-  <%=image_tag("Shovel.png", class: "shovel")%>
-  <%=image_tag("mountain.png", class: "mountain")%>
-
+  
 </header>
-<div class="green_block"></div>
-
+<div class="block">
+<%=image_tag("mountain1.png", class: "mountain")%>
+</div>
 <div id="speaker">
+
   <div class="row">
     <% @speakers.each do |speaker| %>
     <div class="col-sm-4">
@@ -53,6 +54,29 @@
         </div>     
     </div> 
     <% end %>
+  </div>
+</div>
+
+<div id="sponsor">
+  <div class="row">
+    <div class="level">
+      <%=image_tag("sponsorship_level_1.png")%>
+    </div>
+    <% @sponsors.each do |sponsor| %>
+    <div class="col-sm-4">
+      <div class="avatar">    
+        <div class="imagecontainer">
+        <%= image_tag sponsor.image, class:"sponsor_img" %>
+        </div>
+      </div>   
+    </div> 
+    <% end %>
+    </div>
+    
+</div>
+
+  <div class="row">
+    
   </div>
 </div>
 

@@ -3,7 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $green-color: #66CC99;
 $blue-color: #173E71;
-
+html{
+	width: 100%;
+	overflow-x: hidden;
+}
 body{
 	margin:0;
 	overflow-x:hidden;
@@ -16,11 +19,19 @@ canvas {
 }
 header{
 	background-color: #173E71;
-	padding: 128px 0 130px 0;
+	background-image: url('background_icon.png');
+	padding: 128px 0 0px 0;
 	.logo{
 	text-align: center;
 	}
-	
+	.bg_icon{
+		z-index: 0;
+	}
+	img.ruby{
+	  position: absolute;
+	  top: 130px;
+  	  right: 28%;
+	}
 	img.cloud2{
      position: absolute;
      top: 38px;
@@ -35,16 +46,10 @@ header{
 	img.cloud3{	 
      position: absolute;
      top: 555px;
-     right: -3%;	
+     right: -3%;
+     overflow-x: hidden;	
 	}
-	img.mountain{
-	position: absolute;
-	max-width: 104%;
-	width: 104%;
-	right: -17px;
-	z-index: 1;	
 
-	}
 	img.shovel{
 	position: absolute;
 	z-index: 0;	
@@ -113,40 +118,54 @@ header{
 nav#front-nav{
 	position: fixed;
 	// top: 30%;
-	top: 300px;
+	top: 250px;
  	left: 68px;
  	z-index: 2;
+
 	.list-group-icon {
 	  position: relative;
 	  display: block;
 	  padding: 10px 15px;
 	  margin-bottom: -1px;
 	}
-	a.list-group-icon {
-		color: #fff;
-		img{
-			opacity: 0;
-		}
+	li { 
+	  list-style-image:url('menu_line.png'); 
+	  margin: 15px 0px;
 	}
-	a.list-group-icon:hover, a.list-group-icon:focus {
-	  text-decoration: none;
-	  
-	  img{
-			opacity: 1;
-		}
+	li:hover{
+	  list-style-image:url('menu_line_hover.png'); 
+	}
+	li a{
+	 	opacity: 0;
+	}
+	li a:hover{
+		opacity: 1;
 	}
 }
 .green_block{
 	background-color: $green-color;
-	padding-top: 100px;
+	padding-top: 200px;
 }
+.block{
+	background-color: $blue-color;
+}
+img.mountain{
+// position: absolute;
+max-width: 104%;
+width: 100%;
+// right: -17px;
+z-index: 1;	
+// top:600px;
 
-#speaker{
+}
+#speaker,#sponsor{
 	background-color: $green-color;
 	text-align: center;
-	
+	padding-top: 30px;
+
 	.row{
 	margin-left: 30%;
+	background-color: $green-color;
 	}
 	.col-sm-4{
 	padding-left: 60px;
@@ -156,7 +175,9 @@ nav#front-nav{
   	// display: table-cell;
 	}
 	h3{
-		font-family: "Heiti TC";
+		font-family: "Tamil MN";
+		font-weight: bold;
+		//"Heiti TC";
 		color: #318777;
 		font-size: 20px;
 	}
