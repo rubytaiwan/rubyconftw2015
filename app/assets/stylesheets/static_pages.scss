@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $green-color: #66CC99;
 $blue-color: #173E71;
+$coc-pink:#ED4D84;
 html{
 	width: 100%;
 	overflow-x: hidden;
@@ -14,8 +15,16 @@ body{
 img{
 	max-width: 100%;
 }
-canvas {
-    
+.green_block{
+	background-color: $green-color;
+	padding-top: 200px;
+}
+.block{
+	background-color: $blue-color;
+}
+.row{
+margin-left: 30%;
+background-color: transparent;
 }
 header{
 	background-color: #173E71;
@@ -44,10 +53,11 @@ header{
      right: 8.7%;
 	}	
 	img.cloud3{	 
-     position: absolute;
-     top: 555px;
-     right: -3%;
-     overflow-x: hidden;	
+     // position: absolute;
+     margin-top: 50px;
+	 margin-left: 96%;
+	 overflow-x: hidden;	
+	 z-index: 1;
 	}
 
 	img.shovel{
@@ -70,7 +80,7 @@ header{
 		text-align: center;
 		display: block;
 		color: #fff;
-		margin-top: 2%;
+		margin-top: -5%;
 		margin-bottom: 2%;
 		font-family: "Songti TC";
 		img{float:left;}
@@ -131,28 +141,20 @@ nav#front-nav{
 	 	opacity: 0;
 	}
 }
-.green_block{
-	background-color: $green-color;
-	padding-top: 200px;
-}
-.block{
-	background-color: $blue-color;
-}
+
 img.mountain{
 max-width: 104%;
 width: 100%;
 z-index: 1;	
 }
+
 #speaker,#sponsor{
 	background-color: $green-color;
 	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
 
-	.row{
-	margin-left: 30%;
-	background-color: $green-color;
-	}
+
 	.col-sm-4{
 	padding-left: 60px;
   	padding-right: 60px;
@@ -174,7 +176,86 @@ z-index: 1;
 		width: 60%;
 	}
 }
+#coc{
+	background-color: $coc-pink;
+	color: #fff;
 
+	h1{
+		font-family: "Tamil MN";
+		font-weight: bold;
+		font-size: 50px;
+	}
+	p{
+		font-family: "Helvetica Neue";
+		font-size: 20px;
+		line-height: 2;
+	}
+	.col-sm-12{
+		margin: 106px 0;
+		padding-right: 50px;
+	}
+}
+#schedule{
+	background-color: #4BA9FA;
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	color: #fff;
+	.row{
+	margin-left: 30%;
+	// background-color: $green-color;
+	}
+	.btn{
+		text-align: center;
+		display: block;
+		text-transform: capitalize;
+		font-size: 14pt;
+		height: auto;
+		padding-bottom: 70px;
+		a{
+			text-decoration: none;
+		}
+		.white_btn{
+			background-color: #fff;	
+			border: 2px solid #fff;	
+			border-radius: 3px;			
+			color: #4BA9FA;
+			padding: 20px 85px;
+			margin: 0 15px;
+
+		}
+		.blue_btn{
+			background-color: transparent;
+			border: 2px solid #fff;	
+			border-radius: 3px;		
+			color: #fff;
+			padding: 20px 85px;
+			margin: 0 15px;
+		}
+		
+	}
+}
+.table-schedule{
+	width: 90%;
+	thead{
+		background-color: #469EEB;
+	}
+	th{
+	padding: 25px;
+	text-align: center;
+	}
+}
+
+.table-schedule>tbody>tr:nth-of-type(even) {
+  background-color: #469EEB;
+}
+.tab-content{
+  display: none;
+}
+
+.tab-content.current{
+	display: table;
+}
 footer{
 	position: relative;
 	z-index: -1;
