@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require cocoon
-//= require turbolinks
-//= require_tree .
+//= require jquery-scrollspy
+//= require static_pages

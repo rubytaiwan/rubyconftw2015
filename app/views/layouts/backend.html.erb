@@ -2,8 +2,8 @@
 <html>
 <head>
   <title><%=page_title%></title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'backend', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'backend', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -13,8 +13,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-3"><%= render 'sidebar_backend' %></div>
-		
-		<div class="col-md-9"><%= yield %><%= debug(params) if Rails.env.development? %></div>	  
+
+		<div class="col-md-9"><%= yield %><%= debug(params) if Rails.env.development? %></div>
 	</div>
 </div>
 

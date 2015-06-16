@@ -26,7 +26,7 @@ img{
 margin-left: 30%;
 background-color: transparent;
 }
-header{
+#home{
 	background-color: #173E71;
 	background-image: url('background_icon.png');
 	padding: 128px 0 0px 0;
@@ -45,29 +45,29 @@ header{
      position: absolute;
      top: 38px;
      left: 17%;
-	
+
 	}
 	img.cloud1{
 	 position: absolute;
      top: 541px;
      right: 8.7%;
-	}	
-	img.cloud3{	 
+	}
+	img.cloud3{
      // position: absolute;
      margin-top: 50px;
 	 margin-left: 96%;
-	 overflow-x: hidden;	
+	 overflow-x: hidden;
 	 z-index: 1;
 	}
 
 	img.shovel{
 	position: absolute;
-	z-index: 0;	
+	z-index: 0;
 	right: 13%;
 	top:635px;
 	}
-	
-	.social{	
+
+	.social{
   	position: absolute;
   	right: 36px;
   	top:314px;
@@ -86,8 +86,8 @@ header{
 		img{float:left;}
 		p{float:left;letter-spacing: 2px;  margin-left: 10px;}
 		.info-inner{
-			display: inline-block;	
-			margin: 0 3%;	
+			display: inline-block;
+			margin: 0 3%;
 		}
 
 	}
@@ -101,9 +101,9 @@ header{
 			text-decoration: none;
 		}
 		.white_btn{
-			background-color: #fff;	
-			border: 2px solid #fff;	
-			border-radius: 3px;			
+			background-color: #fff;
+			border: 2px solid #fff;
+			border-radius: 3px;
 			color: $blue-color;
 			padding: 20px 85px;
 			margin: 0 15px;
@@ -111,17 +111,17 @@ header{
 		}
 		.blue_btn{
 			background-color: $blue-color;
-			border: 2px solid #fff;	
-			border-radius: 3px;		
+			border: 2px solid #fff;
+			border-radius: 3px;
 			color: #fff;
 			padding: 20px 64px;
 			margin: 0 15px;
 		}
-		
+
 	}
 	.disabled{
-		cursor: default; 
-		opacity: 0.5;	
+		cursor: default;
+		opacity: 0.5;
 	}
 
 }
@@ -130,12 +130,12 @@ nav#front-nav{
 	top: 250px;
  	left: 68px;
  	z-index: 2;
-	li { 
-	  list-style-image:url('menu_line.png'); 
+	li {
+	  list-style-image:url('menu_line.png');
 	  margin: 15px 0px;
 	}
 	li:hover{
-	  list-style-image:url('menu_line_hover.png'); 
+	  list-style-image:url('menu_line_hover.png');
 	}
 	li a{
 	 	opacity: 0;
@@ -145,7 +145,7 @@ nav#front-nav{
 img.mountain{
 max-width: 104%;
 width: 100%;
-z-index: 1;	
+z-index: 1;
 }
 
 #speaker,#sponsor{
@@ -176,6 +176,11 @@ z-index: 1;
 		width: 60%;
 	}
 }
+
+#speaker{
+  padding-top: 0;
+}
+
 #coc{
 	background-color: $coc-pink;
 	color: #fff;
@@ -216,9 +221,9 @@ z-index: 1;
 			text-decoration: none;
 		}
 		.white_btn{
-			background-color: #fff;	
-			border: 2px solid #fff;	
-			border-radius: 3px;			
+			background-color: #fff;
+			border: 2px solid #fff;
+			border-radius: 3px;
 			color: #4BA9FA;
 			padding: 20px 85px;
 			margin: 0 15px;
@@ -226,13 +231,13 @@ z-index: 1;
 		}
 		.blue_btn{
 			background-color: transparent;
-			border: 2px solid #fff;	
-			border-radius: 3px;		
+			border: 2px solid #fff;
+			border-radius: 3px;
 			color: #fff;
 			padding: 20px 85px;
 			margin: 0 15px;
 		}
-		
+
 	}
 }
 .table-schedule{

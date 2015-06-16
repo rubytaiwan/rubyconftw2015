@@ -1,165 +1,164 @@
-<nav id="front-nav"> 
-<ul>
-  <li class="home_ic"><a href="#home"><%= image_tag('menu_home.png')%></a></li>
-  <li class="speaker_ic"><a href="#speaker"><%= image_tag('menu_speaker.png')%></a></li>
-  <li class="coc_ic"><a href="#coc"><%= image_tag('menu_coc.png')%></a></li>
-  <li class="sponser_ic"><a href="#speaker"><%= image_tag('menu_sponser.png')%></a></li>
-</ul>
-</nav> 
-<header id="home">
-  <div class="logo"><%=image_tag("logo.png")%></div>
-  <%=image_tag("gif/ruby_rotate.gif", class: "ruby")%>
-  <%=image_tag("cloud2_airplan.png", class: "cloud2")%>
-  <%=image_tag("cloud1.png", class: "cloud1")%>
-  <%=image_tag("cloud3.png", class: "cloud3")%>
-
-  
-
-  <div class="social">
-    <%=link_to image_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan", target: "_blank"%>
-    <%=link_to image_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan", target: "_blank"%>
-    <%=link_to image_tag("email_ic.png"),"mailto:contact@rubyconf.tw"%>
-  </div>
-  <div class="info">
-    <div class="info-inner time">
-      <%=image_tag("time_ic.png")%>
-      <p>November 9</p>
+<nav id="front-nav" class="navbar">
+  <ul class="nav">
+    <li class="home_ic"><a href="#home"><%= image_tag('menu_home.png')%></a></li>
+    <li class="speaker_ic"><a href="#speaker"><%= image_tag('menu_speaker.png')%></a></li>
+    <li class="coc_ic"><a href="#coc"><%= image_tag('menu_coc.png')%></a></li>
+    <li class="sponser_ic"><a href="#sponsor"><%= image_tag('menu_sponser.png')%></a></li>
+  </ul>
+</nav>
+<div id="sections">
+  <div id="home">
+    <div class="logo"><%=image_tag("logo.png")%></div>
+    <%=image_tag("gif/ruby_rotate.gif", class: "ruby")%>
+    <%=image_tag("cloud2_airplan.png", class: "cloud2")%>
+    <%=image_tag("cloud1.png", class: "cloud1")%>
+    <%=image_tag("cloud3.png", class: "cloud3")%>
+    <div class="social">
+      <%=link_to image_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan", target: "_blank"%>
+      <%=link_to image_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan", target: "_blank"%>
+      <%=link_to image_tag("email_ic.png"),"mailto:contact@rubyconf.tw"%>
     </div>
-    <div class="info-inner location">
-      <%=image_tag("location_ic.png")%>
-      <p>H.S.S. Building, Academia Sinica</p>
+    <div class="info">
+      <div class="info-inner time">
+        <%=image_tag("time_ic.png")%>
+        <p>November 9</p>
+      </div>
+      <div class="info-inner location">
+        <%=image_tag("location_ic.png")%>
+        <p>H.S.S. Building, Academia Sinica</p>
+      </div>
     </div>
+    <div class="btn">
+    <%=link_to "registeration","#",class: "white_btn disabled"%>
+    <%=link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "blue_btn", target: "_blank"%>
+    </div>
+
   </div>
-  <div class="btn">
-  <%=link_to "registeration","#",class: "white_btn disabled"%>
-  <%=link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "blue_btn", target: "_blank"%>
+
+  <div id="speaker">
+  <div class="block">
+    <%=image_tag("mountain1.png", class: "mountain")%>
   </div>
-  
-</header>
-<div class="block">
-<%=image_tag("mountain1.png", class: "mountain")%>
-</div>
-<div id="speaker">
-  <div class="row">
-    <% @speakers.each do |speaker| %>
-    <div class="col-sm-4">
-      <div class="avatar">    
-        <div class="imagecontainer">
-        <%= image_tag speaker.avatar.middle%>
+    <div class="row">
+      <% @speakers.each do |speaker| %>
+      <div class="col-sm-4">
+        <div class="avatar">
+          <div class="imagecontainer">
+          <%= image_tag speaker.avatar.middle%>
+          </div>
         </div>
-      </div> 
-        <div class="description"> 	
-        <h3><%=speaker.name%></h3>
-        <p><%= speaker.biography %></p>
-        </div>     
-    </div> 
-    <% end %>
-  </div>
-</div>
-<div id="coc">
-  <div class="row">
-    <div class="col-sm-12">
-    <h1>Code of conduct</h1>
-    <p>In the same way that Matz has written Ruby in order to make developers happy, we are also focused on making the community happy. The RubyConf Taiwan and Ruby Taiwan gather wonderful people from a diverse range of backgrounds, and we want to create a welcoming and safe environment where everyone eagers to join. </p>
-    <p>When we come together, we insist on what we have believe as a community from the beginning — to provide everyone with opportunities to showcase the best of what he/she can be. We are there to support our peers — to build each other up, to accept each other for who they are, and to encourage each other to become the people they want to be.</p>
-    <p>With that in mind, if you will be present at RubyConf Taiwan, whether as an attendee, organiser, sponsor or speaker, we take it as given that you agree to follow this code of conduct:
-    </p>
-    <p>The RubyConf Taiwan organisation is dedicated to providing harassment-free experiences at events and conferences for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, religion, or age. We do not tolerate harassment in any form.</p>
-    <p>All communication should be appropriate for professional audience including people of different backgrounds. Sexual languages and imageries are not acceptable in any circumstance.
-    </p>
-    <p>Be kind to others. Do not insult or put down other members of the community. Be respectful towards others. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for events supported by RubyConf Taiwan.</p>
-    <p>Anyone violating these rules at events may be asked to leave the event without a refund at the sole discretion of the organisers.</p>
-    <p>If you or someone else is subject to harassment, or you have a concern, please contact the event organisers (who will introduce themselves at the beginning of the event), or member of the <a href="mailto:contact@rubyconf.tw">RubyConf Taiwan Staff</a>.</p>
-    <p>Ruby Taiwan community is a welcoming and friendly place – thank you for being a part of it.</p>
+          <div class="description">
+          <h3><%=speaker.name%></h3>
+          <p><%= speaker.biography %></p>
+          </div>
+      </div>
+      <% end %>
     </div>
   </div>
-</div>
-<div id="schedule">
-<div class="row">
- <div class="btn">
-  <%=link_to "Day 1","#day1",class: "white_btn"%>
-  <%=link_to "Day 2","#day2",class: "blue_btn"%>
-  </div>
-  <table id="day1" class="table-schedule tab-content current">
-   <thead>
-        <tr>
-          <th>Day1</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
-        </tr>
-      </thead>
-    <tbody>
-        <tr>
-          <th>1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th>2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th>3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-  </table>
-  <table id="day2" class="table-schedule tab-content">
-   <thead>
-        <tr>
-          <th>Day2</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
-        </tr>
-      </thead>
-    <tbody>
-        <tr>
-          <th>1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th>2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th>3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-  </table>
-</div> 
-</div><!-- End of Schedule -->
-<div id="sponsor">
-  <div class="row">
-    <div class="level">
-      <%=image_tag("sponsorship_level_1.png")%>
+  <div id="coc">
+    <div class="row">
+      <div class="col-sm-12">
+      <h1>Code of conduct</h1>
+      <p>In the same way that Matz has written Ruby in order to make developers happy, we are also focused on making the community happy. The RubyConf Taiwan and Ruby Taiwan gather wonderful people from a diverse range of backgrounds, and we want to create a welcoming and safe environment where everyone eagers to join. </p>
+      <p>When we come together, we insist on what we have believe as a community from the beginning — to provide everyone with opportunities to showcase the best of what he/she can be. We are there to support our peers — to build each other up, to accept each other for who they are, and to encourage each other to become the people they want to be.</p>
+      <p>With that in mind, if you will be present at RubyConf Taiwan, whether as an attendee, organiser, sponsor or speaker, we take it as given that you agree to follow this code of conduct:
+      </p>
+      <p>The RubyConf Taiwan organisation is dedicated to providing harassment-free experiences at events and conferences for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, religion, or age. We do not tolerate harassment in any form.</p>
+      <p>All communication should be appropriate for professional audience including people of different backgrounds. Sexual languages and imageries are not acceptable in any circumstance.
+      </p>
+      <p>Be kind to others. Do not insult or put down other members of the community. Be respectful towards others. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for events supported by RubyConf Taiwan.</p>
+      <p>Anyone violating these rules at events may be asked to leave the event without a refund at the sole discretion of the organisers.</p>
+      <p>If you or someone else is subject to harassment, or you have a concern, please contact the event organisers (who will introduce themselves at the beginning of the event), or member of the <a href="mailto:contact@rubyconf.tw">RubyConf Taiwan Staff</a>.</p>
+      <p>Ruby Taiwan community is a welcoming and friendly place – thank you for being a part of it.</p>
+      </div>
     </div>
-    <% @sponsors.each do |sponsor| %>
-    <div class="col-sm-6">
-      <div class="avatar">    
-        <div class="imagecontainer">
-        <%= image_tag sponsor.image, class:"sponsor_ruby" %>
+  </div>
+  <div id="schedule">
+  <div class="row">
+   <div class="btn">
+    <%=link_to "Day 1","#day1",class: "white_btn"%>
+    <%=link_to "Day 2","#day2",class: "blue_btn"%>
+    </div>
+    <table id="day1" class="table-schedule tab-content current">
+     <thead>
+          <tr>
+            <th>Day1</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+      <tbody>
+          <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+    </table>
+    <table id="day2" class="table-schedule tab-content">
+     <thead>
+          <tr>
+            <th>Day2</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+      <tbody>
+          <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+  </div><!-- End of Schedule -->
+  <div id="sponsor">
+    <div class="row">
+      <div class="level">
+        <%=image_tag("sponsorship_level_1.png")%>
+      </div>
+      <% @sponsors.each do |sponsor| %>
+      <div class="col-sm-6">
+        <div class="avatar">
+          <div class="imagecontainer">
+          <%= image_tag sponsor.image, class:"sponsor_ruby" %>
+          </div>
         </div>
-      </div>   
-    </div> 
-    <% end %>
-    </div>
-    
-</div>
+      </div>
+      <% end %>
+      </div>
 
+    </div>
+  </div>
 </div>
 
 <footer>
@@ -168,14 +167,3 @@
   <%=image_tag("dwarf2.png", class: "dwarf2")%>
   <%=image_tag("dwarf3.png", class: "dwarf3")%>
 </footer>
-
-<script src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
-<script>
-  $( "nav li a" ).mouseenter(function() {
-  $( this ).animate({opacity:'1'},"slow");
-});
-$( "nav li a" ).mouseleave(function() {
-  $( this ).animate({opacity:'0'},"slow");
-});
-
-</script>
