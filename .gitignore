@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+/.powenv
 
 /config/database.yml
 

@@ -41,6 +41,7 @@ gem 'gretel'
 gem 'therubyracer', platforms: :ruby
 gem 'libv8'
 group :development, :test do
+  gem 'quiet_assets'
   gem 'sqlite3'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -64,4 +65,4 @@ group :test do
 end
 
 gem 'pg'
-
+gem 'highline'

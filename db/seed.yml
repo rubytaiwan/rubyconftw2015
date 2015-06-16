@@ -1,0 +1,16 @@
+:speaker:
+  -
+    name: Matsumoto Yukihiro
+    avatar_path: 'public/fixtures/speakers/matz.png'
+    biography: "Father or Ruby Programming Language"
+    subject: 'TBD'
+  -
+    name: Sarah Allen
+    avatar_path: 'public/fixtures/speakers/sarahallen.png'
+    biography: "Co-founder of Mightyverse and Presidential Innovation Fellow at the Smithsonian Institution."
+    subject: 'TBD'
+  -
+    name: Aaron Patterson
+    avatar_path: 'public/fixtures/speakers/temderlove.png'
+    biography: "Famous Ruby and Rails committer."
+    subject: 'TBD'
