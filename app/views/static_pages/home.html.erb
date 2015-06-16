@@ -1,12 +1,15 @@
+
 <nav id="front-nav"> 
 <ul>
   <li class="home_ic"><a href="#home"><%= image_tag('menu_home.png')%></a></li>
   <li class="speaker_ic"><a href="#speaker"><%= image_tag('menu_speaker.png')%></a></li>
   <li class="coc_ic"><a href="#coc"><%= image_tag('menu_coc.png')%></a></li>
-  <li class="sponser_ic"><a href="#speaker"><%= image_tag('menu_sponser.png')%></a></li>
+  <li class=""><a href="#schedule"><%= image_tag('menu_schedule.png')%></a></li>
+  <li class="sponsor_ic"><a href="#sponsor"><%= image_tag('menu_sponser.png')%></a></li>
 </ul>
-</nav> 
-<header id="home">
+</nav>
+div#id 
+<div id="home">
   <div class="logo"><%=image_tag("logo.png")%></div>
   <%=image_tag("gif/ruby_rotate.gif", class: "ruby")%>
   <%=image_tag("cloud2_airplan.png", class: "cloud2")%>
@@ -35,11 +38,12 @@
   <%=link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "blue_btn", target: "_blank"%>
   </div>
   
-</header>
+</div>
+
+<div id="speaker">
 <div class="block">
 <%=image_tag("mountain1.png", class: "mountain")%>
 </div>
-<div id="speaker">
   <div class="row">
     <% @speakers.each do |speaker| %>
     <div class="col-sm-4">
@@ -76,11 +80,16 @@
 </div>
 <div id="schedule">
 <div class="row">
- <div class="btn">
-  <%=link_to "Day 1","#day1",class: "white_btn"%>
-  <%=link_to "Day 2","#day2",class: "blue_btn"%>
+<div class="call-for-proposal">
+  <h1>We still looking for speakers.<br>If you want to join us.<br>Click “call for proposal” button! </h1>
+  
+</div>
+<div class="btn">
+  <%#=link_to "Day 1","#day1",class: "white_btn"%>
+  <%#=link_to "Day 2","#day2",class: "blue_btn"%>
+  <%=link_to "Day 1","#day1",class: "blue_btn"%>
   </div>
-  <table id="day1" class="table-schedule tab-content current">
+  <!--  <table id="day1" class="table-schedule tab-content current">
    <thead>
         <tr>
           <th>Day1</th>
@@ -139,9 +148,15 @@
           <td>@twitter</td>
         </tr>
       </tbody>
-  </table>
-</div> 
+  </table>-->
+</div>  
+<%=image_tag("dwarf3.png", class: "dwarf-schdule")%>
+<%=image_tag("mountain.png", class: "mountain")%>
 </div><!-- End of Schedule -->
+
+<div id="venue">
+  
+</div>
 <div id="sponsor">
   <div class="row">
     <div class="level">
@@ -175,7 +190,29 @@
   $( this ).animate({opacity:'1'},"slow");
 });
 $( "nav li a" ).mouseleave(function() {
-  $( this ).animate({opacity:'0'},"slow");
+  $( this ).css("opacity","0");
+  //$( this ).animate({opacity:'0'},"fast");
 });
 
 </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFSYBzU149v3h0Orot-FPewIHbzX72Flw"></script>
+    <script>
+function initialize() {
+  var myLatlng = new google.maps.LatLng(25.041384,121.611353);
+  var mapOptions = {
+    zoom: 18,
+    center: myLatlng,
+    scrollwheel: false
+  }
+  var map = new google.maps.Map(document.getElementById('venue'), mapOptions);
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      //icon: "location_ic.png",
+      title: 'Hello World!'
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>

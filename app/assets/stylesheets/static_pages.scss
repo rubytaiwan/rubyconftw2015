@@ -26,7 +26,7 @@ img{
 margin-left: 30%;
 background-color: transparent;
 }
-header{
+#home{
 	background-color: #173E71;
 	background-image: url('background_icon.png');
 	padding: 128px 0 0px 0;
@@ -132,7 +132,7 @@ nav#front-nav{
  	z-index: 2;
 	li { 
 	  list-style-image:url('menu_line.png'); 
-	  margin: 15px 0px;
+	  margin: -25px 0px;
 	}
 	li:hover{
 	  list-style-image:url('menu_line_hover.png'); 
@@ -176,6 +176,9 @@ z-index: 1;
 		width: 60%;
 	}
 }
+#speaker{
+	padding-top: 0;
+}
 #coc{
 	background-color: $coc-pink;
 	color: #fff;
@@ -199,11 +202,24 @@ z-index: 1;
 	background-color: #4BA9FA;
 	text-align: center;
 	padding-top: 70px;
-	padding-bottom: 70px;
 	color: #fff;
-	.row{
-	margin-left: 30%;
-	// background-color: $green-color;
+	
+	.call-for-proposal{
+		margin: 22px 0 46px 0;
+		h1{
+		font-family: "Tamil MN";
+		font-weight: bold;
+		color: #fff;
+		font-size: 28px;
+		line-height: 1.8em;
+	  }
+	}
+	.dwarf3{
+	position: absolute;
+	left: 100px;
+  	bottom: 65px;
+	-moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+	-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 	}
 	.btn{
 		text-align: center;
@@ -255,6 +271,12 @@ z-index: 1;
 
 .tab-content.current{
 	display: table;
+}
+#venue{
+	height: 500px;
+    width:100%;
+    margin: 0px;
+    padding: 0px
 }
 footer{
 	position: relative;
