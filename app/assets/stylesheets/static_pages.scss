@@ -121,7 +121,11 @@ background-color: transparent;
 	}
 
 }
-nav#front-nav{
+.nav > li > a:hover, .nav > li > a:focus {
+	  list-style-image:url('menu_line_hover.png');
+	   background: transparent;
+}
+#front-nav{
 	position: fixed;
 	top: 80px;
  	left: 68px;
@@ -132,10 +136,12 @@ nav#front-nav{
 	}
 	li:hover{
 	  list-style-image:url('menu_line_hover.png');
+	  
 	}
 	li a{
 	 	opacity: 0;
 	}
+	
 }
 
 img.mountain{
@@ -211,7 +217,7 @@ z-index: 1;
 	margin-left: 30%;
 	}
 	.call-for-proposal {
-	  margin: 5% 0 5% 0 ;
+	  margin: 8% 0 ;
 	}
 	.schedule-frame {
 	  width: 589px;
@@ -225,7 +231,7 @@ z-index: 1;
 	  right: 100px;
 	}
 	.schedule-bottom{
-		margin-top: 100px;
+		margin-top: 320px;
 	}
 	.btn{
 		text-align: center;

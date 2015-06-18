@@ -1,4 +1,4 @@
-<nav id="front-nav" class="navbar">
+<nav id="front-nav" >
   <ul class="nav">
     <li class="home_ic"><a href="#home"><%= image_tag('menu_home.png')%></a></li>
     <li class="speaker_ic"><a href="#speaker"><%= image_tag('menu_speaker.png')%></a></li>
@@ -65,13 +65,16 @@
   </div>
   <div id="schedule">
     <div class="row">
-      <div class="schedule-frame"></div>
-      <div class="call-for-proposal">              
+      <div class="schedule-frame">
+        <div class="call-for-proposal">              
         <h1>We still looking for speakers.<br>If you want to join us.<br>Click “call for proposal” button! </h1>
-      </div>   
-      <div class="btn">   
+        </div> 
+        <div class="btn">   
         <%=link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "blue_btn", target: "_blank"%>
+        </div>
       </div>
+        
+      
     </div> 
     <div class="schedule-bottom"> 
       <%=image_tag("dwarf3.png", class: "dwarf-schdule")%>
