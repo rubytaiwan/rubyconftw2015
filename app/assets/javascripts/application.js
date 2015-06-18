@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require cocoon
-//= require jquery-scrollspy
+//= require jquery.scrollstop
 //= require static_pages
