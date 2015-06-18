@@ -4,6 +4,7 @@
 $green-color: #66CC99;
 $blue-color: #173E71;
 $coc-pink:#ED4D84;
+
 html{
 	width: 100%;
 	overflow-x: hidden;
@@ -14,10 +15,6 @@ body{
 }
 img{
 	max-width: 100%;
-}
-.green_block{
-	background-color: $green-color;
-	padding-top: 200px;
 }
 .block{
 	background-color: $blue-color;
@@ -59,7 +56,6 @@ background-color: transparent;
 	 overflow-x: hidden;
 	 z-index: 1;
 	}
-
 	img.shovel{
 	position: absolute;
 	z-index: 0;
@@ -127,7 +123,7 @@ background-color: transparent;
 }
 nav#front-nav{
 	position: fixed;
-	top: 250px;
+	top: 80px;
  	left: 68px;
  	z-index: 2;
 	li {
@@ -204,19 +200,37 @@ z-index: 1;
 	background-color: #4BA9FA;
 	text-align: center;
 	padding-top: 70px;
-	padding-bottom: 70px;
 	color: #fff;
+	h1{
+		font-family: "Tamil MN";
+		font-size: 28px;
+		font-weight: bold;
+		line-height: 1.5;
+	}
 	.row{
 	margin-left: 30%;
-	// background-color: $green-color;
+	}
+	.call-for-proposal {
+	  margin: 5% 0 5% 0 ;
+	}
+	.schedule-frame {
+	  width: 589px;
+	  height: 358px;
+	  margin-left: 15%;
+	  position: absolute;
+	  background:url('schedule.png');
+	}
+	img.dwarf-schdule {
+	  position: absolute;
+	  right: 100px;
+	}
+	.schedule-bottom{
+		margin-top: 100px;
 	}
 	.btn{
 		text-align: center;
-		display: block;
 		text-transform: capitalize;
 		font-size: 14pt;
-		height: auto;
-		padding-bottom: 70px;
 		a{
 			text-decoration: none;
 		}
@@ -261,7 +275,8 @@ z-index: 1;
 .tab-content.current{
 	display: table;
 }
-footer{
+
+#staff{
 	position: relative;
 	z-index: -1;
 	img.footer-bg{

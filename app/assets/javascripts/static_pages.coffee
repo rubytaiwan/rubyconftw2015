@@ -14,11 +14,12 @@ $(document).ready ->
   $('#sections > div').each (i, sec) ->
     link = $("a[href='##{sec.id}']")
     $(sec).scrollspy
-      min: $(sec).position().top - 100
-      max: $(sec).position().top + $(sec).height() - 100
+      min: $(sec).position().top + 0
+      max: $(sec).position().top + $(sec).height() - 0
       onEnter: (ele, pos) ->
         link.trigger('mouseenter')
         console.log "Enter #{ele.id}"
       onLeave: (ele, pos) ->
         link.trigger('mouseleave')
         console.log "Leave #{ele.id}"
+
