@@ -4,6 +4,7 @@
 $green-color: #66CC99;
 $blue-color: #173E71;
 $coc-pink:#ED4D84;
+
 html{
 	width: 100%;
 	overflow-x: hidden;
@@ -15,10 +16,6 @@ body{
 img{
 	max-width: 100%;
 }
-.green_block{
-	background-color: $green-color;
-	padding-top: 200px;
-}
 .block{
 	background-color: $blue-color;
 }
@@ -26,7 +23,7 @@ img{
 margin-left: 30%;
 background-color: transparent;
 }
-header{
+#home{
 	background-color: #173E71;
 	background-image: url('background_icon.png');
 	padding: 128px 0 0px 0;
@@ -45,29 +42,28 @@ header{
      position: absolute;
      top: 38px;
      left: 17%;
-	
+
 	}
 	img.cloud1{
 	 position: absolute;
      top: 541px;
      right: 8.7%;
-	}	
-	img.cloud3{	 
+	}
+	img.cloud3{
      // position: absolute;
      margin-top: 50px;
 	 margin-left: 96%;
-	 overflow-x: hidden;	
+	 overflow-x: hidden;
 	 z-index: 1;
 	}
-
 	img.shovel{
 	position: absolute;
-	z-index: 0;	
+	z-index: 0;
 	right: 13%;
 	top:635px;
 	}
-	
-	.social{	
+
+	.social{
   	position: absolute;
   	right: 36px;
   	top:314px;
@@ -86,8 +82,8 @@ header{
 		img{float:left;}
 		p{float:left;letter-spacing: 2px;  margin-left: 10px;}
 		.info-inner{
-			display: inline-block;	
-			margin: 0 3%;	
+			display: inline-block;
+			margin: 0 3%;
 		}
 
 	}
@@ -101,9 +97,9 @@ header{
 			text-decoration: none;
 		}
 		.white_btn{
-			background-color: #fff;	
-			border: 2px solid #fff;	
-			border-radius: 3px;			
+			background-color: #fff;
+			border: 2px solid #fff;
+			border-radius: 3px;
 			color: $blue-color;
 			padding: 20px 85px;
 			margin: 0 15px;
@@ -111,41 +107,47 @@ header{
 		}
 		.blue_btn{
 			background-color: $blue-color;
-			border: 2px solid #fff;	
-			border-radius: 3px;		
+			border: 2px solid #fff;
+			border-radius: 3px;
 			color: #fff;
 			padding: 20px 64px;
 			margin: 0 15px;
 		}
-		
+
 	}
 	.disabled{
-		cursor: default; 
-		opacity: 0.5;	
+		cursor: default;
+		opacity: 0.5;
 	}
 
 }
-nav#front-nav{
+.nav > li > a:hover, .nav > li > a:focus {
+	  list-style-image:url('menu_line_hover.png');
+	   background: transparent;
+}
+#front-nav{
 	position: fixed;
-	top: 250px;
+	top: 80px;
  	left: 68px;
  	z-index: 2;
-	li { 
-	  list-style-image:url('menu_line.png'); 
+	li {
+	  list-style-image:url('menu_line.png');
 	  margin: 15px 0px;
 	}
 	li:hover{
-	  list-style-image:url('menu_line_hover.png'); 
+	  list-style-image:url('menu_line_hover.png');
+	  
 	}
 	li a{
 	 	opacity: 0;
 	}
+	
 }
 
 img.mountain{
 max-width: 104%;
 width: 100%;
-z-index: 1;	
+z-index: 1;
 }
 
 #speaker,#sponsor{
@@ -176,6 +178,11 @@ z-index: 1;
 		width: 60%;
 	}
 }
+
+#speaker{
+  padding-top: 0;
+}
+
 #coc{
 	background-color: $coc-pink;
 	color: #fff;
@@ -199,26 +206,44 @@ z-index: 1;
 	background-color: #4BA9FA;
 	text-align: center;
 	padding-top: 70px;
-	padding-bottom: 70px;
 	color: #fff;
+	h1{
+		font-family: "Tamil MN";
+		font-size: 28px;
+		font-weight: bold;
+		line-height: 1.5;
+	}
 	.row{
 	margin-left: 30%;
-	// background-color: $green-color;
+	}
+	.call-for-proposal {
+	  margin: 8% 0 ;
+	}
+	.schedule-frame {
+	  width: 589px;
+	  height: 358px;
+	  margin-left: 15%;
+	  position: absolute;
+	  background:url('schedule.png');
+	}
+	img.dwarf-schdule {
+	  position: absolute;
+	  right: 100px;
+	}
+	.schedule-bottom{
+		margin-top: 320px;
 	}
 	.btn{
 		text-align: center;
-		display: block;
 		text-transform: capitalize;
 		font-size: 14pt;
-		height: auto;
-		padding-bottom: 70px;
 		a{
 			text-decoration: none;
 		}
 		.white_btn{
-			background-color: #fff;	
-			border: 2px solid #fff;	
-			border-radius: 3px;			
+			background-color: #fff;
+			border: 2px solid #fff;
+			border-radius: 3px;
 			color: #4BA9FA;
 			padding: 20px 85px;
 			margin: 0 15px;
@@ -226,13 +251,13 @@ z-index: 1;
 		}
 		.blue_btn{
 			background-color: transparent;
-			border: 2px solid #fff;	
-			border-radius: 3px;		
+			border: 2px solid #fff;
+			border-radius: 3px;
 			color: #fff;
 			padding: 20px 85px;
 			margin: 0 15px;
 		}
-		
+
 	}
 }
 .table-schedule{
@@ -256,7 +281,8 @@ z-index: 1;
 .tab-content.current{
 	display: table;
 }
-footer{
+
+#staff{
 	position: relative;
 	z-index: -1;
 	img.footer-bg{

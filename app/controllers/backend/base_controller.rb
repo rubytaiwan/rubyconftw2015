@@ -18,8 +18,6 @@ class Backend::BaseController < ApplicationController
       end
       f.json
     end
-  else
-    flash[:success] = t('flash.warning')
   end
 
   def destroy
@@ -79,7 +77,7 @@ class Backend::BaseController < ApplicationController
   def current_object
     @current_object ||= collection_scope.find(params[:id])
   end
-  
+
   def logged_in_user
       unless logged_in?
         flash[:danger] = "Please log in."
