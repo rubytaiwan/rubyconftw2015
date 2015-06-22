@@ -1,7 +1,13 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+$green-color: #66CC99;
+$blue-color: #173E71;
+$coc-pink:#ED4D84;
+html{
+	width: 100%;
+	overflow-x: hidden;
+}
 body{
 	margin:0;
 	overflow-x:hidden;
@@ -9,13 +15,32 @@ body{
 img{
 	max-width: 100%;
 }
-header{
+.green_block{
+	background-color: $green-color;
+	padding-top: 200px;
+}
+.block{
+	background-color: $blue-color;
+}
+.row{
+margin-left: 30%;
+background-color: transparent;
+}
+#home{
 	background-color: #173E71;
-	padding: 128px 0 130px 0;
+	background-image: url('background_icon.png');
+	padding: 128px 0 0px 0;
 	.logo{
 	text-align: center;
 	}
-	
+	.bg_icon{
+		z-index: 0;
+	}
+	img.ruby{
+	  position: absolute;
+	  top: 130px;
+  	  right: 28%;
+	}
 	img.cloud2{
      position: absolute;
      top: 38px;
@@ -28,29 +53,20 @@ header{
      right: 8.7%;
 	}	
 	img.cloud3{	 
-     position: absolute;
-     top: 555px;
-     right: -3%;	
+     // position: absolute;
+     margin-top: 50px;
+	 margin-left: 96%;
+	 overflow-x: hidden;	
+	 z-index: 1;
 	}
-	img.mountain{
-	position: absolute;
-	max-width: 104%;
-	width: 104%;
-	right: -17px;
-	z-index: 1;	
 
-	}
 	img.shovel{
 	position: absolute;
 	z-index: 0;	
 	right: 13%;
-	top:584px;
+	top:635px;
 	}
-	.disabled{
-		cursor: default; 
-		// opacity: 0.5;
-		display: none;
-	}
+	
 	.social{	
   	position: absolute;
   	right: 36px;
@@ -64,7 +80,7 @@ header{
 		text-align: center;
 		display: block;
 		color: #fff;
-		margin-top: 2%;
+		margin-top: -5%;
 		margin-bottom: 2%;
 		font-family: "Songti TC";
 		img{float:left;}
@@ -78,67 +94,191 @@ header{
 	.btn{
 		text-align: center;
 		display: block;
-		letter-spacing: 45px;
+		text-transform: capitalize;
+		font-size: 14pt;
+		height: 67px;
+		a{
+			text-decoration: none;
+		}
+		.white_btn{
+			background-color: #fff;	
+			border: 2px solid #fff;	
+			border-radius: 3px;			
+			color: $blue-color;
+			padding: 20px 85px;
+			margin: 0 15px;
+
+		}
+		.blue_btn{
+			background-color: $blue-color;
+			border: 2px solid #fff;	
+			border-radius: 3px;		
+			color: #fff;
+			padding: 20px 64px;
+			margin: 0 15px;
+		}
+		
+	}
+	.disabled{
+		cursor: default; 
+		opacity: 0.5;	
 	}
 
 }
 nav#front-nav{
 	position: fixed;
-	// top: 30%;
-	top: 300px;
+	top: 250px;
  	left: 68px;
  	z-index: 2;
-	.list-group-icon {
-	  position: relative;
-	  display: block;
-	  padding: 10px 15px;
-	  margin-bottom: -1px;
+	li { 
+	  list-style-image:url('menu_line.png'); 
+	  margin: -25px 0px;
 	}
-	a.list-group-icon {
-		color: #fff;
-		img{
-			opacity: 0;
-		}
+	li:hover{
+	  list-style-image:url('menu_line_hover.png'); 
 	}
-	a.list-group-icon:hover, a.list-group-icon:focus {
-	  text-decoration: none;
-	  
-	  img{
-			opacity: 1;
-		}
+	li a{
+	 	opacity: 0;
 	}
-}
-.green_block{
-	background-color: #00CCB2;
-	padding-top: 100px;
 }
 
-#speaker{
-	background-color: #00CCB2;
+img.mountain{
+max-width: 104%;
+width: 100%;
+z-index: 1;	
+}
+
+#speaker,#sponsor{
+	background-color: $green-color;
 	text-align: center;
-	
-	.row{
-	margin-left: 30%;
-	}
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+
 	.col-sm-4{
 	padding-left: 60px;
   	padding-right: 60px;
   	padding-bottom: 100px;
-  	// width:31.333%;
-  	// display: table-cell;
 	}
 	h3{
-		font-family: "Heiti TC";
+		font-family: "Tamil MN";
+		font-weight: bold;
 		color: #318777;
 		font-size: 20px;
 	}
 	p{
 		color: #fff;
 	}
+	.level{
+		padding: 30px;
+	}
+	img.sponsor_ruby{
+		width: 60%;
+	}
+}
+#speaker{
+	padding-top: 0;
+}
+#coc{
+	background-color: $coc-pink;
+	color: #fff;
+
+	h1{
+		font-family: "Tamil MN";
+		font-weight: bold;
+		font-size: 50px;
+	}
+	p{
+		font-family: "Helvetica Neue";
+		font-size: 20px;
+		line-height: 2;
+	}
+	.col-sm-12{
+		margin: 106px 0;
+		padding-right: 50px;
+	}
+}
+#schedule{
+	background-color: #4BA9FA;
+	text-align: center;
+	padding-top: 70px;
+	color: #fff;
+	
+	.call-for-proposal{
+		margin: 22px 0 46px 0;
+		h1{
+		font-family: "Tamil MN";
+		font-weight: bold;
+		color: #fff;
+		font-size: 28px;
+		line-height: 1.8em;
+	  }
+	}
+	.dwarf3{
+	position: absolute;
+	left: 100px;
+  	bottom: 65px;
+	-moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+	-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+	}
+	.btn{
+		text-align: center;
+		display: block;
+		text-transform: capitalize;
+		font-size: 14pt;
+		height: auto;
+		padding-bottom: 70px;
+		a{
+			text-decoration: none;
+		}
+		.white_btn{
+			background-color: #fff;	
+			border: 2px solid #fff;	
+			border-radius: 3px;			
+			color: #4BA9FA;
+			padding: 20px 85px;
+			margin: 0 15px;
+
+		}
+		.blue_btn{
+			background-color: transparent;
+			border: 2px solid #fff;	
+			border-radius: 3px;		
+			color: #fff;
+			padding: 20px 85px;
+			margin: 0 15px;
+		}
+		
+	}
+}
+.table-schedule{
+	width: 90%;
+	thead{
+		background-color: #469EEB;
+	}
+	th{
+	padding: 25px;
+	text-align: center;
+	}
 }
 
+.table-schedule>tbody>tr:nth-of-type(even) {
+  background-color: #469EEB;
+}
+.tab-content{
+  display: none;
+}
+
+.tab-content.current{
+	display: table;
+}
+#venue{
+	height: 500px;
+    width:100%;
+    margin: 0px;
+    padding: 0px
+}
 footer{
-	//background-color: #00CCB2;
 	position: relative;
 	z-index: -1;
 	img.footer-bg{
@@ -164,3 +304,4 @@ footer{
 	-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 	}
 }
+

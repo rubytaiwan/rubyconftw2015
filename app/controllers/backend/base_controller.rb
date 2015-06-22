@@ -1,7 +1,7 @@
 class Backend::BaseController < ApplicationController
   layout 'backend'
   helper_method :current_collection, :current_object
-
+  before_action :logged_in_user
   def index
   end
 
@@ -18,6 +18,8 @@ class Backend::BaseController < ApplicationController
       end
       f.json
     end
+  else
+    flash[:success] = t('flash.warning')
   end
 
   def destroy
@@ -77,5 +79,12 @@ class Backend::BaseController < ApplicationController
   def current_object
     @current_object ||= collection_scope.find(params[:id])
   end
+  
+  def logged_in_user
+      unless logged_in?
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
 
 end
