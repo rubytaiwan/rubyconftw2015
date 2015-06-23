@@ -20,8 +20,14 @@ img{
 	background-color: $blue-color;
 }
 .row{
-margin-left: 30%;
-background-color: transparent;
+  margin-left: 30%;
+  background-color: transparent;
+  
+}
+#home,#speaker,#sponsor,#coc,#schedule{
+  background-image: image-url("tub_repeat_y.png");
+  background-repeat: repeat-y;
+  background-position: 237px 0%;
 }
 #home{
 	background-color: #173E71;
@@ -50,7 +56,6 @@ background-color: transparent;
      right: 8.7%;
 	}
 	img.cloud3{
-     // position: absolute;
      margin-top: 50px;
 	 margin-left: 96%;
 	 overflow-x: hidden;
@@ -148,18 +153,16 @@ background-color: transparent;
 img.mountain{
 max-width: 104%;
 width: 100%;
-z-index: 1;
+// z-index: 1;
 }
 .tub-repeat{
-	background-repeat: repeat-y;
-    background-image: image-url("tub_repeat_y.png");
+    
 }
 #speaker,#sponsor{
 	background-color: $green-color;
 	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
-
 
 	.col-sm-4{
 	padding-left: 60px;
@@ -237,8 +240,14 @@ z-index: 1;
 	  position: absolute;
 	  right: 100px;
 	}
+	img.mountain-tub{
+	   position: absolute;
+	   width: 95px;
+  	   height: 250px;
+	   left: 237px;
+	 }
 	.schedule-bottom{
-		margin-top: 320px;
+	  margin-top: 320px;
 	}
 	.btn{
 		text-align: center;
@@ -294,6 +303,18 @@ z-index: 1;
 	z-index: -1;
 	img.footer-bg{
 		width: 100%;
+	}
+	img.staff-tub{
+	  position: absolute;
+	  bottom: 119px;
+	  left: 237px;
+	  height: 500px;
+  	  width: 95px;
+	 }
+	img.tub-bottom{
+	  position: absolute;
+	  left: 300px;
+  	  bottom: 155px;
 	}
 	.dwarf1{
 	position: absolute;
