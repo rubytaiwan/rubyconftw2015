@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150429145324) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
@@ -34,6 +31,14 @@ ActiveRecord::Schema.define(version: 20150429145324) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "sponsers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "image"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "sponsors", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
@@ -50,6 +55,6 @@ ActiveRecord::Schema.define(version: 20150429145324) do
     t.string   "password_digest"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
