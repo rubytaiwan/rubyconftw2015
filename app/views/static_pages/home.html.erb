@@ -7,7 +7,9 @@
     <li class="sponser_ic"><a href="#sponsor"><%= image_tag('menu_sponser.png')%></a></li>
   </ul>
 </nav>
+
 <div id="sections">
+  <div id="tub_repeat"> </div>
   <div id="home">
     <div class="logo"><%=image_tag("logo.png")%></div>
     <%=image_tag("gif/ruby_rotate.gif", class: "ruby")%>
@@ -80,7 +82,6 @@
     </div> 
     <div class="schedule-bottom"> 
       <%=image_tag("dwarf3.png", class: "dwarf-schdule")%>
-      <%=image_tag("tub_repeat_y.png",class: "mountain-tub")%>
       <%=image_tag("mountain.png", class: "mountain")%>
     </div>
   </div><!-- End of Schedule -->
@@ -100,13 +101,14 @@
       <% end %>
     </div>
   </div>
-</div><!-- End of sections-->
-
-<div id="staff">
+  <div id="staff">
   <%=image_tag("footer.png", class: "footer-bg")%>
-  <%=image_tag("tub_repeat_y.png",class: "staff-tub")%>
   <%=image_tag("tub_bottom.png",class: "tub-bottom")%>
   <%=image_tag("dwarf1.png", class: "dwarf1")%>
   <%=image_tag("dwarf2.png", class: "dwarf2")%>
   <%=image_tag("dwarf3.png", class: "dwarf3")%>
-</div>
+  </div>
+
+</div><!-- End of sections-->
+
+

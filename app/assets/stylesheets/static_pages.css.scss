@@ -6,11 +6,14 @@ $blue-color: #173E71;
 $coc-pink:#ED4D84;
 
 html{
+	height: 100%;
 	width: 100%;
 	overflow-x: hidden;
 }
 body{
-	margin:0;
+	min-height:100%;
+	margin: 0;
+	padding: 0;
 	overflow-x:hidden;
 }
 img{
@@ -22,12 +25,21 @@ img{
 .row{
   margin-left: 30%;
   background-color: transparent;
-  
 }
-#home,#speaker,#sponsor,#coc,#schedule{
+
+#sections{
+	position: relative;
+	height: 100%;
+	display: block; 
+}
+#tub_repeat{
+  position: absolute;
   background-image: image-url("tub_repeat_y.png");
   background-repeat: repeat-y;
   background-position: 237px 0%;
+  width: 100%;
+  top:650px;
+  bottom: 80px;
 }
 #home{
 	background-color: #173E71;
@@ -240,12 +252,7 @@ width: 100%;
 	  position: absolute;
 	  right: 100px;
 	}
-	img.mountain-tub{
-	   position: absolute;
-	   width: 95px;
-  	   height: 250px;
-	   left: 237px;
-	 }
+	
 	.schedule-bottom{
 	  margin-top: 320px;
 	}
@@ -304,13 +311,6 @@ width: 100%;
 	img.footer-bg{
 		width: 100%;
 	}
-	img.staff-tub{
-	  position: absolute;
-	  bottom: 119px;
-	  left: 237px;
-	  height: 500px;
-  	  width: 95px;
-	 }
 	img.tub-bottom{
 	  position: absolute;
 	  left: 300px;
