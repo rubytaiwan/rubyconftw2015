@@ -121,18 +121,19 @@ background-color: transparent;
 	}
 
 }
-.nav > li > a:hover, .nav > li > a:focus {
-	  list-style-image:url('menu_line_hover.png');
-	   background: transparent;
-}
+// .nav > li > a:hover, .nav > li > a:focus {
+// 	  list-style-image:url('menu_line_hover.png');
+// 	   background: transparent;
+// }
 #front-nav{
 	position: fixed;
-	top: 80px;
+	top: 247px;
  	left: 68px;
  	z-index: 2;
+
 	li {
 	  list-style-image:url('menu_line.png');
-	  margin: 15px 0px;
+	  margin: -15px 0px;
 	}
 	li:hover{
 	  list-style-image:url('menu_line_hover.png');
