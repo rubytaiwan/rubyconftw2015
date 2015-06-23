@@ -1,10 +1,10 @@
 /*
- *= require_tree .
  *= require_self
+ *= require static_pages
  */
 
 
-// @import "bootstrap-sprockets";
-// @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";

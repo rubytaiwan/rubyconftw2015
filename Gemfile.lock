@@ -134,6 +134,7 @@ GEM
       guard-compat (~> 1.2)
       minitest (>= 3.0)
     hashie (3.4.0)
+    highline (1.7.2)
     hirb (0.7.3)
     hirb-unicode (0.0.5)
       hirb (~> 0.5)
@@ -206,6 +207,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    quiet_assets (1.1.0)
+      railties (>= 3.1, < 5.0)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -325,6 +328,7 @@ DEPENDENCIES
   gretel
   guard
   guard-minitest
+  highline
   hirb-unicode
   jbuilder (~> 2.0)
   jquery-rails
@@ -334,6 +338,7 @@ DEPENDENCIES
   minitest-reporters
   omniauth-facebook
   pg
+  quiet_assets
   rails (= 4.2.1)
   rails-i18n
   sass-rails (~> 5.0)
