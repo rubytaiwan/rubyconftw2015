@@ -216,6 +216,10 @@ img.sponsor_ruby{width: 60%;}
 /*--------------schedule-----------*/
 #schedule{
   background-color: #4BA9FA;
+  background-image: image-url('empty_speaker_mountain2.png');
+  background-repeat:no-repeat;
+  background-size:100% auto;
+  background-position:center bottom;
   text-align: center;
   padding-top: 70px;
   color: #fff;
@@ -227,21 +231,20 @@ img.sponsor_ruby{width: 60%;}
   }
 }
 .call-for-proposal {
-  margin: 8% 0 ;
+  padding: 8% 0 ;
 }
 .schedule-frame {
   width: 589px;
   height: 358px;
   margin-left: 15%;
-  position: absolute;
+  margin-bottom: 15%;
   background:image-url('schedule.png');
+  background-position:center bottom;
+   background-size:100% auto;
 }
-img.dwarf-schdule {
-  position: absolute;
-  right: 100px;
-}	
 .schedule-bottom{
-  margin-top: 320px;
+  //margin-top: 320px;
+  
 }
 
 /*--------------schedule table-----------*/
