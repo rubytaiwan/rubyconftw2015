@@ -1,10 +1,10 @@
 <nav id="front-nav" >
-  <ul>
-    <li class="home_ic"><a href="#home"><%= image_tag('menu_home.png')%></a></li>
-    <li class="speaker_ic"><a href="#speaker"><%= image_tag('menu_speaker.png')%></a></li>
-    <li class="coc_ic"><a href="#coc"><%= image_tag('menu_coc.png')%></a></li>
-    <li class="schedule_ic"><a href="#schedule"><%= image_tag('menu_schedule.png')%></a></li>
-    <li class="sponser_ic"><a href="#sponsor"><%= image_tag('menu_sponser.png')%></a></li>
+  <ul class="inner-nav">
+    <li><a href="#home" class="home_ic"></a></li>
+    <li><a href="#speaker" class="speaker_ic"></a></li>
+    <li><a href="#coc" class="coc_ic"></a></li>
+    <li><a href="#schedule" class="schedule_ic"></a></li>
+    <li><a href="#sponser" class="sponser_ic"></a></li>
   </ul>
 </nav>
 
@@ -73,8 +73,8 @@
         <div class="call-for-proposal">              
         <h1>We still looking for speakers.<br>If you want to join us.<br>Click “call for proposal” button! </h1>
         </div> 
-        <div class="btn">   
-        <%=link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "sky_blue_btn", target: "_blank"%>
+        <div class="btn-group">  
+        <%=link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "sky_blue_btn btn btn-outline btn-lg", target: "_blank"%>
         </div>
       </div>      
     </div> 
