@@ -1,5 +1,5 @@
 <nav id="front-nav" >
-  <ul class="nav">
+  <ul>
     <li class="home_ic"><a href="#home"><%= image_tag('menu_home.png')%></a></li>
     <li class="speaker_ic"><a href="#speaker"><%= image_tag('menu_speaker.png')%></a></li>
     <li class="coc_ic"><a href="#coc"><%= image_tag('menu_coc.png')%></a></li>
@@ -7,13 +7,16 @@
     <li class="sponser_ic"><a href="#sponsor"><%= image_tag('menu_sponser.png')%></a></li>
   </ul>
 </nav>
+
 <div id="sections">
+  <div id="tub_repeat"> </div>
   <div id="home">
     <div class="logo"><%=image_tag("logo.png")%></div>
-    <%=image_tag("gif/ruby_rotate.gif", class: "ruby")%>
+    <%=image_tag("gif/ruby_rotate3.gif", class: "ruby")%>
     <%=image_tag("cloud2_airplan.png", class: "cloud2")%>
     <%=image_tag("cloud1.png", class: "cloud1")%>
     <%=image_tag("cloud3.png", class: "cloud3")%>
+    <%=image_tag("tub_top.png", class: "tub_top")%>
     <div class="social">
       <%=link_to image_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan", target: "_blank"%>
       <%=link_to image_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan", target: "_blank"%>
@@ -22,22 +25,23 @@
     <div class="info">
       <div class="info-inner time">
         <%=image_tag("time_ic.png")%>
-        <p>November 9</p>
+        <p>September 11</p>
       </div>
       <div class="info-inner location">
         <%=image_tag("location_ic.png")%>
         <p>H.S.S. Building, Academia Sinica</p>
       </div>
     </div>
-    <div class="btn">
-      <%=link_to "registeration","#",class: "white_btn disabled"%>
-      <%=link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "blue_btn", target: "_blank"%>
+    <div class="btn-group">
+      <%=link_to "registeration","#",class: "white_btn  btn btn-outline btn-lg btn-disabled"%>
+      <%=link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: " blue_btn btn btn-outline btn-lg",role: "button", target: "_blank"%>
     </div>
   </div>
   <div id="speaker">
     <div class="block">
       <%=image_tag("mountain1.png", class: "mountain")%>
     </div>
+    <div class="tub-repeat"></div>
     <div class="row">
       <% @speakers.each do |speaker| %>
       <div class="col-sm-4">
@@ -70,16 +74,10 @@
         <h1>We still looking for speakers.<br>If you want to join us.<br>Click “call for proposal” button! </h1>
         </div> 
         <div class="btn">   
-        <%=link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "blue_btn", target: "_blank"%>
+        <%=link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "sky_blue_btn", target: "_blank"%>
         </div>
-      </div>
-        
-      
+      </div>      
     </div> 
-    <div class="schedule-bottom"> 
-      <%=image_tag("dwarf3.png", class: "dwarf-schdule")%>
-      <%=image_tag("mountain.png", class: "mountain")%>
-    </div>
   </div><!-- End of Schedule -->
   <div id="sponsor">
     <div class="row">
@@ -97,11 +95,10 @@
       <% end %>
     </div>
   </div>
+  <div id="staff">
+  <%=image_tag("footer.png", class: "footer-bg")%>
+  <%=image_tag("tub_bottom.png",class: "tub-bottom")%> 
+  </div>
 </div><!-- End of sections-->
 
-<div id="staff">
-  <%=image_tag("footer.png", class: "footer-bg")%>
-  <%=image_tag("dwarf1.png", class: "dwarf1")%>
-  <%=image_tag("dwarf2.png", class: "dwarf2")%>
-  <%=image_tag("dwarf3.png", class: "dwarf3")%>
-</div>
+
