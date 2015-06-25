@@ -1,19 +1,22 @@
 <nav id="front-nav" >
-  <ul class="nav">
-    <li class="home_ic"><a href="#home"><%= image_tag('menu_home.png')%></a></li>
-    <li class="speaker_ic"><a href="#speaker"><%= image_tag('menu_speaker.png')%></a></li>
-    <li class="coc_ic"><a href="#coc"><%= image_tag('menu_coc.png')%></a></li>
-    <li class="schedule_ic"><a href="#schedule"><%= image_tag('menu_schedule.png')%></a></li>
-    <li class="sponser_ic"><a href="#sponsor"><%= image_tag('menu_sponser.png')%></a></li>
+  <ul class="inner-nav">
+    <li><a href="#home" class="home_ic"></a></li>
+    <li><a href="#speaker" class="speaker_ic"></a></li>
+    <li><a href="#coc" class="coc_ic"></a></li>
+    <li><a href="#schedule" class="schedule_ic"></a></li>
+    <li><a href="#sponser" class="sponser_ic"></a></li>
   </ul>
 </nav>
+
 <div id="sections">
+  <div id="tub_repeat"> </div>
   <div id="home">
     <div class="logo"><%=image_tag("logo.png")%></div>
-    <%=image_tag("gif/ruby_rotate.gif", class: "ruby")%>
+    <%=image_tag("gif/ruby_rotate3.gif", class: "ruby")%>
     <%=image_tag("cloud2_airplan.png", class: "cloud2")%>
     <%=image_tag("cloud1.png", class: "cloud1")%>
     <%=image_tag("cloud3.png", class: "cloud3")%>
+    <%=image_tag("tub_top.png", class: "tub_top")%>
     <div class="social">
       <%=link_to image_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan", target: "_blank"%>
       <%=link_to image_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan", target: "_blank"%>
@@ -22,22 +25,23 @@
     <div class="info">
       <div class="info-inner time">
         <%=image_tag("time_ic.png")%>
-        <p>November 9</p>
+        <p>September 11</p>
       </div>
       <div class="info-inner location">
         <%=image_tag("location_ic.png")%>
         <p>H.S.S. Building, Academia Sinica</p>
       </div>
     </div>
-    <div class="btn">
-      <%=link_to "registeration","#",class: "white_btn disabled"%>
-      <%=link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "blue_btn", target: "_blank"%>
+    <div class="btn-group">
+      <%=link_to "registeration","#",class: "white_btn  btn btn-outline btn-lg btn-disabled"%>
+      <%=link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: " blue_btn btn btn-outline btn-lg",role: "button", target: "_blank"%>
     </div>
   </div>
   <div id="speaker">
     <div class="block">
       <%=image_tag("mountain1.png", class: "mountain")%>
     </div>
+    <div class="tub-repeat"></div>
     <div class="row">
       <% @speakers.each do |speaker| %>
       <div class="col-sm-4">
@@ -58,8 +62,18 @@
     <div class="row">
       <div class="col-sm-12">
         <h1>Code of conduct</h1>
-        <p>In the same way that Matz has written Ruby in order to make developers happy, we are also focused on making the community happy. The RubyConf Taiwan and Ruby Taiwan gather wonderful people from a diverse range of backgrounds, and we want to create a welcoming and safe environment where everyone eagers to join. 
-        </p>     
+        <div class="eight columns">
+          <p>Matz 人很 nice，而我們也都是很 nice 的</p>
+          <p> 為了使開發者更快樂，Matz 創造了 Ruby。同樣的，我們也致力於讓這個社群更快樂。RubyConf Taiwan 與 Ruby Taiwan 中聚集了來自多樣背景的優秀成員，而我們期盼營造出一個人人都想成為其中一份子的，開放且安全的環境。</p>
+          <p>每當我們同聚一堂，我們始終如一，提供所有人舞台去分享各自的最好的部分，我們為同伴提供各種協助 - 去彼此建立關係、去互相接受、並且鼓勵所有人成為他們想要的樣子。</p>
+          <p>顧慮及此，如果您有機會參與 RubyConf Taiwan ，無論是作為一個聽眾、成員、贊助商甚或是講者，我們都需要您遵從以下行為準則：</p>
+          <p>RubyConf Taiwan 組織致力提供一個平等尊重的參與體驗，在每ㄧ場的活動與議程，無論性別、性向、殘疾、外貌、體型、種族、宗教甚至年齡，我們決不容忍任何形式的騷擾與歧視。</p>
+            <p>所有的議程都應該適合來自不同背景的專業聽眾，性暗示語言在任何情況下都是不恰當的。</p>
+          <p>善待他人，請勿侮辱或冷落社群中的成員，永遠彼此尊重。請銘記在心，性騷擾及性別歧視，種族歧視，或是排外的笑話都不受 RubyConf Taiwan 所有活動的歡迎。</p>
+          <p>任何人違反以上規則都會被請離現場並且不會退費，由主辦方斟酌處置。</p>
+          <p>如果您或是有其他人受到騷擾，或您有相關的顧慮，請聯繫主辦者（會在開場前自我介紹），或是 <a href="mailto:contact@rubyconf.tw">RubyConf Taiwan 其他組織成員</a></p>
+          <p>RubyConf Taiwan 社群是一個友善可親的所在 - 且謝謝您也做為其中的一份子。</p>
+      </div>  
       </div>
     </div>
   </div>
@@ -69,17 +83,11 @@
         <div class="call-for-proposal">              
         <h1>We still looking for speakers.<br>If you want to join us.<br>Click “call for proposal” button! </h1>
         </div> 
-        <div class="btn">   
-        <%=link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "blue_btn", target: "_blank"%>
+        <div class="btn-group">  
+        <%=link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "sky_blue_btn btn btn-outline btn-lg", target: "_blank"%>
         </div>
-      </div>
-        
-      
+      </div>      
     </div> 
-    <div class="schedule-bottom"> 
-      <%=image_tag("dwarf3.png", class: "dwarf-schdule")%>
-      <%=image_tag("mountain.png", class: "mountain")%>
-    </div>
   </div><!-- End of Schedule -->
   <div id="sponsor">
     <div class="row">
@@ -97,11 +105,10 @@
       <% end %>
     </div>
   </div>
+  <div id="staff">
+  <%=image_tag("footer.png", class: "footer-bg")%>
+  <%=image_tag("tub_bottom.png",class: "tub-bottom")%> 
+  </div>
 </div><!-- End of sections-->
 
-<div id="staff">
-  <%=image_tag("footer.png", class: "footer-bg")%>
-  <%=image_tag("dwarf1.png", class: "dwarf1")%>
-  <%=image_tag("dwarf2.png", class: "dwarf2")%>
-  <%=image_tag("dwarf3.png", class: "dwarf3")%>
-</div>
+
