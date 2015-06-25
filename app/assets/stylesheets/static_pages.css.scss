@@ -294,6 +294,9 @@ img.mountain{
 	color: #318777;
 	font-size: 20px;
   }
+  p{
+  	font-weight: lighter;
+  }
 }
 img.sponsor_ruby{width: 60%;}
 .level{padding: 30px;}
@@ -314,9 +317,14 @@ img.sponsor_ruby{width: 60%;}
 	font-size: 50px;
   }
   p{
-	font-family: "Helvetica Neue";
+	font-family: "Helvetica Neue", sans-serif;;
 	font-size: 20px;
-	line-height: 2;
+	line-height: 1.5em;
+	font-weight: lighter;
+  }
+  a{
+  	color: #fff;
+  	text-decoration:underline;
   }
 }
 .col-sm-12{
@@ -331,7 +339,7 @@ img.sponsor_ruby{width: 60%;}
   background-size:100% auto;
   background-position:center bottom;
   text-align: center;
-  padding-top: 70px;
+  padding: 150px 0;
   color: #fff;
   h1{
 	font-family: "Tamil MN";
