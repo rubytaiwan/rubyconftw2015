@@ -135,18 +135,20 @@ img.tub-bottom{
   .speaker_ic{
   	background-image: image-url('menu_speaker.png');   
   }
-  .coc_ic{
-  	background-image: image-url('menu_coc.png');   
-  }
   .schedule_ic{
   	background-image: image-url('menu_schedule.png');   
   }
+  .venue_ic{
+	background-image: image-url('menu_venue.png'); 
+  }
+  .coc_ic{
+  	background-image: image-url('menu_coc.png');   
+  }
+  
   .sponser_ic{
   	background-image: image-url('menu_sponser.png');   
   }
-  .active{
-
-  }
+  
   .active{
   animation: animationFrames ease 1s;
   animation-iteration-count: 1;
