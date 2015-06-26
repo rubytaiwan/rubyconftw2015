@@ -78,7 +78,19 @@
     <div class="row">
       <div class="col-sm-12">
         <h1>Code of conduct</h1>
-        <div class="eight columns">
+        <div class="en content">
+          <p>Matz is nice, and we are nice.</p>
+          <p>In the same way that Matz has written Ruby in order to make developers happy, we are also focused on making the community happy. The RubyConf Taiwan and Ruby Taiwan gather wonderful people from a diverse range of backgrounds, and we want to create a welcoming and safe environment where everyone eagers to join. </p>
+          <p>When we come together, we insist on what we have believe as a community from the beginning — to provide everyone with opportunities to showcase the best of what he/she can be. We are there to support our peers — to build each other up, to accept each other for who they are, and to encourage each other to become the people they want to be.</p>
+          <p>With that in mind, if you will be present at RubyConf Taiwan, whether as an attendee, organiser, sponsor or speaker, we take it as given that you agree to follow this code of conduct:</p>
+          <p>The RubyConf Taiwan organisation is dedicated to providing harassment-free experiences at events and conferences for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, religion, or age. We do not tolerate harassment in any form.</p>
+          <p>All communication should be appropriate for professional audience including people of different backgrounds. Sexual languages and imageries are not acceptable in any circumstance.</p>
+          <p>Be kind to others. Do not insult or put down other members of the community. Be respectful towards others. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for events supported by RubyConf Taiwan.</p>
+          <p>Anyone violating these rules at events may be asked to leave the event without a refund at the sole discretion of the organisers.</p>
+          <p>If you or someone else is subject to harassment, or you have a concern, please contact the event organisers (who will introduce themselves at the beginning of the event), or member of the <a href="mailto:contact@rubyconf.tw">RubyConf Taiwan Staff</a>.</p>
+          <p>Ruby Taiwan community is a welcoming and friendly place – thank you for being a part of it.</p>
+        </div>
+        <div class="zh-tw  content">
           <p>Matz 人很 nice，而我們也都是很 nice 的</p>
           <p> 為了使開發者更快樂，Matz 創造了 Ruby。同樣的，我們也致力於讓這個社群更快樂。RubyConf Taiwan 與 Ruby Taiwan 中聚集了來自多樣背景的優秀成員，而我們期盼營造出一個人人都想成為其中一份子的，開放且安全的環境。</p>
           <p>每當我們同聚一堂，我們始終如一，提供所有人舞台去分享各自的最好的部分，我們為同伴提供各種協助 - 去彼此建立關係、去互相接受、並且鼓勵所有人成為他們想要的樣子。</p>
@@ -89,21 +101,7 @@
           <p>任何人違反以上規則都會被請離現場並且不會退費，由主辦方斟酌處置。</p>
           <p>如果您或是有其他人受到騷擾，或您有相關的顧慮，請聯繫主辦者（會在開場前自我介紹），或是 <a href="mailto:contact@rubyconf.tw">RubyConf Taiwan 其他組織成員</a></p>
           <p>RubyConf Taiwan 社群是一個友善可親的所在 - 且謝謝您也做為其中的一份子。</p>
-      </div>  
-      <div class="eight columns">
-        <p>Matz is nice, and we are nice.</p>
-        <p>In the same way that Matz has written Ruby in order to make developers happy, we are also focused on making the community happy. The RubyConf Taiwan and Ruby Taiwan gather wonderful people from a diverse range of backgrounds, and we want to create a welcoming and safe environment where everyone eagers to join. </p>
-        <p>When we come together, we insist on what we have believe as a community from the beginning — to provide everyone with opportunities to showcase the best of what he/she can be. We are there to support our peers — to build each other up, to accept each other for who they are, and to encourage each other to become the people they want to be.</p>
-        <p>With that in mind, if you will be present at RubyConf Taiwan, whether as an attendee, organiser, sponsor or speaker, we take it as given that you agree to follow this code of conduct:
-        </p>
-        <p>The RubyConf Taiwan organisation is dedicated to providing harassment-free experiences at events and conferences for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, religion, or age. We do not tolerate harassment in any form.</p>
-        <p>All communication should be appropriate for professional audience including people of different backgrounds. Sexual languages and imageries are not acceptable in any circumstance.
-        </p>
-        <p>Be kind to others. Do not insult or put down other members of the community. Be respectful towards others. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for events supported by RubyConf Taiwan.</p>
-        <p>Anyone violating these rules at events may be asked to leave the event without a refund at the sole discretion of the organisers.</p>
-        <p>If you or someone else is subject to harassment, or you have a concern, please contact the event organisers (who will introduce themselves at the beginning of the event), or member of the <a href="mailto:contact@rubyconf.tw">RubyConf Taiwan Staff</a>.</p>
-        <p>Ruby Taiwan community is a welcoming and friendly place – thank you for being a part of it.</p>
-      </div>
+        </div>  
       </div>
     </div>
   </div>
@@ -129,5 +127,26 @@
   <%=image_tag("tub_bottom.png",class: "tub-bottom")%> 
   </div>
 </div><!-- End of sections-->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFSYBzU149v3h0Orot-FPewIHbzX72Flw"></script>
+<script>
+function initialize() {
+  var myLatlng = new google.maps.LatLng(25.041384,121.611353);
+  var mapOptions = {
+    zoom: 18,
+    center: myLatlng,
+    scrollwheel: false
+  }
+  var map = new google.maps.Map(document.getElementById('venue'), mapOptions);
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      //icon: "location_ic.png",
+      title: 'Hello World!'
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 
 
