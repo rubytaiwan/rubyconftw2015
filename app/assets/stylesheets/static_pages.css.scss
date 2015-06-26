@@ -20,7 +20,7 @@ body{
 img{max-width: 100%;}
 a{text-decoration: none;}
 a:hover{text-decoration: none; color: inherit;}
-
+a:active{color: inherit;}
 .row{
   margin-left: 30%;
   background-color: transparent;
@@ -61,9 +61,15 @@ img.tub-bottom{
   text-transform: capitalize;
   font-size: 14pt;
   height: 67px;
-  margin-left: 30%;
+  // margin-left: 30%;
 }
-.blue_btn:hover{
+.btn-group > .btn{
+	float: none;
+}
+.btn:focus{
+	color: inherit;
+}
+.blue_btn:hover,.sky_blue_btn:hover{
   color: #fff;
 }
 .white_btn{
@@ -109,16 +115,17 @@ img.tub-bottom{
 #front-nav{
   position: fixed;
   top: 280px;
-  left: 68px;
+  left: 55px;
   z-index: 2;
   ul{ 
-  list-style-type:none; 
-  margin: 0;
+    list-style-type:none; 
+    margin: 0;
+    padding-left: 0;
   } 
   li {
     background: image-url('menu_line.png') no-repeat left center;
   	padding: 0px 0px 0px 25px;
-	margin-bottom: -30px;
+	margin-bottom: -40px;
   }
   li:hover{
   	background: image-url('menu_line_hover.png') no-repeat left center;
@@ -241,15 +248,15 @@ img.tub-bottom{
 .info{
   display: block;
   margin-top: -5%;
-  margin-bottom: 2%;
-  text-align: center;		
+  margin-left: 9%;
+  text-align: center;
   font-family: "Songti TC";
     img{float:left;}
     p{float:left;letter-spacing: 2px;  margin-left: 10px;}
 }
 .info-inner{
   display: inline-block;
-  margin: 0 3%;
+  margin: 0 1%;
 }
 
 .logo{
@@ -346,7 +353,7 @@ img.sponsor_ruby{width: 60%;}
   margin-bottom: 15%;
   background:image-url('schedule.png');
   background-position:center bottom;
-   background-size:100% auto;
+  background-size:100% auto;
 }
 
 /*--------------schedule table-----------*/
@@ -387,7 +394,7 @@ img.sponsor_ruby{width: 60%;}
   }
   p{
 	font-family: "Helvetica Neue", sans-serif;;
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 2em;
 	
   }
