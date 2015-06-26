@@ -35,20 +35,23 @@ a:hover{text-decoration: none; color: inherit;}
   position: absolute;
   background-image: image-url("tub_repeat_y.png");
   background-repeat: repeat-y;
-  background-position: 237px 0%;
-  width: 100%;
-  top:650px;
+  background-position: 0% 0%;
+  width: 7%;
+  top: 700px;
   bottom: 80px;
   z-index: 1;
+  margin-left: 245px;
 }
 img.tub_top{
   position: absolute;
-  left: 222px;
+  left: 230px;
+  z-index: 2;
 }
 img.tub-bottom{
   position: absolute;
   left: 300px;
   bottom: 155px;
+  z-index: 2;
 }
 
 /*--------------button-----------*/
@@ -310,6 +313,12 @@ img.sponsor_ruby{width: 60%;}
 }
 #speaker{padding-top: 0;}
 #sponsor{padding: 50px 0 180px 0;}
+.ruby-gem-avatar{
+	width: 50%;
+	display: inline-block;
+	margin: 0 -9%;
+}
+
 /*--------------schedule-----------*/
 #schedule{
   background-color: #4BA9FA;
