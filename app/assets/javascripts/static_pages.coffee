@@ -3,21 +3,21 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
   $('#front-nav').on 'mouseenter', 'li', ->
-    $(@).children().addClass( "active" );
+    $(@).find('a').addClass "active"
   .on "mouseleave", 'li', ->
-    $(@).children().removeClass( "active" );
-    
+    $(@).find('a').removeClass "active"
+
   $.event.special.scrollstop.latency = 700
   section_dims = []
-  $('#sections > div').each (i, sec) ->
-    max = parseInt($(sec).position().top + $(sec).height() + 0)
-    section_dims.push max
+  $('#sections .section').each (i, sec) ->
+    min = parseInt $(sec).position().top
+    section_dims.push min #[min, max]
   $(window).on 'scrollstop', ->
     stop = $(@).scrollTop()
-    $('#front-nav li > a').removeClass( "active" )
+    $('#front-nav li > a').removeClass "active"
     idx = 0
-    $.each section_dims, (i, sec) ->
-      idx = i + 1 if stop > sec
-      0
-    $("#front-nav li:nth-child(#{idx + 1}) > a").addClass( "active");
+    middletop = $(window).scrollTop() + $(window).innerHeight() / 2
+    $.each section_dims, (i, sectop) ->
+      idx = i if middletop > sectop
+    $("#front-nav li:nth-child(#{idx + 1}) > a").addClass "active"
   $(window).trigger 'scrollstop'

@@ -28,7 +28,7 @@ a:hover{text-decoration: none; color: inherit;}
 #sections{
   position: relative;
   height: 100%;
-  display: block; 
+  display: block;
 }
 /*--------------Tube-----------*/
 #tub_repeat{
@@ -107,10 +107,10 @@ img.tub-bottom{
   top: 280px;
   left: 68px;
   z-index: 2;
-  ul{ 
-  list-style-type:none; 
+  ul{
+  list-style-type:none;
   margin: 0;
-  } 
+  }
   li {
     background: image-url('menu_line.png') no-repeat left center;
   	padding: 0px 0px 0px 25px;
@@ -124,25 +124,25 @@ img.tub-bottom{
   	opacity: 0;
   	width: 108px;
     height: 92px;
-  	position: relative; 	
+  	position: relative;
     background-repeat:no-repeat;
     background-size:100% 100%;
-    background-position:center center; 	 
+    background-position:center center;
   }
-  .home_ic{ 	
-  	background-image: image-url('menu_home.png');   
+  .home_ic{
+  	background-image: image-url('menu_home.png');
   }
   .speaker_ic{
-  	background-image: image-url('menu_speaker.png');   
+  	background-image: image-url('menu_speaker.png');
   }
   .coc_ic{
-  	background-image: image-url('menu_coc.png');   
+  	background-image: image-url('menu_coc.png');
   }
   .schedule_ic{
-  	background-image: image-url('menu_schedule.png');   
+  	background-image: image-url('menu_schedule.png');
   }
   .sponser_ic{
-  	background-image: image-url('menu_sponser.png');   
+  	background-image: image-url('menu_sponser.png');
   }
   .active{
 
@@ -155,7 +155,7 @@ img.tub-bottom{
   -webkit-animation: animationFrames ease 1s;
   -webkit-animation-iteration-count: 1;
   -webkit-transform-origin: 0% 50%;
-  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
   -moz-animation: animationFrames ease 1s;
   -moz-animation-iteration-count: 1;
   -moz-transform-origin: 0% 50%;
@@ -236,7 +236,7 @@ img.tub-bottom{
   display: block;
   margin-top: -5%;
   margin-bottom: 2%;
-  text-align: center;		
+  text-align: center;
   font-family: "Songti TC";
     img{float:left;}
     p{float:left;letter-spacing: 2px;  margin-left: 10px;}
@@ -362,7 +362,7 @@ img.sponsor_ruby{width: 60%;}
 }
 .schedule-bottom{
   //margin-top: 320px;
-  
+
 }
 
 /*--------------schedule table-----------*/

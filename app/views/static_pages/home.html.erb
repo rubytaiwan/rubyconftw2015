@@ -4,13 +4,14 @@
     <li><a href="#speaker" class="speaker_ic"></a></li>
     <li><a href="#coc" class="coc_ic"></a></li>
     <li><a href="#schedule" class="schedule_ic"></a></li>
-    <li><a href="#sponser" class="sponser_ic"></a></li>
+    <li><a href="#sponsor" class="sponser_ic"></a></li>
+    <li><a href="#staff" class="staff_ic"></a></li>
   </ul>
 </nav>
 
 <div id="sections">
   <div id="tub_repeat"> </div>
-  <div id="home">
+  <div id="home" class="section">
     <div class="logo"><%=image_tag("logo.png")%></div>
     <%=image_tag("gif/ruby_rotate3.gif", class: "ruby")%>
     <%=image_tag("cloud2_airplan.png", class: "cloud2")%>
@@ -37,7 +38,7 @@
       <%=link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: " blue_btn btn btn-outline btn-lg",role: "button", target: "_blank"%>
     </div>
   </div>
-  <div id="speaker">
+  <div id="speaker" class="section">
     <div class="block">
       <%=image_tag("mountain1.png", class: "mountain")%>
     </div>
@@ -58,7 +59,7 @@
       <% end %>
     </div>
   </div>
-  <div id="coc">
+  <div id="coc" class="section">
     <div class="row">
       <div class="col-sm-12">
         <h1>Code of conduct</h1>
@@ -73,23 +74,23 @@
           <p>任何人違反以上規則都會被請離現場並且不會退費，由主辦方斟酌處置。</p>
           <p>如果您或是有其他人受到騷擾，或您有相關的顧慮，請聯繫主辦者（會在開場前自我介紹），或是 <a href="mailto:contact@rubyconf.tw">RubyConf Taiwan 其他組織成員</a></p>
           <p>RubyConf Taiwan 社群是一個友善可親的所在 - 且謝謝您也做為其中的一份子。</p>
-      </div>  
+      </div>
       </div>
     </div>
   </div>
-  <div id="schedule">
+  <div id="schedule" class="section">
     <div class="row">
       <div class="schedule-frame">
-        <div class="call-for-proposal">              
+        <div class="call-for-proposal">
         <h1>We still looking for speakers.<br>If you want to join us.<br>Click “call for proposal” button! </h1>
-        </div> 
-        <div class="btn-group">  
+        </div>
+        <div class="btn-group">
         <%=link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "sky_blue_btn btn btn-outline btn-lg", target: "_blank"%>
         </div>
-      </div>      
-    </div> 
+      </div>
+    </div>
   </div><!-- End of Schedule -->
-  <div id="sponsor">
+  <div id="sponsor" class="section">
     <div class="row">
       <div class="level">
         <%=image_tag("sponsorship_level_1.png")%>
@@ -105,9 +106,9 @@
       <% end %>
     </div>
   </div>
-  <div id="staff">
-  <%=image_tag("footer.png", class: "footer-bg")%>
-  <%=image_tag("tub_bottom.png",class: "tub-bottom")%> 
+  <div id="staff" class="section">
+    <%=image_tag("footer.png", class: "footer-bg")%>
+    <%=image_tag("tub_bottom.png",class: "tub-bottom")%>
   </div>
 </div><!-- End of sections-->
 
