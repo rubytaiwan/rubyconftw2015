@@ -1,11 +1,11 @@
 <nav id="front-nav" >
   <ul class="inner-nav">
-    <li><a href="#home" class="home_ic"></a></li>
-    <li><a href="#speaker" class="speaker_ic"></a></li>
-    <li><a href="#schedule" class="schedule_ic"></a></li>
-    <li><a href="#venue" class="venue_ic"></a></li>  
-    <li><a href="#coc" class="coc_ic"></a></li>    
-    <li><a href="#sponsor" class="sponsor_ic"></a></li>
+    <li><a href="#home" class="home_ic scroll"></a></li>
+    <li><a href="#speaker" class="speaker_ic scroll"></a></li>
+    <li><a href="#schedule" class="schedule_ic scroll"></a></li>
+    <li><a href="#venue" class="venue_ic scroll"></a></li>
+    <li><a href="#coc" class="coc_ic scroll"></a></li>
+    <li><a href="#sponsor" class="sponsor_ic scroll"></a></li>
   </ul>
 </nav>
 <div id="sections">
@@ -61,18 +61,18 @@
   <div id="schedule" class="section">
     <div class="row">
       <div class="schedule-frame">
-        <div class="call-for-proposal">              
+        <div class="call-for-proposal">
         <h1>We still looking for speakers.<br>If you want to join us.<br>Click “call for proposal” button! </h1>
-        </div> 
-        <div class="btn-group">  
+        </div>
+        <div class="btn-group">
         <%=link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "sky_blue_btn btn btn-outline btn-lg", target: "_blank"%>
         </div>
-      </div>      
-    </div> 
+      </div>
+    </div>
   </div>
   <div id="venue" class="section">
     <div class="venue-block">
-      
+
     </div>
   </div>
   <div id="coc" class="section">
@@ -102,7 +102,7 @@
           <p>任何人違反以上規則都會被請離現場並且不會退費，由主辦方斟酌處置。</p>
           <p>如果您或是有其他人受到騷擾，或您有相關的顧慮，請聯繫主辦者（會在開場前自我介紹），或是 <a href="mailto:contact@rubyconf.tw">RubyConf Taiwan 其他組織成員</a></p>
           <p>RubyConf Taiwan 社群是一個友善可親的所在 - 且謝謝您也做為其中的一份子。</p>
-        </div>  
+        </div>
       </div>
     </div>
   </div>
@@ -111,18 +111,18 @@
       <div class="level">
         <%=image_tag("sponsorship_level_1.png")%>
       </div>
-      <% @sponsors.each do |sponsor| %>   
+      <% @sponsors.each do |sponsor| %>
         <div class="ruby-gem-avatar">
           <div class="imagecontainer">
           <%= image_tag sponsor.image, class:"sponsor_ruby" %>
           </div>
-        </div>    
+        </div>
       <% end %>
     </div>
   </div>
   <div id="staff">
     <%=image_tag("footer.png", class: "footer-bg")%>
-    <%=image_tag("tub_bottom.png",class: "tub-bottom")%> 
+    <%=image_tag("tub_bottom.png",class: "tub-bottom")%>
   </div>
 </div>
 
