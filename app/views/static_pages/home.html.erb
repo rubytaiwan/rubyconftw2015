@@ -1,16 +1,16 @@
 <nav id="front-nav" >
   <ul class="inner-nav">
-    <li><a href="#home" class="home_ic"></a></li>
-    <li><a href="#speaker" class="speaker_ic"></a></li>
-    <li><a href="#coc" class="coc_ic"></a></li>
-    <li><a href="#schedule" class="schedule_ic"></a></li>
-    <li><a href="#sponser" class="sponser_ic"></a></li>
+    <li><a href="#home" class="home_ic scroll"></a></li>
+    <li><a href="#speaker" class="speaker_ic scroll"></a></li>
+    <li><a href="#schedule" class="schedule_ic scroll"></a></li>
+    <li><a href="#venue" class="venue_ic scroll"></a></li>
+    <li><a href="#coc" class="coc_ic scroll"></a></li>
+    <li><a href="#sponsor" class="sponsor_ic scroll"></a></li>
   </ul>
 </nav>
-
 <div id="sections">
   <div id="tub_repeat"> </div>
-  <div id="home">
+  <div id="home" class="section">
     <div class="logo"><%=image_tag("logo.png")%></div>
     <%=image_tag("gif/ruby_rotate3.gif", class: "ruby")%>
     <%=image_tag("cloud2_airplan.png", class: "cloud2")%>
@@ -37,7 +37,7 @@
       <%=link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: " blue_btn btn btn-outline btn-lg",role: "button", target: "_blank"%>
     </div>
   </div>
-  <div id="speaker">
+  <div id="speaker" class="section">
     <div class="block">
       <%=image_tag("mountain1.png", class: "mountain")%>
     </div>
@@ -58,11 +58,40 @@
       <% end %>
     </div>
   </div>
-  <div id="coc">
+  <div id="schedule" class="section">
+    <div class="row">
+      <div class="schedule-frame">
+        <div class="call-for-proposal">
+        <h1>We still looking for speakers.<br>If you want to join us.<br>Click “call for proposal” button! </h1>
+        </div>
+        <div class="btn-group">
+        <%=link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "sky_blue_btn btn btn-outline btn-lg", target: "_blank"%>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="venue" class="section">
+    <div class="venue-block">
+
+    </div>
+  </div>
+  <div id="coc" class="section">
     <div class="row">
       <div class="col-sm-12">
         <h1>Code of conduct</h1>
-        <div class="eight columns">
+        <div class="en content">
+          <p>Matz is nice, and we are nice.</p>
+          <p>In the same way that Matz has written Ruby in order to make developers happy, we are also focused on making the community happy. The RubyConf Taiwan and Ruby Taiwan gather wonderful people from a diverse range of backgrounds, and we want to create a welcoming and safe environment where everyone eagers to join. </p>
+          <p>When we come together, we insist on what we have believe as a community from the beginning — to provide everyone with opportunities to showcase the best of what he/she can be. We are there to support our peers — to build each other up, to accept each other for who they are, and to encourage each other to become the people they want to be.</p>
+          <p>With that in mind, if you will be present at RubyConf Taiwan, whether as an attendee, organiser, sponsor or speaker, we take it as given that you agree to follow this code of conduct:</p>
+          <p>The RubyConf Taiwan organisation is dedicated to providing harassment-free experiences at events and conferences for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, religion, or age. We do not tolerate harassment in any form.</p>
+          <p>All communication should be appropriate for professional audience including people of different backgrounds. Sexual languages and imageries are not acceptable in any circumstance.</p>
+          <p>Be kind to others. Do not insult or put down other members of the community. Be respectful towards others. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for events supported by RubyConf Taiwan.</p>
+          <p>Anyone violating these rules at events may be asked to leave the event without a refund at the sole discretion of the organisers.</p>
+          <p>If you or someone else is subject to harassment, or you have a concern, please contact the event organisers (who will introduce themselves at the beginning of the event), or member of the <a href="mailto:contact@rubyconf.tw">RubyConf Taiwan Staff</a>.</p>
+          <p>Ruby Taiwan community is a welcoming and friendly place – thank you for being a part of it.</p>
+        </div>
+        <div class="zh-tw  content">
           <p>Matz 人很 nice，而我們也都是很 nice 的</p>
           <p> 為了使開發者更快樂，Matz 創造了 Ruby。同樣的，我們也致力於讓這個社群更快樂。RubyConf Taiwan 與 Ruby Taiwan 中聚集了來自多樣背景的優秀成員，而我們期盼營造出一個人人都想成為其中一份子的，開放且安全的環境。</p>
           <p>每當我們同聚一堂，我們始終如一，提供所有人舞台去分享各自的最好的部分，我們為同伴提供各種協助 - 去彼此建立關係、去互相接受、並且鼓勵所有人成為他們想要的樣子。</p>
@@ -73,42 +102,27 @@
           <p>任何人違反以上規則都會被請離現場並且不會退費，由主辦方斟酌處置。</p>
           <p>如果您或是有其他人受到騷擾，或您有相關的顧慮，請聯繫主辦者（會在開場前自我介紹），或是 <a href="mailto:contact@rubyconf.tw">RubyConf Taiwan 其他組織成員</a></p>
           <p>RubyConf Taiwan 社群是一個友善可親的所在 - 且謝謝您也做為其中的一份子。</p>
-      </div>  
+        </div>
       </div>
     </div>
   </div>
-  <div id="schedule">
-    <div class="row">
-      <div class="schedule-frame">
-        <div class="call-for-proposal">              
-        <h1>We still looking for speakers.<br>If you want to join us.<br>Click “call for proposal” button! </h1>
-        </div> 
-        <div class="btn-group">  
-        <%=link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "sky_blue_btn btn btn-outline btn-lg", target: "_blank"%>
-        </div>
-      </div>      
-    </div> 
-  </div><!-- End of Schedule -->
-  <div id="sponsor">
+  <div id="sponsor" class="section">
     <div class="row">
       <div class="level">
         <%=image_tag("sponsorship_level_1.png")%>
       </div>
       <% @sponsors.each do |sponsor| %>
-      <div class="col-sm-6">
-        <div class="avatar">
+        <div class="ruby-gem-avatar">
           <div class="imagecontainer">
           <%= image_tag sponsor.image, class:"sponsor_ruby" %>
           </div>
         </div>
-      </div>
       <% end %>
     </div>
   </div>
   <div id="staff">
-  <%=image_tag("footer.png", class: "footer-bg")%>
-  <%=image_tag("tub_bottom.png",class: "tub-bottom")%> 
+    <%=image_tag("footer.png", class: "footer-bg")%>
+    <%=image_tag("tub_bottom.png",class: "tub-bottom")%>
   </div>
-</div><!-- End of sections-->
-
+</div>
 
