@@ -23,26 +23,6 @@ $(document).ready ->
     $("#front-nav .inner-nav:nth-child(#{idx + 1}) > a:nth-child(2)").addClass "active"
   $(window).trigger 'scrollstop'
   
-  # $('#front-nav').on 'mouseenter', 'li', ->
-  #   $(@).find('a').addClass "active"
-  # .on "mouseleave", 'li', ->
-  #   $(@).find('a').removeClass "active"
-  # $.event.special.scrollstop.latency = 700
-  # section_dims = []
-  # $('#sections .section').each (i, sec) ->
-  #   min = parseInt $(sec).position().top
-  #   section_dims.push min
-  # console.dir section_dims
-  # $(window).on 'scrollstop', ->
-  #   stop = $(@).scrollTop()
-  #   $('#front-nav li > a').removeClass "active"
-  #   idx = 0
-  #   middletop = $(window).scrollTop() + $(window).innerHeight() / 2
-  #   $.each section_dims, (i, sectop) ->
-  #     idx = i if middletop > sectop
-  #   $("#front-nav li:nth-child(#{idx + 1}) > a").addClass "active"
-  # $(window).trigger 'scrollstop'
-
   initialize = ->
     myLatlng = new (google.maps.LatLng)(25.041384, 121.611353)
     mapOptions =
