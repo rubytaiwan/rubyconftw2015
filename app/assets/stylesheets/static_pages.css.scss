@@ -117,28 +117,31 @@ img.tub-bottom{
   top: 280px;
   left: 55px;
   z-index: 2;
-  ul{
-    list-style-type:none;
-    margin: 0;
-    padding-left: 0;
-  }
-  li {
-    background: image-url('menu_line.png') no-repeat left center;
-  	padding: 0px 0px 0px 25px;
-	margin-bottom: -40px;
-  }
-  li:hover{
-  	background: image-url('menu_line_hover.png') no-repeat left center;
+  .inner-nav{
+    height:30px;
+    text-align:center;
   }
   a{
-  	display: block;
+    display:inline-block;
+    vertical-align:middle;
+  }
+  a:nth-child(2){	
   	opacity: 0;
   	width: 108px;
     height: 92px;
   	position: relative;
+    cursor:default;
     background-repeat:no-repeat;
-    background-size:100% 100%;
+    background-size:108px 92px;
     background-position:center center;
+  }
+  .nav-line{
+    background: image-url('menu_line.png') no-repeat left center;
+    width: 20px;
+    height: 30px;
+  }
+  .nav-line:hover{
+    background: image-url('menu_line_hover.png') no-repeat left center;
   }
   .home_ic{
   	background-image: image-url('menu_home.png');
