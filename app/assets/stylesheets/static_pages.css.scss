@@ -36,7 +36,7 @@ a:active{color: inherit;}
   background-image: image-url("tub_repeat_y.png");
   background-repeat: repeat-y;
   background-position: 0% 0%;
-  width: 7%;
+  width: 95px;
   top: 700px;
   bottom: 80px;
   z-index: 1;
@@ -53,7 +53,17 @@ img.tub-bottom{
   bottom: 155px;
   z-index: 2;
 }
+@media screen and (max-width: 992px) {
+  #tub_repeat{display: none;}
+  img.tub_top{display: none;}
+  img.tub-bottom{display: none;}
+}
+@media screen and (max-width: 768px) {
 
+}
+@media screen and (max-width: 480px) {
+  
+}
 /*--------------button-----------*/
 .btn-group{
   text-align: center;
@@ -429,3 +439,5 @@ img.footer-bg{width: 100%;}
   -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 }
+
+

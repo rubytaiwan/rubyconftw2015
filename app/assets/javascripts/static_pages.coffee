@@ -7,7 +7,7 @@ $(document).ready ->
     $(@).next().addClass "active"
   .on "mouseleave",'.nav-line',  ->
     $(@).next().removeClass "active"
-  $.event.special.scrollstop.latency = 700
+  $.event.special.scrollstop.latency = 100
   section_dims = []
   $('#sections .section').each (i, sec) ->
     min = parseInt $(sec).position().top
