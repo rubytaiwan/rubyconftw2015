@@ -1,40 +1,15 @@
 <nav id="front-nav" >
-  <div class="inner-nav">
-    <a href="#home" class="nav-line scroll"></a>
-    <a class="home_ic"></a>
-  </div>
-  <div class="inner-nav">
-    <a href="#speaker" class="nav-line scroll"></a>
-    <a class="speaker_ic"></a>
-  </div>
-  <div class="inner-nav">
-    <a href="#schedule" class="nav-line scroll"></a>
-    <a class="schedule_ic"></a>
-  </div>
-   <div class="inner-nav">
-    <a href="#venue" class="nav-line scroll"></a>
-    <a class="venue_ic"></a>
-  </div>
-   <div class="inner-nav">
-    <a href="#coc" class="nav-line scroll"></a>
-    <a class="coc_ic"></a>
-  </div>
-   <div class="inner-nav">
-    <a href="#sponsor" class="nav-line scroll"></a>
-    <a class="sponsor_ic"></a>
-  </div>
-  <div class="inner-nav">
-    <a href="#staff" class="nav-line scroll"></a>
-    <a class="staff_ic"></a>
-  </div>
+  <% %w{home speaker schedule venue coc sponsor staff }.each do |name| %>
+    <%=render partial: 'nav_item', locals: {name: name}%>
+  <%end%>
 </nav>
 <div id="sections">
   <div id="tub_repeat"> </div>
-  <div id="home" class="section">    
+  <div id="home" class="section">
     <div class="logo">
       <%=image_tag("cloud2_airplan.png", class: "cloud2")%>
       <%=image_tag("gif/ruby_rotate3.gif", class: "ruby")%>
-    </div>       
+    </div>
     <%=image_tag("cloud1.png", class: "cloud1")%>
     <%=image_tag("cloud3.png", class: "cloud3")%>
     <%=image_tag("tub_top.png", class: "tub_top")%>
@@ -135,7 +110,7 @@
       <% @sponsors.each do |sponsor| %>
         <div class="ruby-gem-avatar">
           <div class="imagecontainer">
-          <%= image_tag sponsor.image, class:"sponsor_ruby" %>
+          <%= link_to image_tag(sponsor.image, title: sponsor.description,  class:"sponsor_ruby"), sponsor.link, target: '_blank' %>
           </div>
         </div>
       <% end %>
