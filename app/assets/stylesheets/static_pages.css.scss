@@ -36,8 +36,8 @@ a:active{color: inherit;}
   background-image: image-url("tub_repeat_y.png");
   background-repeat: repeat-y;
   background-position: 0% 0%;
-  width: 7%;
-  top: 700px;
+  width: 95px;
+  top: 600px;
   bottom: 80px;
   z-index: 1;
   margin-left: 245px;
@@ -53,7 +53,17 @@ img.tub-bottom{
   bottom: 155px;
   z-index: 2;
 }
+@media screen and (max-width: 992px) {
+  #tub_repeat{display: none;}
+  img.tub_top{display: none;}
+  img.tub-bottom{display: none;}
+}
+@media screen and (max-width: 768px) {
 
+}
+@media screen and (max-width: 480px) {
+  
+}
 /*--------------button-----------*/
 .btn-group{
   text-align: center;
@@ -117,28 +127,31 @@ img.tub-bottom{
   top: 280px;
   left: 55px;
   z-index: 2;
-  ul{
-    list-style-type:none;
-    margin: 0;
-    padding-left: 0;
-  }
-  li {
-    background: image-url('menu_line.png') no-repeat left center;
-  	padding: 0px 0px 0px 25px;
-	margin-bottom: -40px;
-  }
-  li:hover{
-  	background: image-url('menu_line_hover.png') no-repeat left center;
+  .inner-nav{
+    height:30px;
+    text-align:center;
   }
   a{
-  	display: block;
+    display:inline-block;
+    vertical-align:middle;
+  }
+  a:nth-child(2){	
   	opacity: 0;
   	width: 108px;
     height: 92px;
   	position: relative;
+    cursor:default;
     background-repeat:no-repeat;
-    background-size:100% 100%;
+    background-size:108px 92px;
     background-position:center center;
+  }
+  .nav-line{
+    background: image-url('menu_line.png') no-repeat left center;
+    width: 20px;
+    height: 30px;
+  }
+  .nav-line:hover{
+    background: image-url('menu_line_hover.png') no-repeat left center;
   }
   .home_ic{
   	background-image: image-url('menu_home.png');
@@ -155,9 +168,11 @@ img.tub-bottom{
   .coc_ic{
   	background-image: image-url('menu_coc.png');
   }
-
   .sponsor_ic{
   	background-image: image-url('menu_sponsor.png');
+  }
+  .staff_ic{
+    background-image: image-url('menu_staff.png');
   }
 
   .active{
@@ -241,18 +256,18 @@ img.tub-bottom{
 
 /*--------------Home-----------*/
 #home{
-  padding: 128px 0 0px 0;
+  padding: 65px 0 0px 0;
   background-color: #173E71;
   background-image: image-url('background_icon.png');
 }
 .info{
   display: block;
-  margin-top: -5%;
-  margin-left: 9%;
+  // margin-top: -5%;
+  // margin-left: 9%;
   text-align: center;
   font-family: "Songti TC";
-    img{float:left;}
-    p{float:left;letter-spacing: 2px;  margin-left: 10px;}
+  img{float:left;}
+  p{float:left;letter-spacing: 2px;  margin-left: 10px;}
 }
 .info-inner{
   display: inline-block;
@@ -261,6 +276,11 @@ img.tub-bottom{
 
 .logo{
   text-align: center;
+  background-image: image-url('logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
 }
 .social{
   position: absolute;
@@ -272,14 +292,13 @@ img.tub-bottom{
 
 /*--------------Home IMG-----------*/
 img.ruby{
-  position: absolute;
-  top: 130px;
-  right: 28%;
+  position: relative;
+  left: 10%;
 }
 img.cloud2{
-  position: absolute;
-  top: 38px;
-  left: 17%;
+  position: relative;
+  right: 22%;
+  bottom: 8%;
 }
 img.cloud1{
   position: absolute;
@@ -287,8 +306,10 @@ img.cloud1{
   right: 8.7%;
 }
 img.cloud3{
-  margin-top: 50px;
-  margin-left: 96%;
+  position: absolute;
+  left: 96%;
+  // margin-top: 50px;
+  // margin-left: 96%;
   overflow-x: hidden;
   z-index: 1;
 }
@@ -424,3 +445,5 @@ img.footer-bg{width: 100%;}
   -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 }
+
+
