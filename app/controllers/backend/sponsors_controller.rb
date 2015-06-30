@@ -52,6 +52,6 @@ class Backend::SponsorsController < Backend::BaseController
   	# end
 
   	def object_params
-    params.require(:sponsor).permit(:name, :description, :image)
+    params.require(:sponsor).permit(:name, :description, :image, :link)
   	end
 end

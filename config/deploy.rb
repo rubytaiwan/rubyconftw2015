@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 set :application, '2015.rubyconf.tw'
-set :repo_url, 'git@github.com:rubytaiwan/rubyconftw2015.git'
+set :repo_url, ENV['REPO'] || 'git@github.com:rubytaiwan/rubyconftw2015.git'
 #set :branch, 'master'
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
@@ -11,7 +11,6 @@ set :repo_url, 'git@github.com:rubytaiwan/rubyconftw2015.git'
 #set :flowdock_project_name, settings['flowdock']['project_name']
 #set :flowdock_deploy_tags, settings['flowdock']['deploy_tags']
 
-set :deploy_to, '/home/deploy/2015.rubyconf.tw'
 set :scm, :git
 
 # set :format, :pretty
