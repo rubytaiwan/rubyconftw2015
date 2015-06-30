@@ -62,7 +62,7 @@ img.tub-bottom{
 
 }
 @media screen and (max-width: 480px) {
-  
+
 }
 /*--------------button-----------*/
 .btn-group{
@@ -135,7 +135,10 @@ img.tub-bottom{
     display:inline-block;
     vertical-align:middle;
   }
-  a:nth-child(2){	
+  li{
+    list-style-type: none;
+  }
+  a:nth-child(2){
   	opacity: 0;
   	width: 108px;
     height: 92px;
