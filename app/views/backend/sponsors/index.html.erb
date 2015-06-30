@@ -6,6 +6,7 @@
         <tr>
           <th>Name</th>
           <th>description</th>
+          <th>Link</th>
           <th>image</th>
           <th colspan="3"></th>
         </tr>
@@ -15,6 +16,7 @@
         <tr>
           <td><%= sponsor.name %></td>
           <td><%= sponsor.description %></td>
+          <td><%= sponsor.link %></td>
           <td><%= image_tag sponsor.image.small %></td>
           <td><%= link_to '顯示', backend_sponsor_path(sponsor) ,class:'btn btn-success btn-xs'%></td>
           <td><%= link_to '編輯', edit_backend_sponsor_path(sponsor) ,class:'btn btn-success btn-xs'%></td>
