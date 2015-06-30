@@ -135,7 +135,7 @@
       <% @sponsors.each do |sponsor| %>
         <div class="ruby-gem-avatar">
           <div class="imagecontainer">
-          <%= image_tag sponsor.image, class:"sponsor_ruby" %>
+          <%= image_tag(sponsor.image, title: sponsor.description,  class:"sponsor_ruby") %>
           </div>
         </div>
       <% end %>
