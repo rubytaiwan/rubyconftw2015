@@ -12,7 +12,6 @@ $(document).ready ->
   $('#sections .section').each (i, sec) ->
     min = parseInt $(sec).position().top
     section_dims.push min
-  console.dir section_dims
   $(window).on 'scrollstop', ->
     stop = $(@).scrollTop()
     $('#front-nav .inner-nav > a').next().removeClass "active"
@@ -20,9 +19,9 @@ $(document).ready ->
     middletop = $(window).scrollTop() + $(window).innerHeight() / 2
     $.each section_dims, (i, sectop) ->
       idx = i if middletop > sectop
-    $("#front-nav .inner-nav:nth-child(#{idx + 1}) > a:nth-child(2)").addClass "active"
+    $("#front-nav .inner-nav:nth-child(#{idx + 1}) > .enlarge").addClass "active"
   $(window).trigger 'scrollstop'
-  
+
   initialize = ->
     myLatlng = new (google.maps.LatLng)(25.041384, 121.611353)
     mapOptions =
