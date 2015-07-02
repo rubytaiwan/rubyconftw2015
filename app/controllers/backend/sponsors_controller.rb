@@ -1,6 +1,6 @@
 class Backend::SponsorsController < Backend::BaseController
   # before_action :find_sponsor, only:[:show, :destroy, :edit, :update]
-  
+
   # def index
   # 	@sponsors = Sponsor.all
   # end
@@ -17,24 +17,24 @@ class Backend::SponsorsController < Backend::BaseController
   # 	else
   #     render 'new'
   #   end
-  	
+
   # end
 
   # def show
-  	
+
   # end
 
   # def destroy
-  	
+
   # 	@sponsor.destroy
   # 	redirect_to backend_sponsors_path
   # end
 
   # def edit
-  	
+
   # end
   # def update
-  	
+
   # 	if @sponsor.update(sponsor_params)
   #     redirect_to backend_sponsors_path
   #   else
@@ -52,6 +52,6 @@ class Backend::SponsorsController < Backend::BaseController
   	# end
 
   	def object_params
-    params.require(:sponsor).permit(:name, :description, :image, :link)
+      params.require(:sponsor).permit(:name, :description, :image, :link)
   	end
 end
