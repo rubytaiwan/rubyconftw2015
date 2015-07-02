@@ -270,7 +270,7 @@ background-image: image-url('menu_venue.png');
 }
 .logo {
   text-align: center;
-  background-image: image-url('logo.png');
+  background-image: image-url('logo_sponsor.png');
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
@@ -282,6 +282,44 @@ background-image: image-url('menu_venue.png');
   top:315px;
   width: 50px;
   img{ margin: 15px 0; }
+}
+img.dwarf-jump-img {
+  position: absolute;
+  left: 50px;
+  top: 230px;
+}
+img.dwarf-jump:hover{
+  cursor: pointer;
+}
+img.dwarf-jump-gif {
+  position: absolute;
+  left: 125px;
+  top: 255px;
+  display: none;
+}
+.dwarf-jump {
+  background-image: image-url('jump_all.png');
+  position: absolute;
+  margin-left: 140px;
+  top: 210px;
+  height: 400px;
+  width: 200px;
+
+}
+.jump-active {
+  position: absolute;
+  height: 400px;
+  width: 200px;
+  -webkit-animation: jump 1s steps(27) 1 alternate;
+  animation: jump 1s steps(27) 1 alternate;
+}
+@-webkit-keyframes jump {
+   from { background-position: 0 0; }
+     to { background-position: -5800px 0; }
+}
+@keyframes jump {
+   from { background-position: 0 0; }
+     to { background-position: -5800px 0; }
 }
 
 /*--------------Home IMG-----------*/

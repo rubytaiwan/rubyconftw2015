@@ -5,7 +5,7 @@ class Backend::UsersController < Backend::BaseController
   # end
 
   # def show
-  	
+
   # end
 
   # def new
@@ -24,7 +24,7 @@ class Backend::UsersController < Backend::BaseController
   # end
 
   # def edit
-  	
+
   # end
 
   # def update
@@ -49,7 +49,7 @@ class Backend::UsersController < Backend::BaseController
       User
     end
     def object_params
-    params.require(:user).permit(:name, :email, :password,
+      params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
     end
 

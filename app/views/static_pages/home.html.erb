@@ -14,10 +14,13 @@
     <%= image_tag("cloud3.png", class: "cloud3") %>
     <%= image_tag("tub_top.png", class: "tub-top") %>
     <div class="social">
-      <%= link_to image_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan", target: "_blank" %>
-      <%= link_to image_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan", target: "_blank" %>
+      <%= link_to image_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
+       target: "_blank" %>
+      <%= link_to image_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan",
+      target: "_blank" %>
       <%= link_to image_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %>
     </div>
+    <div class="dwarf-jump"></div>
     <div class="info">
       <div class="info-inner time">
         <%= image_tag("time_ic.png") %>
@@ -29,8 +32,9 @@
       </div>
     </div>
     <div class="btn-group">
-      <%= link_to "registeration","#",class: "white-btn  btn btn-outline btn-lg btn-disabled" %>
-      <%= link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: " blue-btn btn btn-outline btn-lg",role: "button", target: "_blank" %>
+      <%= link_to "registeration","#",class: "white-btn btn btn-disabled" %>
+      <%= link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",
+      class: " blue-btn btn ",role: "button", target: "_blank" %>
     </div>
   </div>
   <div id="speaker" class="section">
