@@ -22,7 +22,6 @@ $(document).ready ->
     $("#front-nav .inner-nav:nth-child(#{idx + 1}) > .enlarge").addClass 'active'
   $(window).trigger 'scrollstop'
 
-
   reset = ->
     $('.dwarf-jump').removeClass('jump-active')
 
@@ -30,11 +29,8 @@ $(document).ready ->
     $(@).addClass('jump-active')
     setTimeout(reset, 1000)
 
-
   $(window).on 'scroll', ->
     top = $(document).scrollTop();
-    # $('#dwarf-scroll').removeClass('dwarf-scroll-hide')
-    # $('.dwarf-jump').hide()
     x = $('.dwarf-jump').position().top
     if x == 0
       $('#dwarf-scroll').addClass('dwarf-scroll-hide')
@@ -47,14 +43,6 @@ $(document).ready ->
       $('.dwarf-jump').hide()
       $('.dwarf-bottom').css('display','none')
     console.log(top)
-
-
-    # $('#dwarf-scroll').animate
-    #   scrollTop: 0
-    # , 'slow'
-    # .addClass 'dwarf-scroll-hide'
-
-
 
   initialize = ->
     myLatlng = new (google.maps.LatLng)(25.041384, 121.611353)
