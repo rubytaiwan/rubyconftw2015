@@ -45,7 +45,7 @@ a:active {
   background-repeat: repeat-y;
   width: 95px;
   top: 535px;
-  bottom: 80px;
+  bottom: 0px;
   z-index: 1;
   margin-left: 200px;
 }
@@ -62,7 +62,7 @@ img.tub-bottom {
 }
 @media screen and (max-width: 992px) {
   #tub-repeat { display: none; }
-  img.tub_top { display: none; }
+  img.tub-top { display: none; }
   img.tub-bottom { display: none; }
 }
 /*--------------button-----------*/
@@ -283,45 +283,52 @@ background-image: image-url('menu_venue.png');
   width: 50px;
   img{ margin: 15px 0; }
 }
-img.dwarf-jump-img {
-  position: absolute;
-  left: 50px;
-  top: 230px;
-}
-img.dwarf-jump:hover{
-  cursor: pointer;
-}
-img.dwarf-jump-gif {
-  position: absolute;
-  left: 125px;
-  top: 255px;
-  display: none;
-}
+/*--------------dwarf animation-----------*/
 .dwarf-jump {
-  background-image: image-url('jump_all.png');
+  background-image: image-url('jump_all_s.png');
   position: absolute;
-  margin-left: 140px;
-  top: 210px;
-  height: 400px;
-  width: 200px;
-
+  margin-left: 190px;
+  top: 360px;
+  height: 200px;
+  width: 100px;
+}
+.dwarf-jump:hover {
+  cursor: pointer;
 }
 .jump-active {
   position: absolute;
-  height: 400px;
-  width: 200px;
+  height: 200px;
+  width: 100px;
   -webkit-animation: jump 1s steps(27) 1 alternate;
   animation: jump 1s steps(27) 1 alternate;
 }
 @-webkit-keyframes jump {
    from { background-position: 0 0; }
-     to { background-position: -5800px 0; }
+     to { background-position: -2900px 0; }
 }
 @keyframes jump {
    from { background-position: 0 0; }
-     to { background-position: -5800px 0; }
+     to { background-position: -2900px 0; }
 }
-
+@media screen and (max-width: 992px) {
+  .dwarf-jump {
+    display: none;
+  }
+}
+#dwarf-scroll{
+  position: fixed;
+  top: 380px;
+  left: 190px;
+  height: 150px;
+  width: 120px;
+  z-index: 3;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: image-url('gif/dwarf_back.gif');
+}
+.dwarf-scroll-hide{
+  display: none;
+}
 /*--------------Home IMG-----------*/
 img.ruby {
   position: relative;
@@ -467,12 +474,16 @@ img.sponsor_ruby { width: 60%; }
 }
 /*--------------staff-----------*/
 img.footer-bg { width: 100%; }
-.dwarf2 {
+.dwarf-bottom {
+  background-image: image-url('jump_all_s.png');
   position: absolute;
-  left: 1065px;
-  bottom: 65px;
+  margin-left: 300px;
+  bottom: 210px;
+  height: 200px;
+  width: 100px;
   -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  display: none;
 }
 
 
