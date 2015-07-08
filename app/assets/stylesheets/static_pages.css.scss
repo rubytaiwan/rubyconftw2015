@@ -310,16 +310,28 @@ background-image: image-url('menu_venue.png');
    from { background-position: 0 0; }
      to { background-position: -2900px 0; }
 }
-#dwarf-scroll{
+#dwarf-scroll {
+  background-image: image-url('scroll_all_s.png');
   position: fixed;
-  top: 380px;
-  left: 190px;
-  height: 150px;
-  width: 120px;
   z-index: 3;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: image-url('gif/dwarf_back.gif');
+  margin-left: 180px;
+  top: 360px;
+  height: 200px;
+  width: 110px;
+}
+.climb  {
+  height: 200px;
+  width: 110px;
+  -webkit-animation: climb 1s steps(24) infinite alternate;
+  animation: climb 1s steps(24) infinite alternate;
+}
+@-webkit-keyframes climb {
+   from { background-position: 0 0; }
+     to { background-position: -3430px 0; }
+}
+@keyframes climb {
+   from { background-position: 0 0; }
+     to { background-position: -3430px 0; }
 }
 .dwarf-scroll-hide{
   display: none;

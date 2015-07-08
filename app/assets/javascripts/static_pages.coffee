@@ -29,20 +29,22 @@ $(document).ready ->
     $(@).addClass('jump-active')
     setTimeout(reset, 1000)
 
+  $(window).on 'scrollstop', ->
+    $('#dwarf-scroll').removeClass('climb')
+
   $(window).on 'scroll', ->
-    top = $(document).scrollTop();
     x = $('.dwarf-jump').position().top
+    $('#dwarf-scroll').addClass('climb')
     if x == 0
       $('#dwarf-scroll').addClass('dwarf-scroll-hide')
       $('.dwarf-jump').show()
-    else if x > 3900
+    else if x > 3910
       $('#dwarf-scroll').addClass('dwarf-scroll-hide')
       $('.dwarf-bottom').css('display','block')
     else
       $('#dwarf-scroll').removeClass('dwarf-scroll-hide')
       $('.dwarf-jump').hide()
       $('.dwarf-bottom').css('display','none')
-    console.log(top)
 
   initialize = ->
     myLatlng = new (google.maps.LatLng)(25.041384, 121.611353)
