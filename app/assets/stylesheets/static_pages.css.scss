@@ -141,6 +141,15 @@ img.tub-bottom {
 .nav-line:hover {
   background: image-url('menu_line_hover.png') no-repeat left center;
 }
+@media (max-width: 992px) {
+  #front-nav,
+  .social,.cloud1,.cloud2,.cloud3  {
+    display: none;
+  }
+  .row{
+    margin-left: 0;
+  }
+}
 .home_ic {
 	background-image: image-url('menu_home.png');
 }
@@ -273,6 +282,7 @@ background-image: image-url('menu_venue.png');
   background-image: image-url('logo_sponsor.png');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
   width: 100%;
   height: 450px;
 }
@@ -343,11 +353,15 @@ background-image: image-url('menu_venue.png');
   #dwarf-scroll {
     display: none!important;
   }
+  .info-inner {
+    margin: 10px 0;
+  }
 }
 /*--------------Home IMG-----------*/
 img.ruby {
   position: relative;
-  left: 10%;
+  left: 120px;
+  // left: 10%;
 }
 img.cloud2 {
   position: relative;
