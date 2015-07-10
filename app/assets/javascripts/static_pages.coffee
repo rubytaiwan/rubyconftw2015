@@ -3,10 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
   $('#front-nav').on 'mouseenter', '.nav-line',  ->
-    $('#front-nav .inner-nav > a').next().removeClass 'active'
-    $(@).next().addClass 'active'
+    $('#front-nav .inner-nav > a').next().removeClass 'nav-active'
+    $(@).next().addClass 'mav-active'
   .on 'mouseleave','.nav-line',  ->
-    $(@).next().removeClass 'active'
+    $(@).next().removeClass 'nav-active'
   $.event.special.scrollstop.latency = 100
   section_dims = []
   $('#sections .section').each (i, sec) ->
@@ -18,8 +18,8 @@ $(document).ready ->
     middletop = $(window).scrollTop() + $(window).innerHeight() / 2
     $.each section_dims, (i, sectop) ->
       idx = i if middletop > sectop
-    $('#front-nav .inner-nav > a').next().removeClass 'active'
-    $("#front-nav .inner-nav:nth-child(#{idx + 1}) > .enlarge").addClass 'active'
+    $('#front-nav .inner-nav > a').next().removeClass 'nav-active'
+    $("#front-nav .inner-nav:nth-child(#{idx + 1}) > .enlarge").addClass 'nav-active'
   $(window).trigger 'scrollstop'
 
   reset = ->

@@ -116,11 +116,6 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-<<<<<<< HEAD
-    compass-rails (2.0.1)
-      compass (~> 1.0.0)
-=======
->>>>>>> rubytaiwan/feature/add-compass
     database_cleaner (1.4.1)
     debug_inspector (0.0.2)
     devise (3.5.1)
@@ -348,11 +343,7 @@ DEPENDENCIES
   ceaser-easing
   cocoon
   coffee-rails (~> 4.1.0)
-<<<<<<< HEAD
-  compass-rails
-=======
   compass-rails!
->>>>>>> rubytaiwan/feature/add-compass
   database_cleaner
   devise
   factory_girl_rails
