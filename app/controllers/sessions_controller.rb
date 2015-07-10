@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  #helper_method :log_in, :current_user
 
   def new
   end
@@ -9,7 +8,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       # 登入用户，然后重定向到用户的资料页面
       log_in @user
-      redirect_to root_path
+      redirect_to url_after_login
     else
       # 创建一个错误消息
       #flash[:danger] = 'Invalid email/password combination'
@@ -23,5 +22,10 @@ class SessionsController < ApplicationController
     redirect_to static_pages_home_path
   end
 
+private
+
+  def url_after_login
+    params[:back_url] || backend_speakers_path
+  end
 
 end

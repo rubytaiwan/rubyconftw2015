@@ -1,6 +1,6 @@
 //= require jquery
 //= require jquery_ujs
+//= require jquery-sortable
 //= require bootstrap-sprockets
 //= require cocoon
-//= require turbolinks
-//= require_tree .
+//= require_tree ./backend

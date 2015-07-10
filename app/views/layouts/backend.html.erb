@@ -3,7 +3,6 @@
 <head>
   <title><%=page_title%></title>
   <%= stylesheet_link_tag    'backend', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'backend', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -18,5 +17,6 @@
 	</div>
 </div>
 
+  <%= javascript_include_tag 'backend', 'data-turbolinks-track' => true %>
 </body>
 </html>

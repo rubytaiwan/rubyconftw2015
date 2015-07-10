@@ -1,9 +1,10 @@
 <%= simple_form_for [:backend, current_object] do |f| %>
   <%= f.input :name , label: '贊助商名稱' %>
+  <%= f.input :level, label: '等級', as: :radio_buttons, collection: options_for_sponsor_levels %>
   <%= f.input :description , label: '描述'%>
   <%= f.input :link , label: '網址'%>
   <%= f.input_field :image, as: :file%>
-<br>    
+<br>
   <%= f.submit class: "btn btn-primary"%>
 <% end %>
 

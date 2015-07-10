@@ -12,6 +12,7 @@
 
 	<%= simple_form_for(:session, url: login_path) do |f| %>
 	  <%= f.input :email %>
+    <%= hidden_field_tag :back_url, flash[:back_url]%>
 	  <%= f.input :password %>
 	  <%= f.submit class: "btn btn-primary"%>
 	<% end %>
