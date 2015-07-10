@@ -15,5 +15,7 @@
 //= require bootstrap-sprockets
 //= require cocoon
 //= require jquery.scrollstop
+//= require jquery.transit
 //= require plugins/smooth-scroll
 //= require static_pages
+//= require home_animation

@@ -1,0 +1,33 @@
+//------ Animation ------//
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  // translateY default +20% for animation
+  transform: translate(-50%, -30%);
+  opacity: 0;
+}
+
+#airplan {
+  // temporary using scale
+  transform: scale(0);
+}
+
+#ruby, #cloud1, #cloud3, #dwarf {
+  transform-origin: 50% 50%;
+  transform: scale(0);
+}
+
+#info, #registration {
+  transform: translateY(50%);
+  opacity: 0;
+}
+
+#mountain {
+  transform: translateY(100%);
+}
+
+#tub-repeat {
+  transform: translateY(50%);
+}

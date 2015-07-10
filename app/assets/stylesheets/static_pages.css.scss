@@ -15,7 +15,7 @@ body {
   min-height:100%;
   margin: 0;
   padding: 0;
-  overflow-x:hidden;
+  overflow:hidden;
   color: #ffffff;
 }
 img { max-width: 100%; }
@@ -51,8 +51,13 @@ a:active {
 }
 img.tub-top {
   position: absolute;
-  left: 185px;
+  top: -18px;
+  left: -15px;
+  right: -15px;
   z-index: 2;
+
+  min-width: 124px;
+  min-height: 72px;
 }
 img.tub-bottom {
   position: absolute;
@@ -270,11 +275,14 @@ background-image: image-url('menu_venue.png');
 }
 .logo {
   text-align: center;
+  /*
   background-image: image-url('logo_sponsor.png');
   background-position: center;
   background-repeat: no-repeat;
+  */
   width: 100%;
   height: 450px;
+  position: relative;
 }
 .social {
   position: absolute;
@@ -347,12 +355,13 @@ background-image: image-url('menu_venue.png');
 /*--------------Home IMG-----------*/
 img.ruby {
   position: relative;
-  left: 10%;
+  left: 7.5%;
+  top: 3.5%;
 }
 img.cloud2 {
   position: relative;
-  right: 20%;
-  bottom: 5%;
+  right: 15%;
+  bottom: 10%;
 }
 img.cloud1 {
   position: absolute;
@@ -365,7 +374,14 @@ img.cloud3 {
   left: 95%;
 }
 /*--------------speaker -----------*/
-.block { background-color: $blue-color; }
+.block {
+  background-color: $blue-color;
+
+  &.mountain {
+    min-height: 460px;  // Preload image height
+    overflow: hidden;
+  }
+}
 img.mountain {
   max-width: 104%;
   width: 100%;
