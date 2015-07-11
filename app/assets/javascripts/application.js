@@ -17,3 +17,5 @@
 //= require jquery.scrollstop
 //= require plugins/smooth-scroll
 //= require static_pages
+//= require plugins/jquery.fullNav
+

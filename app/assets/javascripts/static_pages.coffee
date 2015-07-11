@@ -2,9 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
+  $('#navbar').fullNav()
   $('#front-nav').on 'mouseenter', '.nav-line',  ->
     $('#front-nav .inner-nav > a').next().removeClass 'nav-active'
-    $(@).next().addClass 'mav-active'
+    $(@).next().addClass 'nav-active'
   .on 'mouseleave','.nav-line',  ->
     $(@).next().removeClass 'nav-active'
   $.event.special.scrollstop.latency = 100

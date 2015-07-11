@@ -3,33 +3,27 @@
     <%= render partial: 'nav_item', locals: {name: name} %>
   <% end %>
 </nav>
+<div class="nav-triangle"></div>
+<div class="nav-default navbar-fixed-top">
+  <button type="button" data-showfullnav class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+</div>
+<div id="navbar">
+  <ul>
+    <li><a href="#home">home</a></li>
+    <li><a href="#speaker">speaker</a></li>
+    <li><a href="#schedule">schedule</a></li>
+    <li><a href="#venue">venue</a></li>
+    <li><a href="#coc">coc</a></li>
+    <li><a href="#sponsor">sponsor</a></li>
+    <li><a href="#staff">staff</a></li>
+  </ul>
+</div>
 
-<nav class="navbar navbar-default navbar-fixed-top navbar-blue">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#home">home</a></li>
-        <li><a href="#speaker">speaker</a></li>
-        <li><a href="#schedule">schedule</a></li>
-        <li><a href="#venue">venue</a></li>
-        <li><a href="#coc">coc</a></li>
-        <li><a href="#sponsor">sponsor</a></li>
-        <li><a href="#staff">staff</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
 
 <div id="sections">
   <div id="tub-repeat"></div>
@@ -38,7 +32,6 @@
       <%= image_tag("cloud2_airplan.png", class: "cloud2") %>
       <%= image_tag("gif/ruby_rotate3.gif", class: "ruby") %>
     </div>
-    <%#= image_tag("gif/ruby_rotate3.gif", class: "ruby") %>
     <%= image_tag("cloud1.png", class: "cloud1") %>
     <%= image_tag("cloud3.png", class: "cloud3") %>
     <%= image_tag("tub_top.png", class: "tub-top") %>
