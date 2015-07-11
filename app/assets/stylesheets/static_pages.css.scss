@@ -120,7 +120,11 @@ img.tub-bottom {
   display: none;
   text-align: center;
 }
+.navbar-fixed-top {
+  z-index: 3;
+}
 .nav-triangle {
+  display: none;
   width: 0;
   height: 0;
   border-style: solid;
@@ -129,6 +133,12 @@ img.tub-bottom {
   right: 0;
   position: fixed;
   z-index: 2;
+}
+.navbar-fade-in {
+  @include transition(all 1s ceaser($easeInOutExpo));
+}
+.navbar-fade-out {
+  @include transition(all 1s ceaser($easeInOutExpo));
 }
 .navbar-toggle .icon-bar {
     background-color: #fff;
@@ -142,14 +152,14 @@ img.tub-bottom {
 .fullNavOverlay ul li a:hover:before {
   content: '';
   display: inline-block;
-  background-image:image-url("diamand.png") ; /* your background */
+  background-image:image-url("diamand.png") ;
    width: 23px;
   height: 18px;
 }
 .fullNavOverlay ul li a:hover:after {
   content: '';
   display: inline-block;
-  background-image:image-url("diamand.png") ; /* your background */
+  background-image:image-url("diamand.png") ;
    width: 23px;
   height: 18px;
 }
@@ -191,8 +201,11 @@ img.tub-bottom {
   .navbar {
   display: block;
   }
+  .nav-triangle {
+  display: block;
+}
   #front-nav,
-  .social,.cloud1,.cloud2,.cloud3  {
+  .social {
     display: none;
   }
   .row{
@@ -431,6 +444,16 @@ img.cloud3 {
   position: absolute;
   overflow-x: hidden;
   left: 95%;
+}
+@media screen and (max-width: 992px) {
+  img.ruby {
+    left: 25%;
+    bottom: 15%;
+    width: 15%;
+  }
+  .cloud1,.cloud2,.cloud3  {
+    display: none;
+  }
 }
 /*--------------speaker -----------*/
 .block { background-color: $blue-color; }

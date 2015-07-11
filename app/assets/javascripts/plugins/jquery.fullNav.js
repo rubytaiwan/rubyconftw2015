@@ -37,15 +37,16 @@
 		// styling up
 		$('.fullNavOverlay').css({
 			position: 'fixed',
-			top: 0,
-			left: 0,
+			top: '-90%',
+			left: '60%',
+			transform: 'rotate(15deg)',
 			minHeight: '100%',
 			width: '100%',
 			background: settings.background,
-			display: 'none',
-			overflow: 'auto',
+			overflow: 'hidden',
+			opcity:'0'
 		});
-		$('.fullNavOverlay').css('z-index', 9999)
+		$('.fullNavOverlay').css('z-index', 0)
 
 
 		$('.fullNavOverlay ul').css({
@@ -90,7 +91,14 @@
 
 		$('.fullNavOverlay .fullNavOverlayCloseBtn').click(function() {
 			if ( settings.fade ) {
-				$(this).parent('.fullNavOverlay').fadeOut();
+				$(this).parent('.fullNavOverlay').removeClass('navbar-fade-in');
+				$(this).parent('.fullNavOverlay').addClass('navbar-fade-out');
+				$(this).parent('.fullNavOverlay').css({
+						top: '-90%',
+						left: '60%',
+						transform: 'rotate(15deg)',
+						zIndex: '0'
+					});
 			} else {
 				$(this).parent('.fullNavOverlay').hide();
 			}
@@ -110,7 +118,13 @@
 			$(this).on('click', function(e) {
 				e.preventDefault();
 				if (settings.fade) {
-					overlay.fadeIn();
+					overlay.css({
+						top: '0',
+						left: '0',
+						transform: 'rotate(0deg)',
+						zIndex: '5'
+					});
+					overlay.addClass('navbar-fade-in');
 				} else {
 					overlay.show();
 				}
