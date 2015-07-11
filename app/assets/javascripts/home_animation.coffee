@@ -13,23 +13,28 @@ $(document).ready ->
   $dwarf = $("#dwarf")
 
   # Easeing Function
-  _easeing = 'cubic-bezier(0.82, 0.03, 0.58, 1)'
+  _easeing = 'cubic-bezier(0.64, -0.22, 0.45, 1.72)'
 
   # Animate Helper
   animate = (object, options, time) ->
-    return (next) ->
-      object.transition(options, time, _easeing, next)
+    return ->
+      object.transition(options, time, _easeing)
+
+  parallelAnimation = (animations, delay) ->
+    delay ||= 200
+    for animation, index in animations
+      setTimeout(animation, index * 200)
 
   # Build animation queue
-  $(this).delay(1000).queue([
-    animate($airplan, {scale: 1}, 500),
+  parallelAnimation([
+    animate($airplan, {scale: 1}, 1000),
     animate($logo, {x: '-50%', y: '-50%', opacity: 1}, 1000),
     animate($ruby, {scale: 1}, 1000),
-    animate($cloud1, {scale: 1}, 500),
-    animate($cloud3, {scale: 1}, 750),
-    animate($info, {y: '0%', opacity: 1}, 500),
-    animate($registration, {y: '0%', opacity: 1}, 500),
+    animate($cloud1, {scale: 1}, 1000),
+    animate($cloud3, {scale: 1}, 1000),
+    animate($info, {y: '0%', opacity: 1}, 1000),
+    animate($registration, {y: '0%', opacity: 1}, 1000),
     animate($mountain, {y: '0%'}, 1000),
     animate($tube, {y: '0%'}, 1500),
-    animate($dwarf, {scale: 1, delay: 1000}, 500)
+    animate($dwarf, {scale: 1, delay: 1500}, 1000)
   ])
