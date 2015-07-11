@@ -4,12 +4,12 @@
 
 		var settings = {
 			background: '#173E71',
-			color: 'white',
+			color: '#fff',
 			linkPadding: '10px',
 			fontSize: '3em',
 			linkBackground: 'transparent',
 			fontFamily: 'Tamil',
-			hoverColor: 'rgb(196, 196, 196)',
+			hoverColor: '#fff',
 			fade: true,
 			closeContent: 'X'
 		};
@@ -52,7 +52,7 @@
 		$('.fullNavOverlay ul').css({
 			listStyle: 'none',
 			padding: 0,
-			marginTop: '130px'
+			marginTop: '15px'
 		});
 
 		$('.fullNavOverlay ul li').css({
@@ -70,6 +70,7 @@
 			textTransform: 'uppercase'
 		});
 
+    // Hover
 		$('.fullNavOverlay ul li a').hover(function(){
 			$(this).css('color', settings.hoverColor);
 		}, function(){
@@ -80,8 +81,8 @@
 		$('.fullNavOverlay .fullNavOverlayCloseBtn').css({
 			fontFamily: settings.fontFamily,
 			float: 'right',
-			top: '50px',
-			right: '50px',
+			top: '0',
+			right: '15px',
 			color: settings.color,
 			cursor: 'pointer',
 			fontSize: '3em',
@@ -107,11 +108,53 @@
 		//Each link
 		$('.fullNavOverlay a').click(function() {
 			if ( settings.fade ) {
-				$('.fullNavOverlay').fadeOut();
+				$('.fullNavOverlay').removeClass('navbar-fade-in');
+				$('.fullNavOverlay').addClass('navbar-fade-out');
+				$('.fullNavOverlay').css({
+						top: '-90%',
+						left: '60%',
+						transform: 'rotate(15deg)',
+						zIndex: '0'
+					});
 			} else {
 				$(this).parent('.fullNavOverlay').hide();
 			}
 		});
+
+		//
+		// var t = 1000;
+		// $('.fullNavOverlay ul li a').each( function(index) {
+		//   $(this).delay(index*t*0.25).animate(
+		//     {
+		//       'letter-spacing':'10px',
+		//       'padding-left':'75px',
+		//       'opacity':'0.8'
+		//     },
+		//     t
+		//   ).animate(
+		//     {
+		//       'letter-spacing':'1px',
+		//       'padding-left':'50px',
+		//       'opacity':'1'
+		//     },
+		//     0.5*t
+		//   );
+		// });
+
+		var item = $(".fullNavOverlay > a") , time = 300;
+    item.show();
+    item.css("opacity",0);
+
+    for(var i = 0 ; i <= 100 ; i +=10){
+        (function(ind){ //use ind to protect variable "i",or it will always be 100
+            $(".fullNavOverlay > a").queue("fadeIn",function(next){ //put all the process into queue
+                item.css("opacity", ind/100  );
+                setTimeout(next,time); //every 500 ms
+            });
+        })(i);
+    }
+
+
 
 		// Listen for data-showfullnav
 		$('*[data-showfullnav]').each(function(){
@@ -125,12 +168,12 @@
 						zIndex: '5'
 					});
 					overlay.addClass('navbar-fade-in');
+					 $(".fullNavOverlay ul li a").dequeue("fadeIn"); //start to run items!
 				} else {
 					overlay.show();
 				}
 			});
 		});
-
 	};
 
 })(jQuery);

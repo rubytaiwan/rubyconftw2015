@@ -8,6 +8,12 @@ $(document).ready ->
     $(@).next().addClass 'nav-active'
   .on 'mouseleave','.nav-line',  ->
     $(@).next().removeClass 'nav-active'
+  $(".fullNavOverlay ul li a").on 'mouseenter', ->
+    $(@).next().removeClass 'nav-active'
+    $(@).next().addClass 'nav-active'
+  $(".fullNavOverlay ul li a").on 'mouseleave', ->
+    $(@).removeClass 'test'
+
   $.event.special.scrollstop.latency = 100
   section_dims = []
   $('#sections .section').each (i, sec) ->
@@ -20,7 +26,9 @@ $(document).ready ->
     $.each section_dims, (i, sectop) ->
       idx = i if middletop > sectop
     $('#front-nav .inner-nav > a').next().removeClass 'nav-active'
+    $(".fullNavOverlay ul li > a").removeClass 'test'
     $("#front-nav .inner-nav:nth-child(#{idx + 1}) > .enlarge").addClass 'nav-active'
+    $(".fullNavOverlay ul li:nth-child(#{idx + 1}) a ").addClass 'test'
   $(window).trigger 'scrollstop'
 
   reset = ->
