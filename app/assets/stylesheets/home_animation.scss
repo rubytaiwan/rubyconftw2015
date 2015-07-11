@@ -31,3 +31,20 @@
 #tub-repeat {
   transform: translateY(50%);
 }
+
+#dwarf {
+}
+
+#ink-wave {
+  width: 100px;
+  height: 100px;
+
+  position: fixed;
+  top: 470px;
+  left: 250px;
+
+  background: rgba(white, .95);
+  border-radius: 50%;
+
+  transform: scale(0);
+}

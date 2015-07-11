@@ -1,6 +1,7 @@
 $(document).ready ->
 
   # Variables
+  $document = $(@)
   $logo = $("#logo")
   $ruby = $("#ruby")
   $airplan = $("#airplan")
@@ -11,14 +12,32 @@ $(document).ready ->
   $mountain = $("#mountain")
   $tube = $("#tub-repeat")
   $dwarf = $("#dwarf")
+  $inkWave = $("#ink-wave")
 
   # Easeing Function
-  _easeing = 'cubic-bezier(0.64, -0.22, 0.45, 1.72)'
+  _easing = 'cubic-bezier(0.64, -0.22, 0.45, 1.72)'
 
   # Animate Helper
   animate = (object, options, time) ->
+    return (next)->
+      object.transition(options, time, _easing, next)
+
+  queueAnimate = (animations) ->
     return ->
-      object.transition(options, time, _easeing)
+      $document.queue(animations)
+
+  spriteAnimate = (object, columnWidth, columns, fps) -> # Sprite Animate using background-position
+    fps ||= 30
+    frameTime = 1000 / fps
+    return (next) ->
+      object.animate({
+        'background-position-x': columnWidth * columns + 'px'
+      }, {
+        duration: frameTime * columns
+        complete: next
+        step: (p, fx) ->
+          fx.now = Math.floor(p / columnWidth) * columnWidth # Force override to make sprite animate
+      })
 
   parallelAnimation = (animations, delay) ->
     delay ||= 200
@@ -36,5 +55,9 @@ $(document).ready ->
     animate($registration, {y: '0%', opacity: 1}, 1000),
     animate($mountain, {y: '0%'}, 1000),
     animate($tube, {y: '0%'}, 1500),
-    animate($dwarf, {scale: 1, delay: 1500}, 1000)
+    queueAnimate([
+      animate($dwarf, {scale: 1, delay: 1500}, 1000),
+      spriteAnimate($dwarf, 100, 27, 24),
+      animate($inkWave, {scale: 500, opacity: 0}, 1000)
+    ])
   ])
