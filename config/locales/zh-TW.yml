@@ -10,9 +10,14 @@ zh-TW:
     backend/users:
       new: '新增使用者'
       edit: '修改作者資料'
-    
   flash:
     successfully_created: 成功建立
     successfully_updated: 成功更新
     successfully_destroyed: 已刪除
     warning: 失敗
+  sponsor-levels:
+    - Ruby.Gem
+    - Platinum
+    - Gold
+    - Silver
+    - Bronze

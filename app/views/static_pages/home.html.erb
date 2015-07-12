@@ -1,8 +1,33 @@
 <nav id="front-nav">
-  <% %w{home speaker schedule venue coc sponsor staff }.each do |name| %>
+  <% @nav_sections.each do |name| %>
     <%= render partial: 'nav_item', locals: {name: name} %>
   <% end %>
 </nav>
+<div class="nav-triangle"></div>
+<div class="nav-default navbar-fixed-top">
+  <button type="button" data-showfullnav class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+</div>
+<div id="navbar">
+  <ul>
+    <% @nav_sections.each do |name| %>
+      <li><a href="#<%=name%>"><%=name.capitalize%></a></li>
+    <%end%>
+    <div class="socail-rwd">
+      <%= link_to image_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
+         target: "_blank" %></li>
+      <%= link_to image_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan",
+        target: "_blank" %></li>
+      <%= link_to image_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %></li>
+    </div>
+  </ul>
+</div>
+
+
 <div id="sections">
   <div id="tub-repeat">
     <%= image_tag("tub_top.png", class: "tub-top") %>
@@ -49,7 +74,7 @@
     <div class="tub-repeat"></div>
     <div class="row">
       <% @speakers.each do |speaker| %>
-      <div class="col-sm-4">
+      <div class="col-xs-12 col-sm-4 col-md-4">
         <div class="avatar">
           <div class="imagecontainer">
             <%= image_tag speaker.avatar.middle %>
@@ -79,8 +104,8 @@
     <div class="venue-block"></div>
   </div>
   <div id="coc" class="section">
-    <div class="row">
-      <div class="col-sm-10">
+    <div class="row ">
+      <div class="col-xs-12 col-sm-10">
         <div class="coc-title">
           <h1>Code of conduct</h1>
         </div>
@@ -125,7 +150,7 @@
   </div>
   <div id="staff">
     <div class="dwarf-bottom"></div>
-    <%= image_tag("footer.png", class: "footer-bg") %>
+    <%#= image_tag("footer.png", class: "footer-bg") %>
     <%= image_tag("tub_bottom.png",class: "tub-bottom") %>
   </div>
 </div>

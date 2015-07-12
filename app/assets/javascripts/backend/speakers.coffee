@@ -1,3 +1,16 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+group = $('.speaker-sortable').sortable
+  containerSelector: '.speaker-sortable'
+  itemSelector: '.col-sm-4'
+  nested: false
+  handle: '.handle'
+  onDrop: (item, container, _super) ->
+    data = $('.speaker-sortable').find('li').map ->
+      $(@).data('id')
+    .get()
+    $(container.target).find('speaker-container').map
+    $.ajax
+      url: $(container.target).data 'resort-action'
+      data:
+        ids: data
+      type: 'PUT'
+    _super(item, container)
