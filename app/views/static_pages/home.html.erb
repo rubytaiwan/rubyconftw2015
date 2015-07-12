@@ -9,7 +9,8 @@
   </div>
   <div id="home" class="section">
     <div class="logo">
-      <%= image_tag("cloud2_airplan.png", class: "cloud2", id: "airplan") %>
+      <% #image_tag("cloud2_airplan.png", class: "cloud2", id: "airplan") %>
+      <%= render partial: 'airplan.svg' %>
       <%= image_tag("gif/ruby_rotate3.gif", class: "ruby", id: "ruby") %>
       <%= image_tag("logo_sponsor.png", id: "logo") %>
     </div>

@@ -46,7 +46,7 @@ $(document).ready ->
 
   # Build animation queue
   parallelAnimation([
-    animate($airplan, {scale: 1}, 1000),
+    (next) -> $airplan.show(next),
     animate($logo, {x: '-50%', y: '-50%', opacity: 1}, 1000),
     animate($ruby, {scale: 1}, 1000),
     animate($cloud1, {scale: 1}, 1000),
