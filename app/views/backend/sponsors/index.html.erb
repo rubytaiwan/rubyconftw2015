@@ -5,6 +5,7 @@
       <thead>
         <tr>
           <th>Name</th>
+          <th>Level</th>
           <th>description</th>
           <th>Link</th>
           <th>image</th>
@@ -15,6 +16,7 @@
       <% current_collection.each do |sponsor| %>
         <tr>
           <td><%= sponsor.name %></td>
+          <td><%= t('sponsor-levels')[sponsor.level - 1] %></td>
           <td><%= sponsor.description %></td>
           <td><%= sponsor.link %></td>
           <td><%= image_tag sponsor.image.small %></td>
@@ -22,6 +24,6 @@
           <td><%= link_to '編輯', edit_backend_sponsor_path(sponsor) ,class:'btn btn-success btn-xs'%></td>
           <td><%= link_to '刪除', backend_sponsor_path(sponsor), method: :delete, data: { confirm: 'Are you sure?'} ,class:'btn btn-danger btn-xs' %></td>
         </tr>
-       <% end %> 
+       <% end %>
       </tbody>
 </table>
