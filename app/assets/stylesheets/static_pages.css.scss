@@ -1,6 +1,8 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "compass";
+@import "ceaser-easing";
 $green-color: #66CC99;
 $blue-color:  #173E71;
 $sky-blue:    #4BA9FA;
@@ -75,10 +77,17 @@ img.tub-bottom {
 .btn-group > .btn {
 	float: none;
   cursor: pointer;
-  border-radius: 3px;
-  padding: 20px 85px;
-  margin: 0 15px;
+  border-radius: 2px;
+  padding: 20px 60px;
+  margin: 5px 15px;
   border: 2px solid #fff;
+  width: 250px;
+}
+.btn-group > .btn:first-child {
+  margin-left: 15px;
+}
+.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
+  margin-left: 15px;
 }
 .btn:focus {
 	color: inherit;
@@ -107,6 +116,63 @@ img.tub-bottom {
   opacity: 0.2;
 }
 /*--------------nav-----------*/
+#navbar {
+  display: none;
+  text-align: center;
+}
+.navbar-fixed-top {
+  z-index: 3;
+}
+.nav-triangle {
+  display: none;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 230px 60px 0;
+  border-color: transparent #173e71 transparent transparent;
+  right: 0;
+  position: fixed;
+  z-index: 2;
+}
+.navbar-fade-in {
+  @include transition(all 1s ceaser($easeInOutExpo));
+}
+.navbar-fade-out {
+  @include transition(all 1s ceaser($easeInOutExpo));
+}
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+.fullNavOverlay ul li a:hover:before,
+.test:before
+ {
+  content: '';
+  display: inline-block;
+  background-image:image-url("diamand.png") ;
+  width: 23px;
+  height: 35px;
+  margin-right: 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+.fullNavOverlay ul li a:hover:after,
+.test:after
+ {
+  content: '';
+  display: inline-block;
+  background-image:image-url("diamand.png") ;
+  width: 23px;
+  height: 35px;
+  margin-left: 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
 #front-nav {
   position: fixed;
   top: 280px;
@@ -141,6 +207,29 @@ img.tub-bottom {
 .nav-line:hover {
   background: image-url('menu_line_hover.png') no-repeat left center;
 }
+@media (max-width: 769px) {
+  .navbar {
+  display: block;
+  }
+  .nav-triangle {
+  display: block;
+}
+  #front-nav,
+  .social {
+    display: none;
+  }
+  .row{
+    margin-left: 0;
+  }
+  .socail-rwd {
+    text-align: center;
+  }
+  .socail-rwd a {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 15px;
+  }
+}
 .home_ic {
 	background-image: image-url('menu_home.png');
 }
@@ -162,7 +251,7 @@ background-image: image-url('menu_venue.png');
 .staff_ic {
   background-image: image-url('menu_staff.png');
 }
-.active {
+.nav-active {
   animation: animationFrames ease 1s;
   animation-iteration-count: 1;
   transform-origin: 0% 50%;
@@ -269,12 +358,19 @@ background-image: image-url('menu_venue.png');
   margin-left: 75px;
 }
 .logo {
+  @include transition(all 600ms ceaser($easeOutExpo));
   text-align: center;
   background-image: image-url('logo_sponsor.png');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
   width: 100%;
   height: 450px;
+}
+@media screen and (max-width: 992px) {
+  .logo{
+    height: 250px;
+  }
 }
 .social {
   position: absolute;
@@ -343,6 +439,9 @@ background-image: image-url('menu_venue.png');
   #dwarf-scroll {
     display: none!important;
   }
+  .info-inner {
+    margin: 10px 0;
+  }
 }
 /*--------------Home IMG-----------*/
 img.ruby {
@@ -363,6 +462,16 @@ img.cloud3 {
   position: absolute;
   overflow-x: hidden;
   left: 95%;
+}
+@media screen and (max-width: 992px) {
+  img.ruby {
+    left: 25%;
+    bottom: 15%;
+    width: 15%;
+  }
+  .cloud1,.cloud2,.cloud3  {
+    display: none;
+  }
 }
 /*--------------speaker -----------*/
 .block { background-color: $blue-color; }
@@ -394,7 +503,7 @@ img.mountain {
   background-color: $sky-blue;
   background-image: image-url('empty_speaker_mountain2.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  // background-size: 100% auto;
   background-position: center bottom;
   text-align: center;
   padding: 150px 0;
@@ -410,13 +519,17 @@ img.mountain {
   padding: 8% 0 ;
 }
 .schedule-frame {
-  width: 589px;
-  height: 358px;
-  margin-left: 15%;
-  margin-bottom: 15%;
+  width: 590px;
+  height: 360px;
+  margin: 15% auto;
   background: image-url('schedule.png');
   background-position: center bottom;
   background-size: 100% auto;
+}
+@media screen and (max-width: 640px) {
+  #schedule{
+    background-position: 70% bottom;
+  }
 }
 
 /*--------------schedule table-----------*/
@@ -465,6 +578,7 @@ img.mountain {
   	text-decoration: underline;
   }
 }
+
 .coc-title {
   margin-top: 50px;
 }
@@ -473,6 +587,16 @@ img.mountain {
 }
 .content {
 	margin: 5% 0;
+}
+@media (max-width: 992px) {
+  #coc {
+    text-align: left;
+    .row{
+    margin-right: 15px;
+    margin-left: 15px;
+    }
+  }
+
 }
 /*--------------sponsor-----------*/
 #sponsor {
@@ -488,6 +612,12 @@ img.sponsor_ruby { width: 60%; }
   display: inline-block;
 }
 /*--------------staff-----------*/
+#staff{
+  background-image: image-url('footer.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
 img.footer-bg { width: 100%; }
 .dwarf-bottom {
   background-image: image-url('jump_all_s.png');
@@ -501,6 +631,9 @@ img.footer-bg { width: 100%; }
   display: none;
 }
 @media screen and (max-width: 992px) {
+  #staff {
+    background-position: 50% bottom;
+  }
   .dwarf-bottom {
     display: none!important;
   }
