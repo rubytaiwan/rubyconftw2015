@@ -18,9 +18,10 @@ $(document).ready ->
   _easing = 'cubic-bezier(0.64, -0.22, 0.45, 1.72)'
 
   # Animate Helper
-  animate = (object, options, time) ->
+  animate = (object, options, time, easing) ->
+    easing ||= _easing
     return (next)->
-      object.transition(options, time, _easing, next)
+      object.transition(options, time, easing, next)
 
   queueAnimate = (animations) ->
     return ->
@@ -53,11 +54,12 @@ $(document).ready ->
     animate($cloud3, {scale: 1}, 1000),
     animate($info, {y: '0%', opacity: 1}, 1000),
     animate($registration, {y: '0%', opacity: 1}, 1000),
-    animate($mountain, {y: '0%'}, 1000),
-    animate($tube, {y: '0%'}, 1500),
+    animate($mountain, {y: '0%'}, 1000, 'cubic-bezier(1, 0, 0, 1)'),
+    animate($tube, {y: '0%'}, 1500, 'cubic-bezier(1, 0, 0, 1)'),
     queueAnimate([
       animate($dwarf, {scale: 1, delay: 1500}, 1000),
       spriteAnimate($dwarf, 100, 27, 24),
-      animate($inkWave, {scale: 500, opacity: 0}, 1000)
+      animate($inkWave, {scale: 500, opacity: 0}, 1000, 'cubic-bezier(1, 0, 0, 1)'),
+      -> $inkWave.hide().dequeue() # Remove inkwave prevent mouse event
     ])
   ])

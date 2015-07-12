@@ -378,7 +378,7 @@ img.cloud3 {
   background-color: $blue-color;
 
   &.mountain {
-    min-height: 460px;  // Preload image height
+    //min-height: 460px;  // Preload image height
     overflow: hidden;
   }
 }
