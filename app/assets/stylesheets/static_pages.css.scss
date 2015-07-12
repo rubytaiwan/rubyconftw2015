@@ -67,10 +67,12 @@ img.tub-bottom {
   bottom: 150px;
   z-index: 2;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   #tub-repeat { display: none; }
   img.tub-top { display: none; }
   img.tub-bottom { display: none; }
+  .dwarf-jump {display: none!important;}
+  #dwarf-scroll {display: none;}
 }
 /*--------------button-----------*/
 .btn-group {
@@ -377,7 +379,7 @@ background-image: image-url('menu_venue.png');
 }
 @media screen and (max-width: 992px) {
   .logo{
-    height: 250px;
+    height: 350px;
   }
 }
 .social {
@@ -441,9 +443,6 @@ background-image: image-url('menu_venue.png');
   display: none;
 }
 @media screen and (max-width: 992px) {
-  .dwarf-jump {
-    display: none!important;
-  }
   #dwarf-scroll {
     display: none!important;
   }
@@ -475,11 +474,17 @@ img.cloud3 {
 @media screen and (max-width: 992px) {
   img.ruby {
     left: 25%;
-    bottom: 15%;
+    bottom: 5%;
     width: 15%;
   }
   .cloud1,.cloud2,.cloud3  {
     display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  img.ruby {
+    top:0;
+    bottom: 0;
   }
 }
 /*--------------speaker -----------*/
@@ -543,8 +548,19 @@ img.mountain {
   background-size: 100% auto;
 }
 @media screen and (max-width: 640px) {
-  #schedule{
+  #schedule {
     background-position: 70% bottom;
+  }
+  .schedule-frame {
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 450px;
+  }
+  .call-for-proposal  {
+    padding: 10% 0 15% 0;
   }
 }
 
