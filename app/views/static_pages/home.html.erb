@@ -1,5 +1,5 @@
 <nav id="front-nav">
-  <% %w{home speaker schedule venue coc sponsor staff }.each do |name| %>
+  <% @nav_sections.each do |name| %>
     <%= render partial: 'nav_item', locals: {name: name} %>
   <% end %>
 </nav>
@@ -14,12 +14,9 @@
 </div>
 <div id="navbar">
   <ul>
-    <li><a href="#home">home</a></li>
-    <li><a href="#speaker">speaker</a></li>
-    <li><a href="#schedule">schedule</a></li>
-    <li><a href="#venue">venue</a></li>
-    <li><a href="#coc">coc</a></li>
-    <li><a href="#sponsor">sponsor</a></li>
+    <% @nav_sections.each do |name| %>
+      <li><a href="#<%=name%>"><%=name.capitalize%></a></li>
+    <%end%>
     <div class="socail-rwd">
       <%= link_to image_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
          target: "_blank" %></li>
