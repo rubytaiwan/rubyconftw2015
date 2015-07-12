@@ -1,0 +1,107 @@
+//---- Mixin/Keyframes --//
+@mixin animate($name, $delay, $time: 1s, $easing: ease-out) {
+  animation: $name $time $easing forwards;
+  animation-delay: $delay;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+//------ Animation ------//
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  // translateY default +20% for animation
+  transform: translate(-50%, -30%);
+  opacity: 0;
+}
+
+#ruby, #cloud1, #cloud3, #dwarf {
+  transform-origin: 50% 50%;
+  transform: scale(0);
+}
+
+#info, #registration {
+  transform: translateY(50%);
+  opacity: 0;
+}
+
+#mountain {
+  transform: translateY(100%);
+}
+
+#tub-repeat {
+  transform: translateY(50%);
+}
+
+#dwarf {
+}
+
+#ink-wave {
+  width: 100px;
+  height: 100px;
+
+  position: fixed;
+  top: 430px;
+  left: 210px;
+
+  background: rgba(white, .95);
+  border-radius: 50%;
+
+  transform: scale(0);
+}
+
+%storke-style {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+#airplan {
+  .path1 {
+    @include animate(dash, 1s, 500ms);
+    @extend %storke-style;
+  }
+
+  .path2 {
+    @include animate(dash, 1.5s, 500ms);
+    @extend %storke-style;
+  }
+
+  .path3 {
+    @include animate(dash, 2s, 500ms);
+    @extend %storke-style;
+  }
+
+  .cloud {
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    @include animate(scale, 0s, 1s, cubic-bezier(.64, -0.22, .45, 1.72));
+  }
+
+  .airplan {
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    @include animate(scale, 2.5s, 1s, cubic-bezier(.64, -0.22, .45, 1.72));
+  }
+
+  display: none;
+}
+
+

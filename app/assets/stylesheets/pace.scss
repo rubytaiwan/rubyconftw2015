@@ -1,0 +1,45 @@
+.pace {
+  user-select: none;
+
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: #173E71;
+
+  &.pace-inactive {
+    display: none;
+  }
+
+  .pace-progress {
+    position: fixed;
+    z-index: 2000;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 125px;
+    width: 125px !important;
+
+    background-image: image-url('gif/ruby_rotate3.gif');
+
+    transform: translate(-50%, -50%) !important;
+
+    &:after {
+      content: attr(data-progress-text);
+      display: block;
+      margin-top: 94%;
+      margin-left: 0.25em;
+
+      text-align: center;
+      font-size: 2em;
+      font-family: "Songti TC";
+      font-weight: bold;
+      letter-spacing: 0.92px;
+    }
+  }
+}

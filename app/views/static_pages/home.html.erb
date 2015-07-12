@@ -29,15 +29,18 @@
 
 
 <div id="sections">
-  <div id="tub-repeat"></div>
+  <div id="tub-repeat">
+    <%= image_tag("tub_top.png", class: "tub-top") %>
+  </div>
   <div id="home" class="section">
     <div class="logo">
-      <%= image_tag("cloud2_airplan.png", class: "cloud2") %>
-      <%= image_tag("gif/ruby_rotate3.gif", class: "ruby") %>
+      <% #image_tag("cloud2_airplan.png", class: "cloud2", id: "airplan") %>
+      <%= render partial: 'airplan.svg' %>
+      <%= image_tag("gif/ruby_rotate3.gif", class: "ruby", id: "ruby") %>
+      <%= image_tag("logo_sponsor.png", id: "logo") %>
     </div>
-    <%= image_tag("cloud1.png", class: "cloud1") %>
-    <%= image_tag("cloud3.png", class: "cloud3") %>
-    <%= image_tag("tub_top.png", class: "tub-top") %>
+    <%= image_tag("cloud1.png", class: "cloud1", id: "cloud1") %>
+    <%= image_tag("cloud3.png", class: "cloud3", id: "cloud3") %>
     <div class="social">
       <%= link_to image_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
        target: "_blank" %>
@@ -45,9 +48,10 @@
       target: "_blank" %>
       <%= link_to image_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %>
     </div>
-    <div class="dwarf-jump"></div>
+    <div id="ink-wave"></div>
+    <div id="dwarf" class="dwarf-jump"></div>
     <div id="dwarf-scroll" class="dwarf-scroll-hide"></div>
-    <div class="info">
+    <div id="info" class="info">
       <div class="info-inner time">
         <%= image_tag("time_ic.png") %>
         <p>September 11</p>
@@ -57,15 +61,15 @@
         <p>H.S.S. Building, Academia Sinica</p>
       </div>
     </div>
-    <div class="btn-group">
+    <div id="registration" class="btn-group">
       <%= link_to "registeration","#",class: "white-btn btn btn-disabled" %>
       <%= link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",
       class: " blue-btn btn ",role: "button", target: "_blank" %>
     </div>
   </div>
   <div id="speaker" class="section">
-    <div class="block">
-      <%= image_tag("mountain1.png", class: "mountain") %>
+    <div class="block mountain">
+      <%= image_tag("mountain1.png", class: "mountain", id: "mountain") %>
     </div>
     <div class="tub-repeat"></div>
     <div class="row">
