@@ -17,14 +17,19 @@ $(document).ready ->
   $.event.special.scrollstop.latency = 100
   section_dims = []
   $('#sections .section').each (i, sec) ->
-    min = parseInt $(sec).position().top
+    min = parseInt $(sec).offset().top
     section_dims.push min
   $(window).on 'scrollstop', ->
-    stop = $(@).scrollTop()
+    if $('#dwarf-scroll').css('display') == 'block'
+      stop = $('#dwarf-scroll').offset().top + $('#dwarf-scroll').height() / 2
+    else
+      stop = $(@).scrollTop() + $(@).height() / 3
     idx = 0
-    middletop = $(window).scrollTop() + $(window).innerHeight() / 2
-    $.each section_dims, (i, sectop) ->
-      idx = i if middletop > sectop
+    $.each $('#sections .section'), (i, sec) ->
+      sectop = parseInt $(sec).offset().top
+      #     console.log("i=#{i}, sectop=#{sectop}, stop=#{stop}")
+      if i > 0 && stop >= sectop
+        idx = i
     $('#front-nav .inner-nav > a').next().removeClass 'nav-active'
     $(".fullNavOverlay ul li > a").removeClass 'test'
     $("#front-nav .inner-nav:nth-child(#{idx + 1}) > .enlarge").addClass 'nav-active'
