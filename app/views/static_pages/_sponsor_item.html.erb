@@ -1,0 +1,19 @@
+<% current_level = Sponsor.select("level").count  %>
+  <% current_level.each do |x|%>
+<% end %>
+
+
+<% if Sponsor.where(:level => 1).count > 0 %>
+  <div class="level">
+    <%= image_tag("sponsorship_level_1.png") %>
+  </div>
+<% end %>
+<% @sponsors.each do |sponsor| %>
+  <% if sponsor.level == 1 %>
+    <div class="ruby-gem-avatar">
+      <div class="imagecontainer">
+        <%= link_to image_tag(sponsor.image, title: sponsor.description,  class:"sponsor_ruby"), sponsor.link , target: "_blank"%>
+      </div>
+    </div>
+  <% end %>
+<% end %>
