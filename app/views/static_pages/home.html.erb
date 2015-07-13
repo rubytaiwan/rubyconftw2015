@@ -135,17 +135,19 @@
     </div>
   </div>
   <div id="sponsor" class="section">
-    <div class="row">
-      <div class="level">
-        <%= image_tag("sponsorship_level_1.png") %>
-      </div>
-      <% @sponsors.each do |sponsor| %>
-        <div class="ruby-gem-avatar">
-          <div class="imagecontainer">
-          <%= link_to image_tag(sponsor.image, title: sponsor.description,  class:"sponsor_ruby"), sponsor.link , target: "_blank"%>
-          </div>
+    <%@sponsors_hash.keys.each do |slv|%>
+      <div class="row">
+        <div class="level">
+          <%= image_tag("sponsorship_level_#{slv}.png") %>
         </div>
-      <% end %>
+        <% @sponsors_hash[slv].each do |sponsor| %>
+          <div class="ruby-gem-avatar">
+            <div class="imagecontainer">
+            <%= link_to image_tag(sponsor.image, title: sponsor.description,  class:"sponsor_ruby"), sponsor.link , target: "_blank"%>
+            </div>
+          </div>
+        <% end %>
+      <%end%>
     </div>
   </div>
   <div id="staff">
