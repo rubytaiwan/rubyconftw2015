@@ -62,7 +62,7 @@
       </div>
     </div>
     <div id="registration" class="btn-group">
-      <%= link_to "registeration","#",class: "white-btn btn btn-disabled" %>
+      <%= link_to "Registration","#",class: "white-btn btn btn-disabled" %>
       <%= link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",
       class: " blue-btn btn ",role: "button", target: "_blank" %>
     </div>
@@ -116,7 +116,7 @@
           Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/customes, or otherwise create a sexualized environment.</p>
           <p>If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
           If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff will be visible by their special badges and clothing.</p>
-          <p>Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
+          <p>Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escort, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
           We expect participants to follow these rules at all conference venues and conference-related social events.</p>
           <p>This code of conduct is based off the work done at Conference Code of Conduct</p>
         </div>
@@ -140,17 +140,18 @@
         <%= image_tag("sponsorship_level_1.png") %>
       </div>
       <% @sponsors.each do |sponsor| %>
-        <div class="ruby-gem-avatar">
-          <div class="imagecontainer">
-          <%= link_to image_tag(sponsor.image, title: sponsor.description,  class:"sponsor_ruby"), sponsor.link , target: "_blank"%>
+        <% if sponsor.level == 1 %>
+          <div class="ruby-gem-avatar">
+            <div class="imagecontainer">
+              <%= link_to image_tag(sponsor.image, title: sponsor.description,  class:"sponsor_ruby"), sponsor.link , target: "_blank"%>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </div>
   <div id="staff">
     <div class="dwarf-bottom"></div>
-    <%#= image_tag("footer.png", class: "footer-bg") %>
     <%= image_tag("tub_bottom.png",class: "tub-bottom") %>
   </div>
 </div>
