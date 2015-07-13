@@ -136,7 +136,7 @@
   </div>
   <div id="sponsor" class="section">
     <%@sponsors_hash.keys.each do |slv|%>
-      <div class="row">
+      <div class="row sponsor-level-#{slv}">
         <div class="level">
           <%= image_tag("sponsorship_level_#{slv}.png") %>
         </div>
