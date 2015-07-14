@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "compass";
 @import "ceaser-easing";
+@import "retina";
+
 $green-color: #66CC99;
 $blue-color:  #173E71;
 $sky-blue:    #4BA9FA;
@@ -514,8 +516,8 @@ img.mountain {
 }
 /*--------------schedule-----------*/
 #schedule {
+  @include at2x('empty_speaker_mountain2', 'png');
   background-color: $sky-blue;
-  background-image: image-url('empty_speaker_mountain2.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center bottom;
@@ -639,7 +641,7 @@ img.sponsor_ruby { width: 60%; }
 }
 /*--------------staff-----------*/
 #staff{
-  background-image: image-url('footer.png');
+  @include at2x('footer', 'png', 'cover');
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
