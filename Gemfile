@@ -56,6 +56,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'capistrano',  '~> 3.1'
   gem 'capistrano-rails', '~> 1.1'
+  gem 'slackistrano', require: false
 end
 
 group :test do

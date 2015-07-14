@@ -17,6 +17,15 @@ set :scm, :git
 # set :log_level, :debug
 # set :pty, true
 
+settings = YAML.load(File.read(File.expand_path('../settings.yml', __FILE__)))['development']
+
+set :slack_via_slackbot, settings['capistrano_slack']['enable']
+if settings['capistrano_slack']['enable']
+  set :slack_team, settings['capistrano_slack']['team']
+  set :slack_token, settings['capistrano_slack']['token']
+  set :slack_channel, settings['capistrano_slack']['channel']
+end
+
 set :linked_files, %w{config/database.yml config/settings.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads public/cfs}
 
