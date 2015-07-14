@@ -21,3 +21,4 @@
 /log/*
 !/log/.keep
 /tmp
+/app/assets/javescripts/plugins/fb-setting.js
