@@ -15,7 +15,7 @@ document.querySelector( "#nav-toggle" )
       $('.fullNavOverlay').removeClass('navbar-fade-in');
       $('.fullNavOverlay').addClass('navbar-fade-out');
       $('.fullNavOverlay').css({
-          top: '-90%',
+          top: '-100%',
           left: '60%',
           transform: 'rotate(15deg)',
           zIndex: '0'
