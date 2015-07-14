@@ -3,6 +3,11 @@
 <head>
   <title><%=page_title%></title>
   <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+  <meta property="og:title" content="RubyConf Taiwan 2015" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="<%= request.url%>" />
+  <meta property="og:image" content="<%= image_url('og_image.png') %>"/>
+  <meta property="og:type" content="" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'pace', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
