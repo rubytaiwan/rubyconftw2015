@@ -126,22 +126,21 @@ img.tub-bottom {
 }
 /*--------------nav-----------*/
 #navbar {
-  display: none;
   text-align: center;
 }
 .navbar-fixed-top {
-  z-index: 3;
+  z-index: 999;
+  top: 15px;
 }
-.nav-triangle {
+.nav-bg {
   display: none;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 230px 60px 0;
-  border-color: transparent #173e71 transparent transparent;
-  right: 0;
+  width: 50px;
+  height: 50px;
+  right: 4%;
+  top: 5px;
+  background-color: #173e71;
   position: fixed;
-  z-index: 2;
+  z-index: -1;
 }
 .navbar-fade-in {
   @include transition(all 1s ceaser($easeInOutExpo));
@@ -149,14 +148,70 @@ img.tub-bottom {
 .navbar-fade-out {
   @include transition(all 1s ceaser($easeInOutExpo));
 }
-.navbar-toggle .icon-bar {
-    background-color: #fff;
+.fullNavOverlay {
+  position: fixed;
+  top: -100%;
+  left: 70%;
+  transform: rotate(15deg);
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 5;
+  background: rgb(23, 62, 113);
 }
-.navbar-toggle .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    border-radius: 1px;
+.fullNavOverlay ul{
+  list-style: none;
+  padding: 0px;
+  margin-top: 15px;
+}
+.fullNavOverlay a{
+  display: block;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+  font-size: 3em;
+  font-family: Tamil;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#nav-toggle span {
+  // position: absolute;
+  right: 15%;
+  top: 50%;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
 }
 .fullNavOverlay ul li a:hover:before,
 .test:before
@@ -220,7 +275,7 @@ img.tub-bottom {
   .navbar {
   display: block;
   }
-  .nav-triangle {
+  .nav-bg {
   display: block;
 }
   #front-nav,
