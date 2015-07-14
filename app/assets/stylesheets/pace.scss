@@ -1,5 +1,6 @@
 .pace {
   user-select: none;
+  -webkit-backface-visibility: hidden;
 
   z-index: 2000;
   position: fixed;
@@ -25,9 +26,25 @@
     height: 125px;
     width: 125px !important;
 
-    background-image: image-url('gif/ruby_rotate3.gif');
+    background-image: image-url('svg/diamand.svg');
+    background-position: center;
+    background-repeat: no-repeat;
 
     transform: translate(-50%, -50%) !important;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 125px;
+      height: 125px;
+
+      background-image: image-url('svg/diamand_outline_rotate.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+
+      animation: rotate 6s linear forwards infinite;
+    }
 
     &:after {
       content: attr(data-progress-text);

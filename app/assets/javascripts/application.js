@@ -21,3 +21,4 @@
 //= require home_animation
 //= require plugins/fb-setting.js
 //= require plugins/fullNav.js
+//= require retina

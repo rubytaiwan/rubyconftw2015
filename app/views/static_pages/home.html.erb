@@ -31,10 +31,9 @@
   </div>
   <div id="home" class="section">
     <div class="logo">
-      <% #image_tag("cloud2_airplan.png", class: "cloud2", id: "airplan") %>
       <%= render partial: 'airplan.svg' %>
-      <%= image_tag("gif/ruby_rotate3.gif", class: "ruby", id: "ruby") %>
-      <%= image_tag("logo_sponsor.png", id: "logo") %>
+      <div class="ruby" id="ruby"><!-- CSS Animation --></div>
+      <%= image_retina_tag("logo_sponsor.png", id: "logo") %>
     </div>
     <%= image_tag("cloud1.png", class: "cloud1", id: "cloud1") %>
     <%= image_tag("cloud3.png", class: "cloud3", id: "cloud3") %>
@@ -66,7 +65,7 @@
   </div>
   <div id="speaker" class="section">
     <div class="block mountain">
-      <%= image_tag("mountain1.png", class: "mountain", id: "mountain") %>
+      <%= image_retina_tag("mountain1.png", class: "mountain", id: "mountain") %>
     </div>
     <div class="tub-repeat"></div>
     <div class="row">
