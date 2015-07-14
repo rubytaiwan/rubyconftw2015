@@ -12,7 +12,7 @@
   <%= javascript_include_tag 'pace', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-facebook-appid="<%=Settings.facebook.app_id%>">
 <%= yield %>
 <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyDFSYBzU149v3h0Orot-FPewIHbzX72Flw" %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>

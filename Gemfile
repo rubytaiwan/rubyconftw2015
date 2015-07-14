@@ -72,3 +72,4 @@ end
 
 gem 'pg'
 gem 'highline'
+gem 'settingslogic'
