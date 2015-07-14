@@ -34,7 +34,8 @@ a:active {
   color: inherit;
 }
 .row {
-  margin-left: 30%;
+  // margin-left: 30%;
+  margin-left: 285px;
   background-color: transparent;
 }
 #sections {
@@ -75,6 +76,7 @@ img.tub-bottom {
   img.tub-bottom { display: none; }
   .dwarf-jump {display: none!important;}
   #dwarf-scroll {display: none;}
+  .row  { margin: 0 15px }
 }
 /*--------------button-----------*/
 .btn-group {
@@ -134,13 +136,14 @@ img.tub-bottom {
 }
 .nav-bg {
   display: none;
-  width: 50px;
-  height: 50px;
-  right: 4%;
-  top: 5px;
+  width: 52px;
+  height: 52px;
+  right: 15px;
+  top: 15px;
   background-color: #173e71;
   position: fixed;
   z-index: -1;
+  padding-left: 16px;
 }
 .navbar-fade-in {
   @include transition(all 1s ceaser($easeInOutExpo));
@@ -175,9 +178,7 @@ img.tub-bottom {
   text-transform: uppercase;
 }
 #nav-toggle span {
-  // position: absolute;
-  right: 15%;
-  top: 50%;
+  top: 25px;
 }
 
 #nav-toggle span,
@@ -185,18 +186,18 @@ img.tub-bottom {
 #nav-toggle span:after {
   cursor: pointer;
   border-radius: 1px;
-  height: 5px;
-  width: 35px;
+  height: 3px;
+  width: 20px;
   background: white;
   position: absolute;
   display: block;
   content: '';
 }
 #nav-toggle span:before {
-  top: -10px;
+  top: -7px;
 }
 #nav-toggle span:after {
-  bottom: -10px;
+  bottom: -7px;
 }
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
   transition: all 500ms ease-in-out;
@@ -409,9 +410,10 @@ background-image: image-url('menu_venue.png');
     margin-right: 5px;
   }
   p {
-    font-family: "Songti TC";
+    font-family: "Tamil MN";
+    font-weight: bold;
     float: left;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin: 0;
   }
 }
@@ -662,6 +664,7 @@ img.mountain {
 /*--------------COC-----------*/
 #coc {
   background-color: $coc-pink;
+  overflow: hidden;
   text-align: justify;
   text-justify: inter-ideograph;
   h1 {
@@ -680,7 +683,6 @@ img.mountain {
   	text-decoration: underline;
   }
 }
-
 .coc-title {
   margin-top: 50px;
 }
@@ -693,12 +695,12 @@ img.mountain {
 @media (max-width: 992px) {
   #coc {
     text-align: left;
-    .row{
-    margin-right: 15px;
-    margin-left: 15px;
-    }
   }
-
+}
+@media (min-width: 768px) {
+  .col-sm-12  {
+    padding: 0 100px;
+  }
 }
 /*--------------sponsor-----------*/
 #sponsor {
