@@ -22,6 +22,15 @@
   }
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 //------ Animation ------//
 #logo {
   position: absolute;
@@ -41,6 +50,12 @@
 #info, #registration {
   transform: translateY(50%);
   opacity: 0;
+}
+
+#ruby {
+  &:after { // Rotating outline
+    animation: rotate 6s linear forwards infinite;
+  }
 }
 
 #mountain {

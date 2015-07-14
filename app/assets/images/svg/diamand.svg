@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="41px" height="31px" viewBox="0 0 41 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>diamand</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="63.0864493%" x2="50%" y2="157.749386%" id="linearGradient-1">
+            <stop stop-color="#DBDBDB" offset="0%"></stop>
+            <stop stop-color="#B9BBBB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="75.0994637%" y1="33.0366382%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#DDDBDB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="32.0552863%" y1="37.6830209%" x2="66.2905465%" y2="0%" id="linearGradient-3">
+            <stop stop-color="#EBEBEB" offset="0%"></stop>
+            <stop stop-color="#C5C7C7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="47.8755301%" y1="-25.1929772%" x2="72.1055033%" y2="37.7954171%" id="linearGradient-4">
+            <stop stop-color="#DEDEDE" offset="0%"></stop>
+            <stop stop-color="#B9BBBB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="63.0864493%" x2="50%" y2="157.749386%" id="linearGradient-5">
+            <stop stop-color="#EBEBEB" offset="0%"></stop>
+            <stop stop-color="#C5C7C7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="44.4811519%" y1="18.9186572%" x2="71.3894037%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#F5F4F4" offset="0%"></stop>
+            <stop stop-color="#EBEBEB" offset="0%"></stop>
+            <stop stop-color="#C5C7C7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="website_done" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="diamand" sketch:type="MSLayerGroup" transform="translate(-18.500000, -26.027612)">
+            <g id="Group-Copy" sketch:type="MSShapeGroup">
+                <path d="M41.0769747,39.1928456 C40.2196021,38.4290714 40.2235963,38.4326296 41.0769747,39.1928456 L59.4066424,55.5214843 C59.8329883,55.9012865 59.8373526,55.9051743 59.4066424,55.5214843 L41.0769747,39.1928456 Z" id="Polygon-1-Copy" fill="url(#linearGradient-1)" transform="translate(39.505041, 47.414045) scale(1, -1) translate(-39.505041, -47.414045) "></path>
+                <g id="Group" transform="translate(18.256292, 26.517082)">
+                    <polygon id="Polygon-1-Copy-8" fill="url(#linearGradient-2)" transform="translate(20.639347, 15.242113) scale(1, -1) translate(-20.639347, -15.242113) " points="20.6390912 -0.11911552 41.3862958 19.1523787 33.4615688 30.3379017 7.81661336 30.3379017 -0.108113679 19.1523787 "></polygon>
+                    <polygon id="Polygon-1-Copy-9" opacity="0.097423041" fill="url(#linearGradient-3)" transform="translate(6.028817, 6.026680) scale(1, -1) translate(-6.028817, -6.026680) " points="11.7028797 0.680385792 7.88340301 11.974781 -0.0934692451 0.625949674 "></polygon>
+                    <polygon id="Polygon-1-Copy-10" opacity="0.4" fill="url(#linearGradient-3)" transform="translate(35.251533, 6.026680) scale(-1, -1) translate(-35.251533, -6.026680) " points="40.925596 0.680385792 37.1061194 11.974781 29.1292471 0.625949674 "></polygon>
+                    <path d="M40.9493518,11.3810994 C40.9315409,11.4589385 40.9065272,11.5360254 40.8752375,11.6110321 C40.7895087,11.8165385 40.6566683,12.0064296 40.4957794,12.1533921 L22.2520475,29.110568 C21.3380934,30.0017273 19.9365766,29.9453864 19.0785363,29.1415201 L0.755037765,12.1591563 C0.551040936,11.9680392 0.394244856,11.681186 0.323507323,11.3810994 L40.9493518,11.3810994 Z" id="Polygon-1-Copy-7" opacity="0.874067164" fill="url(#linearGradient-4)"></path>
+                    <polygon id="Polygon-1-Copy-11" opacity="0.48204291" fill="url(#linearGradient-5)" transform="translate(20.666329, 20.538317) scale(1, -1) translate(-20.666329, -20.538317) " points="20.6751927 10.2249682 29.6020628 29.7036605 11.7305959 29.6503604 "></polygon>
+                    <polygon id="Polygon-1-Copy-12" opacity="0.150000006" fill="url(#linearGradient-6)" points="20.6751927 0.150896546 29.6020628 11.4274095 11.7305959 11.3947658 "></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

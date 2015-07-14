@@ -34,10 +34,9 @@
   </div>
   <div id="home" class="section">
     <div class="logo">
-      <% #image_tag("cloud2_airplan.png", class: "cloud2", id: "airplan") %>
       <%= render partial: 'airplan.svg' %>
-      <%= image_tag("gif/ruby_rotate3.gif", class: "ruby", id: "ruby") %>
-      <%= image_tag("logo_sponsor.png", id: "logo") %>
+      <div class="ruby" id="ruby"><!-- CSS Animation --></div>
+      <%= image_retina_tag("logo_sponsor.png", id: "logo") %>
     </div>
     <%= image_tag("cloud1.png", class: "cloud1", id: "cloud1") %>
     <%= image_tag("cloud3.png", class: "cloud3", id: "cloud3") %>

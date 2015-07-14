@@ -447,10 +447,29 @@ background-image: image-url('menu_venue.png');
   }
 }
 /*--------------Home IMG-----------*/
-img.ruby {
+.ruby {
   position: relative;
-  left: 7%;
-  top: -15%;
+  left: 59%;
+  top: -35%;
+
+  width: 125px;
+  height: 125px;
+
+  background-image: image-url('svg/diamand.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 125px;
+    height: 125px;
+
+    background-image: image-url('svg/diamand_outline_rotate.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 svg.cloud2 { // For airplan
   position: relative;
