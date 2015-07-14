@@ -42,10 +42,12 @@ $(document).ready ->
           fx.now = Math.floor(p / columnWidth) * columnWidth # Force override to make sprite animate
       })
 
-  parallelAnimation = (animations, delay) ->
+  parallelAnimation = (animations, delay, next) ->
     delay ||= 200
+    # TODO: Should using "Promise" to catch animation finished time to prevent delay cannot control
+    animations.push(next) if next and typeof next is "function"
     for animation, index in animations
-      setTimeout(animation, index * 200)
+      setTimeout(animation, index * delay)
 
   # Build animation queue
   Pace.on 'done', ->
@@ -62,8 +64,11 @@ $(document).ready ->
       animate($tube, {y: '0%'}, 1500, 'cubic-bezier(1, 0, 0, 1)'),
       queueAnimate([
         animate($dwarf, {scale: 1, delay: 1500}, 1000),
-        spriteAnimate($dwarf, 100, 27, 24),
-        animate($inkWave, {scale: 500, opacity: 0}, 1000, 'cubic-bezier(1, 0, 0, 1)'),
+        (next)-> parallelAnimation([
+          spriteAnimate($dwarf, 100, 27, 24),
+          animate($inkWave, {scale: 500, opacity: 0}, 1000, 'cubic-bezier(1, 0, 0, 1)'),
+        ], 500, next)
         -> $inkWave.hide().dequeue() # Remove inkwave prevent mouse event
       ])
     ])
+    _animationPlayed = true

@@ -1,0 +1,12 @@
+defaults: &defaults
+  facebook:
+    app_id:
+  capistrano_slack:
+    enable: false
+    team: rubyconftw
+    token:
+    channel: '#designer-team'
+development:
+  <<: *defaults
+production:
+  <<: *defaults
