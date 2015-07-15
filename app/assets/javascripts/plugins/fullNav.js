@@ -16,10 +16,21 @@ document.querySelector( "#nav-toggle" )
       $('.fullNavOverlay').addClass('navbar-fade-out');
       $('.fullNavOverlay').css({
           top: '-100%',
-          left: '60%',
+          left: '100%',
           transform: 'rotate(15deg)',
           zIndex: '0'
         });
     }
+    $('.fullNavOverlay a').click(function() {
+        $('#nav-toggle').removeClass('active');
+        $('.fullNavOverlay').removeClass('navbar-fade-in');
+        $('.fullNavOverlay').addClass('navbar-fade-out');
+        $('.fullNavOverlay').css({
+            top: '-100%',
+            left: '100%',
+            transform: 'rotate(15deg)',
+            zIndex: '0'
+          });
+    });
   });
 

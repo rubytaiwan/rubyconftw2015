@@ -154,12 +154,12 @@ img.tub-bottom {
 .fullNavOverlay {
   position: fixed;
   top: -100%;
-  left: 70%;
-  transform: rotate(15deg);
+  left: 100%;
+  transform: rotate(90deg);
   min-height: 100%;
   width: 100%;
   overflow: hidden;
-  z-index: 5;
+  z-index: 0;
   background: rgb(23, 62, 113);
 }
 .fullNavOverlay ul{
@@ -544,19 +544,28 @@ img.cloud3 {
   left: 95%;
 }
 @media screen and (max-width: 992px) {
-  img.ruby {
-    left: 25%;
-    bottom: 5%;
-    width: 15%;
+  .ruby {
+    left: 70%;
+    top: -15%;
+    &:after {
+      width: 125px;
+      height: 125px;
+    }
   }
   .cloud1,.cloud2,.cloud3  {
     display: none;
   }
 }
 @media screen and (max-width: 640px) {
-  img.ruby {
-    top:0;
-    bottom: 0;
+  .ruby {
+    top: 10%;
+    width: 90px;
+    height: 90px;
+    left: 75%;
+     &:after {
+      width: 90px;
+      height: 90px;
+    }
   }
 }
 /*--------------speaker -----------*/
@@ -655,10 +664,38 @@ img.mountain {
 
 /*--------------venue-----------*/
 #venue {
+  position: relative;
+}
+#venue-block {
   height: 500px;
   width: 100%;
   margin: 0px;
   padding: 0px;
+}
+.venue-info {
+  position: absolute;
+  height: 270px;
+  width: 370px;
+  color: #000000;
+  background-color: #ffffff;
+  opacity: 0.85;
+  right: 1%;
+  top: 25%;
+  font-size: 20px;
+}
+.venue-info-inner {
+  top: calc(50% - 40px);
+  position: absolute;
+  margin: 0 5%;
+}
+@media screen and (max-width: 640px) {
+  .venue-info {
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    right: 5%;
+  }
+
 }
 
 /*--------------COC-----------*/
