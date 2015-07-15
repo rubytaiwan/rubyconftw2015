@@ -27,7 +27,6 @@ $(document).ready ->
     idx = 0
     $.each $('#sections .section'), (i, sec) ->
       sectop = parseInt $(sec).offset().top
-      #     console.log("i=#{i}, sectop=#{sectop}, stop=#{stop}")
       if i > 0 && stop >= sectop
         idx = i
     $('#front-nav .inner-nav > a').next().removeClass 'nav-active'
