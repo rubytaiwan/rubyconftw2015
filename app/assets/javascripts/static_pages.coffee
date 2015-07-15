@@ -27,7 +27,6 @@ $(document).ready ->
     idx = 0
     $.each $('#sections .section'), (i, sec) ->
       sectop = parseInt $(sec).offset().top
-      #     console.log("i=#{i}, sectop=#{sectop}, stop=#{stop}")
       if i > 0 && stop >= sectop
         idx = i
     $('#front-nav .inner-nav > a').next().removeClass 'nav-active'
@@ -66,8 +65,7 @@ $(document).ready ->
       zoom: 18
       center: myLatlng
       scrollwheel: false
-      draggable: false
-    map = new (google.maps.Map)(document.getElementById('venue'), mapOptions)
+    map = new (google.maps.Map)(document.getElementById('venue-block'), mapOptions)
     marker = new (google.maps.Marker)(
       position: myLatlng
       map: map)
