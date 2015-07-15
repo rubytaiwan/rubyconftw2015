@@ -66,8 +66,7 @@ $(document).ready ->
       zoom: 18
       center: myLatlng
       scrollwheel: false
-      draggable: false
-    map = new (google.maps.Map)(document.getElementById('venue'), mapOptions)
+    map = new (google.maps.Map)(document.getElementById('venue-block'), mapOptions)
     marker = new (google.maps.Marker)(
       position: myLatlng
       map: map)
