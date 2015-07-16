@@ -421,7 +421,19 @@ background-image: image-url('menu_venue.png');
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
-  margin-left: 75px;
+  // margin-left: 75px;
+  line-height: 26px;
+}
+.pluginButton {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.tweet-share  {
+    display: inline-block;
+}
+.fb-like {
+  display: inline-block;
 }
 .logo {
   @include transition(all 600ms ceaser($easeOutExpo));
@@ -440,8 +452,10 @@ background-image: image-url('menu_venue.png');
   right: 35px;
   top:315px;
   width: 50px;
+  z-index: 1;
   img{ margin: 15px 0; }
 }
+
 /*--------------dwarf animation-----------*/
 .dwarf-jump {
   background-image: image-url('jump_all_s.png');
