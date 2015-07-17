@@ -15,11 +15,11 @@
       <li><a href="#<%=name%>"><%=name.capitalize%></a></li>
     <%end%>
     <div class="socail-rwd">
-      <%= link_to image_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
+      <%= link_to image_retina_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
          target: "_blank" %></li>
-      <%= link_to image_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan",
+      <%= link_to image_retina_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan",
         target: "_blank" %></li>
-      <%= link_to image_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %></li>
+      <%= link_to image_retina_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %></li>
     </div>
 
   </ul>
@@ -39,11 +39,11 @@
     <%= image_tag("cloud1.png", class: "cloud1", id: "cloud1") %>
     <%= image_tag("cloud3.png", class: "cloud3", id: "cloud3") %>
     <div class="social">
-      <%= link_to image_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
+      <%= link_to image_retina_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
        target: "_blank" %>
-      <%= link_to image_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan",
+      <%= link_to image_retina_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan",
       target: "_blank" %>
-      <%= link_to image_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %>
+      <%= link_to image_retina_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %>
     </div>
 
 
@@ -151,7 +151,7 @@
       <%@sponsors_hash.keys.each do |slv|%>
         <div class="sponsor-level-#{slv}">
           <div class="level">
-            <%= image_tag("sponsorship_level_#{slv}.png") %>
+            <%= image_retina_tag("sponsorship_level_#{slv}.png") %>
           </div>
           <% @sponsors_hash[slv].each do |sponsor| %>
             <div class="ruby-gem-avatar">

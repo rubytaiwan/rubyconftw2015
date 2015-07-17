@@ -79,6 +79,9 @@ img.tub-bottom {
   .row  { margin: 0 15px }
 }
 /*--------------button-----------*/
+#registration .blue-btn {
+    margin-right: 10px;
+}
 .btn-group {
   text-align: center;
   display: block;
@@ -90,15 +93,15 @@ img.tub-bottom {
   cursor: pointer;
   border-radius: 2px;
   padding: 20px 60px;
-  margin: 5px 15px;
+  margin: 5px 0px;
   border: 2px solid #fff;
   width: 250px;
 }
 .btn-group > .btn:first-child {
-  margin-left: 15px;
+  // margin-left: 15px;
 }
 .btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
-  margin-left: 15px;
+  // margin-left: 15px;
 }
 .btn:focus {
 	color: inherit;
@@ -296,25 +299,25 @@ img.tub-bottom {
   }
 }
 .home_ic {
-	background-image: image-url('menu_home.png');
+  @include at2x('menu_home', 'png');
 }
 .speaker_ic {
-	background-image: image-url('menu_speaker.png');
+  @include at2x('menu_speaker', 'png');
 }
 .schedule_ic {
-	background-image: image-url('menu_schedule.png');
+  @include at2x('menu_schedule', 'png');
 }
 .venue_ic {
-background-image: image-url('menu_venue.png');
+  @include at2x('menu_venue', 'png');
 }
 .coc_ic {
-	background-image: image-url('menu_coc.png');
+  @include at2x('menu_coc', 'png');
 }
 .sponsor_ic {
-	background-image: image-url('menu_sponsor.png');
+  @include at2x('menu_sponsor', 'png');
 }
 .staff_ic {
-  background-image: image-url('menu_staff.png');
+  @include at2x('menu_staff', 'png');
 }
 .nav-active {
   animation: animationFrames ease 500ms;
@@ -404,10 +407,11 @@ background-image: image-url('menu_venue.png');
   display: block;
   text-align: center;
   vertical-align: top;
-  margin: 15px 0;
+  margin: 0;
   img {
     float: left;
     margin-right: 5px;
+    width: 25px;
   }
   p {
     font-family: "Tamil MN";
@@ -428,12 +432,19 @@ background-image: image-url('menu_venue.png');
   text-align: center;
   width: 100%;
   display: block;
+  position: absolute;
 }
 .tweet-share  {
-    display: inline-block;
+  padding-top: 0px;
+  display: inline-block;
+  position: relative;
+  right: 10px;
 }
 .fb-like {
   display: inline-block;
+  position: relative;
+  bottom: 5px;
+  right: 5px;
 }
 .logo {
   @include transition(all 600ms ceaser($easeOutExpo));
