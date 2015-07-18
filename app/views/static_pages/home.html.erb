@@ -46,8 +46,6 @@
       <%= link_to image_retina_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %>
     </div>
 
-
-
     <div id="ink-wave"></div>
     <div id="dwarf" class="dwarf-jump"></div>
     <div id="dwarf-scroll" class="dwarf-scroll-hide"></div>
@@ -94,6 +92,8 @@
       <% end %>
     </div>
   </div>
+
+
   <div id="schedule" class="section">
     <div class="row">
       <div class="schedule-frame">
@@ -103,9 +103,83 @@
         <div class="btn-group">
         <%= link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "sky-blue-btn btn btn-outline btn-lg", target: "_blank" %>
         </div>
-      </div>
-    </div>
-  </div>
+      </div><!--schedule-frame-->
+      <div class="schedule-tabel">
+        <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
+            <li class="active"><a href="#day1" data-toggle="tab">Day 1</a></li>
+            <li><a href="#day2" data-toggle="tab">Day 2</a></li>
+        </ul>
+        <div id="my-tab-content" class="tab-content">
+            <div class="tab-pane active" id="day1">
+              <table class="table-schedule tab-content">
+               <thead>
+                    <tr>
+                      <th>Day1</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Username</th>
+                    </tr>
+                  </thead>
+                <tbody>
+                    <tr>
+                      <th>1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div><!--Day 1-->
+            <div class="tab-pane" id="day2">
+              <table  class="table-schedule tab-content">
+               <thead>
+                    <tr>
+                      <th>Day2</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Username</th>
+                    </tr>
+                  </thead>
+                <tbody>
+                    <tr>
+                      <th>1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div><!--Day 2-->
+        </div> <!--my-tab-content-->
+      </div><!--schedule-tabel-->
+    </div><!--row-->
+  </div> <!--end of schedule-->
+
+
   <div id="venue" class="section">
     <div id="venue-block"></div>
     <div class="venue-info">
@@ -146,6 +220,8 @@
       </div>
     </div>
   </div>
+
+
   <div id="sponsor" class="section">
     <div class="row">
       <%@sponsors_hash.keys.each do |slv|%>
@@ -164,9 +240,11 @@
       </div>
     </div>
   </div>
+
   <div id="staff">
     <div class="dwarf-bottom"></div>
     <%= image_tag("tub_bottom.png",class: "tub-bottom") %>
   </div>
 </div>
 <div id="fb-root"></div>
+

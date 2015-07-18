@@ -82,6 +82,9 @@ img.tub-bottom {
 #registration .blue-btn {
     margin-right: 10px;
 }
+#registration .white-btn {
+  margin-right: 30px;
+}
 .btn-group {
   text-align: center;
   display: block;
@@ -408,16 +411,12 @@ img.tub-bottom {
   text-align: center;
   vertical-align: top;
   margin: 0;
-  img {
-    float: left;
-    margin-right: 5px;
-    width: 25px;
-  }
   p {
     font-family: "Tamil MN";
     font-weight: bold;
     float: left;
     letter-spacing: 1px;
+    line-height: 24px;
     margin: 0;
   }
 }
@@ -427,6 +426,16 @@ img.tub-bottom {
   margin-right: 10px;
   // margin-left: 75px;
   line-height: 26px;
+}
+.time img {
+  float: left;
+  margin-right: 5px;
+  width: 24px;
+}
+.location img {
+  float: left;
+  margin-right: 5px;
+  width: 18px;
 }
 .pluginButton {
   text-align: center;
@@ -439,13 +448,13 @@ img.tub-bottom {
   padding-top: 0px;
   display: inline-block;
   position: relative;
-  right: 10px;
+  right: 25px;
 }
 .fb-like {
   display: inline-block;
   position: relative;
   bottom: 5px;
-  right: 5px;
+  left: 5px;
 }
 .logo {
   @include transition(all 600ms ceaser($easeOutExpo));
@@ -500,7 +509,6 @@ img.tub-bottom {
   position: fixed;
   z-index: 3;
   margin-left: 180px;
-  top: 360px;
   height: 200px;
   width: 110px;
 }
@@ -672,6 +680,9 @@ img.mountain {
 }
 
 /*--------------schedule table-----------*/
+.schedule-tabel {
+  display: none;
+}
 .table-schedule {
   width: 90%;
   thead {
@@ -685,8 +696,8 @@ img.mountain {
 .table-schedule>tbody>tr:nth-of-type(even) {
   background-color: #469EEB;
 }
-.tab-content{ display: none; }
-.tab-content.current{ display: table; }
+// .tab-content{ display: none; }
+// .tab-content.current{ display: table; }
 
 /*--------------venue-----------*/
 #venue {
@@ -767,7 +778,7 @@ img.mountain {
 }
 /*--------------sponsor-----------*/
 #sponsor {
-  padding: 50px 0 150px 0 ;
+  padding: 50px 0 0 0 ;
   background-color: $green-color;
   text-align: center;
 }

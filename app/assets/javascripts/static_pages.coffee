@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
-  # $('#navbar').fullNav()
+  $('#tabs').tab()
   $('#front-nav').on 'mouseenter', '.nav-line',  ->
     $('#front-nav .inner-nav > a').next().removeClass 'nav-active'
     $(@).next().addClass 'nav-active'
@@ -46,12 +46,14 @@ $(document).ready ->
     $('#dwarf-scroll').removeClass('climb')
 
   $(window).on 'scroll', ->
+    # h = $(document).height() 5077
+    winHeight = $(window).height()
     x = $('.dwarf-jump').position().top
     $('#dwarf-scroll').addClass('climb')
     if x == 0
       $('#dwarf-scroll').addClass('dwarf-scroll-hide')
       $('.dwarf-jump').show()
-    else if x > 3910
+    else if $(window).scrollTop() + $(window).height() == $(document).height()
       $('#dwarf-scroll').addClass('dwarf-scroll-hide')
       $('.dwarf-bottom').css('display','block')
     else
