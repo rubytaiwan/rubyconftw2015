@@ -96,88 +96,91 @@
 
   <div id="schedule" class="section">
     <div class="row">
-      <div class="schedule-frame">
-        <div class="call-for-proposal">
-        <h1>We still looking for speakers.<br>If you want to join us.<br>Click "call for proposal" button! </h1>
-        </div>
-        <div class="btn-group">
-        <%= link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "sky-blue-btn btn btn-outline btn-lg", target: "_blank" %>
-        </div>
-      </div><!--schedule-frame-->
-      <div class="schedule-tabel">
-        <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
-            <li class="active"><a href="#day1" data-toggle="tab">Day 1</a></li>
-            <li><a href="#day2" data-toggle="tab">Day 2</a></li>
-        </ul>
-        <div id="my-tab-content" class="tab-content">
-            <div class="tab-pane active" id="day1">
-              <table class="table-schedule tab-content">
-               <thead>
-                    <tr>
-                      <th>Day1</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>Username</th>
-                    </tr>
-                  </thead>
-                <tbody>
-                    <tr>
-                      <th>1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th>2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th>3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-              </table>
-            </div><!--Day 1-->
-            <div class="tab-pane" id="day2">
-              <table  class="table-schedule tab-content">
-               <thead>
-                    <tr>
-                      <th>Day2</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>Username</th>
-                    </tr>
-                  </thead>
-                <tbody>
-                    <tr>
-                      <th>1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th>2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th>3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-              </table>
-            </div><!--Day 2-->
-        </div> <!--my-tab-content-->
-      </div><!--schedule-tabel-->
-    </div><!--row-->
-  </div> <!--end of schedule-->
+      <%unless params.has_key?(:show_schedule)%>
+        <div class="schedule-frame">
+          <div class="call-for-proposal">
+          <h1>We still looking for speakers.<br>If you want to join us.<br>Click "call for proposal" button! </h1>
+          </div>
+          <div class="btn-group">
+          <%= link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "sky-blue-btn btn btn-outline btn-lg", target: "_blank" %>
+          </div>
+        </div><!--schedule-frame-->
+      <%else%>
+        <div class="schedule-tabel" style="display: block;"  >
+          <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
+              <li class="active"><a href="#day1" data-toggle="tab">Day 1</a></li>
+              <li><a href="#day2" data-toggle="tab">Day 2</a></li>
+          </ul>
+          <div id="my-tab-content" class="tab-content">
+              <div class="tab-pane active" id="day1">
+                <table class="table-schedule tab-content">
+                 <thead>
+                      <tr>
+                        <th>Day1</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                      </tr>
+                    </thead>
+                  <tbody>
+                      <tr>
+                        <th>1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th>2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th>3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div><!--Day 1-->
+              <div class="tab-pane" id="day2">
+                <table  class="table-schedule tab-content">
+                 <thead>
+                      <tr>
+                        <th>Day2</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                      </tr>
+                    </thead>
+                  <tbody>
+                      <tr>
+                        <th>1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th>2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th>3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div><!--Day 2-->
+          </div> <!--my-tab-content-->
+        </div><!--schedule-tabel-->
+      </div><!--row-->
+    </div> <!--end of schedule-->
+  <%end%>
 
 
   <div id="venue" class="section">
