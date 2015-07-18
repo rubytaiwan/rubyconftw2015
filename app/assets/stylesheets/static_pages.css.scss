@@ -411,6 +411,10 @@ img.tub-bottom {
   text-align: center;
   vertical-align: top;
   margin: 0;
+  img {
+    float: left;
+    margin-right: 5px;
+  }
   p {
     font-family: "Tamil MN";
     font-weight: bold;
@@ -424,18 +428,7 @@ img.tub-bottom {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
-  // margin-left: 75px;
   line-height: 26px;
-}
-.time img {
-  float: left;
-  margin-right: 5px;
-  width: 24px;
-}
-.location img {
-  float: left;
-  margin-right: 5px;
-  width: 18px;
 }
 .pluginButton {
   text-align: center;
@@ -511,6 +504,7 @@ img.tub-bottom {
   margin-left: 180px;
   height: 200px;
   width: 110px;
+  bottom: 150px;
 }
 .climb  {
   height: 200px;
@@ -656,7 +650,7 @@ img.mountain {
 .schedule-frame {
   width: 590px;
   height: 360px;
-  margin: 15% auto;
+  margin: 50px auto;
   background: image-url('schedule.png');
   background-position: center bottom;
   background-size: 100% auto;
@@ -680,8 +674,35 @@ img.mountain {
 }
 
 /*--------------schedule table-----------*/
-.schedule-tabel {
-  display: none;
+
+ul#tabs {
+  text-align: center;
+  display: inline-flex;
+  margin-bottom: 50px;
+}
+.nav-pills > li {
+  width: 260px;
+  border: 2px solid #fff;
+}
+.nav-pills > li > a {
+  border-radius: 0px;
+  color: #fff;
+  background-color: #4BA9FA;
+  height: 61px;
+  line-height: 61px;
+  padding: 0;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: $sky-blue;
+  background-color: #ffffff;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background: rgba(255,255,255,0.20);
+  color: $sky-blue;
+}
+.nav-pills > li + li {
+  margin-left: 0;
 }
 .table-schedule {
   width: 90%;
