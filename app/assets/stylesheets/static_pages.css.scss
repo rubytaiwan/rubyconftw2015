@@ -411,6 +411,10 @@ img.tub-bottom {
   text-align: center;
   vertical-align: top;
   margin: 0;
+  img {
+    float: left;
+    margin-right: 5px;
+  }
   p {
     font-family: "Tamil MN";
     font-weight: bold;
@@ -424,18 +428,7 @@ img.tub-bottom {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
-  // margin-left: 75px;
   line-height: 26px;
-}
-.time img {
-  float: left;
-  margin-right: 5px;
-  width: 24px;
-}
-.location img {
-  float: left;
-  margin-right: 5px;
-  width: 18px;
 }
 .pluginButton {
   text-align: center;
@@ -681,9 +674,7 @@ img.mountain {
 }
 
 /*--------------schedule table-----------*/
-.schedule-tabel {
-  // display: none;
-}
+
 ul#tabs {
   text-align: center;
   display: inline-flex;
