@@ -33,8 +33,12 @@ a:hover {
 a:active {
   color: inherit;
 }
+p {
+  font-family: "Tamil MN";
+  line-height: 1.8em;
+  padding: 7px 0px;
+}
 .row {
-  // margin-left: 30%;
   margin-left: 285px;
   background-color: transparent;
 }
@@ -100,12 +104,7 @@ img.tub-bottom {
   border: 2px solid #fff;
   width: 250px;
 }
-.btn-group > .btn:first-child {
-  // margin-left: 15px;
-}
-.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
-  // margin-left: 15px;
-}
+
 .btn:focus {
 	color: inherit;
 }
@@ -416,12 +415,12 @@ img.tub-bottom {
     margin-right: 5px;
   }
   p {
-    font-family: "Tamil MN";
     font-weight: bold;
     float: left;
     letter-spacing: 1px;
     line-height: 24px;
     margin: 0;
+    padding: 0;
   }
 }
 .info-inner {
@@ -740,6 +739,7 @@ ul#tabs {
   right: 1%;
   top: 25%;
   font-size: 20px;
+  font-family: "Tamil MN";
 }
 .venue-info-inner {
   top: calc(50% - 40px);
@@ -768,9 +768,7 @@ ul#tabs {
   	font-size: 50px;
   }
   p {
-    font-family: "Helvetica Neue", sans-serif;
     font-size: 16px;
-    line-height: 1.5em;
     letter-spacing: 1px;
   }
   a {
