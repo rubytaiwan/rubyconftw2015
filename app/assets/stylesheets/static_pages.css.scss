@@ -131,6 +131,14 @@ img.tub-bottom {
   cursor: default;
   opacity: 0.2;
 }
+@media screen and (max-width: 640px) {
+  #registration .white-btn {
+    margin-right: 0;
+  }
+  #registration .blue-btn {
+    margin-right: 0;
+  }
+}
 /*--------------nav-----------*/
 #navbar {
   text-align: center;
@@ -405,11 +413,15 @@ img.tub-bottom {
   background-color: $blue-color;
   background-image: image-url('background_icon.png');
 }
+#registration {
+  padding: 20px 0;
+}
 .info {
   display: block;
   text-align: center;
   vertical-align: top;
   margin: 0;
+  padding: 0 0 20px 0;
   img {
     float: left;
     margin-right: 5px;
@@ -435,6 +447,7 @@ img.tub-bottom {
   display: block;
   position: absolute;
   z-index: 1;
+  padding: 20px 0;
 }
 .tweet-share  {
   padding-top: 0px;
@@ -610,6 +623,7 @@ img.mountain {
 #speaker {
   background-color: $green-color;
   text-align: center;
+  padding-bottom: 100px;
   h3 {
 	font-family: "Tamil MN";
 	font-weight: bold;
@@ -673,7 +687,9 @@ img.mountain {
 }
 
 /*--------------schedule table-----------*/
-
+.schedule-tabel {
+  margin-bottom: 250px;
+}
 ul#tabs {
   text-align: center;
   display: inline-flex;
@@ -704,7 +720,7 @@ ul#tabs {
   margin-left: 0;
 }
 .table-schedule {
-  width: 90%;
+  width: 100%;
   thead {
 	background-color: #469EEB;
   }
@@ -766,6 +782,7 @@ ul#tabs {
   	font-family: "Tamil MN";
   	font-weight: bold;
   	font-size: 50px;
+    margin-top: 100px;
   }
   p {
     font-size: 16px;
@@ -775,9 +792,6 @@ ul#tabs {
   	color: #fff;
   	text-decoration: underline;
   }
-}
-.coc-title {
-  margin-top: 50px;
 }
 .en {
 	font-weight: lighter;
@@ -797,7 +811,7 @@ ul#tabs {
 }
 /*--------------sponsor-----------*/
 #sponsor {
-  padding: 50px 0 0 0 ;
+  padding: 50px 0 100px 0 ;
   background-color: $green-color;
   text-align: center;
 }
