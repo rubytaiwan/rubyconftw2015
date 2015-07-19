@@ -33,8 +33,12 @@ a:hover {
 a:active {
   color: inherit;
 }
+p {
+  font-family: "Tamil MN";
+  line-height: 1.8em;
+  padding: 7px 0px;
+}
 .row {
-  // margin-left: 30%;
   margin-left: 285px;
   background-color: transparent;
 }
@@ -100,12 +104,7 @@ img.tub-bottom {
   border: 2px solid #fff;
   width: 250px;
 }
-.btn-group > .btn:first-child {
-  // margin-left: 15px;
-}
-.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
-  // margin-left: 15px;
-}
+
 .btn:focus {
 	color: inherit;
 }
@@ -131,6 +130,14 @@ img.tub-bottom {
 .btn-disabled {
   cursor: default;
   opacity: 0.2;
+}
+@media screen and (max-width: 640px) {
+  #registration .white-btn {
+    margin-right: 0;
+  }
+  #registration .blue-btn {
+    margin-right: 0;
+  }
 }
 /*--------------nav-----------*/
 #navbar {
@@ -406,22 +413,26 @@ img.tub-bottom {
   background-color: $blue-color;
   background-image: image-url('background_icon.png');
 }
+#registration {
+  padding: 20px 0;
+}
 .info {
   display: block;
   text-align: center;
   vertical-align: top;
   margin: 0;
+  padding: 0 0 20px 0;
   img {
     float: left;
     margin-right: 5px;
   }
   p {
-    font-family: "Tamil MN";
     font-weight: bold;
     float: left;
     letter-spacing: 1px;
     line-height: 24px;
     margin: 0;
+    padding: 0;
   }
 }
 .info-inner {
@@ -436,6 +447,7 @@ img.tub-bottom {
   display: block;
   position: absolute;
   z-index: 1;
+  padding: 20px 0;
 }
 .tweet-share  {
   padding-top: 0px;
@@ -611,6 +623,7 @@ img.mountain {
 #speaker {
   background-color: $green-color;
   text-align: center;
+  padding-bottom: 100px;
   h3 {
 	font-family: "Tamil MN";
 	font-weight: bold;
@@ -674,7 +687,9 @@ img.mountain {
 }
 
 /*--------------schedule table-----------*/
-
+.schedule-tabel {
+  margin-bottom: 250px;
+}
 ul#tabs {
   text-align: center;
   display: inline-flex;
@@ -705,7 +720,7 @@ ul#tabs {
   margin-left: 0;
 }
 .table-schedule {
-  width: 90%;
+  width: 100%;
   thead {
 	background-color: #469EEB;
   }
@@ -740,6 +755,7 @@ ul#tabs {
   right: 1%;
   top: 25%;
   font-size: 20px;
+  font-family: "Tamil MN";
 }
 .venue-info-inner {
   top: calc(50% - 40px);
@@ -766,20 +782,16 @@ ul#tabs {
   	font-family: "Tamil MN";
   	font-weight: bold;
   	font-size: 50px;
+    margin-top: 100px;
   }
   p {
-    font-family: "Helvetica Neue", sans-serif;
     font-size: 16px;
-    line-height: 1.5em;
     letter-spacing: 1px;
   }
   a {
   	color: #fff;
   	text-decoration: underline;
   }
-}
-.coc-title {
-  margin-top: 50px;
 }
 .en {
 	font-weight: lighter;
@@ -799,7 +811,7 @@ ul#tabs {
 }
 /*--------------sponsor-----------*/
 #sponsor {
-  padding: 50px 0 0 0 ;
+  padding: 50px 0 100px 0 ;
   background-color: $green-color;
   text-align: center;
 }
