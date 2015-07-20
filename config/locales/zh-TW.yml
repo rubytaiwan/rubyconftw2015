@@ -16,7 +16,8 @@ zh-TW:
     successfully_destroyed: 已刪除
     warning: 失敗
   sponsor-levels:
-    - Ruby.Gem
+    - Ruby
+    - Gem
     - Platinum
     - Gold
     - Silver

@@ -231,7 +231,7 @@
       <%@sponsors_hash.keys.each do |slv|%>
         <div class="sponsor-level-#{slv}">
           <div class="level">
-            <%= image_retina_tag("sponsorship_level_#{slv}.png") %>
+            <%= image_retina_tag("sponsorship_level_#{slv-1}.png") %>
           </div>
           <% @sponsors_hash[slv].each do |sponsor| %>
             <div class="ruby-gem-avatar">
