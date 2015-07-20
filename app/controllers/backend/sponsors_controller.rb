@@ -6,6 +6,6 @@ class Backend::SponsorsController < Backend::BaseController
     end
 
   	def object_params
-      params.require(:sponsor).permit(:name, :description, :image, :link, :level)
+      params.require(:sponsor).permit(:name, :description, :image, :link, :level, :twox_image)
   	end
 end

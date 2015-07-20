@@ -236,7 +236,7 @@
           <% @sponsors_hash[slv].each do |sponsor| %>
             <div class="ruby-gem-avatar">
               <div class="imagecontainer">
-              <%= link_to image_tag(sponsor.image, title: sponsor.description,  class:"sponsor_ruby"), sponsor.link , target: "_blank"%>
+                <%= link_to image_tag(sponsor.image.url, title: sponsor.description,  class:"sponsor_ruby", data: {at_2x: sponsor.twox_image.url}), sponsor.link , target: "_blank"%>
               </div>
             </div>
           <% end %>
