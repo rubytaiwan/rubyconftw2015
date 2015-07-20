@@ -275,6 +275,7 @@ img.tub-bottom {
     cursor: default;
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: contain;
   }
 }
 .nav-line {
@@ -671,7 +672,8 @@ img.mountain {
 @media screen and (max-width: 640px) {
   #schedule {
     background-size: inherit;
-    background-position: 70% bottom;
+    background-position: 75% bottom;
+    background-size: 200%;
   }
   .schedule-frame {
     width: 100%;
@@ -840,6 +842,10 @@ img.footer-bg { width: 100%; }
   -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
   display: none;
+}
+.dwarf-group {
+  background-image: image-url('dwarf_group.png');
+  position: absolute;
 }
 @media screen and (max-width: 992px) {
   #staff {
