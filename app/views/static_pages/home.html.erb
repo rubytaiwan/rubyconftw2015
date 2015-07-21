@@ -79,11 +79,9 @@
     <div class="row">
       <% @speakers.each do |speaker| %>
       <div class="col-xs-12 col-sm-4 col-md-4">
-        <div class="avatar">
-          <div class="imagecontainer">
+          <div class="avatar-mask">
             <%= image_tag speaker.avatar.middle %>
           </div>
-        </div>
           <div class="description">
             <h3><%= speaker.name %></h3>
             <p><%= speaker.biography %></p>
