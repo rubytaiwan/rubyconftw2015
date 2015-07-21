@@ -639,6 +639,17 @@ img.mountain {
   padding: 15px;
   text-align: center;
 }
+.avatar-mask {
+  width: 150px;
+  height: 166px;
+  margin: auto;
+  overflow: hidden;
+  -webkit-mask-image: url(speaker_mask.png);
+  -webkit-mask-repeat: no-repeat;
+  img{
+    width: 100%
+  }
+}
 /*--------------schedule-----------*/
 #schedule {
   @include at2x('empty_speaker_mountain2', 'png');
