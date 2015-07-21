@@ -180,13 +180,13 @@ img.tub-bottom {
   padding: 0px;
   margin-top: 15px;
 }
-.fullNavOverlay a{
+.fullNavOverlay a {
   display: block;
   color: rgb(255, 255, 255);
   padding: 10px;
   text-align: center;
-  font-size: 3em;
-  font-family: Tamil;
+  font-family: "Tamil MN";
+  font-size: 28px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -228,25 +228,23 @@ img.tub-bottom {
   transform: rotate(-45deg);
 }
 .fullNavOverlay ul li a:hover:before,
-.test:before
  {
   content: '';
   display: inline-block;
   background-image:image-url("diamand.png") ;
   width: 23px;
-  height: 35px;
+  height: 18px;
   margin-right: 15px;
   background-repeat: no-repeat;
   background-position-y: center;
 }
 .fullNavOverlay ul li a:hover:after,
-.test:after
  {
   content: '';
   display: inline-block;
   background-image:image-url("diamand.png") ;
   width: 23px;
-  height: 35px;
+  height: 18px;
   margin-left: 15px;
   background-repeat: no-repeat;
   background-position-y: center;
