@@ -78,12 +78,5 @@ class Backend::BaseController < ApplicationController
     @current_object ||= collection_scope.find(params[:id])
   end
 
-  def logged_in_user
-      unless logged_in?
-        flash[:danger] = "Please log in."
-        flash[:back_url] = request.url
-        redirect_to login_url
-      end
-    end
 
 end

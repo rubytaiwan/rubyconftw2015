@@ -19,6 +19,7 @@
 //= require plugins/smooth-scroll
 //= require static_pages
 //= require home_animation
+//= require footer_animation
 //= require plugins/fb-setting.js
 //= require plugins/fullNav.js
 //= require retina

@@ -2,12 +2,14 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
+  $('[data-toggle="tooltip"]').tooltip()
   $('#tabs').tab()
   $('#front-nav').on 'mouseenter', '.nav-line',  ->
     $('#front-nav .inner-nav > a').next().removeClass 'nav-active'
     $(@).next().addClass 'nav-active'
   .on 'mouseleave','.nav-line',  ->
     $(@).next().removeClass 'nav-active'
+
   $(".fullNavOverlay ul li a").on 'mouseenter', ->
     $(@).next().removeClass 'nav-active'
     $(@).next().addClass 'nav-active'
@@ -46,7 +48,6 @@ $(document).ready ->
     $('#dwarf-scroll').removeClass('climb')
 
   $(window).on 'scroll', ->
-    # h = $(document).height() 5077
     winHeight = $(window).height()
     x = $('.dwarf-jump').position().top
     $('#dwarf-scroll').addClass('climb')
