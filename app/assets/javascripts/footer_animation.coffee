@@ -1,11 +1,11 @@
 $(document).ready ->
   $('#ruby-footer').animate({scale: 1}, 1000)
   $('.dwarf-group').on 'mouseenter', ->
-    $('.staff-all').addClass( 'group-active' );
+    $('.staff-all').addClass( 'group-active' )
   $('#staff-close').on 'click', ->
-    $('.staff-all').removeClass( 'group-active' );
+    $('.staff-all').removeClass( 'group-active' )
 
-  $('.more-btn').on 'click', ->
-    $('.speaker-info').addClass('info-active');
+  $('.more-btn').on 'click', (e) ->
+    $($(e.target).attr('href')).addClass 'info-active'
   $('#info-close').on 'click', ->
-    $('.speaker-info').removeClass('info-active');
+    $('.speaker-info').removeClass('info-active')

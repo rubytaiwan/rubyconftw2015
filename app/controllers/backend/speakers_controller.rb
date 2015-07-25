@@ -13,7 +13,7 @@ class Backend::SpeakersController < Backend::BaseController
     end
 
   	def object_params
-      params.require(:speaker).permit(:name, :avatar, :biography , :subject , :asbtract)
+      params.require(:speaker).permit(:name, :avatar, :biography , :subject , :abstract)
   	end
 
 end

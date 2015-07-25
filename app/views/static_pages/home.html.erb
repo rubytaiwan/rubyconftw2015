@@ -86,12 +86,12 @@
               <h3><%= speaker.name %></h3>
               <p><%= speaker.biography %></p>
             </div>
-            <div class="more-btn"></div>
+            <a class="more-btn" href="#speaker-<%=speaker.id%>"></a>
         </div>
       <% end %>
     </div>
-      <%= render 'speaker_info'%>
   </div>
+  <%= render partial: 'speaker_info', collection: @speakers, as: :speaker%>
 
 
   <div id="schedule" class="section">
