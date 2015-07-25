@@ -1,0 +1,13 @@
+h1 單元資訊
+= link_to "編輯" ,edit_backend_chapter_path ,class:'btn btn-success btn-default'
+hr
+  table.table.table-hover
+    thead
+      tr
+        th ID
+        th 單元名稱
+    tbody
+      tr
+        td= current_object.id
+        td= current_object.chapters_title
+= link_to "返回列表" ,backend_chapters_path ,class:'btn btn-primary'

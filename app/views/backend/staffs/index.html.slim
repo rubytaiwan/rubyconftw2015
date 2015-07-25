@@ -1,0 +1,18 @@
+h1 列表
+= link_to '新增', new_backend_staff_path, class:'btn btn-success'
+hr
+  table.table.table-hover
+    thead
+      tr
+        th 姓名
+        th 連結
+        th colspan="3"
+    tbody
+      - current_collection.each do |staff|
+        tr
+          td= staff.name
+          td= staff_link_for staff
+          / td= staff.link
+          / td= link_to '顯示', backend_staff_path(staff) ,class:'btn btn-success btn-xs'
+          td= link_to '編輯', edit_backend_staff_path(staff) ,class:'btn btn-success btn-xs'
+          td= link_to '刪除', backend_staff_path(staff), method: :delete, data: {confirm: 'Are you sure?'}  ,class:'btn btn-danger btn-xs'

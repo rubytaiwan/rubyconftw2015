@@ -159,22 +159,28 @@ img.tub-bottom {
   z-index: -1;
   padding-left: 16px;
 }
-.navbar-fade-in {
-  @include transition(all 1s ceaser($easeInOutExpo));
-}
-.navbar-fade-out {
-  @include transition(all 1s ceaser($easeInOutExpo));
-}
+
 .fullNavOverlay {
+  transition:visibility 0s linear 1s,opacity 1s linear;
+  transition-property: visibility, opacity;
+  transition-duration: 0s, 1s;
+  transition-timing-function: initial, linear;
+  transition-delay: 1s, initial;
+
+  background: $blue-color;
   position: fixed;
-  top: -100%;
-  left: 100%;
-  transform: rotate(90deg);
+  overflow: hidden;
   min-height: 100%;
   width: 100%;
-  overflow: hidden;
-  z-index: 0;
-  background: rgb(23, 62, 113);
+  opacity: 0;
+  z-index: 5;
+  visibility: hidden;
+
+}
+.fullNavOverlay.full-active {
+  transition-delay: 0s;
+  opacity: 1;
+  visibility:visible;
 }
 .fullNavOverlay ul{
   list-style: none;
@@ -842,11 +848,9 @@ img.sponsor_ruby { width: 60%; }
 /*--------------staff-----------*/
 #staff{
   @include at2x('footer/footer', 'png', 'cover');
-  //background-image: image-url('footer@2x.png');
   background-color: $green-color;
   background-repeat: repeat-x;
   background-position: left bottom;
-  // background-size: contain;
   height: 442px;
   position: relative;
   overflow: hidden;
@@ -901,8 +905,6 @@ img.footer-bg { width: 100%; }
 .show:hover .staff-info {
   opacity: 1;
   z-index: 0;
-  // display: block;
-
 }
 .show:not(:hover) .staff-info {
   z-index: -1;

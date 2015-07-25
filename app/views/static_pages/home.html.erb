@@ -370,8 +370,8 @@
     <div class="staff-1 show">
       <div class="dwarf-1">
         <div class="staff-info">
-          <h4>鄧慕凡</h4>
-          <p>http://rubyconftw2015.dev/</p>
+          <h4>Mu-Fan Teng</h4>
+          <p>http://ryudo.tw</p>
         </div>
       </div>
     </div>
@@ -386,7 +386,7 @@
     <div class="staff-3  show">
       <div class="dwarf-3">
         <div class="staff-info">
-          <h4>Rice Tseng - Web Designer</h4>
+          <h4>Rice Tseng</h4>
           <p>http://rubyconftw2015.dev/</p>
         </div>
       </div>
@@ -394,8 +394,8 @@
     <div class="staff-4  show">
       <div class="dwarf-4">
         <div class="staff-info">
-          <h4>KangChiao - Web Designer</h4>
-          <p>http://rubyconftw2015.dev/</p>
+          <h4>KangChiao</h4>
+          <p>http://kangchiao.wix.com/kangchiao</p>
         </div>
       </div>
     </div>
@@ -411,7 +411,6 @@
       <div class="dwarf-6">
         <div class="staff-info">
           <h4>Nina - Web Designer</h4>
-          <p>http://rubyconftw2015.dev/</p>
         </div>
       </div>
     </div>
@@ -420,24 +419,12 @@
       <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="ruby-footer" id="ruby-footer"><!-- CSS Animation --></div>
       </div>
-      <div class="col-xs-12 col-sm-4 col-md-4">
-        <h3>Nina</h3>
-        <h3>Nina</h3>
-        <h3>Nina</h3>
-        <h3>Nina</h3>
-      </div>
-      <div class="col-xs-12 col-sm-4 col-md-4">
-        <p>Nina</p>
-        <p>Nina</p>
-        <p>Nina</p>
-        <p>Nina</p>
-      </div>
-      <div class="col-xs-12 col-sm-4 col-md-4">
-        <p>Nina</p>
-        <p>Nina</p>
-        <p>Nina</p>
-        <p>Nina</p>
-      </div>
+      <% @staffs.each do |staff| %>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h3><%= staff.name %><%= staff_link_for staff %></h3>
+        </div>
+      <%end%>
+
       <div class="col-xs-12 col-sm-12 col-md-12">
         <a data-showfullnav id="staff-close" class="active"><span></span></a>
       </div>

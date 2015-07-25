@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     resources :users
     resources :sponsors
     resources :posts
+    resources :staffs
   end
 
 
