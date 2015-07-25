@@ -1,17 +1,11 @@
 $(document).ready ->
   $('#ruby-footer').animate({scale: 1}, 1000)
   $('.dwarf-group').on 'mouseenter', ->
-    $('.staff-all').addClass('staff-all-fade-in')
-    $('.staff-all').css
-      top: '0',
-      left: '0',
-      transform: 'rotate(0deg)',
-      zIndex: '3'
+    $('.staff-all').addClass( 'group-active' );
   $('#staff-close').on 'click', ->
-    $('.staff-all').removeClass('staff-all-fade-in')
-    $('.staff-all').addClass('staff-all-fade-out')
-    $('.staff-all').css
-      top: '-100%',
-      left: '100%',
-      transform: 'rotate(15deg)',
-      zIndex: '0'
+    $('.staff-all').removeClass( 'group-active' );
+
+  $('.more-btn').on 'click', ->
+    $('.speaker-info').addClass('info-active');
+  $('#info-close').on 'click', ->
+    $('.speaker-info').removeClass('info-active');

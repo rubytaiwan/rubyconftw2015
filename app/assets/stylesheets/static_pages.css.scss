@@ -651,6 +651,12 @@ img.mountain {
   padding: 15px;
   text-align: center;
 }
+.more-btn {
+  background-image: image-url('more_btn.png');
+  margin: 20px auto;
+  width: 170px;
+  height:29px;
+}
 .avatar-mask {
   width: 150px;
   height: 166px;
@@ -1023,8 +1029,9 @@ img.footer-bg { width: 100%; }
 }
 .ruby-footer {
   position: relative;
-  left: 45%;
+  left: 0;
   top: 0;
+  margin: 0 auto;
 
   width: 125px;
   height: 125px;

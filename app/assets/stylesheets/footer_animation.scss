@@ -1,24 +1,42 @@
 @import "compass";
 @import "ceaser-easing";
 @import "retina";
+$blue-color:  #173E71;
 .staff-all {
+  transition:visibility 0s linear 1s,opacity 1s linear;
+  transition-property: visibility, opacity;
+  transition-duration: 0s, 1s;
+  transition-timing-function: initial, linear;
+  transition-delay: 1s, initial;
+  background: $blue-color;
+  text-align: center;
   position: fixed;
-  top: -100%;
-  left: 100%;
-  transform: rotate(90deg);
+  overflow: hidden;
+  top:0;
   min-height: 100%;
   width: 100%;
-  overflow: hidden;
-  z-index: 0;
-  background-color:#173E71;
-  text-align: center;
+  opacity: 0;
+  z-index: 5;
+  visibility: hidden;
+  a{
+    color: #fff;
+  }
 }
-#staff-close span {
+.staff-all.group-active {
+  transition-delay: 0s;
+  opacity: 1;
+  visibility:visible;
+}
+#staff-close span,
+#info-close span {
   top: 25px;
 }
 #staff-close span,
 #staff-close span:before,
-#staff-close span:after {
+#staff-close span:after,
+#info-close  span,
+#info-close  span:before,
+#info-close  span:after {
   cursor: pointer;
   border-radius: 1px;
   height: 3px;
@@ -28,24 +46,53 @@
   display: block;
   content: '';
 }
-a#staff-close {
+a#staff-close,
+a#info-close {
   display: inline-block;
 }
-#staff-close.active span {
+#staff-close.active span,
+#info-close.active span {
   background-color: transparent;
 }
-#staff-close.active span:before, #staff-close.active span:after {
+#staff-close.active span:before, #staff-close.active span:after,
+#info-close.active span:before, #info-close.active span:after {
   top: 0;
 }
-#staff-close.active span:before {
+#staff-close.active span:before,
+#info-close.active span:before {
   transform: rotate(45deg);
 }
-#staff-close.active span:after {
+#staff-close.active span:after,
+#info-close.active span:after  {
   transform: rotate(-45deg);
 }
-.staff-all-fade-in {
-  @include transition(all 1s ceaser($easeInOutExpo));
+// .speaker-info.row.active {
+//   margin: 0;
+// }
+.speaker-info {
+  transition:visibility 0s linear 1s,opacity 1s linear;
+  transition-property: visibility, opacity;
+  transition-duration: 0s, 1s;
+  transition-timing-function: initial, linear;
+  transition-delay: 1s, initial;
+  background: $blue-color;
+  text-align: center;
+  position: fixed;
+  overflow: hidden;
+  top:0;
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 5;
+  visibility: hidden;
+  a{
+    color: #fff;
+  }
 }
-.staff-all-fade-out {
-  @include transition(all 1s ceaser($easeInOutExpo));
+.speaker-info.info-active {
+  transition-delay: 0s;
+  opacity: 1;
+  visibility:visible;
 }
+
