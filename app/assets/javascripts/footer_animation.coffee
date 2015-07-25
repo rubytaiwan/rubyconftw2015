@@ -7,5 +7,5 @@ $(document).ready ->
 
   $('.more-btn').on 'click', (e) ->
     $($(e.target).attr('href')).addClass 'info-active'
-  $('#info-close').on 'click', ->
-    $('.speaker-info').removeClass('info-active')
+  $('.info-close').on 'click', (e) ->
+    $(e.target).parents('.speaker-info').removeClass 'info-active'

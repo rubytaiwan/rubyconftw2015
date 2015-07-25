@@ -28,15 +28,10 @@ $blue-color:  #173E71;
   visibility:visible;
 }
 #staff-close span,
-#info-close span {
+.info-close span {
   top: 25px;
 }
-#staff-close span,
-#staff-close span:before,
-#staff-close span:after,
-#info-close  span,
-#info-close  span:before,
-#info-close  span:after {
+#staff-close span, #staff-close span:before, #staff-close span:after, .info-close  span, .info-close  span:before, .info-close  span:after {
   cursor: pointer;
   border-radius: 1px;
   height: 3px;
@@ -46,24 +41,22 @@ $blue-color:  #173E71;
   display: block;
   content: '';
 }
-a#staff-close,
-a#info-close {
+a#staff-close, a.info-close {
   display: inline-block;
 }
 #staff-close.active span,
-#info-close.active span {
+.info-close.active span {
   background-color: transparent;
 }
-#staff-close.active span:before, #staff-close.active span:after,
-#info-close.active span:before, #info-close.active span:after {
+#staff-close.active span:before, #staff-close.active span:after, .info-close.active span:before, .info-close.active span:after {
   top: 0;
 }
 #staff-close.active span:before,
-#info-close.active span:before {
+.info-close.active span:before {
   transform: rotate(45deg);
 }
 #staff-close.active span:after,
-#info-close.active span:after  {
+.info-close.active span:after  {
   transform: rotate(-45deg);
 }
 // .speaker-info.row.active {

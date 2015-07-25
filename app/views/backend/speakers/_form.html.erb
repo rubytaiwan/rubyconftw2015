@@ -1,6 +1,10 @@
 <%= simple_form_for [:backend, current_object] do |f| %>
   <%= f.input :name %>
+  <%= f.input :dom_id, label: '講者在頁面的 ID'%>
   <%= f.input :avatar, as: :file%>
+  <%= f.input :twitter%>
+  <%= f.input :github%>
+  <%= f.input :home_page%>
   <%= f.input :biography %>
   <%= f.input :subject %>
   <%= f.input :abstract %>
