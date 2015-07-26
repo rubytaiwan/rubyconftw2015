@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .speaker-sortable{
   position: relative;
+  li{
+    height: 350px;
+  }
   li:before{
     position: absolute;
   }
@@ -12,9 +15,9 @@
 
 }
 
-  .dragged {
-    position: absolute;
-    opacity: 0.5;
-    z-index: 2000;
-  }
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
 
