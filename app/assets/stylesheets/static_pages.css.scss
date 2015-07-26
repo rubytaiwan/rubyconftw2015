@@ -891,6 +891,12 @@ img.sponsor_ruby { width: 60%; }
     background-repeat: no-repeat;
     background-position-y: center;
   }
+  .show{
+    a{
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
 }
 
 img.footer-bg { width: 100%; }
