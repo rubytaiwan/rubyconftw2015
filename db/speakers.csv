@@ -1,0 +1,388 @@
+name,sort_order,title,dom_id,github,twitter,home_page,biography,subject,abstract,english
+Yukihiro (Matz) Matsumoto,1,"Creator of Ruby, Heroku",matz,matz,yukihiro_matz,http://www.rubyist.net/~matz/,Father or Ruby Programming Language,Lazy Programmers,"Matz will talk about three virtues of great programmers,",1
+Sarah Allen,2,"Presidential Innovation Fellow, Smithsonian Institution",ultrasaurus,ultrasaurus,ultrasaurus,http://www.ultrasaurus.com,Co-founder of Mightyverse and Presidential Innovation Fellow at the Smithsonian Institution.,TBA,"especially the first one, laziness, and how they influenced",1
+Aaron Patterson,3,"Ruby Core, Rails Core",tenderlove,tenderlove,tenderlove,http://tenderlovemaking.com/,"Aaron was born and raised on the mean streets of Salt Lake City. His only hope for survival was to join the local gang of undercover street ballet performers known as the Tender Tights. As a Tender Tights member, Aaron learned to perfect the technique of self-defense pirouettes so that nobody, not even the Parkour Posse could catch him. Between vicious street dance-offs, Aaron taught himself to program. He learned to combine the art of street ballet with the craft of software engineering. Using these unique skills, he was able to leave his life on the streets and become a professional software engineer. He is currently Pirouetting through Processes, and Couruing through code for Red Hat. Sometimes he thinks back fondly on his life in the Tender Tights, but then he remembers that it is better to have Tender Loved and Lost than to never have Tender Taught at all.",TBA,the design and philosophy of Ruby,1
+Ruddy Lee / 李智樺,4,老師,ruddylee,,,https://ruddyblog.wordpress.com/,擁有超過30年的資訊工作經驗。早期從事於 IBM 系統網路的鑽研，曾設計過國內郵務、儲匯及國內外多家銀行的分行系統，近年來專注於微軟各類嶄新技術的技術研究，擅長於軟體 prototype 的架構設計及新產品的技術測試工作，經常擔任產品技術早期的宣導講師，從事推廣敏捷開發的 SCRUM 專案管理。現在擔任 Waveface 公司架構設計師，同時也是 MSDN 的特約講師。,未來的專案開發 The future of project development,"對軟體開發的成長過程而言；敏捷開發用迭代(iteration)式小週期循環的開發方式，克服了傳統開發對需求變更的無奈，成功克服了複雜專案的開發。但在這個 Mobile is eating the world的時代裡，任何開發作業的時間都嚴重的受到了挑戰，一切都越變越快，產品生命週期的長短就彷彿像手機App的安裝與移除一般的令人驚訝它的快速，此時能夠迅速交付產品的精實開發，
+便成了大家的寵兒，因為它能盡快提供具有足夠價值的產物給客戶，這種稱不上是創新卻能整合開發與維運的架構方式，就稱之為DevOps。對軟體開發的成長過程而言；敏捷開發用迭代(iteration)式小週期循環的開發方式，克服了傳統開發對需求變更的無奈，成功克服了複雜專案的開發。但在這個 Mobile is eating the world的時代裡，任何開發作業的時間都嚴重的受到了挑戰，一切都越變越快，產品生命週期的長短就彷彿像手機App的安裝與移除一般的令人驚訝它的快速，此時能夠迅速交付產品的精實開發，
+便成了大家的寵兒，因為它能盡快提供具有足夠價值的產物給客戶，這種稱不上是創新卻能整合開發與維運的架構方式，就稱之為DevOps。",0
+Fred Wu,5,"Delivery Lead, REA Group",fredwu,fredwu,fredwu,http://fredwu.me/,"Fred is a motivated and established software developer, designer and manager with a strong focus on code craftsmanship, business values and user experience. He's worked at companies such as Envato, SitePoint, PlayUp and Locomote and is currently working at REA Group (http://www.realestate.com.au/).
+
+
+
+Having built his first webpage back in 1997, Fred soon became interested in and started dabbling in the web industry. He began his career as a software developer while studying at Monash University - he worked as a part time web developer in a small web development firm as well as a freelancer designing and building client websites.
+
+
+
+Fred is a passionate open source developer who has made contributions to many dozens of open source projects including being one of the top 200 committers of Ruby on Rails - one of the most popular web frameworks, and an early co-author of Slim - one of the most popular template engines for Ruby. Today, ruby gems developed by Fred have a combined downloads of 5mil+.
+
+
+
+In 2012 Fred was invited to speak at RubyConf China. His talk ""Become a Better Developer You Can"" was well received and has been tweeted by many industry veterans including Yukihiro Matsumoto (Matz) - the author of the Ruby programming language.Fred is a motivated and established software developer, designer and manager with a strong focus on code craftsmanship, business values and user experience. He's worked at companies such as Envato, SitePoint, PlayUp and Locomote and is currently working at REA Group (http://www.realestate.com.au/).
+
+
+
+Having built his first webpage back in 1997, Fred soon became interested in and started dabbling in the web industry. He began his career as a software developer while studying at Monash University - he worked as a part time web developer in a small web development firm as well as a freelancer designing and building client websites.
+
+
+
+Fred is a passionate open source developer who has made contributions to many dozens of open source projects including being one of the top 200 committers of Ruby on Rails - one of the most popular web frameworks, and an early co-author of Slim - one of the most popular template engines for Ruby. Today, ruby gems developed by Fred have a combined downloads of 5mil+.
+
+
+
+In 2012 Fred was invited to speak at RubyConf China. His talk ""Become a Better Developer You Can"" was well received and has been tweeted by many industry veterans including Yukihiro Matsumoto (Matz) - the author of the Ruby programming language.",Get Ahead By Open Source,"There is a saying of ""10,000 hours of practice makes you an expert"" - no matter whether you believe it or not, it is clear that by spending more time wisely on a particular subject, you will gain experience and insights therefore you would become more competent in that subject.
+
+
+
+There are thousands of thousands of talented, driven and passionate developers around the world, how do you get ahead then?
+
+
+
+Open source!
+
+
+
+When others watch TV, play games or go out for drinks after work, what if you spend an hour or two everyday contributing to open source projects?
+
+
+
+This talk will take you through the journey I have been through so far, and paint you a picture of how I end up being a top 200 Ruby on Rails contributor, and have a combined downloads of 5mil+ for all the ruby gems I have developed.
+
+
+
+Ever wondered how you could start getting your feet wet in open source? How you could start contributing without the fear of being judged by your code quality? How you could motivate yourself when some people disregard your contribution and effort? How you could balance open source contribution with your day job? You’re in for a treat!There is a saying of ""10,000 hours of practice makes you an expert"" - no matter whether you believe it or not, it is clear that by spending more time wisely on a particular subject, you will gain experience and insights therefore you would become more competent in that subject.
+
+
+
+There are thousands of thousands of talented, driven and passionate developers around the world, how do you get ahead then?
+
+
+
+Open source!
+
+
+
+When others watch TV, play games or go out for drinks after work, what if you spend an hour or two everyday contributing to open source projects?
+
+
+
+This talk will take you through the journey I have been through so far, and paint you a picture of how I end up being a top 200 Ruby on Rails contributor, and have a combined downloads of 5mil+ for all the ruby gems I have developed.
+
+
+
+Ever wondered how you could start getting your feet wet in open source? How you could start contributing without the fear of being judged by your code quality? How you could motivate yourself when some people disregard your contribution and effort? How you could balance open source contribution with your day job? You’re in for a treat!",1
+PJ Hagerty,6,"Community Team Lead, Engine Yard",aspleenic,aspleenic,aspleenic,https://about.me/pjhagerty,"Developer, writer, speaker, musician, and Team Lead of an elite band known as the Engine Yard Community Team, PJ is known to travel the world speaking about programming and the way people think and interact. He is also known for wearing hats.",Urban Legends: What You Code Makes You Who You Are,"If you were a carpenter, would your skills at building be more important than the tools you use to build? Skills, right? Tools are just a means to an end. So why do developers think the language they use defines the problems they solve?
+
+
+
+This talk will take a look at misconceptions across the board, some experiences, both positive and negative, people have had crossing barriers to new languages, and show some of the benefits thinking of one's self as a coder and not a ""Ruby coder"" or a ""PHP dev"" can have on being a better problem solver.If you were a carpenter, would your skills at building be more important than the tools you use to build? Skills, right? Tools are just a means to an end. So why do developers think the language they use defines the problems they solve?
+
+
+
+This talk will take a look at misconceptions across the board, some experiences, both positive and negative, people have had crossing barriers to new languages, and show some of the benefits thinking of one's self as a coder and not a ""Ruby coder"" or a ""PHP dev"" can have on being a better problem solver.",1
+Vipul A M,7,"Software Developer, BigBinary",vipulnsward,vipulnsward,vipulnsward,http://bigbinary.com/vipul,"Vipul works as a Software Consultant at BigBinary LLC. He is an avid Rails and Ruby Projects Contributor. His spare time is spent exploring and contributing to many Open Source ruby projects, when not dabbling with Clojure or React JS.
+
+
+
+He's currently working on a book titled - ""ReactJS by Example"", that does a deep walk-through of using ReactJS, whilst working on project examples.
+
+
+
+Vipul loves Ruby's vibrant community and helps in building PuneRb, is the founder of and runs RubyIndia Community Newsletter and RubyIndia Podcast, and organizes Deccan Ruby Conference in Pune.Vipul works as a Software Consultant at BigBinary LLC. He is an avid Rails and Ruby Projects Contributor. His spare time is spent exploring and contributing to many Open Source ruby projects, when not dabbling with Clojure or React JS.
+
+
+
+He's currently working on a book titled - ""ReactJS by Example"", that does a deep walk-through of using ReactJS, whilst working on project examples.
+
+
+
+Vipul loves Ruby's vibrant community and helps in building PuneRb, is the founder of and runs RubyIndia Community Newsletter and RubyIndia Podcast, and organizes Deccan Ruby Conference in Pune.",React on Rails,"Rails has seen a lot of MVC’s for the V layer itself. May it be Ember or Angular, unless there’s some heavy groundwork, these don’t gel well with existing applications. React JS being framework Agnostic, blows out of these requirements, and being dead simple is far easier to add to existing / new projects.
+
+
+
+In this talk we’ll do walkthrough on using React JS and some of the new ES 6 features it brings, and integrating and using React in Rails. We’ll then take a look at various integration approaches with Rails- webpack/browserify and how to manage data and states using backbone, flux, GraphQL+Relay and more.Rails has seen a lot of MVC’s for the V layer itself. May it be Ember or Angular, unless there’s some heavy groundwork, these don’t gel well with existing applications. React JS being framework Agnostic, blows out of these requirements, and being dead simple is far easier to add to existing / new projects.
+
+
+
+In this talk we’ll do walkthrough on using React JS and some of the new ES 6 features it brings, and integrating and using React in Rails. We’ll then take a look at various integration approaches with Rails- webpack/browserify and how to manage data and states using backbone, flux, GraphQL+Relay and more.",1
+Manuel Vidaurre,8,"VP, Product Development, Crowd Interactive",mvidaurre,mvidaurre,mvidaurre,https://medium.com/@mvidaurre,"me.born = ""Guadalajara, Jal"" me.passions = {value: ""adding more"", meaning: ""leaving a notch in life"", people: ""doing something to give them more happiness and freedom"", software: ""a way to adding more happiness and freedom to the people leaving a notch in life"", gourmet: ""my deepest sin"", music: ""eclectic tastes"", art: ""give happiness and color""] me.skills = {mental: [:problem_solving, :good_memory, :abstract_thinking, :positive_attitude, :focus, :results_oriented], social: [:listener, :learner, :mentor, :needs_elicitor, :mediator, :people_oriented ]} me.programming = { languages: [:ruby, :js, :html, :css, :coffeescript, :python, :scala, :elixir, :java, :c, :logo], skills: [:agiledev, :patterns, :continuos_improvement, :project_management, ], practices: [:software_craftsmanship, :test_first, :object_thinking, :solid_principles, :refactoring, :pair_programming, :collective_ownership], paradigms: [:domain_driven_design, :lean, :behaivour_driven_design, :scrum, :xp]. web_frameworks: [:rails, :sinatra,:ember.js], tools: [:cucumber, :rspec, :capybara, :git, :jquery, :sql, :mongodb]. segments: [:health, :real_state, :retail, :gis]} me.past = { jobs: {university_of_guadalajara: :chief_of_programming_and_analysis, panamerican_health_organization: => advisor_information_systems, johns_hopkins: lab_professor, business: [:venyrent, :asdetec, :buzzurbano]} me.present = {business: [:agiltec, :imber, :emagazine], communities: [:ruby_gdl, :elixir_gdl, :toolsforfullstack, :startupweeken
+
+
+
+https://about.me/manuel.vidaurreme.born = ""Guadalajara, Jal"" me.passions = {value: ""adding more"", meaning: ""leaving a notch in life"", people: ""doing something to give them more happiness and freedom"", software: ""a way to adding more happiness and freedom to the people leaving a notch in life"", gourmet: ""my deepest sin"", music: ""eclectic tastes"", art: ""give happiness and color""] me.skills = {mental: [:problem_solving, :good_memory, :abstract_thinking, :positive_attitude, :focus, :results_oriented], social: [:listener, :learner, :mentor, :needs_elicitor, :mediator, :people_oriented ]} me.programming = { languages: [:ruby, :js, :html, :css, :coffeescript, :python, :scala, :elixir, :java, :c, :logo], skills: [:agiledev, :patterns, :continuos_improvement, :project_management, ], practices: [:software_craftsmanship, :test_first, :object_thinking, :solid_principles, :refactoring, :pair_programming, :collective_ownership], paradigms: [:domain_driven_design, :lean, :behaivour_driven_design, :scrum, :xp]. web_frameworks: [:rails, :sinatra,:ember.js], tools: [:cucumber, :rspec, :capybara, :git, :jquery, :sql, :mongodb]. segments: [:health, :real_state, :retail, :gis]} me.past = { jobs: {university_of_guadalajara: :chief_of_programming_and_analysis, panamerican_health_organization: => advisor_information_systems, johns_hopkins: lab_professor, business: [:venyrent, :asdetec, :buzzurbano]} me.present = {business: [:agiltec, :imber, :emagazine], communities: [:ruby_gdl, :elixir_gdl, :toolsforfullstack, :startupweeken
+
+
+
+https://about.me/manuel.vidaurre",Using Ruby to Implement e-commerce: Lessons Learned and Challenges,"Implementing e-commerce is complicated because there are several interconnected parts as:
+
+* Architectural Design and Patterns
+
+* Appropriate use of messaging, composition and inheritance
+
+* Balancing the transactions security and the user experience
+
+* Integration with 3rd-party services
+
+* Clear conversion funnel/workflow for ensuring business viability
+
+* Features management and implementation
+
+* I18n and localization
+
+* Continuos Integration and Deployment
+
+* Support and maintenance of e-commerce infrastructure
+
+
+
+We as a team focus in e-commerce implementation. Since several years ago, we have successfully implemented e-commerce for several customers, using Ruby, Ruby on Rails, Sinatra, Spreecommerce and other frameworks and platforms. We have learned many things in the process and we have identified common pitfalls and challenges. In this talk, those lessons learned will be presented, as well, how to implement a successful e-commerce.Implementing e-commerce is complicated because there are several interconnected parts as:
+
+* Architectural Design and Patterns
+
+* Appropriate use of messaging, composition and inheritance
+
+* Balancing the transactions security and the user experience
+
+* Integration with 3rd-party services
+
+* Clear conversion funnel/workflow for ensuring business viability
+
+* Features management and implementation
+
+* I18n and localization
+
+* Continuos Integration and Deployment
+
+* Support and maintenance of e-commerce infrastructure
+
+
+
+We as a team focus in e-commerce implementation. Since several years ago, we have successfully implemented e-commerce for several customers, using Ruby, Ruby on Rails, Sinatra, Spreecommerce and other frameworks and platforms. We have learned many things in the process and we have identified common pitfalls and challenges. In this talk, those lessons learned will be presented, as well, how to implement a successful e-commerce.",1
+簡煒航,9,Freelancer,tonytonyjan,tonytonyjan,tonytonyjan,http://tonytonyjan.net,"喜歡 Ruby、Java、C，愛好寫程式，以此為樂，並以此維生。 
+
+
+
+Love Ruby, Java and C. Program for joy and living.喜歡 Ruby、Java、C，愛好寫程式，以此為樂，並以此維生。 
+
+
+
+Love Ruby, Java and C. Program for joy and living.",Gulp on Rails: Return Front-end back to Front-end Developers (還給前端工程師一個天空),"Rails sprockets is dated. It was an awesome tool in years since its inception. Although it's easy to use, when it starts having bugs (we know it had), front-end developers are helpless in what is supposed to be their own ecosystem, because they don't know Ruby. Why should a front-end developers knows how to use Sprockets/Ruby instead of using their tools like gulp, grunt, browserify, webpack, etc, that belongs to JS ecosystem?
+
+
+
+Gulp, a modern approach to asset pipeline has become more popular and actively maintained by JS community. In this session, I'll share how and why I integrate Gulp and Rails.Rails sprockets is dated. It was an awesome tool in years since its inception. Although it's easy to use, when it starts having bugs (we know it had), front-end developers are helpless in what is supposed to be their own ecosystem, because they don't know Ruby. Why should a front-end developers knows how to use Sprockets/Ruby instead of using their tools like gulp, grunt, browserify, webpack, etc, that belongs to JS ecosystem?
+
+
+
+Gulp, a modern approach to asset pipeline has become more popular and actively maintained by JS community. In this session, I'll share how and why I integrate Gulp and Rails.",0
+謝昇佑,10,"軟體工程師, 果實夥伴股份有限公司",nkj20932,nkj20932,,http://motion-express.com,"Call me Adler, A rails developer who is interested in learning new stuff and tools, and also a lazy guy who always tries to achieve more by doing less. That’s why I love Ruby. Currently I am working in the industry of online video advertisement.",Scripting makes tasks easier,"This talk aims to go through basic scripting skills in Ruby. Participants will have a better understanding in managing their daily tasks on their Mac or Linux OS with scripting in Ruby.
+
+
+
+As Rubists, we build and maintain our apps with a lot of ruby code. However, it would be a huge waste if we do not use them to manage our daily tasks. For example, we can use scripting to delete old files instead of checking and dragging them into the Trash manually. These can be done with Bash, Perl and many other scripting languages, but among of which Ruby is better known for its readability. It is easier to write, maintain, and reuse. It opens a new way for we Rubists to manage our systems.
+
+
+
+This talk covers the following parts:
+
+1. Why we need scripting to manage our daily tasks.
+
+2. How do libraries like File, Dir, and FileUtils manage our files.
+
+3. Several cases you may find scripting useful like deleting old files and locating junk files.
+
+4. How can we package our scripts into executables, gems, and rake tasks.This talk aims to go through basic scripting skills in Ruby. Participants will have a better understanding in managing their daily tasks on their Mac or Linux OS with scripting in Ruby.
+
+
+
+As Rubists, we build and maintain our apps with a lot of ruby code. However, it would be a huge waste if we do not use them to manage our daily tasks. For example, we can use scripting to delete old files instead of checking and dragging them into the Trash manually. These can be done with Bash, Perl and many other scripting languages, but among of which Ruby is better known for its readability. It is easier to write, maintain, and reuse. It opens a new way for we Rubists to manage our systems.
+
+
+
+This talk covers the following parts:
+
+1. Why we need scripting to manage our daily tasks.
+
+2. How do libraries like File, Dir, and FileUtils manage our files.
+
+3. Several cases you may find scripting useful like deleting old files and locating junk files.
+
+4. How can we package our scripts into executables, gems, and rake tasks.",1
+Don Werve,11,"Consultant, Minimum Viable",matadon,matadon,matadon,http://werve.net,"Although originally designed by Apple in California as a durability-testing device for Macbooks, Don has spent the past six years working around the world as a software engineer and back-pocket CTO, helping companies tackle tough management and engineering challenges. Don lives in Tokyo, and spends his spare time reading too many books, creating new forms of deliciousness in his kitchen, and searching for new and creative ways to injure himself with sporting equipment.",Maker to Manager,"Stepping into a management role is often the most difficult career transition for a working programmer, and can be a sharp and painful lesson in how to lose friends and alienate people, as the skills required to successfully manage people are very different than the skills required to successfully cut code.
+
+
+
+We will discuss what it takes to be an effective manager, learn how to avoid many of the traps that await engineers that start down the management path, and explore several battle-tested management techniques that you can deploy within your team to nurture a culture of engineering excellence.
+
+
+
+If you are a developer taking on a leadership role, a first-time CTO, or a technical cofounder, then this talk is for you.Stepping into a management role is often the most difficult career transition for a working programmer, and can be a sharp and painful lesson in how to lose friends and alienate people, as the skills required to successfully manage people are very different than the skills required to successfully cut code.
+
+
+
+We will discuss what it takes to be an effective manager, learn how to avoid many of the traps that await engineers that start down the management path, and explore several battle-tested management techniques that you can deploy within your team to nurture a culture of engineering excellence.
+
+
+
+If you are a developer taking on a leadership role, a first-time CTO, or a technical cofounder, then this talk is for you.",1
+Grzegorz Witek,12,"Lead Software Engineer, Kaligo",arnvald,arnvald,arnvald,,"I boost economy by making bugs here and there, so that others always have something to fix and they can keep their jobs. Constantly afraid of stack overflows, I always work as an empty-stack developer.",From international to global,"Having internet available in almost any country, we, programmers, often believe that the applications we build are available for everyone. However by ignoring issues with encoding, censorship, and internet speed, we lose millions of potential users. Some of these problems are very tough and time-consuming, others, though, are very easy to fix.",1
+林健欣,13,"Source Code Formatter, Codementor",godfat,godfat,godfat,http://www.godfat.org/,"""Lin Jen Shin (godfat) is a programmer who loves computer games, open source, Haskell and self-referential jokes, such as: %p=~/(.+)/;puts(($1%%$1)[/: (.+)/,1])""=~/(.+)/;puts(($1%$1)[/: (.+)/,1])",Have you seen the Mock Muack yet?,"In this talk, I'll briefly introduce what is a test double, and why and when we should use it, and what's the trade of we'll make by using it. WITH GREAT POWER THERE MUST ALSO COME--GREAT RESPONSIBILITY! Examples will all be written with [Muack](https://github.com/godfat/muack).",0
+RainChen,14,"CTO, Beansmile",rainchen,rainchen,,,"CTO of Beansmile.
+
+
+
+Team manager & Project manger, loving programming, loving ruby, committed myself to build efficient team & deliver high quality projects.CTO of Beansmile.
+
+
+
+Team manager & Project manger, loving programming, loving ruby, committed myself to build efficient team & deliver high quality projects.",Integrating Reactjs and Rails for mobile app,"In this topic, I will introduce why chosen React as the frontend framework, describe how to play with rails, sharing major problems I met and solutions, at last talk about the feeling of using React.",0
+Kuniaki IGARASHI,15,"Chief Engineer, spice life, Inc.",igaiga,igaiga,igaiga555,http://igarashikuniaki.net/diary/,"Kuniaki is a Chief Engineer at spice life, inc. and author of the ""Startup Ruby"" book (Japanese). As founder of Rails Terakoya (Rails workshop event for students), he also coaches RailsGirls around Japan and teaches a Ruby class part-time at Hitotsubashi University.",Debugging basics for Rails applications,"Debugging occupies a large part of our development time. If only we could debug faster and more comfortably, our coding time would be more happier.
+
+
+
+Being able to debug is an essential skill for every engineer, but learning effective debugging methods is difficult.
+
+
+
+In this talk, we will discuss basics to debugging and some useful tips for Rails app development.
+
+
+
+keywords: observing request parameters, cosmetics for rails console, built-in debug tools, email sending, ""g"" gem.Debugging occupies a large part of our development time. If only we could debug faster and more comfortably, our coding time would be more happier.
+
+
+
+Being able to debug is an essential skill for every engineer, but learning effective debugging methods is difficult.
+
+
+
+In this talk, we will discuss basics to debugging and some useful tips for Rails app development.
+
+
+
+keywords: observing request parameters, cosmetics for rails console, built-in debug tools, email sending, ""g"" gem.",1
+Hiroshi SHIBATA,16,"Chief engineer, GMO Pepabo, Inc.",hsbt,hsbt,hsbt,http://www.hsbt.org,CRuby committer and root operation engineer of ruby-lang.org. I am a full-stack developer at GMO Pepabo.,Middleware as Code with mruby,"mruby is the lightweight implementation of the Ruby language and was released about a year ago. mruby has embeddable mechanism for middlewares like http server, search engine, etc.
+
+
+
+Embedded mruby provides ruby runtime and syntax to middlewares. It’s so powerful programming environment for Rubyists. Even with mruby, we were able to create web services with tests and gems, and it also helped to solve some problems using Ruby code outside of a Rails application.
+
+
+
+I will describe​ details of mruby in production service.",1
+Jason Lee (李致賢),17,"Web Developer, Kerjadulu",leechsien,LeeChSien,,http://chsien.logdown.com/,"Fullstack Web Developer at Kerjadulu, as well as a graduate student at National Chengchi University. Love Ruby and Rails, Javascript and AngularJS.",如何在 JVM 上透過 Warbler 部署 Rails 應用,"有的時候客戶的環境不一定能夠支援 Ruby，
+
+我們這時候除了想到 JRuby 和 JVM 還能做些什麼？
+
+本透過本議程，我們將初略介紹如何利用 Warbler 這個套件打包 Rails 應用
+
+在這個打包的過程中，除了 Rails App 之外，同時也加入 Rack Worker
+
+讓你的應用能夠完整地在 JVM 中順利的部署和執行",0
+林鈺翔(John Lin),18,"Head of Algorithm, SpoonRocket",johnlinvc,johnlinvc,johnlinvc,http://johnlin.vc,Head of Algorithm at SpoonRocket. Creator of Livehouse.in(beta).Ruby lover. Full-stack developer. iOS developer. FP lover.,Need for Speed: Boost ruby with FFI,"Let's make ruby the best language in the world by giving it the speed of C. Ruby's goal is maximize programmer happiness, not the happiness of computers. But sometimes we still need to give some sympathy to the poor machine, especially when our API requests timed out. There're multiple ways to speed up Ruby by running C under the hood. Among them, FFI (foreign function interface) is the one that give us the most pleasant experience.
+
+With FFI, we can use C libraries without writing a single line of C code. Better yet, we also get cross platform/implementation support for free. We'll start from how FFI works, then calling a simple c function from ruby. Explore more by bridging C structs to ruby class and handing C pointers. Conclude with a FFI example.",1
+Ted Johansson,19,"Technial Director, Tinkerbox Studios Pte Ltd",drenmi,drenmi,drenmi,,"Ted is a nomad technical director, a rock climber, and a big time coffee drinker.
+
+He has been programming since he got his first modem at the age of 12, and after spending most of his life writing in other languages, has finally found his long lost love in Ruby.",Beyond the MVC: An Object Taxonomy for Rails,"Rails goes to great lengths to convince us that we can get by with merely three different building blocks--the old, familiar models, views, and controllers. In early 2010, James Golick objected to this and proposed the (then controversial) idea of adding something called a Service Object, into the mix.
+
+In this talk, we will look at the development in the 5 years that have since passed. We will take a walk outside the compound, and explore a new taxonomy of objects that we can use in our Rails applications to create a richer domain model.",1
+lulalala,20,"Developer, Listia",lulalala,lulalala,lulalala_it,http://lulalala.logdown.com/,"A Ruby hobbyist who is also a bit of an otaku. Likes writing Ruby programs, drawing and anime~",Rewriting an imageboard,"幾年前我為了學習 Rails 而寫了一個類似 2ch 的貼圖版，但是找到工作後就忘了它的存在。幾年後我突然想知道要是能運用這幾年學到的經驗重寫的話，會發生什麼事。於是我重寫了。這裡我會整理自己在這次所得到的心得。
+
+
+
+A few years ago I wrote a 2ch-like imageboard in order to learn Rails. After finding a job I abandoned it... until now. I decide to apply all the knowledge I have learnt over the years into rewriting this app. Here I'll talk about what I have done, what I have changed, and how I felt during the process.",0
+Juanito Fatas,21,"Jolly Good Coder, Jolly Good Code",juanitofatas,JuanitoFatas,JuanitoFatas,juanitofatas.com,"Juanito Fatas is passionate about programming, web development, and an amateur translator. He contributes to open source projects frequently.",RSpec for Practical Rubyist,"Everyone knows testing is so important. Everyone knows the pros and cons of testing. But there are thousands of excuses to prevent you from writing tests. There are thousands of barriers to block beginners from writing tests. I want to promote more people start writing tests. I want to make writing tests extremely easy. In this talk I will cover enough testing backgounds, types of tests. Introduce RSpec as the weapon to test our Ruby/Rails application. RSpec magic spells to start writing tests. Give practical examples of the most important tests they can write after this talk. How to be a mocking bird to fake everything for testing real world interactions. Then cover other types of tests for them to go even further.",1
+hothero,22,"共同創辦人暨技術總監, 貝殼放大 BackerFounder",hothero,hothero,hothero,http://blog.hothero.org,"一個五專資管插大生，到清大資工研究所畢，不大一樣的求學路程，反而從桌面應用、手機到網站開發都有經驗，喜愛瞭解問題，進而開發產品應用解決的過程。
+
+近年很喜歡一句話「自己成功前，先幫助別人成功」，所以跳進了群眾募資產業，希望能與許多有夢想的人一起成長，用自己的專業幫助更多的人。",百大媒體網站從 WordPress 到 Rails 的大小事,WordPress 簡易的架設與強大的後台讓人愛不釋手，但其令人垢病的低落效能讓一個台灣百大的媒體網站苦不堪言，遇到重要時事新聞常因突然過大的龐大流量導致掛站。這次將分享將近一年時間，從 WordPress 前台＋Rails 後台，一步步到全站 Rails 過程的大小事，包含資料庫、程式與伺服器架構設計等。,0
+Laurent Sansonetti,23,"Founder / CEO, HipByte",lrz,lrz,lrz,http://orval.club/~lrz,"Laurent is the founder of HipByte and the original developer of RubyMotion. He worked at Apple for 7 years as a senior software engineer, on both iLife and OS X. At Apple, he maintained the Ruby distribution of OS X and also created the MacRuby project. In a previous life, he worked on IDA Pro and was an active contributor to RubyCocoa and GNOME. Laurent lives in Liège, Belgium. He enjoys drinking beer, eating waffles, and spending time with his wife and son.",What's new in RubyMotion 4.0,"RubyMotion is a toolchain to write cross-platform mobile apps for iOS and Android using the Ruby language. In this session we will cover how RubyMotion works, check out some of the high-level gems that can be used to speed up development, and have a sneak peek at new features of RubyMotion 4.0.",1
+何澤清 Tse-Ching Ho,24,"共同創辦人 Co-Founder, 黃碼科技有限公司 Goldenio Technology Ltd.",tsechingho,tsechingho,tsechingho,,"Ruby/Rails 工程師，意圖在生物資訊和資料視覺化領域，開發出有趣的產品。
+
+
+
+Ruby/Rails programmer, focused on bioinfomatics and infographics.",gem 'webpack-rails',"好用的 Javascript Library 越來越多，前端程式越來越複雜，要引用到 Rails 專案的手續開始變得煩人。
+
+Webpack 越來越強大，整合到 Rails 的方式各有偏好，網路教學看到頭昏，入手門檻無形中越墊越高。
+
+
+
+將介紹自己的一個套件，能以 hybridization 或 replacement 的方式，整合 webpack 和 rails asset pipeline。
+
+大量減低 webpack 入門的時間，並對日後的專案維護，達到一定的可靠性。
+
+
+
+I will introduce a gem to integrate webpack with rails in hybridization or replacement way.",0
+許斯凱,25,"Software Developer, 奇群科技 Zillians Inc.",brucehsu,brucehsu,brucehsu,http://brucehsu.org,"Though Szu-Kai is not using Ruby on his work. Deep inside his heart, he's still very much a Rubyist and uses it every time he needs to hack something.",Evolution of GobiesVM,"Since its birth, GobiesVM has been focusing on parallelism in a Ruby implementation. In this talk, we'll illustrate how GobiesVM keeps on improving this aspect while bringing other new ideas to the table.",1
+tka,26,,tka,tka,,http://blog.tka.lu,"網站工程師, 通常使用 RoR 解決方案, 去年開始接觸 Golang",如何用 golang 幫 ruby 專案加速,"ruby 常常被人詬病效能不佳, 而 golang 1.5 提供了編譯成 shared library 讓其他程式呼叫的功能. 所以這個分享將會簡介 golang 1.5 的 shared library 功能以及如何<del>將 golang 偷渡到 ruby 專案</del>在 ruby 中借助 golang 來解決效能問題",0
+吴江,27,"Tech Lead, D.G.Z",nouse,nouse,masterwujiang,http://jiangwu.net,"资深Ruby程序员，8年Rails经验，曾经在Inker, Factual, Ehoke, EMC等知名公司担任高级程序员。2010年在日本筑波举办的RubyKaigi上演讲Sinatra心得，是Sinatra文档的简体中文译者。现在在中国著名的代码托管网站GitCafe担任Tech Lead，主导API的开发工作。",用Swagger实做Web API文档,"随着Mobile程序和Single Page Application的流行，编写RESTful API变得越来越常见和重要。
+
+
+
+Swagger是一个简单而又十分强大的描述RESTful API的规范，允许开发者使用JSON描述API的元数据，结构和数据模型。Swagger的开发者社区在不断的成长。在规范以外，Swagger有多种实现，并提供丰富的工具套件，帮助API开发者生成交互性的文档（且与代码保持同步）和client SDK，大幅度地提高API的成功采用。
+
+
+
+除了很多start-up公司采用Swagger外，很多领先的科技企业比如 Microsoft, IBM, Apigee, Getty Images, Intuit, LivingSocial, McKesson, Morningstar 和 PayPal 也使用 Swagger 打造更优秀的 RESTful API。
+
+
+
+本次演讲主要介绍如何使用grape-swagger这个gem开发符合Swagger规范的API描述，减少代码和文档中的重复，并用Swagger UI展现文档和实时测试。",0
+Ricky Pai,28,"Software Engineer, Airbnb",rickypai,rickypai,rickypaipie,http://rickypai.com,"Ricky is a software engineer @ Airbnb (previously @ Twitter) with interest in large Ruby/Rails deployment and infrastructure. Besides being a Rubyist, Ricky is addicted to traveling and photography, and is generally considered quite terrible at bio-writing.","Better Testing in Ruby (or ""How I Learned to Love Testing"")","""I just wrote this and I already know it works""
+
+
+
+Testing is annoying; testing is hard; testing is time that could otherwise be writing cool new features. Indeed, many find testing an annoyance and have great reasons to avoid it; however, in this talk, I will try to talk about the benefits of testing, and ways to make the testing experience better. I hope as a result, more will appreciate and even enjoy writing tests!
+
+
+
+Agenda: https://gist.github.com/rickypai/777b66bdb2c3ed02dc1d",1
+Joseph Ku (古傑芳),29,"VP, Engineering, MobiApps",josephku,JosephKu,josephku,,"Programmer. I wrote x86 Assembly at age 10, C at 20, Ruby at 30. Board gamer, Bitcoin enthusiast, Minecraft miner, Ruby lover.",R&B: When Ruby Met Bitcoin,"Bitcoin is the final piece of the Internet protocol puzzle. As the technology of Bitcoin matures, it will reveal the next Internet revolution.
+
+
+
+* When Matz met Satoshi?
+
+* What’s Bitcoin?
+
+* Do you really know what money is?
+
+* Why Bitcoin?
+
+* Let Ruby take you to the world of Bitcoin 
+
+* Blockchain
+
+* What’s Blockchain?
+
+* Hacking Blockchain by Ruby
+
+* Applications
+
+* Bitcoin accepted
+
+* Rails & Bitcoin
+
+* The future of Bitcoin",0
+Nico Hagenburger,30,"Ruby & front-end developer, LivingStyleGuide.org",hagenburger,hagenburger,hagenburger,http://www.hagenburger.net,"I’m a front-end developer with a strong love for Ruby and therefore mostly work on Middleman or Ruby on Rails projects with large, maintainable code bases, style guides, and designing in the browser. Whenever I find a way to automize things, I try to create an open-source solution. It started with [Lemonade/Compass Sprites] (https://github.com/hagenburger/lemonade#lemonade-is-deprecated), [Sass Quotation-Marks](http://quotation-marks.org), [Git Routines] (https://github.com/hagenburger/git-routines), and the baby I spent most of my time on: the [LivingStyleGuide Gem for Sass] (https://github.com/livingstyleguide/livingstyleguide/tree/v2#readme). Just recently, I put my experience on style guide APIs [into an own Gem] (https://github.com/hagenburger/styleguide-api) which is already in use to keep [Eurucamp’s](http://style- guide.eurucamp.org/2015/components.html) different applications in sync.
+
+
+
+When my computer is actually off, I’m working with interior design, including my collection of vintage subway train parts and signage.",Get rid of that front end,"For many back-end developers, the front-end is a pain. Dirty code within the application and even hard to test. So how can we use our experiences as Ruby developer to built a better front end?
+
+
+
+Not every application developer (back-end or JavaScript) places importance on the details of front-end structure. Instead, they prefer simply to use APIs — mostly with a JSON interface. Instead of interference with the front-end developer’s work, this provides a structured API that only takes care of defined values.
+
+
+
+CSS can’t live without HTML, and HTML almost can’t live without CSS. Let the front-end developer take care of both and consume the result as a well-tested API that takes nothing else than data as input.",1
+Rens Verstegen,31,"General Manager, Akatsuki Inc.",renske,Renske,,,"Rens came to Japan to join the game industry after studying Computer Science and Japanese Studies in The Netherlands. After working five years at Konami, GREE as a C++/node-.js programmer he joined Akatsuki as a fresh Ruby on Rails engineer. There he worked on several mobile games, both web-based and native. Recently Rens came to Taiwan to help set-up Akatsuki's subsidiary there and is now responsible for development and localization of Akatsuki's games.",Game Development with Ruby on Rails (Tentative),"The attendee will learn about the basic development process Akatsuki uses to develop their mobile games using highly scalable Ruby on Rails servers.
+
+
+
+This talk will not be only about Ruby or Ruby on Rails, but will also introduce various services that are used during our development, like JIRA, AWS, HoundCI, and many others.
+
+
+
+By attending this talk you will get an idea of how developing for games might be different from your average website.",1

@@ -1,24 +1,24 @@
 <nav id="front-nav">
   <% @nav_sections.each do |name| %>
-    <%= render partial: 'nav_item', locals: {name: name} %>
+  <%= render partial: 'nav_item', locals: {name: name} %>
   <% end %>
 </nav>
 
 <div class="nav-default navbar-fixed-top">
   <div class="nav-bg">
-  <a data-showfullnav id="nav-toggle"><span></span></a>
+    <a data-showfullnav id="nav-toggle"><span></span></a>
   </div>
 </div>
 <div id="navbar" class="fullNavOverlay">
   <ul>
     <% @nav_sections.each do |name| %>
-      <li><a href="#<%=name%>"><%=name.capitalize%></a></li>
+    <li><a href="#<%=name%>"><%=name.capitalize%></a></li>
     <%end%>
     <div class="socail-rwd">
       <%= link_to image_retina_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
-         target: "_blank" %></li>
+      target: "_blank" %></li>
       <%= link_to image_retina_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan",
-        target: "_blank" %></li>
+      target: "_blank" %></li>
       <%= link_to image_retina_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %></li>
     </div>
 
@@ -40,7 +40,7 @@
     <%= image_tag("cloud3.png", class: "cloud3", id: "cloud3") %>
     <div class="social">
       <%= link_to image_retina_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
-       target: "_blank" %>
+      target: "_blank" %>
       <%= link_to image_retina_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan",
       target: "_blank" %>
       <%= link_to image_retina_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %>
@@ -63,188 +63,327 @@
       <%= link_to "Registration","#",class: "white-btn btn btn-disabled" %>
       <%= link_to "Call For LT Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-ltcfp",
       class: " blue-btn btn ",role: "button", target: "_blank" %>
-    </div>
-    <div class="pluginButton">
-      <div class="tweet-share">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://2015.rubyconf.tw/" data-count="none">Tweet</a>
       </div>
-      <div class="fb-like" data-href="http://2015.rubyconf.tw/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+      <div class="pluginButton">
+        <div class="tweet-share">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://2015.rubyconf.tw/" data-count="none">Tweet</a>
+        </div>
+        <div class="fb-like" data-href="http://2015.rubyconf.tw/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+      </div>
     </div>
-  </div>
-  <div id="speaker" class="section">
-    <div class="block mountain">
-      <%= image_retina_tag("mountain1.png", class: "mountain", id: "mountain") %>
-    </div>
-    <div class="tub-repeat"></div>
-    <div class="row">
-      <% @speakers.each do |speaker| %>
-      <div class="col-xs-12 col-sm-4 col-md-4">
+
+    <div id="speaker" class="section">
+      <div class="block mountain">
+        <%= image_retina_tag("mountain1.png", class: "mountain", id: "mountain") %>
+      </div>
+      <div class="tub-repeat"></div>
+      <div class="row">
+        <% @speakers.each do |speaker| %>
+        <div class="col-xs-12 col-sm-4 col-md-4">
           <%= image_tag speaker.avatar.middle %>
           <div class="description">
             <h3><%= speaker.name %></h3>
             <p><%= speaker.title%></p>
           </div>
+          <a class="more-btn" href="#<%=speaker.dom_id%>"></a>
+        </div>
+        <% end %>
       </div>
-      <% end %>
     </div>
-  </div>
+    <%= render partial: 'speaker_info', collection: @speakers, as: :speaker%>
 
 
-  <div id="schedule" class="section">
-    <div class="row">
-      <%unless params.has_key?(:show_schedule)%>
-        <div class="schedule-frame">
-          <div class="call-for-proposal">
-          <h1>We still looking for speakers.<br>If you want to join us.<br>Click "call for proposal" button! </h1>
-          </div>
-          <div class="btn-group">
-          <%= link_to "call for proposal","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",class: "sky-blue-btn btn btn-outline btn-lg", target: "_blank" %>
-          </div>
-        </div><!--schedule-frame-->
-      <%else%>
+    <div id="schedule" class="section">
+      <div class="row">
         <div class="schedule-tabel col-xs-12 col-sm-12" style="display: block;"  >
           <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
-              <li class="active"><a href="#day1" data-toggle="tab">Day 1</a></li>
-              <li><a href="#day2" data-toggle="tab">Day 2</a></li>
+            <li class="active"><a href="#day1" data-toggle="tab">Day 1</a></li>
+            <li><a href="#day2" data-toggle="tab">Day 2</a></li>
           </ul>
           <div id="my-tab-content" class="tab-content">
-              <div class="tab-pane active" id="day1">
-                <table class="table-schedule tab-content">
-                 <thead>
-                      <tr>
-                        <th>Day1</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                      </tr>
-                    </thead>
-                  <tbody>
-                      <tr>
-                        <th>1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th>2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th>3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                </table>
-              </div><!--Day 1-->
-              <div class="tab-pane" id="day2">
-                <table  class="table-schedule tab-content">
-                 <thead>
-                      <tr>
-                        <th>Day2</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                      </tr>
-                    </thead>
-                  <tbody>
-                      <tr>
-                        <th>1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th>2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th>3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                </table>
-              </div><!--Day 2-->
+            <div class="tab-pane active" id="day1">
+              <table class="table-schedule tab-content">
+                <thead>
+                  <tr>
+                    <th class="period">Period</th>
+                    <th class="r0">國際會議廳 International Conference Hall</th>
+                    <th class="r1">第1會議室 1st Conference Room</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>9:50 ~ 10:00</th>
+                    <td colspan="2">Openinig</td>
+                  </tr>
+                  <tr>
+                    <th>10:00 ~ 11:00</th>
+                    <td colspan="2"><%=session_schedule 'ruddylee'%></td>
+                  </tr>
+                  <tr>
+                    <th>11:05 ~ 11:30</th>
+                    <td><%=session_schedule 'fredwu'%></td>
+                    <td><%=session_schedule 'aspleenic'%></td>
+                  </tr>
+                  <tr>
+                    <th>11:30 ~ 11:55</th>
+                    <td><%=session_schedule 'godfat'%></td>
+                    <td><%=session_schedule 'arnvald'%></td>
+                  </tr>
+                  <tr>
+                    <th>12:00 ~ 13:30</th>
+                    <td colspan="2">Lunch</td>
+                  </tr>
+                  <tr>
+                    <th>13:30 ~ 13:55</th>
+                    <td rowspan="2"><%=session_schedule 'hothero'%></td>
+                    <td><%=session_schedule 'leechsien'%></td>
+                  </tr>
+                  <tr>
+                    <th>13:55 ~ 14:20</th>
+                    <td><%=session_schedule 'brucehsu'%></td>
+                  </tr>
+                  <tr>
+                    <th>14:30 ~ 14:55</th>
+                    <td rowspan="2"><%=session_schedule 'josephku'%></td>
+                    <td><%=session_schedule 'nkj20932'%></td>
+                  </tr>
+                  <tr>
+                    <th>14:55 ~ 15:20</th>
+                    <td><%=session_schedule 'tonytonyjan'%></td>
+                  </tr>
+                  <tr>
+                    <th>15:20 ~ 15:50</th>
+                    <td colspan="2">Tea Time</td>
+                  </tr>
+                  <tr>
+                    <th>15:50 ~ 16:15</th>
+                    <td><%=session_schedule 'johnlinvc'%></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>16:15 ~ 16:40</th>
+                    <td><%=session_schedule 'renske'%></td>
+                    <td><%=session_schedule 'hsbt'%></td>
+                  </tr>
+                  <tr>
+                    <th>16:40 ~ 17:40</th>
+                    <td colspan="2"><%=session_schedule 'matz'%></td>
+                  </tr>
+                  <tr>
+                    <th>17:55 ~ 18:25</th>
+                    <td colspan="2">Linghting Talks(TBA)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!--Day 1-->
+            <div class="tab-pane" id="day2">
+              <table  class="table-schedule tab-content">
+                <thead>
+                  <tr>
+                    <th class="period">Period</th>
+                    <th class="r0">國際會議廳 International Conference Hall</th>
+                    <th class="r1">第1會議室 1st Conference Room</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>9:50 ~ 10:00</th>
+                    <td colspan="2">Openinig</td>
+                  </tr>
+                  <tr>
+                    <th>10:00 ~ 11:00</th>
+                    <td colspan="2"><%=session_schedule 'ultrasaurus'%></td>
+
+                  </tr>
+                  <tr>
+                    <th>11:05 ~ 11:30</th>
+                    <td rowspan="2"><%=session_schedule 'lrz'%></td>
+                    <td><%=session_schedule 'igaiga'%></td>
+                  </tr>
+                  <tr>
+                    <th>11:30 ~ 11:55</th>
+                    <td><%=session_schedule 'lulalala'%></td>
+                  </tr>
+                  <tr>
+                    <th>12:00 ~ 13:30</th>
+                    <td colspan="2">Lunch</td>
+                  </tr>
+                  <tr>
+                    <th>13:30 ~ 13:55</th>
+                    <td><%=session_schedule 'nouse'%></td>
+                    <td><%=session_schedule 'tsechingho'%></td>
+                  </tr>
+                  <tr>
+                    <th>13:55 ~ 14:20</th>
+                    <td><%=session_schedule 'tka'%></td>
+                    <td><%=session_schedule 'matadon'%></td>
+                  </tr>
+                  <tr>
+                    <th>14:30 ~ 14:55</th>
+                    <td rowspan="2"><%=session_schedule 'juanitofatas'%></td>
+                    <td><%=session_schedule 'drenmi'%></td>
+                  </tr>
+                  <tr>
+                    <th>14:55 ~ 15:20</th>
+                    <td><%=session_schedule 'hagenburger'%></td>
+                  </tr>
+                  <tr>
+                    <th>15:20 ~ 15:50</th>
+                    <td colspan="2">Tea Time</td>
+                  </tr>
+                  <tr>
+                    <th>15:50 ~ 16:15</th>
+                    <td rowspan="2"><%=session_schedule 'rickypai'%></td>
+                    <td><%=session_schedule 'vipulnsward'%></td>
+                  </tr>
+                  <tr>
+                    <th>16:15 ~ 16:40</th>
+                    <td><%=session_schedule 'rainchen'%></td>
+                  </tr>
+                  <tr>
+                    <th>16:50 ~ 17:50</th>
+                    <td colspan="2"><%=session_schedule 'tenderlove'%></td>
+                  </tr>
+                  <tr>
+                    <th>17:40 ~ 17:55</th>
+                    <td colspan="2">Closing</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!--Day 2-->
           </div> <!--my-tab-content-->
         </div><!--schedule-tabel-->
-      <%end%>
-    </div><!--row-->
-  </div> <!--end of schedule-->
-
-
-
-  <div id="venue" class="section">
-    <div id="venue-block"></div>
-    <div class="venue-info">
-      <div class="venue-info-inner">
-        <p>Venue: 中研院</p>
-        <p>Address: 台北市南港區研究院路二段128號</p>
-      </div>
-    </div>
-  </div>
-  <div id="coc" class="section">
-    <div class="row ">
-      <div class="col-xs-12 col-sm-12">
-        <div class="coc-title">
-          <h1>Code of conduct</h1>
-        </div>
-        <div class="en content">
-          <p>All attendees, speakers, sponsors and volunteers at our conference are required to agree to following the code of conduct. Organizers will enforce this code of conduct throughout the event. We are expecting cooperation from all participants to help ensure a safe environment for everybody.</p>
-          <p>Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p>
-          <p>Participants asked to stop any harassing behavior are expected to comply immediately.
-          Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/customes, or otherwise create a sexualized environment.</p>
-          <p>If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
-          If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff will be visible by their special badges and clothing.</p>
-          <p>Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escort, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
-          We expect participants to follow these rules at all conference venues and conference-related social events.</p>
-          <p>This code of conduct is based off the work done at Conference Code of Conduct</p>
-        </div>
-        <div class="zh-tw content">
-          <p>所有此次活動的聽眾、演講者、贊助商和志工，都必須同意遵守下列行為準則。而主辦單位也將嚴格地執行這些準則，我們期待所有參加者的合作，以確保大家能有一個安全友善的環境。</p>
-          <p>騷擾包括有關性別，性別認同、年齡、性向、殘疾、外貌、體型、種族、宗教的攻擊性言語，或是在公共場合散播色情圖片、蓄意恐嚇、跟踪、騷擾性的攝影或錄影、多次打斷活動、不恰當的身體接觸，和讓人感到不舒服的性關注。</p>
-          <p>參與者必須停止任何騷擾行為並且立即遵守行為準則。</p>
-          <p>贊助商也必須遵守行為準則。贊助商不應該使用帶有性意味的圖像、活動，或其它材料。工作人員（包括志工）不該穿著帶有性意味的衣服/制服/裝扮，或是建立一個具有性意味的環境。</p>
-          <p>如果參與者從事騷擾行為，工作人員會採取其認為適當的任何手段，包括警告或是請離會場，並且不會退費。</p>
-          <p>如果你被騷擾、看到別人受到騷擾，或有任何其他問題，請立即聯繫會議工作人員，工作人員身上會穿戴可以識別身份的特殊徽章或衣服。</p>
-          <p>工作人員會很樂意幫助參與者聯繫酒店/場地警衛或當地警察、提供護送，或以其他方式幫助那些遇到騷擾的參與者感到安全。我們非常重視您的參與。</p>
-          <p>我們希望參與者在各活動場合、會議有關的社群活動都能遵循這些規則。</p>
-          <p>此行為準則是基於Conference Code of Conduct(http://confcodeofconduct.com/)而訂定。</p>
+      </div><!--row-->
+    </div> <!--end of schedule-->
+    <div id="venue" class="section">
+      <div id="venue-block"></div>
+      <div class="venue-info">
+        <div class="venue-info-inner">
+          <p>Venue: 中研院</p>
+          <p>Address: 台北市南港區研究院路二段128號</p>
         </div>
       </div>
     </div>
-  </div>
-
-
-  <div id="sponsor" class="section">
-    <div class="row">
-      <%@sponsors_hash.keys.each do |slv|%>
-        <div class="sponsor-level-#{slv}">
-          <div class="level">
-            <%= image_retina_tag("sponsorship_level_#{slv-1}.png") %>
+    <div id="coc" class="section">
+      <div class="row ">
+        <div class="col-xs-12 col-sm-12">
+          <div class="coc-title">
+            <h1>Code of conduct</h1>
           </div>
-          <% @sponsors_hash[slv].each do |sponsor| %>
-            <div class="ruby-gem-avatar">
-              <div class="imagecontainer">
-                <%= link_to image_tag(sponsor.image.url, title: sponsor.description,  class:"sponsor_ruby", data: {at2x: sponsor.twox_image.url}), sponsor.link , target: "_blank"%>
+          <div class="en content">
+            <p>All attendees, speakers, sponsors and volunteers at our conference are required to agree to following the code of conduct. Organizers will enforce this code of conduct throughout the event. We are expecting cooperation from all participants to help ensure a safe environment for everybody.</p>
+            <p>Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p>
+            <p>Participants asked to stop any harassing behavior are expected to comply immediately.
+              Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/customes, or otherwise create a sexualized environment.</p>
+              <p>If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
+                If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff will be visible by their special badges and clothing.</p>
+                <p>Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escort, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
+                  We expect participants to follow these rules at all conference venues and conference-related social events.</p>
+                  <p>This code of conduct is based off the work done at Conference Code of Conduct</p>
+                </div>
+                <div class="zh-tw content">
+                  <p>所有此次活動的聽眾、演講者、贊助商和志工，都必須同意遵守下列行為準則。而主辦單位也將嚴格地執行這些準則，我們期待所有參加者的合作，以確保大家能有一個安全友善的環境。</p>
+                  <p>騷擾包括有關性別，性別認同、年齡、性向、殘疾、外貌、體型、種族、宗教的攻擊性言語，或是在公共場合散播色情圖片、蓄意恐嚇、跟踪、騷擾性的攝影或錄影、多次打斷活動、不恰當的身體接觸，和讓人感到不舒服的性關注。</p>
+                  <p>參與者必須停止任何騷擾行為並且立即遵守行為準則。</p>
+                  <p>贊助商也必須遵守行為準則。贊助商不應該使用帶有性意味的圖像、活動，或其它材料。工作人員（包括志工）不該穿著帶有性意味的衣服/制服/裝扮，或是建立一個具有性意味的環境。</p>
+                  <p>如果參與者從事騷擾行為，工作人員會採取其認為適當的任何手段，包括警告或是請離會場，並且不會退費。</p>
+                  <p>如果你被騷擾、看到別人受到騷擾，或有任何其他問題，請立即聯繫會議工作人員，工作人員身上會穿戴可以識別身份的特殊徽章或衣服。</p>
+                  <p>工作人員會很樂意幫助參與者聯繫酒店/場地警衛或當地警察、提供護送，或以其他方式幫助那些遇到騷擾的參與者感到安全。我們非常重視您的參與。</p>
+                  <p>我們希望參與者在各活動場合、會議有關的社群活動都能遵循這些規則。</p>
+                  <p>此行為準則是基於Conference Code of Conduct(http://confcodeofconduct.com/)而訂定。</p>
+                </div>
               </div>
             </div>
-          <% end %>
+          </div>
+
+
+          <div id="sponsor" class="section">
+            <div class="row">
+              <%@sponsors_hash.keys.each do |slv|%>
+              <div class="sponsor-level-#{slv}">
+                <div class="level">
+                  <%= image_retina_tag("sponsorship_level_#{slv-1}.png") %>
+                </div>
+                <% @sponsors_hash[slv].each do |sponsor| %>
+                <div class="ruby-gem-avatar">
+                  <div class="imagecontainer">
+                    <%= link_to image_tag(sponsor.image.url, title: sponsor.description,  class:"sponsor_ruby", data: {at2x: sponsor.twox_image.url}), sponsor.link , target: "_blank"%>
+                  </div>
+                </div>
+                <% end %>
+              </div>
+              <%end%>
+            </div>
+          </div>
+
+          <div id="staff" class="section">
+            <div class="staff-bg"></div>
+            <div class="dwarf-bottom"></div>
+            <%= image_tag("tub_bottom.png",class: "tub-bottom") %>
+            <div class="staff-1 show">
+              <div class="dwarf-1">
+                <div class="staff-info">
+                  <h4>Mu-Fan Teng</h4>
+                  <p>http://ryudo.tw</p>
+                </div>
+              </div>
+            </div>
+            <div class="staff-2  show">
+              <div class="dwarf-2">
+                <div class="staff-info">
+                  <h4>高見龍</h4>
+                  <p>http://rubyconftw2015.dev/</p>
+                </div>
+              </div>
+            </div>
+            <div class="staff-3  show">
+              <div class="dwarf-3">
+                <div class="staff-info">
+                  <h4>Rice Tseng</h4>
+                  <p>http://rubyconftw2015.dev/</p>
+                </div>
+              </div>
+            </div>
+            <div class="staff-4  show">
+              <div class="dwarf-4">
+                <div class="staff-info">
+                  <h4>KangChiao</h4>
+                  <p>http://kangchiao.wix.com/kangchiao</p>
+                </div>
+              </div>
+            </div>
+            <div class="staff-5  show">
+              <div class="dwarf-5">
+                <div class="staff-info">
+                  <h4>蒼時 - Web Designer</h4>
+                  <p>http://rubyconftw2015.dev/</p>
+                </div>
+              </div>
+            </div>
+            <div class="staff-6  show">
+              <div class="dwarf-6">
+                <div class="staff-info">
+                  <h4>Nina - Web Designer</h4>
+                </div>
+              </div>
+            </div>
+            <div class="dwarf-group"></div>
+            <div class="staff-all modal-box">
+              <div class="col-xs-12 col-sm-12 col-md-12 top">
+                <div class="ruby-footer" id="ruby-footer"><!-- CSS Animation --></div>
+              </div>
+              <% @staffs.each do |staff| %>
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                <h3><%= staff.name %><%= staff_link_for staff %></h3>
+              </div>
+              <%end%>
+              <div class="col-xs-12 col-sm-12 col-md-12 bottom">
+                <a href="#" class="close-info fa fa-times" data-class2remove="group-active"></a>
+              </div>
+            </div>
+          </div>
         </div>
-      <%end%>
+        <div id="fb-root"></div>
+      </div>
     </div>
-  </div>
-
-  <div id="staff">
-    <div class="dwarf-bottom"></div>
-    <%= image_tag("tub_bottom.png",class: "tub-bottom") %>
-  </div>
 </div>
-<div id="fb-root"></div>
-

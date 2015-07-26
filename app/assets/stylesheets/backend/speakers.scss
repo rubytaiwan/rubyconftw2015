@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .speaker-sortable{
   position: relative;
-  li{
+  li>.thumbnail{
     height: 350px;
   }
   li:before{

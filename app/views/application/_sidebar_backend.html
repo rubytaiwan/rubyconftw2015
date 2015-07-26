@@ -9,18 +9,24 @@
   <h2 class="sidebar-heading">演講者</h2>
   <li role="presentation"><%= link_to '演講者列表' , backend_speakers_path %></li>
   <li role="presentation"><%= link_to '新增演講者' , new_backend_speaker_path %></li>
-  
-  <h2 class="sidebar-heading">贊助商</h2>  
+
+  <h2 class="sidebar-heading">贊助商</h2>
   <li role="presentation"><%= link_to '贊助商列表' , backend_sponsors_path %></li>
   <li role="presentation"><%= link_to '新增贊助商' , new_backend_sponsor_path %></li>
 </ul>
 
 <ul class="nav nav-pills nav-stacked">
-    <h2 class="sidebar-heading">最新消息</h2>
-  <li role="presentation"><%= link_to '文章列表' , backend_posts_path %></li>
-  <li role="presentation"><%= link_to '新增消息' , new_backend_post_path %></li>
+    <h2 class="sidebar-heading">工作人員</h2>
+  <li role="presentation"><%= link_to '工作人員列表' , backend_staffs_path %></li>
+  <li role="presentation"><%= link_to '新增工作人員' , new_backend_staff_path %></li>
 </ul>
 
+<!-- <ul class="nav nav-pills nav-stacked">
+    <h2 class="sidebar-heading">最新消息</h2>
+  <li role="presentation"><%#= link_to '文章列表' , backend_posts_path %></li>
+  <li role="presentation"><%#= link_to '新增消息' , new_backend_post_path %></li>
+</ul>
+ -->
 <ul class="nav nav-pills nav-stacked">
     <h2 class="sidebar-heading">作者</h2>
   <li role="presentation"><%= link_to '作者列表' , backend_users_path %></li>

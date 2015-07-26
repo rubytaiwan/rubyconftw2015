@@ -1,0 +1,42 @@
+<div id="<%=speaker.dom_id%>" class="speaker-info modal-box">
+  <div class="col-xs-12 col-sm-12 col-md-12 top">
+    <div class="ruby-footer" id="ruby-footer"></div>
+  </div>
+  <div class="col-xs-12 col-sm-2 col-md-2"></div>
+  <div class="col-xs-12 col-sm-2 col-md-2">
+    <%= image_tag speaker.avatar.middle %>
+    <div class="description">
+      <h3><%= speaker.name %></h3>
+      <p><%= speaker.title%></p>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-6 intro">
+    <div class="social-wrapper">
+      <ul>
+        <%if speaker.home_page.present?%>
+          <li>
+            <%= link_to '<i class="fa fa-home"></i>'.html_safe, speaker.home_page, target: "_blank" %>
+          </li>
+        <%end%>
+        <%if speaker.twitter.present?%>
+          <li>
+            <%= link_to '<i class="fa fa-twitter"></i>'.html_safe, speaker.twitter_url, target: "_blank"  %>
+          </li>
+        <%end%>
+        <%if speaker.github.present?%>
+          <li>
+            <%= link_to '<i class="fa fa-github"></i>'.html_safe, speaker.github_url, target: "_blank"  %>
+          </li>
+        <%end%>
+      </ul>
+    </div>
+    <ul class="bio-and-subject-and-summary">
+      <li>Bio：<%= speaker.biography %></li>
+      <li>Subject：<%= speaker.subject %></li>
+      <li>Summary：<%= speaker.abstract %></li>
+    </ul>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-12 bottom">
+    <a href="#" class="close-info fa fa-times" data-class2remove="info-active"></a>
+  </div>
+</div>

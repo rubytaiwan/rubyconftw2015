@@ -3,7 +3,9 @@ class Speaker < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
   makr_uploader_local_assignable :avatar
 
-  validates :name,  presence: true, length: { maximum: 50 }
+  validates :dom_id, :name, presence: true, length: { maximum: 50 }
+  validates :dom_id, :name, uniqueness: true
+  validates :home_page, :twitter, :github, uniqueness: true, allow_nil: true
 
   def self.resort(ids)
     self.transaction do
@@ -11,6 +13,13 @@ class Speaker < ActiveRecord::Base
         self.where(id: id).update_all sort_order: so
       end
     end
+  end
 
+  def twitter_url
+    "http://twitter.com/#{twitter}"
+  end
+
+  def github_url
+    "http://github.com/#{github}"
   end
 end

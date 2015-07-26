@@ -1,0 +1,10 @@
+h1 新增
+hr
+  - if flash[:success]!=nil
+    .alert.alert-success.alert-dismissible role="alert"
+      button.close aria-label="Close" data-dismiss="alert" type="button"
+        span aria-hidden="true"  &times;
+      = flash[:success]
+  - else
+    .space
+  = render 'form'
