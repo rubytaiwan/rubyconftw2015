@@ -415,8 +415,8 @@
       </div>
     </div>
     <div class="dwarf-group"></div>
-    <div class="staff-all row">
-      <div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="staff-all">
+      <div class="col-xs-12 col-sm-12 col-md-12 top">
         <div class="ruby-footer" id="ruby-footer"><!-- CSS Animation --></div>
       </div>
       <% @staffs.each do |staff| %>
@@ -424,8 +424,7 @@
           <h3><%= staff.name %><%= staff_link_for staff %></h3>
         </div>
       <%end%>
-
-      <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 bottom">
         <a data-showfullnav id="staff-close" class="active"><span></span></a>
       </div>
     </div>
