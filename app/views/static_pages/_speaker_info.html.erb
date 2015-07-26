@@ -1,15 +1,36 @@
 <div id="speaker-<%=speaker.dom_id%>" class="speaker-info row ">
-  <div class="col-xs-12 col-sm-12 col-md-12">
-    <div class="ruby-footer" id="ruby-footer"><!-- CSS Animation --></div>
+  <div class="col-xs-12 col-sm-12 col-md-12 top">
+    <div class="ruby-footer" id="ruby-footer"></div>
   </div>
-  <div class="col-xs-12 col-sm-3 col-md-3">
-      <%= image_tag speaker.avatar.middle %>
+  <div class="col-xs-12 col-sm-2 col-md-2"></div>
+  <div class="col-xs-12 col-sm-2 col-md-2">
+    <%= image_tag speaker.avatar.middle %>
+    <div class="description">
+      <h3><%= speaker.name %></h3>
+      <p><%= speaker.title%></p>
+    </div>
   </div>
-  <div class="col-xs-12 col-sm-9 col-md-9">
-      <!-- Speaker info -->
+   <div class="col-xs-12 col-sm-1 col-md-1"></div>
+  <div class="col-xs-12 col-sm-6 col-md-6 intro">
+    <div class="social-wrapper">
+      <ul>
+        <li>
+          <%= link_to '<i class="fa fa-home"></i>'.html_safe, speaker.home_page %>
+        </li>
+        <li>
+          <%= link_to '<i class="fa fa-twitter"></i>'.html_safe, speaker.twitter %>
+        </li>
+        <li>
+          <%= link_to '<i class="fa fa-github"></i>'.html_safe, speaker.github %>
+        </li>
+      </ul>
+    </div>
+    <p><%= speaker.title %></p>
+    <p><%= speaker.biography %></p>
+    <p><%= speaker.subject %></p>
+    <p><%= speaker.abstract %></p>
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-12">
-    <a data-showfullnav class="active info-close" href="#">x</a>
+  <div class="col-xs-12 col-sm-12 col-md-12 bottom">
+    <a class="active info-close" href="#speaker"><span></span></a>
   </div>
 </div>
-

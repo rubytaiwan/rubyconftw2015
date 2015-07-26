@@ -1,0 +1,82 @@
+$blue-color:  #173E71;
+.staff-all {
+  transition:visibility 0s linear 1s,opacity 1s linear;
+  transition-property: visibility, opacity;
+  transition-duration: 0s, 1s;
+  transition-timing-function: initial, linear;
+  transition-delay: 1s, initial;
+  background: $blue-color;
+  text-align: center;
+  position: fixed;
+  overflow: hidden;
+  top:0;
+  min-height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 5;
+  visibility: hidden;
+  a{
+    color: #fff;
+  }
+}
+.staff-all.group-active {
+  transition-delay: 0s;
+  opacity: 1;
+  visibility:visible;
+}
+.ruby-footer {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 0 auto;
+
+  width: 125px;
+  height: 125px;
+
+  background-image: image-url('svg/diamand.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 125px;
+    height: 125px;
+
+    background-image: image-url('svg/diamand_outline_rotate.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+#staff-close span {
+  top: 25px;
+}
+#staff-close span, #staff-close span:before, #staff-close span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 20px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+a#staff-close {
+  display: inline-block;
+}
+#staff-close.active span {
+  background-color: transparent;
+}
+#staff-close.active span:before, #staff-close.active span:after {
+  top: 0;
+}
+#staff-close.active span:before {
+  transform: rotate(45deg);
+}
+#staff-close.active span:after {
+  transform: rotate(-45deg);
+}
+
+
+

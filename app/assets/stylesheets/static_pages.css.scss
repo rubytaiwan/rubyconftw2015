@@ -5,6 +5,7 @@
 @import "ceaser-easing";
 @import "retina";
 
+
 $green-color: #66CC99;
 $blue-color:  #173E71;
 $sky-blue:    #4BA9FA;
@@ -762,8 +763,6 @@ ul#tabs {
 .table-schedule>tbody>tr:nth-of-type(even) {
   background-color: #469EEB;
 }
-// .tab-content{ display: none; }
-// .tab-content.current{ display: table; }
 
 /*--------------venue-----------*/
 #venue {
@@ -799,9 +798,7 @@ ul#tabs {
     top: 5%;
     right: 5%;
   }
-
 }
-
 /*--------------COC-----------*/
 #coc {
   background-color: $coc-pink;
@@ -915,18 +912,13 @@ img.footer-bg { width: 100%; }
 }
 .show:not(:hover) .staff-info {
   z-index: -1;
-  // top:-3000px;
-  // display: none;
 }
 
 .staff-1 {
   position: absolute;
-  // top: 108px;
   left: 1010px;
   bottom: 245px;
 }
-
-
 
 .dwarf-1 {
   width: 105px;
@@ -961,7 +953,6 @@ img.footer-bg { width: 100%; }
 .dwarf-3 {
   width: 60px;
   height: 90px;
-  // left: 755px;
   bottom: 0px;
   background-image: image-url('footer/dwarf3.png');
   background-repeat: no-repeat;
@@ -983,7 +974,6 @@ img.footer-bg { width: 100%; }
   position: absolute;
 }
 .staff-5 {
-  // top: 108px;
   bottom: 245px;
   left: 805px;
   position: absolute;
@@ -992,14 +982,10 @@ img.footer-bg { width: 100%; }
   width: 50px;
   height: 75px;
   bottom: 0;
-  // top: 123px;
-  // left: 95px;
   background-image: image-url('footer/dwarf5.png');
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  // -moz-transform: matrix(-1,0,0,1,0,0);
-  // -webkit-transform: matrix(-1,0,0,1,0,0);
 }
 .staff-6 {
   left: 1000px;
@@ -1009,14 +995,11 @@ img.footer-bg { width: 100%; }
 .dwarf-6 {
   width: 50px;
   height: 74px;
-  // left: 1065px;
   bottom: 0;
   background-image: image-url('footer/dwarf6.png');
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  // -moz-transform: matrix(-1,0,0,1,0,0);
-  // -webkit-transform: matrix(-1,0,0,1,0,0);
 }
 .dwarf-group {
   width: 120px;
@@ -1028,37 +1011,8 @@ img.footer-bg { width: 100%; }
   background-size: contain;
   position: absolute;
 }
-.ruby-footer {
-  position: relative;
-  left: 0;
-  top: 0;
-  margin: 0 auto;
-
-  width: 125px;
-  height: 125px;
-
-  background-image: image-url('svg/diamand.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-
-  &:after {
-    content: " ";
-    position: absolute;
-    display: block;
-    width: 125px;
-    height: 125px;
-
-    background-image: image-url('svg/diamand_outline_rotate.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
 
 @media screen and (max-width: 992px) {
-  // #staff {
-  //   background-position: 50% bottom;
-  // }
   .dwarf-bottom, .staff-1 ,.staff-2,.staff-3,.staff-4,
   .staff-5,.staff-6  {
     display: none!important;
