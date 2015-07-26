@@ -1,6 +1,7 @@
 <%= simple_form_for [:backend, current_object] do |f| %>
   <%= f.input :name %>
   <%= f.input :avatar, as: :file%>
+  <%= f.input :title%>
   <%= f.input :biography %>
   <%= f.input :subject %>
   <%= f.input :abstract %>
