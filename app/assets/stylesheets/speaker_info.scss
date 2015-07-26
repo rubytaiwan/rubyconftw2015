@@ -1,4 +1,15 @@
+.modal-box{
+  .close-info{
+    display: block;
+    margin: 1em auto;
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    font-size: 2.5em;
+  }
+}
 .speaker-info {
+
   .top {
     margin-top: 37px;
   }
@@ -23,12 +34,16 @@
   }
   .intro {
     text-align: left;
-    p {
-      font-family: Helvetica-Light;
-      font-size: 12px;
-      color: #FFFFFF;
-      letter-spacing: 0.4px;
-      line-height: 24px;
+    .bio-and-subject-and-summary{
+      list-style: none;
+      padding-left: 0;
+      li {
+        font-family: Helvetica-Light;
+        font-size: 12px;
+        color: #FFFFFF;
+        letter-spacing: 0.4px;
+        line-height: 24px;
+      }
     }
   }
   .bottom {
@@ -61,7 +76,7 @@
   opacity: 1;
   visibility:visible;
 }
-#staff-close span, #staff-close span:before, #staff-close span:after, .info-close  span, .info-close  span:before, .info-close  span:after {
+#staff-close span, #staff-close span:before, #staff-close span:after{
   cursor: pointer;
   border-radius: 1px;
   height: 3px;
@@ -70,20 +85,5 @@
   position: absolute;
   display: block;
   content: '';
-}
-a.info-close {
-  display: inline-block;
-}
-.info-close.active span {
-  background-color: transparent;
-}
-.info-close.active span:before, .info-close.active span:after {
-  top: 0;
-}
-.info-close.active span:before {
-  transform: rotate(45deg);
-}
-.info-close.active span:after  {
-  transform: rotate(-45deg);
 }
 

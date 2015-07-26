@@ -1,4 +1,4 @@
-<div id="speaker-<%=speaker.dom_id%>" class="speaker-info">
+<div id="<%=speaker.dom_id%>" class="speaker-info modal-box">
   <div class="col-xs-12 col-sm-12 col-md-12 top">
     <div class="ruby-footer" id="ruby-footer"></div>
   </div>
@@ -10,27 +10,33 @@
       <p><%= speaker.title%></p>
     </div>
   </div>
-   <div class="col-xs-12 col-sm-1 col-md-1"></div>
   <div class="col-xs-12 col-sm-6 col-md-6 intro">
     <div class="social-wrapper">
       <ul>
-        <li>
-          <%= link_to '<i class="fa fa-home"></i>'.html_safe, speaker.home_page %>
-        </li>
-        <li>
-          <%= link_to '<i class="fa fa-twitter"></i>'.html_safe, speaker.twitter %>
-        </li>
-        <li>
-          <%= link_to '<i class="fa fa-github"></i>'.html_safe, speaker.github %>
-        </li>
+        <%if speaker.home_page.present?%>
+          <li>
+            <%= link_to '<i class="fa fa-home"></i>'.html_safe, speaker.home_page, target: "_blank" %>
+          </li>
+        <%end%>
+        <%if speaker.twitter.present?%>
+          <li>
+            <%= link_to '<i class="fa fa-twitter"></i>'.html_safe, speaker.twitter_url, target: "_blank"  %>
+          </li>
+        <%end%>
+        <%if speaker.github.present?%>
+          <li>
+            <%= link_to '<i class="fa fa-github"></i>'.html_safe, speaker.github_url, target: "_blank"  %>
+          </li>
+        <%end%>
       </ul>
     </div>
-    <p><%= speaker.title %></p>
-    <p><%= speaker.biography %></p>
-    <p><%= speaker.subject %></p>
-    <p><%= speaker.abstract %></p>
+    <ul class="bio-and-subject-and-summary">
+      <li>Bio：<%= speaker.biography %></li>
+      <li>Subject：<%= speaker.subject %></li>
+      <li>Summary：<%= speaker.abstract %></li>
+    </ul>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-12 bottom">
-    <a class="active info-close" href="#speaker"><span></span></a>
+    <a href="#" class="close-info fa fa-times" data-class2remove="info-active"></a>
   </div>
 </div>

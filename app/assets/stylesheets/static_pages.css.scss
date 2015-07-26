@@ -755,9 +755,21 @@ ul#tabs {
   thead {
 	background-color: #469EEB;
   }
+  thead{
+    tr{
+      .period{width: 18%;}
+      .r0,r1{width: 41%;}
+    }
+  }
   th {
 	padding: 25px;
 	text-align: center;
+  }
+  td{
+    a{
+      color: #fff;
+      text-decoration: underline;
+    }
   }
 }
 .table-schedule>tbody>tr:nth-of-type(even) {
@@ -1001,6 +1013,7 @@ img.footer-bg { width: 100%; }
   position: absolute;
 }
 .dwarf-group {
+  cursor: pointer;
   width: 120px;
   height: 100px;
   left: 600px;
