@@ -61,7 +61,7 @@
     </div>
     <div id="registration" class="btn-group">
       <%= link_to "Registration","#",class: "white-btn btn btn-disabled" %>
-      <%= link_to "Call For Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-cfp",
+      <%= link_to "Call For LT Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-ltcfp",
       class: " blue-btn btn ",role: "button", target: "_blank" %>
     </div>
     <div class="pluginButton">
@@ -84,7 +84,7 @@
           </div>
           <div class="description">
             <h3><%= speaker.name %></h3>
-            <p><%= speaker.biography %></p>
+            <p><%= speaker.title%></p>
           </div>
       </div>
       <% end %>
