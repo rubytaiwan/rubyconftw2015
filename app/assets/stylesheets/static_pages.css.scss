@@ -655,7 +655,7 @@ img.mountain {
 .more-btn {
   display: block;
   background-image: image-url('more_btn.png');
-  margin: 20px auto;
+  margin: 20px auto 50px auto;
   width: 170px;
   height:29px;
 }
@@ -762,10 +762,12 @@ ul#tabs {
     }
   }
   th {
+  border: $sky-blue 3px solid;
 	padding: 25px;
 	text-align: center;
   }
   td{
+    border: $sky-blue 3px solid;
     a{
       color: #fff;
       text-decoration: underline;
