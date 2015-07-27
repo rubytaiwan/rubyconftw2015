@@ -7,7 +7,7 @@ module StaticPagesHelper
   def session_schedule(handle)
     spk = @speakers.find{|s| s.dom_id == handle}
     if spk.present?
-      link_to "#{spk.name}：#{spk.subject}", "##{spk.dom_id}", class: 'link-to-speaker'
+      link_to "#{spk.name}：#{spk.subject} (#{spk.english ? 'English' : 'Chinese'})", "##{spk.dom_id}", class: 'link-to-speaker'
     else
       raw('TBA')
     end
