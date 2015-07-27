@@ -686,6 +686,24 @@ img.mountain {
 	font-weight: bold;
 	line-height: 1.5;
   }
+  h4:before {
+    content: '';
+    display: inline-block;
+    background-image:image-url("footer/square_ic.png") ;
+    width: 35px;
+    height: 10px;
+    margin-right: 15px;
+    background-repeat: space no-repeat;
+  }
+  h4:after {
+    content: '';
+    display: inline-block;
+    background-image:image-url("footer/square_ic.png") ;
+    width: 35px;
+    height: 10px;
+    margin-left: 15px;
+    background-repeat: space no-repeat;
+  }
 }
 .call-for-proposal {
   padding: 8% 0 ;
@@ -720,6 +738,9 @@ img.mountain {
 /*--------------schedule table-----------*/
 .schedule-tabel {
   margin-bottom: 250px;
+}
+#my-tab-content {
+  margin-top: 65px;
 }
 ul#tabs {
   text-align: center;
