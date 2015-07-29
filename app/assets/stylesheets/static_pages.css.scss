@@ -1057,13 +1057,15 @@ img.footer-bg { width: 100%; }
   background-size: contain;
   position: absolute;
 }
-
+@media screen and (max-width: 992px) {
+  #staff{
+  @include at2x('footer/footer', 'png', 'cover');
+  }
+}
 @media screen and (max-width: 992px) {
   .dwarf-bottom, .staff-1 ,.staff-2,.staff-3,.staff-4,
   .staff-5,.staff-6  {
     display: none!important;
-  }
-
 }
 
 
