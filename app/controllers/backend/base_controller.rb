@@ -45,7 +45,7 @@ class Backend::BaseController < ApplicationController
       end
     else
       respond_to do |f|
-        f.html do |f|
+        f.html do
           render action: :edit
         end
         f.json
