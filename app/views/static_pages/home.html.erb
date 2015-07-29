@@ -202,7 +202,7 @@
                   </tr>
                   <tr>
                     <th>11:05 ~ 11:30</th>
-                    <td rowspan="2"><%=session_schedule 'lrz'%></td>
+                    <td rowspan="2" style="background-color: #469EEB;"><%=session_schedule 'lrz'%></td>
                     <td><%=session_schedule 'igaiga'%></td>
                   </tr>
                   <tr>
@@ -238,7 +238,7 @@
                   </tr>
                   <tr>
                     <th>15:50 ~ 16:15</th>
-                    <td rowspan="2"><%=session_schedule 'rickypai'%></td>
+                    <td rowspan="2" style="background-color: #469EEB;"><%=session_schedule 'rickypai'%></td>
                     <td><%=session_schedule 'vipulnsward'%></td>
                   </tr>
                   <tr>
@@ -379,11 +379,11 @@
               </div>
               <% @staffs.each do |staff| %>
               <div class="col-xs-12 col-sm-4 col-md-4">
-                <h3><%= staff.name %><%= staff_link_for staff %></h3>
+                <h4><%= staff.name %><%= staff_link_for staff %></h4>
               </div>
               <%end%>
               <div class="col-xs-12 col-sm-12 col-md-12 bottom">
-                <a href="#" class="close-info fa fa-times" data-class2remove="group-active"></a>
+                <a href="#" class="close-info" data-class2remove="group-active"></a>
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+@import "retina";
 .modal-box{
   .close-info{
     display: block;
@@ -47,7 +48,7 @@
     }
   }
   .bottom {
-    margin-top: 68px;
+    margin-top: 34px;
   }
 }
 .speaker-info {
@@ -65,7 +66,7 @@
   min-height: 100%;
   width: 100%;
   opacity: 0;
-  z-index: 5;
+  z-index: 6;
   visibility: hidden;
   a{
     color: #fff;
@@ -76,14 +77,11 @@
   opacity: 1;
   visibility:visible;
 }
-#staff-close span, #staff-close span:before, #staff-close span:after{
-  cursor: pointer;
-  border-radius: 1px;
-  height: 3px;
-  width: 20px;
-  background: white;
-  position: absolute;
-  display: block;
-  content: '';
+
+a.close-info {
+  @include at2x('close_btn', 'png');
+  background-repeat: no-repeat;
+  background-position: center top;
 }
+
 
