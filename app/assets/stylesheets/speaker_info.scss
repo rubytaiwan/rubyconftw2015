@@ -4,8 +4,6 @@
     display: block;
     margin: 1em auto;
     text-align: center;
-    width: 2em;
-    height: 2em;
     font-size: 2.5em;
   }
 }
@@ -33,6 +31,10 @@
       }
     }
   }
+  .speaker-intro-scroll {
+    height: 350px;
+    overflow: auto;
+  }
   .intro {
     text-align: left;
     .bio-and-subject-and-summary{
@@ -48,7 +50,8 @@
     }
   }
   .bottom {
-    margin-top: 34px;
+    position: absolute;
+    bottom: 0;
   }
 }
 .speaker-info {
@@ -79,9 +82,24 @@
 }
 
 a.close-info {
-  @include at2x('close_btn', 'png');
+  @include at2x('close_btn', 'png' , 'contain');
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center center;
+  width: 24px;
+  height: 24px;
 }
-
-
+@media screen and (max-width: 768px) {
+  #ruby-footer,
+  .social-wrapper {
+    display: none;
+  }
+  img.speaker-info-avatar {
+    display: none;
+  }
+  .speaker-info .speaker-intro-scroll {
+    height: 250px;
+  }
+  .speaker-info .top {
+    margin-top: 0;
+  }
+}

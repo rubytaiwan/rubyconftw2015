@@ -4,7 +4,7 @@
   </div>
   <div class="col-xs-12 col-sm-2 col-md-2"></div>
   <div class="col-xs-12 col-sm-2 col-md-2">
-    <%= image_tag speaker.avatar.middle %>
+    <%= image_tag speaker.avatar.middle ,class:'speaker-info-avatar'%>
     <div class="description">
       <h3><%= speaker.name %></h3>
       <p><%= speaker.title%></p>
@@ -30,11 +30,13 @@
         <%end%>
       </ul>
     </div>
-    <ul class="bio-and-subject-and-summary">
-      <li>Bio：<%= speaker.biography %></li>
-      <li>Subject：<%= speaker.subject %></li>
-      <li>Summary：<%= speaker.abstract %></li>
-    </ul>
+    <div class="speaker-intro-scroll">
+      <ul class="bio-and-subject-and-summary">
+        <li>Bio：<%= speaker.biography %></li>
+        <li>Subject：<%= speaker.subject %></li>
+        <li>Summary：<%= speaker.abstract %></li>
+      </ul>
+    </div>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-12 bottom">
     <a href="#" class="close-info" data-class2remove="info-active"></a>
