@@ -12,7 +12,9 @@ zh-TW:
       edit: '修改作者資料'
   flash:
     successfully_created: 成功建立
+    cannot_create: 建立失敗
     successfully_updated: 成功更新
+    cannot_update: 更新失敗　
     successfully_destroyed: 已刪除
     warning: 失敗
   sponsor-levels:

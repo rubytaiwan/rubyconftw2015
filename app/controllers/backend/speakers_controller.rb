@@ -1,4 +1,5 @@
 class Backend::SpeakersController < Backend::BaseController
+  USE_PAGER = false
 
   def resort
     ids = params[:ids].map(&:to_i)

@@ -1,5 +1,4 @@
-h1
-  |講者列表
+h1 "講者列表(共 #{Speaker.count} 位)"
 = link_to '新增', new_backend_speaker_path, class:'btn btn-success'
 hr
 ul.row.speaker-sortable data-resort-action=url_for(action: :resort)

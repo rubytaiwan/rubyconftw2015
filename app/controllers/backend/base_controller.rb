@@ -2,6 +2,9 @@ class Backend::BaseController < ApplicationController
   layout 'backend'
   helper_method :current_collection, :current_object
   before_action :logged_in_user
+
+  USE_PAGER = true
+
   def index
   end
 
@@ -13,8 +16,13 @@ class Backend::BaseController < ApplicationController
     @current_object = collection_scope.create(object_params)
     respond_to do |f|
       f.html do
-        flash[:success] = t('flash.successfully_created')
-        redirect_to url_after_create
+        if @current_object.errors.empty?
+          flash[:success] = t('flash.successfully_created')
+          redirect_to url_after_create
+        else
+          flash[:error] = t('flash.cannot_create')
+          render action: :new
+        end
       end
       f.json
     end
@@ -38,8 +46,13 @@ class Backend::BaseController < ApplicationController
     if current_object.update(object_params)
       respond_to do |f|
         f.html do
-          flash[:success] = t('flash.successfully_updated')
-          redirect_to url_after_update
+          if current_object.errors.empty?
+            flash[:success] = t('flash.successfully_updated')
+            redirect_to url_after_update
+          else
+            flash[:error] = t('flash.cannot_update')
+            render action: :edit
+          end
         end
         f.json
       end
@@ -71,7 +84,7 @@ class Backend::BaseController < ApplicationController
   end
 
   def current_collection
-    @collection ||= collection_scope.page(params[:page])
+    @collection ||= self.class.const_get(:USE_PAGER) ? collection_scope.page(params[:page]) : collection_scope.all
   end
 
   def current_object
