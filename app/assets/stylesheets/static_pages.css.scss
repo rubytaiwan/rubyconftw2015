@@ -886,7 +886,7 @@ img.sponsor_ruby { width: 60%; }
 }
 /*--------------staff-----------*/
 #staff{
-  @include at2x('footer/footer', 'png', 'cover');
+  @include at2x('footer/footer', 'png', 'contain');
   background-color: $green-color;
   background-repeat: repeat-x;
   background-position: left bottom;
