@@ -786,12 +786,16 @@ ul#tabs {
   border: $sky-blue 3px solid;
 	padding: 25px;
 	text-align: center;
+  letter-spacing: 2px;
   }
-  td{
+  td {
+    padding: 25px 40px;
     border: $sky-blue 3px solid;
-    a{
+    a {
       color: #fff;
-      text-decoration: underline;
+      text-decoration: none;
+      line-height: 15px;
+      letter-spacing: 1px;
     }
   }
 }
