@@ -146,7 +146,7 @@ img.tub-bottom {
   text-align: center;
 }
 .navbar-fixed-top {
-  z-index: 999;
+  z-index: 5;
   top: 15px;
 }
 .nav-bg {
@@ -174,7 +174,7 @@ img.tub-bottom {
   min-height: 100%;
   width: 100%;
   opacity: 0;
-  z-index: 5;
+  z-index: 4;
   visibility: hidden;
 
 }
@@ -904,9 +904,7 @@ img.sponsor_ruby { width: 60%; }
     font-family: "Tamil MN", Microsoft JhengHei;
     line-height: 2.2em;
   }
-  h4{
-    margin: 0;
-  }
+
   h4:before,
   .staff-all h3:before{
     content: '';
@@ -919,6 +917,9 @@ img.sponsor_ruby { width: 60%; }
     background-position-y: center;
   }
   .show{
+    h4{
+    margin: 0;
+    }
     a{
       color: #fff;
       text-decoration: underline;
