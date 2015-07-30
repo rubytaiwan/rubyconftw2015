@@ -95,7 +95,7 @@
 
     <div id="schedule" class="section">
       <div class="row">
-        <div class="schedule-tabel col-xs-12 col-sm-12" style="display: block;"  >
+        <div class="schedule-tabel col-xs-12 col-sm-12">
           <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
             <li class="active"><a href="#day1" data-toggle="tab">Day 1</a></li>
             <li><a href="#day2" data-toggle="tab">Day 2</a></li>
@@ -257,6 +257,9 @@
               </table>
             </div><!--Day 2-->
           </div> <!--my-tab-content-->
+          <div class="mobile-schedule">
+            <%= render partial: 'schedule_mobile' %>
+          </div>
         </div><!--schedule-tabel-->
       </div><!--row-->
     </div> <!--end of schedule-->

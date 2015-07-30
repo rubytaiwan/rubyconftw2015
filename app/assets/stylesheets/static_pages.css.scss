@@ -82,7 +82,7 @@ img.tub-bottom {
   img.tub-bottom { display: none; }
   .dwarf-jump {display: none!important;}
   #dwarf-scroll {display: none;}
-  .row  { margin: 0 15px }
+  .row  { margin: 0 -15px }
 }
 /*--------------button-----------*/
 #registration .blue-btn {
@@ -303,9 +303,9 @@ img.tub-bottom {
   .social {
     display: none;
   }
-  .row{
-    margin-left: 0;
-  }
+  // .row{
+  //   margin-left: 0;
+  // }
   .socail-rwd {
     text-align: center;
   }
@@ -779,7 +779,7 @@ ul#tabs {
   thead{
     tr{
       .period{width: 18%;}
-      .r0,r1{width: 41%;}
+      .r0,.r1{width: 41%;}
     }
   }
   th {
@@ -791,18 +791,37 @@ ul#tabs {
   td {
     padding: 25px 40px;
     border: $sky-blue 3px solid;
-    a {
+  }
+  a {
       color: #fff;
       text-decoration: none;
       line-height: 15px;
       letter-spacing: 1px;
     }
-  }
 }
 .table-schedule>tbody>tr:nth-of-type(even) {
   background-color: #469EEB;
 }
-
+.table-mobile {
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  #my-tab-content,
+  ul#tabs {
+    display: none;
+  }
+  .table-mobile {
+    display: table;
+    th {
+      padding: 15px;
+      line-height: 1.8em;
+      font-weight: lighter;
+    }
+    tr:nth-of-type(even) {
+      font-family: "Tamil MN";
+    }
+  }
+}
 /*--------------venue-----------*/
 #venue {
   position: relative;
@@ -841,6 +860,7 @@ ul#tabs {
 /*--------------COC-----------*/
 #coc {
   background-color: $coc-pink;
+  padding: 0 15px;
   overflow: hidden;
   text-align: justify;
   text-justify: inter-ideograph;
