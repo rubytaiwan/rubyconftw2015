@@ -909,6 +909,11 @@ img.sponsor_ruby { width: 60%; }
   display: inline-block;
 }
 @media (max-width: 768px) {
+  .ruby-gem-avatar{
+    width: 80%;
+    margin: 2% auto;
+    padding: 0 5%;
+  }
   img.sponsor_ruby {
     width: 100%;
   }
