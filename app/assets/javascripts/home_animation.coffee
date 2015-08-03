@@ -72,3 +72,5 @@ $(document).ready ->
       ])
     ])
     _animationPlayed = true
+    if window.location.hash != '' && $(window.location.hash).length > 0
+      $('.more-btn[href=' + window.location.hash + ']').trigger 'click'

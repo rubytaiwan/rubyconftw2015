@@ -7,9 +7,12 @@ $(document).ready ->
     e.preventDefault()
     $('.speaker-info').removeClass 'info-active'
     $($(e.target).attr('href')).addClass 'info-active'
+  $(document).keyup (e) ->
+    if e.keyCode == 27
+      $('.info-active').removeClass 'info-active'
+      $('.group-active').removeClass 'group-active'
   $('.close-info').on 'click', (e) ->
     e.preventDefault()
     tg = e.target
     $(tg).parents('.modal-box').removeClass $(tg).data('class2remove')
-  if window.location.hash != '' && $(window.location.hash).length > 0
-    $('.more-btn[href=' + window.location.hash + ']').trigger 'click'
+
