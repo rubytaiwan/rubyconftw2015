@@ -908,6 +908,11 @@ img.sponsor_ruby { width: 60%; }
   margin: 1% -9%;
   display: inline-block;
 }
+@media (max-width: 768px) {
+  img.sponsor_ruby {
+    width: 100%;
+  }
+}
 /*--------------staff-----------*/
 #staff{
   @include at2x('footer/footer', 'png', 'contain');
