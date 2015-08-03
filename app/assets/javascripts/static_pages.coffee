@@ -9,7 +9,6 @@ $(document).ready ->
     $(@).next().addClass 'nav-active'
   .on 'mouseleave','.nav-line',  ->
     $(@).next().removeClass 'nav-active'
-
   $(".fullNavOverlay ul li a").on 'mouseenter', ->
     $(@).next().removeClass 'nav-active'
     $(@).next().addClass 'nav-active'

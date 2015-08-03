@@ -3,11 +3,6 @@ $(document).ready ->
   $('.dwarf-group').on 'click', (e)->
     e.preventDefault()
     $('.staff-all').addClass( 'group-active' )
-
-#  $('#staff-close').on 'click', (e)->
-#    e.preventDefault()
-#    $('.staff-all').removeClass( 'group-active' )
-
   $('.more-btn, .link-to-speaker').on 'click', (e) ->
     e.preventDefault()
     $('.speaker-info').removeClass 'info-active'
@@ -15,6 +10,6 @@ $(document).ready ->
   $('.close-info').on 'click', (e) ->
     e.preventDefault()
     tg = e.target
-    console.log $(tg).parents('.modal-box').length
-    console.log $(tg).attr('class')
     $(tg).parents('.modal-box').removeClass $(tg).data('class2remove')
+  if window.location.hash != '' && $(window.location.hash).length > 0
+    $('.more-btn[href=' + window.location.hash + ']').trigger 'click'
