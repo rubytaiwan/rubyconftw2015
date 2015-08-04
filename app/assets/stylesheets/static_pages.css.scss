@@ -87,11 +87,15 @@ img.tub-bottom {
   .row  { margin: 0 -15px }
 }
 /*--------------button-----------*/
-#registration .blue-btn {
+#registration .btn-right {
     margin-right: 10px;
 }
-#registration .white-btn {
+#registration .btn-left {
   margin-right: 30px;
+}
+#registration .blue-btn:hover{
+  background-color: #fff;
+  color: $blue-color;
 }
 .btn-group {
   text-align: center;
@@ -111,17 +115,6 @@ img.tub-bottom {
 
 .btn:focus {
 	color: inherit;
-}
-.blue-btn:hover,
-.sky-blue-btn:hover {
-  color: #fff;
-}
-.white-btn:hover {
-  color: $blue-color;
-}
-.white-btn {
-  background-color: #fff;
-  color: $blue-color;
 }
 .blue-btn {
   background-color: $blue-color;
