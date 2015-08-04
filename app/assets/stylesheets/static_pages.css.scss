@@ -51,7 +51,7 @@ p {
 /*--------------Tube-----------*/
 #tub-repeat {
   position: absolute;
-  background-image: image-url("tub_repeat_y.png");
+  @include at2x('tub_repeat_y', 'png');
   background-repeat: repeat-y;
   width: 95px;
   top: 535px;
@@ -655,7 +655,7 @@ img.mountain {
 .more-btn {
   display: block;
   background-image: image-url('more_btn.png');
-  margin: 20px auto 50px auto;
+  margin: -30px auto 70px auto;
   width: 170px;
   height:29px;
 }
