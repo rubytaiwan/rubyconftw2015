@@ -119,6 +119,7 @@ img.tub-bottom {
 .blue-btn {
   background-color: $blue-color;
   color: #fff;
+  transition: all .5s;
 }
 .sky-blue-btn {
   background-color: $sky-blue;
@@ -644,7 +645,7 @@ img.mountain {
 }
 .description {
   height: 150px;
-  padding: 15px;
+  padding: 0 15px;
   text-align: center;
 }
 .more-btn {
@@ -753,6 +754,7 @@ ul#tabs {
   height: 61px;
   line-height: 61px;
   padding: 0;
+  transition: all .5s;
 }
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   color: $sky-blue;
@@ -760,7 +762,7 @@ ul#tabs {
 }
 .nav > li > a:hover, .nav > li > a:focus {
   text-decoration: none;
-  background: rgba(255,255,255,0.20);
+  background: rgba(255,255,255,1);
   color: $sky-blue;
 }
 .nav-pills > li + li {
