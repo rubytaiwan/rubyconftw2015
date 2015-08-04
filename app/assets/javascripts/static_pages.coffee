@@ -1,7 +1,12 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
+methodToFixLayout =  ->
+  viewportHeight = $(window).height()
+  speakerIntroHeight = viewportHeight * 0.6
+  $('.speaker-intro-scroll').css('height',speakerIntroHeight)
 $(document).ready ->
+  methodToFixLayout()
   $('[data-toggle="tooltip"]').tooltip()
   $('#tabs').tab()
   $('#front-nav').on 'mouseenter', '.nav-line',  ->
@@ -73,3 +78,5 @@ $(document).ready ->
       map: map)
     return
   google.maps.event.addDomListener window, 'load', initialize
+
+  $(window).on 'resize', methodToFixLayout
