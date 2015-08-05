@@ -1095,5 +1095,10 @@ img.footer-bg { width: 100%; }
     display: none!important;
   }
 }
-
+@media screen and (max-width: 730px){
+  .dwarf-group{
+    left: 50%;
+    margin-left: -60px;
+  }
+}
 
