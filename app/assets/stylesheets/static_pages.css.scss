@@ -921,7 +921,10 @@ img.sponsor_ruby { width: 60%; }
   background-color: $green-color;
   background-repeat: repeat-x;
   background-position: left bottom;
-  height: 442px;
+  height: 472px; 
+  /* original height: 442px */
+  /* original bug: .sponsor-nav will be displayed instead of .staff-nav when scrolling to the most bottom of page */
+  /* add 30px to make .staff-nav be displayed when scrolling to the most bottom of page */
   position: relative;
   overflow: hidden;
   .row{
