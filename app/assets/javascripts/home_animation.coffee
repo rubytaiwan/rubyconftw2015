@@ -52,25 +52,39 @@ $(document).ready ->
   # Build animation queue
   Pace.on 'done', ->
     return if _animationPlayed # Only play animation 1 times
-    parallelAnimation([
-      (next) -> $airplan.show(next),
-      animate($logo, {x: '-50%', y: '-50%', opacity: 1}, 1000),
-      animate($ruby, {scale: 1}, 1000),
-      animate($cloud1, {scale: 1}, 1000),
-      animate($cloud3, {scale: 1}, 1000),
-      animate($info, {y: '0%', opacity: 1}, 1000),
-      animate($registration, {y: '0%', opacity: 1}, 1000),
-      animate($mountain, {y: '0%'}, 1000, 'cubic-bezier(1, 0, 0, 1)'),
-      animate($tube, {y: '0%'}, 1500, 'cubic-bezier(1, 0, 0, 1)'),
-      queueAnimate([
-        animate($dwarf, {scale: 1, delay: 1500}, 1000),
-        (next)-> parallelAnimation([
-          spriteAnimate($dwarf, 100, 27, 24),
-          animate($inkWave, {scale: 500, opacity: 0}, 1000, 'cubic-bezier(1, 0, 0, 1)'),
-        ], 500, next)
-        -> $inkWave.hide().dequeue() # Remove inkwave prevent mouse event
-      ])
-    ])
+    # console.log($document.width());
+    if $document.width() > 992
+      animation_queue = [
+        (next) -> $airplan.show(next),
+        animate($logo, {x: '-50%', y: '-50%', opacity: 1}, 1000),
+        animate($ruby, {scale: 1}, 1000),
+        animate($cloud1, {scale: 1}, 1000),
+        animate($cloud3, {scale: 1}, 1000),
+        animate($info, {y: '0%', opacity: 1}, 1000),
+        animate($registration, {y: '0%', opacity: 1}, 1000),
+        animate($mountain, {y: '0%'}, 1000, 'cubic-bezier(1, 0, 0, 1)'),
+        animate($tube, {y: '0%'}, 1500, 'cubic-bezier(1, 0, 0, 1)'),
+        queueAnimate([
+          animate($dwarf, {scale: 1, delay: 1500}, 1000),
+          (next)-> parallelAnimation([
+            spriteAnimate($dwarf, 100, 27, 24),
+            animate($inkWave, {scale: 500, opacity: 0}, 1000, 'cubic-bezier(1, 0, 0, 1)'),
+          ], 500, next)
+          -> $inkWave.hide().dequeue() # Remove inkwave prevent mouse event
+        ])
+      ]
+    else
+      animation_queue = [
+        (next) -> $airplan.show(next),
+        animate($logo, {x: '-50%', y: '-50%', opacity: 1}, 1000),
+        animate($ruby, {scale: 1}, 1000),
+        animate($info, {y: '0%', opacity: 1}, 1000),
+        animate($registration, {y: '0%', opacity: 1}, 1000),
+        animate($mountain, {y: '0%'}, 1000, 'cubic-bezier(1, 0, 0, 1)'),
+        animate($tube, {y: '0%'}, 1500, 'cubic-bezier(1, 0, 0, 1)'),
+      ]
+    # console.log(animation_queue);
+    parallelAnimation(animation_queue)
     _animationPlayed = true
     if window.location.hash != '' && $(window.location.hash).length > 0
       $('.more-btn[href=' + window.location.hash + ']').trigger 'click'
