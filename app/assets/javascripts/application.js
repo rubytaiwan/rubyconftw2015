@@ -23,3 +23,4 @@
 //= require plugins/fb-setting.js
 //= require plugins/fullNav.js
 //= require retina
+//= require fade_in

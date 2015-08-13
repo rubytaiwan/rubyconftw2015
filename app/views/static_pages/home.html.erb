@@ -73,14 +73,14 @@
       </div>
     </div>
 
-    <div id="speaker" class="section">
+    <div id="speaker" class="section"> 
       <div class="block mountain">
         <%= image_retina_tag("mountain.png", class: "mountain", id: "mountain") %>
       </div>
       <div class="tub-repeat"></div>
       <div class="row">
         <% @speakers.each do |speaker| %>
-        <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="col-xs-12 col-sm-4 col-md-4 fadeIn"> 
           <%= image_tag speaker.avatar.middle %>
           <div class="description">
             <h3><%= speaker.name %></h3>
