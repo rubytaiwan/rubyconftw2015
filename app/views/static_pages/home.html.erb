@@ -73,14 +73,14 @@
       </div>
     </div>
 
-    <div id="speaker" class="section"> 
+    <div id="speaker" class="section">
       <div class="block mountain">
         <%= image_retina_tag("mountain.png", class: "mountain", id: "mountain") %>
       </div>
       <div class="tub-repeat"></div>
       <div class="row">
         <% @speakers.each do |speaker| %>
-        <div class="col-xs-12 col-sm-4 col-md-4 fadeIn"> 
+        <div class="col-xs-12 col-sm-4 col-md-4 fadeIn">
           <%= image_tag speaker.avatar.middle %>
           <div class="description">
             <h3><%= speaker.name %></h3>
@@ -101,6 +101,7 @@
             <li class="active"><a href="#day1" data-toggle="tab">Day 1</a></li>
             <li><a href="#day2" data-toggle="tab">Day 2</a></li>
           </ul>
+          <h4>We offer simultaneous interpretation service(Chinese to English) on all Chinese sessions!</h4>
           <h4>We also have a pre-conference Party at 9/9 night, please check <a href="http://rubytaiwan.kktix.cc/events/850d36b0" target="_blank">here</a></h4>
           <div id="my-tab-content" class="tab-content">
             <div class="tab-pane active" id="day1">
