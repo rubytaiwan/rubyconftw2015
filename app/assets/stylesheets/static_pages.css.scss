@@ -411,10 +411,9 @@ img.tub-bottom {
 }
 
 /*-------speakers fade in--------*/
-.fadeIn {
+.speakerFadeIn {
   opacity:0;
 }
-
 
 /*--------------Home-----------*/
 #home {
@@ -737,6 +736,28 @@ img.mountain {
   }
 }
 
+/*--------------schedule (FOR QRCODE SCHEDULE PAGE)-----------*/
+#schedule_qrcode #schedule{
+  padding: 25px 0;
+}
+#schedule_qrcode .schedule-tabel{
+  padding-left: 0;
+}
+#schedule_qrcode #ul_qrcode 
+{
+  margin-top: 5%;
+}
+#schedule_qrcode ul.nav.nav-pills {
+    display: inline-flex;
+}
+#schedule_qrcode .row {
+  margin-left: 0;
+  background-color: transparent;
+}
+#ul_qrcode_m{
+  display: none;
+}
+
 /*--------------schedule table-----------*/
 .schedule-tabel {
   margin-bottom: 250px;
@@ -813,6 +834,43 @@ ul#tabs {
   ul#tabs {
     display: none;
   }
+  /*--------------schedule (FOR QRCODE SCHEDULE PAGE :MOBILE)-----------*/
+  #schedule_qrcode #tabs {
+    text-align: center;
+    display: inline-flex;
+    margin-bottom: 50px;
+  }
+  #schedule_qrcode .nav {
+    padding-top: 5%;
+    padding-left: 15%;
+
+  }
+  #schedule_qrcode .nav-pills > li {
+    width: 40%;
+    border: 2px solid #fff;
+  }
+  #schedule_qrcode .nav-pills > li > a {
+    border-radius: 0px;
+    color: #fff;
+    background-color: #4BA9FA;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    transition: all .5s;
+  }
+  #schedule_qrcode .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: $sky-blue;
+    background-color: #ffffff;
+  }
+  #schedule_qrcode ul.nav.nav-pills, #ul_qrcode_m {
+    display: block;
+  }
+
+  #schedule_qrcode #ul_qrcode li, a {
+    display: none;
+  }
+
+  /*-----------END---schedule (FOR QRCODE SCHEDULE PAGE)-----------*/
   .table-mobile {
     display: table;
     th {

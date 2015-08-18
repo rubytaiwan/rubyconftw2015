@@ -80,7 +80,7 @@
       <div class="tub-repeat"></div>
       <div class="row">
         <% @speakers.each do |speaker| %>
-        <div class="col-xs-12 col-sm-4 col-md-4 fadeIn"> 
+        <div class="col-xs-12 col-sm-4 col-md-4 speakerFadeIn"> 
           <%= image_tag speaker.avatar.middle %>
           <div class="description">
             <h3><%= speaker.name %></h3>
@@ -247,7 +247,7 @@
                     <td><%=session_schedule 'rainchen'%></td>
                   </tr>
                   <tr>
-                    <th>16:50 ~ 17:50</th>
+                    <th>16:50 ~ 17:40</th>
                     <td colspan="2"><%=session_schedule 'tenderlove'%></td>
                   </tr>
                   <tr>
