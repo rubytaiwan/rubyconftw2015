@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'sessions/new'
   get 'static_pages/home'
-  get 'static_pages/schedule_qrcode' => "static_pages#schedule_qrcode"
+  get 'schedule' => "static_pages#schedule_qrcode"
 
 #  resources :users
 
