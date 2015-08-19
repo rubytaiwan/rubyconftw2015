@@ -755,7 +755,7 @@ img.mountain {
   margin-left: 0;
   background-color: transparent;
 }
-#ul_qrcode_m{
+#ul_qrcode_m li{
   display: none;
 }
 
@@ -842,7 +842,7 @@ ul#tabs {
     margin-bottom: 50px;
   }
   #schedule_qrcode .nav {
-    padding-top: 5%;
+    padding-top: 3%;
     padding-left: 15%;
 
   }
@@ -863,11 +863,11 @@ ul#tabs {
     color: $sky-blue;
     background-color: #ffffff;
   }
-  #schedule_qrcode ul.nav.nav-pills, #ul_qrcode_m {
+  #schedule_qrcode ul.nav.nav-pills, #ul_qrcode_m li{
     display: block;
   }
 
-  #schedule_qrcode #ul_qrcode li, a {
+  #schedule_qrcode #ul_qrcode li{
     display: none;
   }
 

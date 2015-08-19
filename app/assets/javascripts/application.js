@@ -24,3 +24,4 @@
 //= require plugins/fullNav.js
 //= require retina
 //= require fade_in
+//= require schedule 
