@@ -32,7 +32,7 @@
   </div>
   <div id="home" class="section">
     <div class="logo">
-      <%= image_tag('airplan.svg')%>
+      <%= render partial: 'airplan.svg' %>
       <div class="ruby" id="ruby"><!-- CSS Animation --></div>
       <%= image_retina_tag("logo.png", id: "logo") %>
     </div>
@@ -168,8 +168,10 @@
                 <% end %>
               </div>
               <%end%>
-              <p>This site is powered by</p>
-              <div class="sponsor-azure"></div>
+              <div class="col-xs-12 col-sm-12">
+                <p>This site is powered by
+                <%= image_tag("svg/microsoft-azure-2.svg", class: "azure") %></p>
+              </div>
             </div>
           </div>
 

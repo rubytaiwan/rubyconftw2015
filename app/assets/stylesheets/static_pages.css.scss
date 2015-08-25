@@ -911,14 +911,9 @@ img.sponsor_ruby { width: 60%; }
   margin: 1% -9%;
   display: inline-block;
 }
-.sponsor-azure {
-  width: 100%;
-  height: 50px;
-  background-image: image-url('svg/microsoft-azure-2.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 25%;
-  margin: 0 auto;
+img.azure {
+  width: 30%;
+  margin-left: 1%;
 }
 @media (max-width: 768px) {
   .ruby-gem-avatar{
