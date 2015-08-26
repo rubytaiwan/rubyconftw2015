@@ -911,8 +911,12 @@ img.sponsor_ruby { width: 60%; }
   margin: 1% -9%;
   display: inline-block;
 }
+.imageblock {
+  margin: auto;
+  display: inline-block;
+}
 img.azure {
-  margin-left: 1%;
+  width: 60%;
 }
 @media (max-width: 768px) {
   .ruby-gem-avatar{
