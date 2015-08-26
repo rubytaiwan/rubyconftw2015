@@ -916,7 +916,7 @@ img.sponsor_ruby { width: 60%; }
   display: inline-block;
 }
 img.azure {
-  width: 60%;
+  width: 40%;
 }
 @media (max-width: 768px) {
   .ruby-gem-avatar{
@@ -927,6 +927,9 @@ img.azure {
   img.sponsor_ruby {
     width: 100%;
   }
+  img.azure {
+  width: 50%;
+}
 }
 /*--------------staff-----------*/
 #staff{
