@@ -1,0 +1,28 @@
+<div id="schedule_qrcode">
+  <div id="schedule" class="section">
+    <div class="row">
+      <div class="schedule-tabel col-xs-12 col-sm-12">
+        <h4>Schedule</h4>
+        
+        <!-- PC -->
+        <ul id="ul_qrcode" class="nav nav-pills" data-tabs="tabs">
+          <li class="active"><a href="#day1" data-toggle="tab">Day 1</a></li>
+          <li><a href="#day2" data-toggle="tab">Day 2</a></li>
+        </ul>
+        <div id="my-tab-content" class="tab-content">
+          <%=render partial: 'schedule_pc'%>  
+        </div> <!--my-tab-content-->
+        
+        <!-- mobile -->
+        <ul id="ul_qrcode_m" class="nav nav-pills" data-tabs="tabs">
+          <li class="active"><a href="#m_day1" data-toggle="tab">Day 1</a></li>
+          <li><a href="#m_day2" data-toggle="tab">Day 2</a></li>
+        </ul>
+        <div class="mobile-schedule tab-content">
+          <%= render partial: 'schedule_mobile' %>
+        </div>
+        
+      </div><!--schedule-tabel-->
+    </div><!--row-->
+  </div> <!--end of schedule-->
+</div>

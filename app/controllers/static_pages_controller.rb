@@ -5,4 +5,8 @@ class StaticPagesController < ApplicationController
     @nav_sections = %w{home speaker schedule venue coc sponsor staff}
     @staffs = Staff.all
   end
+
+  def schedule_qrcode
+  	@speakers = Speaker.order(:sort_order).all
+  end
 end
