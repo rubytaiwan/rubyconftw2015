@@ -11,10 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150726143951) do
+ActiveRecord::Schema.define(version: 20150828101141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "conf_activities", force: :cascade do |t|
+    t.integer  "attendee_id"
+    t.integer  "event_id"
+    t.datetime "happened_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "conf_attendees", force: :cascade do |t|
+    t.integer  "identity",              default: 1
+    t.string   "check_code",  limit: 4
+    t.integer  "ticket_type"
+    t.string   "name"
+    t.string   "email"
+    t.string   "org"
+    t.string   "title"
+    t.string   "github"
+    t.string   "twitter"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+  end
+
+  create_table "conf_events", force: :cascade do |t|
+    t.string   "name"
+    t.string   "category"
+    t.string   "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -33,11 +63,11 @@ ActiveRecord::Schema.define(version: 20150726143951) do
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
     t.integer  "sort_order"
+    t.string   "title"
     t.string   "dom_id",     limit: 32
     t.string   "twitter",    limit: 64
     t.string   "github",     limit: 64
     t.string   "home_page"
-    t.string   "title"
     t.boolean  "english",               default: true
   end
 
