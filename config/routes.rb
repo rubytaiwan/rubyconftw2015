@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'static_pages/home'
   get 'schedule' => "static_pages#schedule_qrcode"
+  get 'activities' => "activities#all"
+  get 'activities/:id' => "activities#attended"
 
 #  resources :users
 
@@ -21,6 +23,9 @@ Rails.application.routes.draw do
     resources :sponsors
     resources :posts
     resources :staffs
+    resources :conf_events
+    resources :conf_attendees
+    resources :conf_activities
   end
 
 

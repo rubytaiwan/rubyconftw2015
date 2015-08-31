@@ -1,0 +1,25 @@
+h1 活動清單
+
+table.table
+  thead
+    tr
+      th Name
+      th Category
+      th Slug
+      th
+      th
+      th
+
+  tbody
+    - @backend_conf_events.each do |backend_conf_event|
+      tr
+        td = backend_conf_event.name
+        td = backend_conf_event.category
+        td = backend_conf_event.slug
+        td = link_to 'Show', backend_conf_event_path(backend_conf_event)
+        td = link_to 'Edit', edit_backend_conf_event_path(backend_conf_event)
+        td = link_to 'Destroy', backend_conf_event_path(backend_conf_event), data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Conf event', new_backend_conf_event_path

@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Attendee:
+  = @backend_conf_activity.attendee_id
+p
+  strong Event:
+  = @backend_conf_activity.event_id
+p
+  strong Happened at:
+  = @backend_conf_activity.happened_at
+
+= link_to 'Edit', edit_backend_conf_activity_path(@backend_conf_activity)
+'|
+= link_to 'Back', backend_conf_activities_path

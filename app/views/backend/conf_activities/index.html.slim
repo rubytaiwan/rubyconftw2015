@@ -1,0 +1,25 @@
+h1 打卡記錄 
+
+table.table
+  thead
+    tr
+      th Attendee
+      th Event
+      th Happened at
+      th
+      th
+      th
+
+  tbody
+    - @backend_conf_activities.each do |backend_conf_activity|
+      tr
+        td = backend_conf_activity.attendee_id
+        td = backend_conf_activity.event_id
+        td = backend_conf_activity.happened_at
+        td = link_to 'Show', backend_conf_activity_path(backend_conf_activity)
+        td = link_to 'Edit', edit_backend_conf_activity_path(backend_conf_activity)
+        td = link_to 'Destroy', backend_conf_activity_path(backend_conf_activity), data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Conf activity', new_backend_conf_activity_path
