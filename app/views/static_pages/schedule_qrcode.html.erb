@@ -4,6 +4,8 @@
       <div class="schedule-tabel col-xs-12 col-sm-12">
         <h4>Schedule</h4>
         
+        <%= render partial: 'speaker_info', collection: @speakers, as: :speaker%>
+
         <!-- PC -->
         <ul id="ul_qrcode" class="nav nav-pills" data-tabs="tabs">
           <li class="active"><a href="#day1" data-toggle="tab">Day 1</a></li>
