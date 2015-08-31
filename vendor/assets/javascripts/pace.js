@@ -15,10 +15,10 @@
     startOnPageLoad: true,
     restartOnPushState: true,
     restartOnRequestAfter: 500,
-    target: 'body',
+    target: '.loadingAnimation', //change 'body' to 'loadingAnimation'
     elements: {
       checkInterval: 100,
-      selectors: ['body']
+      selectors: ['.loadingAnimation'] //change 'body' to 'loadingAnimation'
     },
     eventLag: {
       minSamples: 10,
