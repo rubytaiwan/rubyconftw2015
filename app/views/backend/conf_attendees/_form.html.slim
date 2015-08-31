@@ -1,0 +1,18 @@
+= simple_form_for @backend_conf_attendee, url:@backend_conf_attendee.new_record? ? backend_conf_attendees_path : backend_conf_attendee_path(@backend_conf_attendee) do |f|
+  - if @backend_conf_attendee.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@backend_conf_attendee.errors.count, "error")} prohibited this backend_conf_attendee from being saved:"
+      ul
+        - @backend_conf_attendee.errors.full_messages.each do |message|
+          li = message
+  
+  = f.input :identity
+  = f.input :check_code
+  = f.input :ticket_type
+  = f.input :name
+  = f.input :email
+  = f.input :org
+  = f.input :title
+  = f.input :github
+  = f.input :twitter
+  = button_tag "Submit", type: 'submit', class: "btn btn-primary"

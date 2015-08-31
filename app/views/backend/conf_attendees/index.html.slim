@@ -1,0 +1,37 @@
+h1 與會者
+
+table.table.table-responsive
+  thead
+    tr
+      th Identity
+      th Check code
+      th Ticket type
+      th Name
+      th Email
+      th Org
+      th Title
+      th Github
+      th Twitter
+      th
+      th
+      th
+
+  tbody
+    - @backend_conf_attendees.each do |backend_conf_attendee|
+      tr
+        td = backend_conf_attendee.identity
+        td = backend_conf_attendee.check_code
+        td = backend_conf_attendee.ticket_type
+        td = backend_conf_attendee.name
+        td = backend_conf_attendee.email
+        td = backend_conf_attendee.org
+        td = backend_conf_attendee.title
+        td = backend_conf_attendee.github
+        td = backend_conf_attendee.twitter
+        td = link_to 'Show', backend_conf_attendee_path(backend_conf_attendee)
+        td = link_to 'Edit', edit_backend_conf_attendee_path(backend_conf_attendee)
+        td = link_to 'Destroy', backend_conf_attendee_path(backend_conf_attendee), data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Conf attendee', new_backend_conf_attendee_path

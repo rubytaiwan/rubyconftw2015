@@ -1,0 +1,12 @@
+= simple_form_for @backend_conf_event, url:@backend_conf_event.new_record? ? backend_conf_events_path : backend_conf_event_path(@backend_conf_event) do |f|
+  - if @backend_conf_event.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@backend_conf_event.errors.count, "error")} prohibited this backend_conf_event from being saved:"
+      ul
+        - @backend_conf_event.errors.full_messages.each do |message|
+          li = message
+
+  = f.input :name
+  = f.input :category
+  = f.input :slug
+  = button_tag "Submit", type: 'submit', class: "btn btn-primary"

@@ -10,3 +10,5 @@ Rails.application.config.assets.precompile += %w( backend.css backend.js pace.js
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( sub.js )
+Rails.application.config.assets.precompile += %w( sub.css )

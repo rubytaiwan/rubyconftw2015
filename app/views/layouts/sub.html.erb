@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%=page_title%></title>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+  <meta property="og:title" content="RubyConf Taiwan 2015" />
+  <meta property="og:description" content="台灣 Ruby 界的 2015 年度盛會 RubyConf Taiwan，國內外高手雲集，不可錯過" />
+  <meta property="og:url" content="<%= request.url%>" />
+  <meta property="og:image" content="<%= image_url('og_image.png') %>"/>
+  <meta property="og:type" content="" />
+
+  <%= stylesheet_link_tag 'sub', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body data-facebook-appid="<%=Settings.facebook.app_id%>">
+<%= yield %>
+<%= javascript_include_tag 'sub' %>
+</body>
+</html>
