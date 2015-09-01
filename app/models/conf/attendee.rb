@@ -3,6 +3,7 @@ class Conf::Attendee < ActiveRecord::Base
   validates :name, :email, :check_code, :ticket_type, presence: true
   has_many :activities
   has_many :events, through: :activities
+  paginates_per 20
 
   TICKET_TYPE_NAMES = ["Speaker or Staff / 講者或贊助商", "Enterprise / 企業票", "CFP Submitter", "Scholarship / 學生獎勵計劃", "Regular / 一般票"].reverse
 

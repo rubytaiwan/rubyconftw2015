@@ -23,6 +23,7 @@ table.table.table-hover
       td= attendee.org
       td= attendee.github
       td= attendee.twitter
+= paginate current_collection
 
 = form_tag import_backend_attendees_path, multipart: true
   = file_field_tag :file
