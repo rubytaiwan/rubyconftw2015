@@ -1,0 +1,29 @@
+h1 會眾列表
+= flash[:notice]
+hr
+table.table.table-hover
+  thead
+    tr
+      th identity
+      th check_code
+      th ticket_type
+      th name
+      th email
+      th org
+      th github
+      th twitter
+  tbody
+  - current_collection.each do |attendee|
+    tr
+      td= attendee.identity
+      td= attendee.check_code
+      td= Conf::Attendee::TICKET_TYPE_NAMES[attendee.ticket_type - 1]
+      td= attendee.name
+      td= attendee.email
+      td= attendee.org
+      td= attendee.github
+      td= attendee.twitter
+
+= form_tag import_backend_attendees_path, multipart: true
+  = file_field_tag :file
+  = submit_tag '匯入', class:'btn btn-success'

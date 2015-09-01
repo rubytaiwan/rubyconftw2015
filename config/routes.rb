@@ -21,7 +21,11 @@ Rails.application.routes.draw do
     resources :sponsors
     resources :posts
     resources :staffs
+    resources :attendees do
+      collection do
+        post :import
+      end
+    end
   end
-
 
 end

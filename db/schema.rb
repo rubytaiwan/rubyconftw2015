@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150828101141) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "conf_activities", force: :cascade do |t|
     t.integer  "attendee_id"
     t.integer  "event_id"
@@ -63,11 +60,11 @@ ActiveRecord::Schema.define(version: 20150828101141) do
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
     t.integer  "sort_order"
-    t.string   "title"
     t.string   "dom_id",     limit: 32
     t.string   "twitter",    limit: 64
     t.string   "github",     limit: 64
     t.string   "home_page"
+    t.string   "title"
     t.boolean  "english",               default: true
   end
 
@@ -97,6 +94,6 @@ ActiveRecord::Schema.define(version: 20150828101141) do
     t.string   "password_digest"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
