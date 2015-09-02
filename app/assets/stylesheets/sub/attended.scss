@@ -1,0 +1,21 @@
+
+.event .glyphicon.event-icon {
+    font-size: 150px;
+}
+
+.event p {
+    margin-bottom: 0;
+    padding: 0;
+}
+.event p, .event .glyphicon.event-icon {
+    color: gray;
+}
+.event p, .event:not(.attended) img {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+}
+.event.attended .glyphicon.event-icon, .event.attended p {
+    color: white;
+}

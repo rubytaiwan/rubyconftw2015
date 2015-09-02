@@ -35,6 +35,8 @@ $(document).ready ->
       sectop = parseInt $(sec).offset().top
       if i > 0 && stop >= sectop
         idx = i
+    if jQuery(window).height() + jQuery(document).scrollTop() == jQuery(document).height()
+      idx = jQuery('.section').length - 1
     $('#front-nav .inner-nav > a').next().removeClass 'nav-active'
     $(".fullNavOverlay ul li > a").removeClass 'test'
     $("#front-nav .inner-nav:nth-child(#{idx + 1}) > .enlarge").addClass 'nav-active'
