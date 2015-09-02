@@ -1,6 +1,7 @@
 class Conf::Activity < ActiveRecord::Base
   belongs_to :attendee
   belongs_to :event
+  paginates_per 20
 
   REMOTE_URL = "https://www.codeme.cc/api/activity/?format=json"
   AUTH_HEADER = Settings.codemecc.auth_header

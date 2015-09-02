@@ -19,7 +19,6 @@ table.table.table-hover
       td= activity.try(:event).try(:name)
       td= activity.event.category
       td= activity.event.slug
-
-
+= paginate current_collection
 
 = link_to '同步資料', fetch_backend_activities_path,method: :post,class:'btn btn-success'
