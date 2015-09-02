@@ -21,7 +21,17 @@ Rails.application.routes.draw do
     resources :sponsors
     resources :posts
     resources :staffs
+    resources :attendees do
+      collection do
+        post :import
+      end
+    end
+    resources :activities do
+      collection do
+        post :fetch
+      end
+    end
+    get 'events', to:'events#index'
   end
-
 
 end

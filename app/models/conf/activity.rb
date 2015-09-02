@@ -18,7 +18,7 @@ class Conf::Activity < ActiveRecord::Base
     self.happened_at = Time.parse(t)
   end
 
-  def self.fetch_codemecc(after_id: nil)
+  def self.fetch_codemecc_json(after_id: nil)
     url = REMOTE_URL
     url << "&after_id=#{after_id}" if after_id
     logger.info "Start fetch activities from #{url}"
