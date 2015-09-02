@@ -1,0 +1,16 @@
+.panel.panel-info
+  .panel-heading
+    h4 搜尋
+  .panel-body
+    = form_for search_object, url: backend_activities_path, html: {class: 'form-horizontal'}, method: :get do |f|
+      .form-group
+        = f.label :event_name_like, '活動名稱', class: 'control-label col-sm-2'
+        .col-sm-6
+          = f.text_field :event_name_like, class: 'form-control', placeholder: '請輸入要搜尋的活動'
+      .form-group
+        = f.label :name_like, '姓名', class: 'control-label col-sm-2'
+        .col-sm-6
+          = f.text_field :attendee_name_like, class: 'form-control', placeholder: '請輸入要搜尋的姓名'
+      .form-group
+        .col-sm-offset-2.col-sm-6
+          = f.submit '送出查詢', class: 'btn btn-primary'

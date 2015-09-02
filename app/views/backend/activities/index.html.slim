@@ -1,5 +1,6 @@
 h1 會眾活動紀錄
 hr
+= render 'search'
 table.table.table-hover
   thead
     tr
@@ -15,7 +16,10 @@ table.table.table-hover
       td= activity.attendee_id
       td= activity.attendee.name
       td= activity.event_id
-      td= activity.event.name
+      td= activity.try(:event).try(:name)
       td= activity.event.category
       td= activity.event.slug
+
+
+
 = link_to '同步資料', fetch_backend_activities_path,method: :post,class:'btn btn-success'
