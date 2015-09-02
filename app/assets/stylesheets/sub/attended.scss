@@ -1,0 +1,27 @@
+
+.event .glyphicon.event-icon {
+    font-size: 150px;
+}
+
+.event p {
+    margin-bottom: 0;
+    padding: 0;
+}
+.event p, .event .glyphicon.event-icon {
+    color: gray;
+}
+.event.attended .glyphicon.event-icon, .event.attended p {
+    color: white;
+}
+
+#front-nav.sub-page {
+    top: 55px;
+}
+#front-nav .inner-nav a:nth-child(2) {
+    background: white;
+    height: auto;
+}
+
+#front-nav .inner-nav a:nth-child(2):hover {
+    color: #6FB2DE;
+}

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'static_pages/home'
   get 'schedule' => "static_pages#schedule_qrcode"
-  get 'attendee/:id' => "activities#attended"
+  get 'attended/:code' => "activities#attended"
 
 #  resources :users
 
