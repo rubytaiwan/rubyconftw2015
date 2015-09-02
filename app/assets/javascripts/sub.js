@@ -3,4 +3,4 @@
 //= require retina
 //= require jquery.scrollstop
 //= require plugins/smooth-scroll
-//= require sub/attended.coffee
+//= require sub/nav.coffee

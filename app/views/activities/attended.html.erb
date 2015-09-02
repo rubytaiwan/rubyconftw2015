@@ -17,7 +17,12 @@
       <div class="row">
         <% for e in @events %>
           <div class="col-xs-12 col-sm-4 col-md-4 event <%= e.activity ? 'attended' : '' %>" style="opacity: 1;">
-            <span class="glyphicon glyphicon-tower event-icon" aria-hidden="true"></span>
+            <% if e.resource %>
+              <%= image_tag(e.image, title: e.resource.description,  class:"sponsor_ruby", data: {at2x: e.resource.twox_image.url}) %>
+              <%#= image_tag(e.sponsor.image.url, title: e.sponsor.description,  class:"sponsor_ruby", data: {at2x: e.sponsor.twox_image.url}) %>
+            <% else %>
+              <span class="glyphicon glyphicon-tower event-icon" aria-hidden="true"></span>
+            <% end %>
             <div class="description">
               <h3><%= e.name %></h3>
               <p><%= e.category %></p>
@@ -33,37 +38,27 @@
     <% end %>
   </div>
   <div class="section" id="schedule">
+    <% if !@sessions.blank? %>
       <div class="row">
-          <div class="col-xs-12 col-sm-4 col-md-4 event <%= @sessions.count >= 15 ? 'attended' : '' %>" style="opacity: 1;">
-            <span class="glyphicon glyphicon-tower event-icon" aria-hidden="true"></span>
+        <% for e in @sessions %>
+          <div class="col-xs-12 col-sm-4 col-md-4 event <%= e.activity ? 'attended' : '' %>" style="opacity: 1;">
+            <% if e.resource %>
+              <%= image_tag e.image %>
+            <% else %>
+              <span class="glyphicon glyphicon-blackboard event-icon" aria-hidden="true"></span>
+            <% end %>
             <div class="description">
-              <h3>Attend 15 Talk</h3>
-              <p>Attend 15 Talk</p>
+              <h3><%= e.name %></h3>
+              <p><%= e.category %></p>
+              <p><%= e.slug %></p>
+              <% if e.activity %>
+                <p>Attended at <%= e.activity.happened_at %></p>
+              <% end %>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 event <%= @sessions.count >= 10 ? 'attended' : '' %>" style="opacity: 1;">
-            <span class="glyphicon glyphicon-tower event-icon" aria-hidden="true"></span>
-            <div class="description">
-              <h3>Attend 10 Talk</h3>
-              <p>Attend 10 Talk</p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 event <%= @sessions.count >= 5 ? 'attended' : '' %>" style="opacity: 1;">
-            <span class="glyphicon glyphicon-tower event-icon" aria-hidden="true"></span>
-            <div class="description">
-              <h3>Attend 5 Talk</h3>
-              <p>Attend 5 Talk</p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 event <%= @sessions.count >= 1 ? 'attended' : '' %>" style="opacity: 1;">
-            <span class="glyphicon glyphicon-tower event-icon" aria-hidden="true"></span>
-            <div class="description">
-              <h3>Attend 1 Talk</h3>
-              <p>Attend 1 Talk</p>
-            </div>
-          </div>
+        <% end %>
       </div>
-
-
+    <% else %>
+    <% end %>
   </div>
 </div>

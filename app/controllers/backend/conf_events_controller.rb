@@ -69,6 +69,6 @@ class Backend::ConfEventsController < Backend::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def backend_conf_event_params
-      params.require(:conf_event).permit(:name,:category,:slug)
+      params.require(:conf_event).permit(:name,:category,:slug,:resource_id,:resource_type)
     end
 end

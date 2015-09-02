@@ -9,4 +9,6 @@
   = f.input :name
   = f.input :category
   = f.input :slug
+  = f.association :resource, collection: Sponsor.all + Speaker.all
+  = f.input :resource_type, collection: Conf::Event.resource_types
   = button_tag "Submit", type: 'submit', class: "btn btn-primary"

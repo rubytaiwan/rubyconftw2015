@@ -10,18 +10,12 @@
 .event p, .event .glyphicon.event-icon {
     color: gray;
 }
+.event p, .event:not(.attended) img {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+}
 .event.attended .glyphicon.event-icon, .event.attended p {
     color: white;
-}
-
-#front-nav.sub-page {
-    top: 55px;
-}
-#front-nav .inner-nav a:nth-child(2) {
-    background: white;
-    height: auto;
-}
-
-#front-nav .inner-nav a:nth-child(2):hover {
-    color: #6FB2DE;
 }

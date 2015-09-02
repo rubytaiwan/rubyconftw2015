@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :sponsors
     resources :posts
     resources :staffs
+    resources :conf_events
     resources :attendees do
       collection do
         post :import

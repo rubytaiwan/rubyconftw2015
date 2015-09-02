@@ -13,8 +13,8 @@ class ActivitiesController < ApplicationController
       if e.is_session?
         if event_id2activity.has_key?(e.id)
           e.activity = event_id2activity[e.id]
-          @sessions << e
         end
+        @sessions << e
       else
         if event_id2activity.has_key?(e.id)
           e.activity = event_id2activity[e.id]

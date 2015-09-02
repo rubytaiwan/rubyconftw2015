@@ -17,5 +17,7 @@ $(document).ready ->
       sectop = parseInt $(sec).offset().top
       if stop >= sectop
         idx = i
+    if jQuery(window).height() + jQuery(document).scrollTop() == jQuery(document).height()
+      idx = jQuery('.section').length - 1
     update_active_nav()
   $(window).trigger 'scrollstop'
