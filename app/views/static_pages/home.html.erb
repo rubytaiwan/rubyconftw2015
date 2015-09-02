@@ -1,254 +1,256 @@
-<nav id="front-nav">
-  <% @nav_sections.each do |name| %>
-  <%= render partial: 'nav_item', locals: {name: name} %>
-  <% end %>
-</nav>
-
-<div class="nav-default navbar-fixed-top">
-  <div class="nav-bg">
-    <a data-showfullnav id="nav-toggle"><span></span></a>
-  </div>
-</div>
-<div id="navbar" class="fullNavOverlay">
-  <ul>
+<div class="loadingAnimation"> <!-- For loading animation -->
+  <nav id="front-nav">
     <% @nav_sections.each do |name| %>
-    <li><a href="#<%=name%>"><%=name.capitalize%></a></li>
-    <%end%>
-    <div class="socail-rwd">
-      <%= link_to image_retina_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
-      target: "_blank" %></li>
-      <%= link_to image_retina_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan",
-      target: "_blank" %></li>
-      <%= link_to image_retina_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %></li>
+    <%= render partial: 'nav_item', locals: {name: name} %>
+    <% end %>
+  </nav>
+
+  <div class="nav-default navbar-fixed-top">
+    <div class="nav-bg">
+      <a data-showfullnav id="nav-toggle"><span></span></a>
     </div>
-
-  </ul>
-</div>
-
-
-<div id="sections">
-  <div id="tub-repeat">
-    <%= image_tag("tub_top.png", class: "tub-top") %>
   </div>
-  <div id="home" class="section">
-    <div class="logo">
-      <%= render partial: 'airplan.svg' %>
-      <div class="ruby" id="ruby"><!-- CSS Animation --></div>
-      <%= image_retina_tag("logo.png", id: "logo") %>
-    </div>
-    <%= image_tag("cloud1.png", class: "cloud1", id: "cloud1") %>
-    <%= image_tag("cloud3.png", class: "cloud3", id: "cloud3") %>
-    <div class="social">
-      <%= link_to image_retina_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
-      target: "_blank" %>
-      <%= link_to image_retina_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan",
-      target: "_blank" %>
-      <%= link_to image_retina_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %>
-    </div>
+  <div id="navbar" class="fullNavOverlay">
+    <ul>
+      <% @nav_sections.each do |name| %>
+      <li><a href="#<%=name%>"><%=name.capitalize%></a></li>
+      <%end%>
+      <div class="socail-rwd">
+        <%= link_to image_retina_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
+        target: "_blank" %></li>
+        <%= link_to image_retina_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan",
+        target: "_blank" %></li>
+        <%= link_to image_retina_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %></li>
+      </div>
 
-    <div id="ink-wave"></div>
-    <div id="dwarf" class="dwarf-jump"></div>
-    <div id="dwarf-scroll" class="dwarf-scroll-hide"></div>
-    <div id="info" class="info">
-      <div class="info-inner time">
-        <%= image_retina_tag("time_ic.png") %>
-        <p>September 11, 12</p>
-      </div>
-      <div class="info-inner location">
-        <%= image_retina_tag("location_ic.png") %>
-        <p>H.S.S. Building, Academia Sinica</p>
-      </div>
+    </ul>
+  </div>
+
+
+  <div id="sections">
+    <div id="tub-repeat">
+      <%= image_tag("tub_top.png", class: "tub-top") %>
     </div>
-    <div id="registration" class="btn-group">
-      <%= link_to "Registration","http://rubytaiwan.kktix.cc/events/rubyconftw2015",
-      class: "blue-btn btn btn-left" %>
-      <%= link_to "Call For LT Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-ltcfp",
-      class: " blue-btn btn btn-right",role: "button", target: "_blank" %>
+    <div id="home" class="section">
+      <div class="logo">
+        <%= render partial: 'airplan.svg' %>
+        <div class="ruby" id="ruby"><!-- CSS Animation --></div>
+        <%= image_retina_tag("logo.png", id: "logo") %>
       </div>
-      <div class="pluginButton">
-        <div class="tweet-share">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://2015.rubyconf.tw/" data-count="none">Tweet</a>
+      <%= image_tag("cloud1.png", class: "cloud1", id: "cloud1") %>
+      <%= image_tag("cloud3.png", class: "cloud3", id: "cloud3") %>
+      <div class="social">
+        <%= link_to image_retina_tag("fb_ic.png"),"https://www.facebook.com/ruby.taiwan",
+        target: "_blank" %>
+        <%= link_to image_retina_tag("twitter_ic.png"),"https://twitter.com/rubytaiwan",
+        target: "_blank" %>
+        <%= link_to image_retina_tag("email_ic.png"),"mailto:contact@rubyconf.tw" %>
+      </div>
+
+      <div id="ink-wave"></div>
+      <div id="dwarf" class="dwarf-jump"></div>
+      <div id="dwarf-scroll" class="dwarf-scroll-hide"></div>
+      <div id="info" class="info">
+        <div class="info-inner time">
+          <%= image_retina_tag("time_ic.png") %>
+          <p>September 11, 12</p>
         </div>
-        <div class="fb-like" data-href="http://2015.rubyconf.tw/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-      </div>
-    </div>
-
-    <div id="speaker" class="section">
-      <div class="block mountain">
-        <%= image_retina_tag("mountain.png", class: "mountain", id: "mountain") %>
-      </div>
-      <div class="tub-repeat"></div>
-      <div class="row">
-        <% @speakers.each do |speaker| %>
-        <div class="col-xs-12 col-sm-4 col-md-4 fadeIn">
-          <%= image_tag speaker.avatar.middle %>
-          <div class="description">
-            <h3><%= speaker.name %></h3>
-            <p><%= speaker.title%></p>
-          </div>
-          <a class="more-btn" href="#<%=speaker.dom_id%>"></a>
-        </div>
-        <% end %>
-      </div>
-    </div>
-    <%= render partial: 'speaker_info', collection: @speakers, as: :speaker%>
-
-
-    <div id="schedule" class="section">
-      <div class="row">
-        <div class="schedule-tabel col-xs-12 col-sm-12">
-          <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
-            <li class="active"><a href="#day1" data-toggle="tab">Day 1</a></li>
-            <li><a href="#day2" data-toggle="tab">Day 2</a></li>
-          </ul>
-          <h4>We offer simultaneous interpretation service(Chinese to English) on all Chinese sessions!</h4>
-          <h4>We also have a pre-conference Party at 9/9 night, please check <a href="http://rubytaiwan.kktix.cc/events/850d36b0" target="_blank">here</a></h4>
-          <div id="my-tab-content" class="tab-content"><%=render partial: 'schedule_pc'%></div>
-          <div class="mobile-schedule">
-            <%= render partial: 'schedule_mobile' %>
-          </div>
-        </div><!--schedule-tabel-->
-      </div><!--row-->
-    </div> <!--end of schedule-->
-    <div id="venue" class="section">
-      <div id="venue-block"></div>
-      <div class="venue-info">
-        <div class="venue-info-inner">
-          <p>Venue: 中研院</p>
-          <p>Address: 台北市南港區研究院路二段128號</p>
+        <div class="info-inner location">
+          <%= image_retina_tag("location_ic.png") %>
+          <p>H.S.S. Building, Academia Sinica</p>
         </div>
       </div>
-    </div>
-    <div id="coc" class="section">
-      <div class="row ">
-        <div class="col-xs-12 col-sm-12">
-          <div class="coc-title">
-            <h1>Code of conduct</h1>
+      <div id="registration" class="btn-group">
+        <%= link_to "Registration","http://rubytaiwan.kktix.cc/events/rubyconftw2015",
+        class: "blue-btn btn btn-left" %>
+        <%= link_to "Call For LT Proposals","http://rubytaiwan.kktix.cc/events/rubyconftw2015-ltcfp",
+        class: " blue-btn btn btn-right",role: "button", target: "_blank" %>
+        </div>
+        <div class="pluginButton">
+          <div class="tweet-share">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://2015.rubyconf.tw/" data-count="none">Tweet</a>
           </div>
-          <div class="en content">
-            <p>All attendees, speakers, sponsors and volunteers at our conference are required to agree to following the code of conduct. Organizers will enforce this code of conduct throughout the event. We are expecting cooperation from all participants to help ensure a safe environment for everybody.</p>
-            <p>Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p>
-            <p>Participants asked to stop any harassing behavior are expected to comply immediately.
-              Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/customes, or otherwise create a sexualized environment.</p>
-              <p>If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
-                If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff will be visible by their special badges and clothing.</p>
-                <p>Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escort, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
-                  We expect participants to follow these rules at all conference venues and conference-related social events.</p>
-                  <p>This code of conduct is based off the work done at Conference Code of Conduct</p>
-                </div>
-                <div class="zh-tw content">
-                  <p>所有此次活動的聽眾、演講者、贊助商和志工，都必須同意遵守下列行為準則。而主辦單位也將嚴格地執行這些準則，我們期待所有參加者的合作，以確保大家能有一個安全友善的環境。</p>
-                  <p>騷擾包括有關性別，性別認同、年齡、性向、殘疾、外貌、體型、種族、宗教的攻擊性言語，或是在公共場合散播色情圖片、蓄意恐嚇、跟踪、騷擾性的攝影或錄影、多次打斷活動、不恰當的身體接觸，和讓人感到不舒服的性關注。</p>
-                  <p>參與者必須停止任何騷擾行為並且立即遵守行為準則。</p>
-                  <p>贊助商也必須遵守行為準則。贊助商不應該使用帶有性意味的圖像、活動，或其它材料。工作人員（包括志工）不該穿著帶有性意味的衣服/制服/裝扮，或是建立一個具有性意味的環境。</p>
-                  <p>如果參與者從事騷擾行為，工作人員會採取其認為適當的任何手段，包括警告或是請離會場，並且不會退費。</p>
-                  <p>如果你被騷擾、看到別人受到騷擾，或有任何其他問題，請立即聯繫會議工作人員，工作人員身上會穿戴可以識別身份的特殊徽章或衣服。</p>
-                  <p>工作人員會很樂意幫助參與者聯繫酒店/場地警衛或當地警察、提供護送，或以其他方式幫助那些遇到騷擾的參與者感到安全。我們非常重視您的參與。</p>
-                  <p>我們希望參與者在各活動場合、會議有關的社群活動都能遵循這些規則。</p>
-                  <p>此行為準則是基於Conference Code of Conduct(http://confcodeofconduct.com/)而訂定。</p>
-                </div>
-              </div>
+          <div class="fb-like" data-href="http://2015.rubyconf.tw/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+        </div>
+      </div>
+
+      <div id="speaker" class="section">
+        <div class="block mountain">
+          <%= image_retina_tag("mountain.png", class: "mountain", id: "mountain") %>
+        </div>
+        <div class="tub-repeat"></div>
+        <div class="row">
+          <% @speakers.each do |speaker| %>
+          <div class="col-xs-12 col-sm-4 col-md-4 fadeIn">
+            <%= image_tag speaker.avatar.middle %>
+            <div class="description">
+              <h3><%= speaker.name %></h3>
+              <p><%= speaker.title%></p>
             </div>
+            <a class="more-btn" href="#<%=speaker.dom_id%>"></a>
           </div>
+          <% end %>
+        </div>
+      </div>
+      <%= render partial: 'speaker_info', collection: @speakers, as: :speaker%>
 
 
-          <div id="sponsor" class="section">
-            <div class="row">
-              <%@sponsors_hash.keys.each do |slv|%>
-              <div class="sponsor-level-#{slv}">
-                <div class="level">
-                  <%= image_retina_tag("sponsorship_level_#{slv-1}.png") %>
-                </div>
-                <% @sponsors_hash[slv].each do |sponsor| %>
-                <div class="ruby-gem-avatar">
-                  <div class="imagecontainer">
-                    <%= link_to image_tag(sponsor.image.url, title: sponsor.description,  class:"sponsor_ruby", data: {at2x: sponsor.twox_image.url}), sponsor.link , target: "_blank"%>
+      <div id="schedule" class="section">
+        <div class="row">
+          <div class="schedule-tabel col-xs-12 col-sm-12">
+            <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
+              <li class="active"><a href="#day1" data-toggle="tab">Day 1</a></li>
+              <li><a href="#day2" data-toggle="tab">Day 2</a></li>
+            </ul>
+            <h4>We offer simultaneous interpretation service(Chinese to English) on all Chinese sessions!</h4>
+            <h4>We also have a pre-conference Party at 9/9 night, please check <a href="http://rubytaiwan.kktix.cc/events/850d36b0" target="_blank">here</a></h4>
+            <div id="my-tab-content" class="tab-content"><%=render partial: 'schedule_pc'%></div>
+            <div class="mobile-schedule">
+              <%= render partial: 'schedule_mobile' %>
+            </div>
+          </div><!--schedule-tabel-->
+        </div><!--row-->
+      </div> <!--end of schedule-->
+      <div id="venue" class="section">
+        <div id="venue-block"></div>
+        <div class="venue-info">
+          <div class="venue-info-inner">
+            <p>Venue: 中研院</p>
+            <p>Address: 台北市南港區研究院路二段128號</p>
+          </div>
+        </div>
+      </div>
+      <div id="coc" class="section">
+        <div class="row ">
+          <div class="col-xs-12 col-sm-12">
+            <div class="coc-title">
+              <h1>Code of conduct</h1>
+            </div>
+            <div class="en content">
+              <p>All attendees, speakers, sponsors and volunteers at our conference are required to agree to following the code of conduct. Organizers will enforce this code of conduct throughout the event. We are expecting cooperation from all participants to help ensure a safe environment for everybody.</p>
+              <p>Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p>
+              <p>Participants asked to stop any harassing behavior are expected to comply immediately.
+                Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/customes, or otherwise create a sexualized environment.</p>
+                <p>If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
+                  If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff will be visible by their special badges and clothing.</p>
+                  <p>Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escort, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
+                    We expect participants to follow these rules at all conference venues and conference-related social events.</p>
+                    <p>This code of conduct is based off the work done at Conference Code of Conduct</p>
+                  </div>
+                  <div class="zh-tw content">
+                    <p>所有此次活動的聽眾、演講者、贊助商和志工，都必須同意遵守下列行為準則。而主辦單位也將嚴格地執行這些準則，我們期待所有參加者的合作，以確保大家能有一個安全友善的環境。</p>
+                    <p>騷擾包括有關性別，性別認同、年齡、性向、殘疾、外貌、體型、種族、宗教的攻擊性言語，或是在公共場合散播色情圖片、蓄意恐嚇、跟踪、騷擾性的攝影或錄影、多次打斷活動、不恰當的身體接觸，和讓人感到不舒服的性關注。</p>
+                    <p>參與者必須停止任何騷擾行為並且立即遵守行為準則。</p>
+                    <p>贊助商也必須遵守行為準則。贊助商不應該使用帶有性意味的圖像、活動，或其它材料。工作人員（包括志工）不該穿著帶有性意味的衣服/制服/裝扮，或是建立一個具有性意味的環境。</p>
+                    <p>如果參與者從事騷擾行為，工作人員會採取其認為適當的任何手段，包括警告或是請離會場，並且不會退費。</p>
+                    <p>如果你被騷擾、看到別人受到騷擾，或有任何其他問題，請立即聯繫會議工作人員，工作人員身上會穿戴可以識別身份的特殊徽章或衣服。</p>
+                    <p>工作人員會很樂意幫助參與者聯繫酒店/場地警衛或當地警察、提供護送，或以其他方式幫助那些遇到騷擾的參與者感到安全。我們非常重視您的參與。</p>
+                    <p>我們希望參與者在各活動場合、會議有關的社群活動都能遵循這些規則。</p>
+                    <p>此行為準則是基於Conference Code of Conduct(http://confcodeofconduct.com/)而訂定。</p>
                   </div>
                 </div>
-                <% end %>
               </div>
-              <%end%>
-
             </div>
-            <div class="row">
-              <BR/>
-              <div class="ruby-gem-avatar">
-                <div class="imageblock">
-                  <p>This site is powered by
-                  <%= link_to image_retina_tag("microsoft.png", class: "azure"),  'https://azure.microsoft.com', target: "_blank"%></p>
+
+
+            <div id="sponsor" class="section">
+              <div class="row">
+                <%@sponsors_hash.keys.each do |slv|%>
+                <div class="sponsor-level-#{slv}">
+                  <div class="level">
+                    <%= image_retina_tag("sponsorship_level_#{slv-1}.png") %>
+                  </div>
+                  <% @sponsors_hash[slv].each do |sponsor| %>
+                  <div class="ruby-gem-avatar">
+                    <div class="imagecontainer">
+                      <%= link_to image_tag(sponsor.image.url, title: sponsor.description,  class:"sponsor_ruby", data: {at2x: sponsor.twox_image.url}), sponsor.link , target: "_blank"%>
+                    </div>
+                  </div>
+                  <% end %>
+                </div>
+                <%end%>
+
+              </div>
+              <div class="row">
+                <BR/>
+                <div class="ruby-gem-avatar">
+                  <div class="imageblock">
+                    <p>This site is powered by
+                    <%= link_to image_retina_tag("microsoft.png", class: "azure"),  'https://azure.microsoft.com', target: "_blank"%></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="staff" class="section">
+              <div class="staff-bg"></div>
+              <div class="dwarf-bottom"></div>
+              <%= image_tag("tub_bottom.png",class: "tub-bottom") %>
+              <div class="staff-1 show">
+                <div class="dwarf-1">
+                  <div class="staff-info">
+                    <h4>Mu-Fan Teng</h4>
+                    <p><%=link_to 'http://ryudo.tw','http://ryudo.tw', target: '_blank'%></p>
+                  </div>
+                </div>
+              </div>
+              <div class="staff-2  show">
+                <div class="dwarf-2">
+                  <div class="staff-info">
+                    <h4>高見龍</h4>
+                    <p><%=link_to 'http://blog.eddie.com.tw','http://blog.eddie.com.tw', target: '_blank'%></p>
+                  </div>
+                </div>
+              </div>
+              <div class="staff-3  show">
+                <div class="dwarf-3">
+                  <div class="staff-info">
+                    <h4>Rice Tseng - Designer</h4>
+                    <p><%=link_to 'http://ricetseng.com','http://ricetseng.com', target: '_blank'%></p>
+                  </div>
+                </div>
+              </div>
+              <div class="staff-4  show">
+                <div class="dwarf-4">
+                  <div class="staff-info">
+                    <h4>KangChiao - Designer</h4>
+                    <p><%=link_to 'http://kangchiao.wix.com', 'http://kangchiao.wix.com/kangchiao', target: '_blank'%></p>
+                  </div>
+                </div>
+              </div>
+              <div class="staff-5  show">
+                <div class="dwarf-5">
+                  <div class="staff-info">
+                    <h4>蒼時弦也 - Web Designer</h4>
+                    <p><%=link_to 'http://frost.tw', 'http://frost.tw', target: '_blank'%></p>
+                  </div>
+                </div>
+              </div>
+              <div class="staff-6  show">
+                <div class="dwarf-6">
+                  <div class="staff-info">
+                    <h4>Nina - Web Designer</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="dwarf-group"></div>
+              <div class="staff-all modal-box">
+                <div class="col-xs-12 col-sm-12 col-md-12 top">
+                  <div class="ruby-footer" id="ruby-footer"><!-- CSS Animation --></div>
+                </div>
+                <% @staffs.each do |staff| %>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                  <h4><%= staff.name %><%= staff_link_for staff %></h4>
+                </div>
+                <%end%>
+                <div class="col-xs-12 col-sm-12 col-md-12 bottom">
+                  <a href="#" class="close-info" data-class2remove="group-active"></a>
                 </div>
               </div>
             </div>
           </div>
-
-          <div id="staff" class="section">
-            <div class="staff-bg"></div>
-            <div class="dwarf-bottom"></div>
-            <%= image_tag("tub_bottom.png",class: "tub-bottom") %>
-            <div class="staff-1 show">
-              <div class="dwarf-1">
-                <div class="staff-info">
-                  <h4>Mu-Fan Teng</h4>
-                  <p><%=link_to 'http://ryudo.tw','http://ryudo.tw', target: '_blank'%></p>
-                </div>
-              </div>
-            </div>
-            <div class="staff-2  show">
-              <div class="dwarf-2">
-                <div class="staff-info">
-                  <h4>高見龍</h4>
-                  <p><%=link_to 'http://blog.eddie.com.tw','http://blog.eddie.com.tw', target: '_blank'%></p>
-                </div>
-              </div>
-            </div>
-            <div class="staff-3  show">
-              <div class="dwarf-3">
-                <div class="staff-info">
-                  <h4>Rice Tseng - Designer</h4>
-                  <p><%=link_to 'http://ricetseng.com','http://ricetseng.com', target: '_blank'%></p>
-                </div>
-              </div>
-            </div>
-            <div class="staff-4  show">
-              <div class="dwarf-4">
-                <div class="staff-info">
-                  <h4>KangChiao - Designer</h4>
-                  <p><%=link_to 'http://kangchiao.wix.com', 'http://kangchiao.wix.com/kangchiao', target: '_blank'%></p>
-                </div>
-              </div>
-            </div>
-            <div class="staff-5  show">
-              <div class="dwarf-5">
-                <div class="staff-info">
-                  <h4>蒼時弦也 - Web Designer</h4>
-                  <p><%=link_to 'http://frost.tw', 'http://frost.tw', target: '_blank'%></p>
-                </div>
-              </div>
-            </div>
-            <div class="staff-6  show">
-              <div class="dwarf-6">
-                <div class="staff-info">
-                  <h4>Nina - Web Designer</h4>
-                </div>
-              </div>
-            </div>
-            <div class="dwarf-group"></div>
-            <div class="staff-all modal-box">
-              <div class="col-xs-12 col-sm-12 col-md-12 top">
-                <div class="ruby-footer" id="ruby-footer"><!-- CSS Animation --></div>
-              </div>
-              <% @staffs.each do |staff| %>
-              <div class="col-xs-12 col-sm-4 col-md-4">
-                <h4><%= staff.name %><%= staff_link_for staff %></h4>
-              </div>
-              <%end%>
-              <div class="col-xs-12 col-sm-12 col-md-12 bottom">
-                <a href="#" class="close-info" data-class2remove="group-active"></a>
-              </div>
-            </div>
-          </div>
+          <div id="fb-root"></div>
         </div>
-        <div id="fb-root"></div>
       </div>
-    </div>
+  </div>
 </div>
