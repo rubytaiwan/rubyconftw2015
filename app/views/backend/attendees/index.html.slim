@@ -5,11 +5,11 @@ table.table.table-hover
   thead
     tr
       th identity
-      th check_code
-      th ticket_type
-      th name
+      th check code
+      th 票種
+      th 姓名
       th email
-      th org
+      th 單位
       th github
       th twitter
   tbody
@@ -25,6 +25,6 @@ table.table.table-hover
       td= attendee.twitter
 = paginate current_collection
 
-= form_tag import_backend_attendees_path, multipart: true
+= form_tag fetch_backend_activities_path, multipart: true
   = file_field_tag :file
   = submit_tag '匯入', class:'btn btn-success'
