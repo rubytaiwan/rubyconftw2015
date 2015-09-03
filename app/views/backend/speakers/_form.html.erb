@@ -10,6 +10,7 @@
   <%= f.input :subject %>
   <%= f.input :abstract %>
   <%= f.input :english, as: :radio_buttons, collection: [[:English, true], [:Chinese, false]], label: 'Language'%>
+  <%= f.input :lt_speaker, as: :radio_buttons, collection: [[:Yes, true], [:No, false]], label: 'LT Speaker'%>
   <%= f.submit class: "btn btn-success"%>
   <%= link_to "返回列表" ,backend_speakers_path ,class:'btn btn-primary' %>
 <% end %>
