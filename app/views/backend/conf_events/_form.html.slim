@@ -9,6 +9,11 @@
   = f.input :name
   = f.input :category
   = f.input :slug
-  = f.association :resource, collection: Sponsor.all + Speaker.all
-  = f.input :resource_type, collection: Conf::Event.resource_types
+  .polymorphic-selection
+    #Sponsor.polymorphic-option
+      = f.association :resource, collection: Sponsor.all, label: Sponsor.name
+    #Speaker.polymorphic-option
+      = f.association :resource, collection: Speaker.all, label: Speaker.name
+  .polymorphic-selector
+    = f.input :resource_type, collection: Conf::Event.resource_types
   = button_tag "Submit", type: 'submit', class: "btn btn-primary"
