@@ -74,7 +74,15 @@
                   </tr>
                   <tr>
                     <th>17:55 ~ 18:25</th>
-                    <td colspan="2"><i class="fa fa-bolt"></i>&nbsp;Lightning Talks(TBA), submit your proposal <a href="http://rubytaiwan.kktix.cc/events/rubyconftw2015-ltcfp" target="_blank">here</a></td>
+                    <td colspan="2"><i class="fa fa-bolt"></i>&nbsp;Lightning Talks&nbsp;
+                      <p>
+                      <% @speakers.each do |speaker| %>
+                          <% if speaker.lt_speaker? %>
+                              <span><%= link_to "#{speaker.name}：#{speaker.subject} (#{speaker.english ? 'English' : 'Chinese'})", "##{speaker.dom_id}", class: 'link-to-speaker' %></span><br>
+                          <% end %>
+                      <% end %>
+                      </p>
+                    </td>
                   </tr>
                   <tr>
                     <th>19:00 ~ 21:30</th>
