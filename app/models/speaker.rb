@@ -5,7 +5,7 @@ class Speaker < ActiveRecord::Base
 
   validates :dom_id, :name, presence: true, length: { maximum: 50 }
   validates :dom_id, :name, uniqueness: true
-  validates :home_page, uniqueness: true, allow_nil: true
+#  validates :home_page, uniqueness: true, allow_nil: true
   before_create do
     self.sort_order = self.class.maximum(:sort_order) + 1 unless self.sort_order.present?
   end
