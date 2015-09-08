@@ -1,9 +1,9 @@
 class Conf::Activity < ActiveRecord::Base
   belongs_to :attendee
   belongs_to :event
+  include CodemeccFetchable
 
   REMOTE_URL = "https://www.codeme.cc/api/activity/?format=json"
-  AUTH_HEADER = Settings.codemecc.auth_header
 
   def event_attrs=(eattrs)
     e = ::Conf::Event.find_by(slug: eattrs[:slug])
@@ -18,16 +18,17 @@ class Conf::Activity < ActiveRecord::Base
     self.happened_at = Time.parse(t)
   end
 
-  def self.fetch_codemecc_json(after_id: nil)
+  def self.fetch_codemecc_json(after_id: nil, acts_created: [])
     url = REMOTE_URL
     url << "&after_id=#{after_id}" if after_id
     logger.info "Start fetch activities from #{url}"
-    remote_result = JSON.parse(open(url, "Authorization" => AUTH_HEADER).read)
-    acts_created = []
+    remote_result = fetch_codemecc_api(url)
+    last_id = nil
     self.transaction do
       remote_result["results"].each do |res|
         res.deep_symbolize_keys!
         unless self.find_by(id: res[:id])
+          last_id = res[:id]
           kktix = res.delete(:kktix)
           event_attrs = res.delete(:event)
           act = self.new(res)
@@ -38,6 +39,10 @@ class Conf::Activity < ActiveRecord::Base
         end
       end
     end
-    acts_created
+    if remote_result['next'].present?
+      return fetch_codemecc_json(after_id: last_id, acts_created: acts_created)
+    else
+      return acts_created
+    end
   end
 end
