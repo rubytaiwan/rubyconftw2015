@@ -1,0 +1,64 @@
+<nav id="front-nav" class="sub-page">
+  <div class="inner-nav">
+    <a href="#speaker" class="nav-line scroll"></a>
+    <a class="enlarge">Events</a>
+  </div>
+  <div class="inner-nav">
+    <a href="#schedule" class="nav-line scroll"></a>
+    <a class="enlarge">Sessions</a>
+  </div>
+</nav>
+<div id="sections">
+  <div class="section" id="speaker">
+    <div class="block mountain">
+      <%= image_retina_tag("mountain.png", class: "mountain", id: "mountain") %>
+    </div>
+    <% if !@events.blank? %>
+      <div class="row">
+        <% for e in @events %>
+          <div class="col-xs-12 col-sm-4 col-md-4 event <%= e.activity ? 'attended' : '' %>" style="opacity: 1;">
+            <% if e.resource %>
+              <%= image_tag(e.image, title: e.resource.description,  class:"sponsor_ruby", data: {at2x: e.resource.twox_image.url}) %>
+              <%#= image_tag(e.sponsor.image.url, title: e.sponsor.description,  class:"sponsor_ruby", data: {at2x: e.sponsor.twox_image.url}) %>
+            <% else %>
+              <span class="glyphicon glyphicon-tower event-icon" aria-hidden="true"></span>
+            <% end %>
+            <div class="description">
+              <h3><%= e.name %></h3>
+              <p><%= e.category %></p>
+              <p><%= e.slug %></p>
+              <% if e.activity %>
+                <p>Attended at <%= e.activity.happened_at %></p>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+    <% end %>
+  </div>
+  <div class="section" id="schedule">
+    <% if !@sessions.blank? %>
+      <div class="row">
+        <% for e in @sessions %>
+          <div class="col-xs-12 col-sm-4 col-md-4 event <%= e.activity ? 'attended' : '' %>" style="opacity: 1;">
+            <% if e.resource %>
+              <%= image_tag e.image %>
+            <% else %>
+              <span class="glyphicon glyphicon-blackboard event-icon" aria-hidden="true"></span>
+            <% end %>
+            <div class="description">
+              <h3><%= e.name %></h3>
+              <p><%= e.category %></p>
+              <p><%= e.slug %></p>
+              <% if e.activity %>
+                <p>Attended at <%= e.activity.happened_at %></p>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+p#notice = notice
+
+p
+  strong Identity:
+  = @backend_conf_attendee.identity
+p
+  strong Check code:
+  = @backend_conf_attendee.check_code
+p
+  strong Ticket type:
+  = @backend_conf_attendee.ticket_type
+p
+  strong Name:
+  = @backend_conf_attendee.name
+p
+  strong Email:
+  = @backend_conf_attendee.email
+p
+  strong Org:
+  = @backend_conf_attendee.org
+p
+  strong Title:
+  = @backend_conf_attendee.title
+p
+  strong Github:
+  = @backend_conf_attendee.github
+p
+  strong Twitter:
+  = @backend_conf_attendee.twitter
+
+= link_to 'Edit', edit_backend_conf_attendee_path(@backend_conf_attendee)
+'|
+= link_to 'Back', backend_conf_attendees_path

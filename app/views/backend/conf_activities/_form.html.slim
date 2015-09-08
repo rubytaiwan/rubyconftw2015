@@ -1,0 +1,12 @@
+= simple_form_for @backend_conf_activity, url:@backend_conf_activity.new_record? ? backend_conf_activities_path : backend_conf_activity_path(@backend_conf_activity) do |f|
+  - if @backend_conf_activity.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@backend_conf_activity.errors.count, "error")} prohibited this backend_conf_activity from being saved:"
+      ul
+        - @backend_conf_activity.errors.full_messages.each do |message|
+          li = message
+
+  = f.association :attendee, collection: Conf::Attendee.all
+  = f.association :event, collection: Conf::Event.all
+  = f.input :happened_at
+  = button_tag "Submit", type: 'submit', class: "btn btn-primary"
