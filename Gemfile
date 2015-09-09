@@ -47,6 +47,7 @@ gem 'gretel'
 gem 'therubyracer', platforms: :ruby
 gem 'libv8'
 group :development, :test do
+  gem 'yaml_db'
   gem 'quiet_assets'
   gem 'sqlite3'
   gem 'byebug'
