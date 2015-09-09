@@ -13,10 +13,10 @@
     <div class="block mountain">
       <%= image_retina_tag("mountain.png", class: "mountain", id: "mountain") %>
     </div>
-    <% if !@badge.blank? %>
+    <% if !@badges.blank? %>
       <h1 class="section-header">Badges / Events</h1>
       <div class="row">
-        <% for e in @badge %>
+        <% for e in @badges %>
           <div class="col-xs-12 col-sm-4 col-md-4 event <%= e.activity ? 'attended' : '' %>" style="opacity: 1;">
             <% if e.resource %>
               <%= image_tag(e.image, title: e.resource.description,  class:"sponsor_ruby", data: {at2x: e.resource.twox_image.url}) %>

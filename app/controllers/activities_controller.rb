@@ -7,11 +7,12 @@ class ActivitiesController < ApplicationController
       event_id2activity[a.event_id] = a
     end
     events = Conf::Event.all_categorized
-    @badge = events[:badge].each do |e|
+    @badges = events[:badge].each do |e|
       if event_id2activity.has_key?(e.id)
         e.activity = event_id2activity[e.id]
       end
     end
+    @badges.sort! { |b| b.resource ? b.resource.level : 0 }
     @sessions = []
     events[:session].group_by{|s| s.resource_id}.each do |k,session|
       session_attended = nil
@@ -29,5 +30,6 @@ class ActivitiesController < ApplicationController
       session.stripe_multi_point_number
       @sessions << session
     end
+    @sessions.sort! { |s| s.resource ? s.resource.sort_order : 0 }
   end
 end
