@@ -13,13 +13,17 @@
     <div class="block mountain">
       <%= image_retina_tag("mountain.png", class: "mountain", id: "mountain") %>
     </div>
-    <% if !@events.blank? %>
+    <% if !@badges.blank? %>
+      <h1 class="section-header">Badges / Events</h1>
       <div class="row">
-        <% for e in @events %>
+        <% for e in @badges %>
           <div class="col-xs-12 col-sm-4 col-md-4 event <%= e.activity ? 'attended' : '' %>" style="opacity: 1;">
             <% if e.resource %>
               <%= image_tag(e.image, title: e.resource.description,  class:"sponsor_ruby", data: {at2x: e.resource.twox_image.url}) %>
               <%#= image_tag(e.sponsor.image.url, title: e.sponsor.description,  class:"sponsor_ruby", data: {at2x: e.sponsor.twox_image.url}) %>
+              <% if e.activity %>
+                <span class="glyphicon glyphicon-ok event-icon-ok" aria-hidden="true"></span>
+              <% end %>
             <% else %>
               <span class="glyphicon glyphicon-tower event-icon" aria-hidden="true"></span>
             <% end %>
@@ -39,11 +43,15 @@
   </div>
   <div class="section" id="schedule">
     <% if !@sessions.blank? %>
+      <h1 class="section-header">Sessions</h1>
       <div class="row">
         <% for e in @sessions %>
           <div class="col-xs-12 col-sm-4 col-md-4 event <%= e.activity ? 'attended' : '' %>" style="opacity: 1;">
             <% if e.resource %>
               <%= image_tag e.image %>
+              <% if e.activity %>
+                <span class="glyphicon glyphicon-ok event-icon-ok" aria-hidden="true"></span>
+              <% end %>
             <% else %>
               <span class="glyphicon glyphicon-blackboard event-icon" aria-hidden="true"></span>
             <% end %>
