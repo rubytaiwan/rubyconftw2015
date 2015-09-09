@@ -12,7 +12,7 @@ class ActivitiesController < ApplicationController
         e.activity = event_id2activity[e.id]
       end
     end
-    @badges.sort! { |b| (b.resource ? b.resource.level : 0) }
+    @badges.sort! { |a,b| a.attendee_priority_as_badge <=> b.attendee_priority_as_badge  }
     @sessions = []
     events[:session].group_by{|s| s.resource_id}.each do |k,session|
       session_attended = nil
@@ -30,6 +30,6 @@ class ActivitiesController < ApplicationController
       session.stripe_multi_point_number
       @sessions << session
     end
-    @sessions.sort! { |s| (s.resource ? s.resource.sort_order : 0) }
+    @sessions.sort! { |a,b| a.attendee_priority_as_session <=> b.attendee_priority_as_session  }
   end
 end
