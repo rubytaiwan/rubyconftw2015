@@ -6,22 +6,28 @@ class ActivitiesController < ApplicationController
     attendee.activities.each do |a|
       event_id2activity[a.event_id] = a
     end
-    events = Conf::Event.all
-    @events = []
-    @sessions = []
-    events.each do |e|
-      if e.is_session?
-        if event_id2activity.has_key?(e.id)
-          e.activity = event_id2activity[e.id]
-        end
-        @sessions << e
-      else
-        if event_id2activity.has_key?(e.id)
-          e.activity = event_id2activity[e.id]
-        end
-        @events << e
+    events = Conf::Event.all_categorized
+    @badge = events[:badge].each do |e|
+      if event_id2activity.has_key?(e.id)
+        e.activity = event_id2activity[e.id]
       end
     end
-
+    @sessions = []
+    events[:session].group_by{|s| s.resource_id}.each do |k,session|
+      session_attended = nil
+      session.each do |s|
+        if event_id2activity.has_key?(s.id)
+          s.activity = event_id2activity[s.id]
+          session_attended = s
+        end
+      end
+      if session_attended
+        session = session_attended
+      else
+        session = session[0]
+      end
+      session.stripe_multi_point_number
+      @sessions << session
+    end
   end
 end

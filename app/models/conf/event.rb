@@ -7,7 +7,7 @@ class Conf::Event < ActiveRecord::Base
   URL_EVENTS = 'https://www.codeme.cc/api/event/?format=json'
   URL_BADGES = 'https://www.codeme.cc/api/badge/?format=json'
 
-  CATEGORY_SESSION = "session"
+  CATEGORY_SESSION = Speaker.name
   RESOURCE_TYPES = [Sponsor.name,Speaker.name]
 
   validate :check_slug, on: :create
@@ -25,12 +25,20 @@ class Conf::Event < ActiveRecord::Base
     self.resource.class == Speaker
   end
 
-  def self.all_session
-    Conf::Event.where(category: CATEGORY_SESSION).all
+  def self.all_categorized
+    Conf::Event.all.preload(:resource).all.group_by { |e| e.is_session? ? :session : :badge }
   end
 
-  def self.all_event
-    Conf::Event.where.not(category: CATEGORY_SESSION).all
+  def self.all_session
+    Conf::Event.all_categorized[:session]
+  end
+
+  def self.all_session
+    Conf::Event.all_categorized[:badge]
+  end
+
+  def self.all_badge
+    Conf::Event.where.not(resource_type: CATEGORY_SESSION).all
   end
 
   def self.resource_types
@@ -43,6 +51,11 @@ class Conf::Event < ActiveRecord::Base
     else
       self.resource.twox_image.url
     end
+  end
+
+  def stripe_multi_point_number
+    self.name = self.name[0..-3]
+    self.slug = self.slug[0..-3]
   end
 
   def sponsor
