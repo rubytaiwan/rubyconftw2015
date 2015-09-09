@@ -21,6 +21,9 @@
             <% if e.resource %>
               <%= image_tag(e.image, title: e.resource.description,  class:"sponsor_ruby", data: {at2x: e.resource.twox_image.url}) %>
               <%#= image_tag(e.sponsor.image.url, title: e.sponsor.description,  class:"sponsor_ruby", data: {at2x: e.sponsor.twox_image.url}) %>
+              <% if e.activity %>
+                <span class="glyphicon glyphicon-ok event-icon-ok" aria-hidden="true"></span>
+              <% end %>
             <% else %>
               <span class="glyphicon glyphicon-tower event-icon" aria-hidden="true"></span>
             <% end %>
@@ -46,6 +49,9 @@
           <div class="col-xs-12 col-sm-4 col-md-4 event <%= e.activity ? 'attended' : '' %>" style="opacity: 1;">
             <% if e.resource %>
               <%= image_tag e.image %>
+              <% if e.activity %>
+                <span class="glyphicon glyphicon-ok event-icon-ok" aria-hidden="true"></span>
+              <% end %>
             <% else %>
               <span class="glyphicon glyphicon-blackboard event-icon" aria-hidden="true"></span>
             <% end %>

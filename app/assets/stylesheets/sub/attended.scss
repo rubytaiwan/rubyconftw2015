@@ -10,12 +10,12 @@
 .event p, .event .glyphicon.event-icon {
     color: gray;
 }
-.event p, .event:not(.attended) img {
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-}
+// .event p, .event:not(.attended) img {
+//     -webkit-filter: grayscale(100%);
+//     -moz-filter: grayscale(100%);
+//     -o-filter: grayscale(100%);
+//     -ms-filter: grayscale(100%);
+// }
 .event.attended .glyphicon.event-icon, .event.attended p {
     color: white;
 }
@@ -24,4 +24,18 @@
     margin-top: -100px;
     margin-bottom: 40px;
     font-size: 50px !important;
+}
+
+.event-icon-ok {
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -42px;
+    font-size: 80px;
+    color: #FD027A;
+    text-shadow: #EF33FF 0px 3px 0px;
+}
+
+#speaker .description {
+    height: 170px;
 }
