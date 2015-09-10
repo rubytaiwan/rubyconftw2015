@@ -1,0 +1,21 @@
+h1 會眾活動紀錄
+hr
+table.table.table-hover
+  thead
+    tr
+      th 會眾編號
+      th 姓名
+      th 活動編號
+      th 活動名稱
+      th 類別
+      th slug
+  tbody
+  - current_collection.each do |activity|
+    tr
+      td= activity.attendee_id
+      td= activity.attendee.name
+      td= activity.event_id
+      td= activity.event.name
+      td= activity.event.category
+      td= activity.event.slug
+= link_to '同步資料', fetch_backend_activities_path,method: :post,class:'btn btn-success'

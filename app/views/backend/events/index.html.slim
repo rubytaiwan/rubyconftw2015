@@ -1,0 +1,14 @@
+h1 活動列表
+hr
+table.table.table-hover
+  thead
+    tr
+      th 活動名稱
+      th 類別
+      th slug
+  tbody
+  - current_collection.each do |event|
+    tr
+      td= event.name
+      td= event.category
+      td= event.slug

@@ -1,0 +1,2 @@
+module Backend::ConfActivitiesHelper
+end

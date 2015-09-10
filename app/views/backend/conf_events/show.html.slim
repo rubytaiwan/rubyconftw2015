@@ -1,0 +1,15 @@
+p#notice = notice
+
+h5 Name:
+h4 = @backend_conf_event.name
+h5 Category:
+h4 = @backend_conf_event.category
+h5 Slug:
+h4 = @backend_conf_event.slug
+- if @backend_conf_event.resource
+  h5 Image
+  = image_tag(@backend_conf_event.image)
+  br
+= link_to 'Edit', edit_backend_conf_event_path(@backend_conf_event)
+'|
+= link_to 'Back', backend_conf_events_path

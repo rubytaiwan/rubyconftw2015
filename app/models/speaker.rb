@@ -1,4 +1,5 @@
 class Speaker < ActiveRecord::Base
+  has_many :events, as: :resource
   extend ::CarrierWave::LocalFileAssignable
   mount_uploader :avatar, AvatarUploader
   makr_uploader_local_assignable :avatar
@@ -7,7 +8,7 @@ class Speaker < ActiveRecord::Base
   validates :dom_id, :name, uniqueness: true
 #  validates :home_page, uniqueness: true, allow_nil: true
   before_create do
-    self.sort_order = self.class.maximum(:sort_order) + 1 unless self.sort_order.present?
+    self.sort_order = (self.class.maximum(:sort_order) || 0) + 1 unless self.sort_order.present?
   end
 
   def self.resort(ids)
