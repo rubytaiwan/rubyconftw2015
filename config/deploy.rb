@@ -1,3 +1,4 @@
+require "whenever/capistrano"
 # -*- encoding : utf-8 -*-
 set :application, '2015.rubyconf.tw'
 set :repo_url, ENV['REPO'] || 'git@github.com:rubytaiwan/rubyconftw2015.git'
