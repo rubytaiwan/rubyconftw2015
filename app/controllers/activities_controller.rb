@@ -1,7 +1,7 @@
 class ActivitiesController < ApplicationController
   layout "sub"
   def attended
-    attendee = Conf::Attendee.find_by(check_code: params[:code])
+    attendee = Conf::Attendee.find_by!(check_code: params[:code])
     event_id2activity = {}
     attendee.activities.each do |a|
       event_id2activity[a.event_id] = a
