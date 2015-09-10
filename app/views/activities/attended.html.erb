@@ -32,7 +32,7 @@
               <p><%= e.category %></p>
               <p><%= e.slug %></p>
               <% if e.activity %>
-                <p>Attended at <%= e.activity.happened_at %></p>
+                <p><%= e.activity.happened_at ? "Checked at " + e.activity.happened_at.to_formatted_s(:db) : "" %></p>
               <% end %>
             </div>
           </div>
@@ -60,7 +60,7 @@
               <p><%= e.category %></p>
               <p><%= e.slug %></p>
               <% if e.activity %>
-                <p>Attended at <%= e.activity.happened_at %></p>
+                <p><%= e.activity.happened_at ? "Attended at " + e.activity.happened_at.to_formatted_s(:db) : "" %></p>
               <% end %>
             </div>
           </div>
