@@ -3,8 +3,8 @@
                 <thead>
                   <tr>
                     <th class="period">Period</th>
-                    <th class="r0">國際會議廳 International Conference Hall</th>
-                    <th class="r1">第1會議室 1st Conference Room</th>
+                    <th class="r0">國際會議廳 International Conference Hall（Live Cast <a href="https://livehouse.in/channel/rubyconf1" target="_blank">Here</a> by LIVEhouse.in）</th>
+                    <th class="r1">第1會議室 1st Conference Room（Live Cast <a href="https://livehouse.in/channel/rubyconf2" target="_blank">Here</a>）by LIVEHouse.in</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -76,11 +76,9 @@
                     <th>17:55 ~ 18:25</th>
                     <td colspan="2"><i class="fa fa-bolt"></i>&nbsp;Lightning Talks&nbsp;
                       <p>
-                      <% @speakers.each do |speaker| %>
-                          <% if speaker.lt_speaker? %>
-                              <span><%= link_to "#{speaker.name}：#{speaker.subject} (#{speaker.english ? 'English' : 'Chinese'})", "##{speaker.dom_id}", class: 'link-to-speaker' %></span><br>
-                          <% end %>
-                      <% end %>
+                        <% @speakers.select{|spk| spk.lt_speaker}.each do |speaker| %>
+                          <span><%= link_to "#{speaker.name}：#{speaker.subject} (#{speaker.english ? 'English' : 'Chinese'})", "##{speaker.dom_id}", class: 'link-to-speaker' %></span><br>
+                        <% end %>
                       </p>
                     </td>
                   </tr>
@@ -96,8 +94,8 @@
                 <thead>
                   <tr>
                     <th class="period">Period</th>
-                    <th class="r0">國際會議廳 International Conference Hall</th>
-                    <th class="r1">第1會議室 1st Conference Room</th>
+                    <th class="r0">國際會議廳 International Conference Hall（Live Cast <a href="https://livehouse.in/channel/rubyconf1" target="_blank">Here</a> by LIVEhouse.in）</th>
+                    <th class="r1">第1會議室 1st Conference Room（Live Cast <a href="https://livehouse.in/channel/rubyconf2" target="_blank">Here</a>）by LIVEHouse.in</th>
                   </tr>
                 </thead>
                 <tbody>

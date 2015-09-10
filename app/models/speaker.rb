@@ -4,6 +4,8 @@ class Speaker < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
   makr_uploader_local_assignable :avatar
 
+  scope :lt, lambda{ where("lt_speaker IS TRUE") }
+
   validates :dom_id, :name, presence: true, length: { maximum: 50 }
   validates :dom_id, :name, uniqueness: true
 #  validates :home_page, uniqueness: true, allow_nil: true
