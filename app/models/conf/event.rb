@@ -58,6 +58,15 @@ class Conf::Event < ActiveRecord::Base
     self.slug = self.slug[0..-3]
   end
 
+  def multi_track?
+    !! self.name.rindex('Track')
+  end
+
+  def stripe_multi_track
+    self.name = self.name[0..-11]
+    self.slug = self.slug[0..-3]
+  end
+
   def attendee_priority
     if self.is_session?
       self.attendee_priority_as_session
