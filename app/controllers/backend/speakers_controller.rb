@@ -14,7 +14,7 @@ class Backend::SpeakersController < Backend::BaseController
     end
 
   	def object_params
-      params.require(:speaker).permit(:name, :avatar, :biography , :subject , :abstract, :dom_id, :twitter, :github, :home_page, :title, :english, :lt_speaker)
+      params.require(:speaker).permit(:name, :avatar, :biography , :subject , :abstract, :dom_id, :twitter, :github, :home_page, :title, :english, :lt_speaker, :slide_url, :video_url)
   	end
 
 end

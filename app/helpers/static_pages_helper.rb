@@ -6,11 +6,19 @@ module StaticPagesHelper
 
   def session_schedule(handle)
     spk = @speakers.find{|s| s.dom_id == handle}
-    if spk.present?
-      link_to "#{spk.name}：#{spk.subject} (#{spk.english ? 'English' : 'Chinese'})", "##{spk.dom_id}", class: 'link-to-speaker'
-    else
-      raw('TBA')
-    end
+    if spk.present? 
+      block = link_to "#{spk.name}：#{spk.subject} (#{spk.english ? 'English' : 'Chinese'})", "##{spk.dom_id}", class: 'link-to-speaker'
+      if spk.slide_url.present? || spk.video_url.present? 
+        block << " (" 
+        block << link_to('Slide', spk.slide_url, class: 'url-colored') if spk.slide_url.present? 
+        if spk.slide_url.present? && spk.video_url.present? 
+          block << ", " 
+        end 
+        block << link_to('Video', spk.video_url, class: 'url-colored') if spk.video_url.present? 
+        block << ")" 
+      end 
+      return block
+    end 
   end
-
+  
 end

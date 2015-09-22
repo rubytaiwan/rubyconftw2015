@@ -77,9 +77,9 @@
                     <td colspan="2"><i class="fa fa-bolt"></i>&nbsp;Lightning Talks&nbsp;
                       <p>
                       <% @speakers.each do |speaker| %>
-                          <% if speaker.lt_speaker? %>
-                              <span><%= link_to "#{speaker.name}：#{speaker.subject} (#{speaker.english ? 'English' : 'Chinese'})", "##{speaker.dom_id}", class: 'link-to-speaker' %></span><br>
-                          <% end %>
+                        <% if speaker.lt_speaker? %>
+                          <span><%=session_schedule speaker.dom_id%></span><br>
+                        <% end %>
                       <% end %>
                       </p>
                     </td>

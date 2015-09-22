@@ -109,12 +109,12 @@ table.table-schedule.tab-content.table-mobile#table_day1
       th
         i.fa.fa-bolt
         | \&nbsp;Lightning Talks&nbsp;
-        p
+        p 
           - @speakers.each do |speaker| 
             - if speaker.lt_speaker? 
               | <span>
-              = link_to "#{speaker.name}：#{speaker.subject} (#{speaker.english ? 'English' : 'Chinese'})", "##{speaker.dom_id}", class: 'link-to-speaker'
-              |<br>
+              =session_schedule speaker.dom_id
+          |<br>
     tr
       th 19:00 ~ 21:30
     tr
