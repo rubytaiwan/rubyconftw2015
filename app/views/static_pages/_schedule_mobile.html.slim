@@ -112,8 +112,7 @@ table.table-schedule.tab-content.table-mobile#table_day1
         p
           - @speakers.select{|spk| spk.lt_speaker}.each do |speaker|
             | <span>
-            = link_to "#{speaker.name}：#{speaker.subject} (#{speaker.english ? 'English' : 'Chinese'})", "##{speaker.dom_id}", class: 'link-to-speaker'
-            |<br>
+            =speaker_schedule speaker
     tr
       th 19:00 ~ 21:30
     tr
